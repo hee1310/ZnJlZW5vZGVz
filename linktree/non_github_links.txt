@@ -445,7 +445,6 @@ https://cache.ravelloh.top?uuid=64a9f944-2e68-303f-378f-95954af7c798
 https://cache.ravelloh.top?uuid=780a8279-e991-a06e-1e15-456c405f20c2
 https://cache.ravelloh.top?uuid=cc980bc7-352e-d2d3-8059-eb91414f4a6e
 https://cache.ravelloh.top?uuid=f3d5c774-62ea-c52d-5b22-a7c44a663150
-https://cdn.jsdelivr.net/gh/vxiaov/free_proxies@main/clash/clash.provider.yaml
 https://cdn.jsdelivr.us/gh/anaer/Sub@main/clash.yaml
 https://cdn.z.wiki/autoupload/20250327/rY5d/Jsnzk.yaml
 https://cdn1.xr56385d.qianglie.cloud/link/ukPlvBCb3gT8hN0G?clash=1
@@ -457,7 +456,6 @@ https://cdnrss.starlinkclash.ggff.net/s/fcfe598c4b5c77822b72a22ab377915b
 https://cedb4ccc-89b7-3a24-962c-ea8f65b11deb.aliyunsub.com/link/3kjWSxNGuWbqnUHP?sub=3&amp;extend=1
 https://cf-workers-sub-691.pages.dev/r7td8tt88yy8gi
 https://cf-workers-sub-9s8.pages.dev/CSDN
-https://cf.ghproxy.cc/https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 https://cf.hughhad.us.kg/sub/89b3cbba-e6ac-485a-9481-976a0415eab9
 https://cfxr.eu.org/autoconvert
 https://cfxr.eu.org/autoconvert?target=clash
@@ -543,8 +541,6 @@ https://exportcomments.com/
 https://faly8rzti.prosubnet02.eu:8443/api/v1/client/6f58467b2712daad532abff5d5a8aac0
 https://fast.o00o.ooo/ooo
 https://fast.yt/sub/353bfbe55b9e9b33/clash
-https://fastly.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
-https://fastly.jsdelivr.net/gh/dongchengjie/airport@main/subs/merged/tested_within.yaml
 https://fastraw.ixnic.net/anaer/Sub/main/clash.yaml
 https://fbapiv2.fbsublink.com/flydsubal/oz9aa3eflzapwvsy?sub=2&amp;extend=1
 https://fd.oxox.pp.ua/hajimi/d241a06ef687c4cde020bfe8388eec04#
@@ -636,7 +632,6 @@ https://fuqing.ch/subscribe/rmbmzk-afcevakl
 https://gbshct.spphhnhg.top/link/JLHEEE50yZqSOLhNC8nyvaeLLtJW4Ec4?sub=3&amp;extend=1
 https://gbshct.spphhnhg.top/link/YxqEJ4l3MSAYEmU4e1nqCGyQnLC9u6Dv?sub=3&amp;extend=1
 https://gbshct.spphhnhg.top/link/lIgMcMSUd6HLrYoSHOIaLN6AQwv8ug6e?sub=3&amp;extend=1
-https://gcore.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
 https://get.dalao.ws/s/6c809423861d54fffe51e61cbfe374f0
 https://getafreenode.com/subscribe/?uuid=5af5e263-f03e-4329-a4c5-9aac626efdc2
 https://gfdlaw9.xiaoliyu.xyz:8443/api/v1/client/2ffe6c21898d497cdbd08492e24d921a
@@ -646,19 +641,14 @@ https://gh-proxy.com/raw.githubusercontent.com/ssrsub/ssr/master/Clash.yaml
 https://gh-proxy.com/raw.githubusercontent.com/ssrsub/ssr/master/V2Ray
 https://gh-proxy.com/raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
 https://gh-proxy.com/raw.githubusercontent.com/ssrsub/ssr/master/v2ray
-https://ghfast.top/https://raw.githubusercontent.com/sadietarasa/VOF-OvercomingGFW/refs/heads/main/Here2new/11.1.yml
 https://ghostcc.cc/ss.cn/cn.ovg
 https://ghostcc.cc/ss.cn/gu11ouy.ss
 https://ghostcc.cc/ss.cn/ovs7.net
 https://ghostcc.cc/ss.cn/txy.xyz
-https://ghproxy.com/https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
-https://ghproxy.com/https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub
 https://ghproxy.com/raw.githubusercontent.com/Lewis-1217/FreeNodes/main/bpjzx1
 https://ghproxy.com/raw.githubusercontent.com/Lewis-1217/FreeNodes/main/bpjzx2
-https://ghproxy.net/https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 https://git.io/emzclash
 https://git.io/emzv2ray
-https://github.moeyy.xyz/https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 https://go-79m.pages.dev/zhao
 https://golden57.qjty.buzz/api/v2/user/token/4411a1d4c77f94d216ff9aa108cbc822
 https://gougou.myyfqh.tech/gogo/01931e34a7ddcd928489d270735e5c7c
@@ -1081,7 +1071,6 @@ https://mihu.sorry.ip-ddns.com/6oFtgiYFBA77zDwFRA4b
 https://miku.mikuru.ip-ddns.com/nYMU6Xk61WsKCCXF941K
 https://miku.onl/zh
 https://mikuyo.bpd67081tsq.ddns-ip.net/xe3K5Bi0FsU2VxAb5aXi
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 https://misub-eld.pages.dev/EAyLzvCbnJRZEPrzEhrTdeoFRZeBcHvzAuTlviiMbRm/Boringdad123
 https://misub.nbee.pp.ua/wltpladlw/sub
 https://mm.mibei77.com/202505/05.0664baqhl.txt
