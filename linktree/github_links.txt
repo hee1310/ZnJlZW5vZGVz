@@ -25,13 +25,6 @@ https://cdn.jsdelivr.net/gh/Argh94/V2RayAutoConfig@main/configs/Germany.txt
 https://cdn.jsdelivr.net/gh/Argh94/V2RayAutoConfig@main/configs/Hysteria2.txt
 https://cdn.jsdelivr.net/gh/Argh94/V2RayAutoConfig@main/configs/Vmess.txt
 https://cdn.jsdelivr.net/gh/Ashkan-m/v2ray@main/Sub.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/10.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/12.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/16.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/18.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/26.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/4.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/7.txt
 https://cdn.jsdelivr.net/gh/AzadNetCH/Clash@main/AzadNet.txt
 https://cdn.jsdelivr.net/gh/AzadNetCH/Clash@main/AzadNet_iOS.txt
 https://cdn.jsdelivr.net/gh/BUTUbird/ClashPoint@main/application.yaml
