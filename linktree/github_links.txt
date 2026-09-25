@@ -50,6 +50,7 @@ https://cdn.jsdelivr.net/gh/Created-By/Telegram-Eag1e_YT@main/@Eag1e_YT
 https://cdn.jsdelivr.net/gh/Creativveb/v2configs@main/updated
 https://cdn.jsdelivr.net/gh/Danialsamadi/v2go@main/AllConfigsSub.txt
 https://cdn.jsdelivr.net/gh/Danialsamadi/v2go@main/Splitted-By-Protocol/ss.txt
+https://cdn.jsdelivr.net/gh/Danialsamadi/v2go@main/Splitted-By-Protocol/ssr.txt
 https://cdn.jsdelivr.net/gh/Danialsamadi/v2go@main/Splitted-By-Protocol/trojan.txt
 https://cdn.jsdelivr.net/gh/Danialsamadi/v2go@main/Splitted-By-Protocol/vless.txt
 https://cdn.jsdelivr.net/gh/DarknessShade/Sub@main/Ss
