@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edge Storage Console · HK-01 (Demo)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+
+      /* Theme variables (default dark) */
+      --bg1: #0f172a;
+      --bg2: #020617;
+      --panel: rgba(15,23,42,0.92);
+      --panel2: rgba(15,23,42,0.8);
+      --border: rgba(148,163,184,0.2);
+      --border2: rgba(148,163,184,0.32);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --muted2: #6b7280;
+      --shadow: rgba(15,23,42,0.7);
+      --accent1: #2563eb;
+      --accent2: #0ea5e9;
+      --ok: #22c55e;
+      --warn: #eab308;
+      --err: #ef4444;
+    }
+
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg1: #f1f5f9;
+      --bg2: #e2e8f0;
+      --panel: rgba(255,255,255,0.88);
+      --panel2: rgba(255,255,255,0.75);
+      --border: rgba(15,23,42,0.16);
+      --border2: rgba(15,23,42,0.12);
+      --text: #0b1220;
+      --muted: rgba(15,23,42,0.65);
+      --muted2: rgba(15,23,42,0.5);
+      --shadow: rgba(15,23,42,0.12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top left, var(--bg1) 0, var(--bg2) 40%);
+      color: var(--text);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      border-right: 1px solid color-mix(in srgb, var(--border) 90%, transparent);
+      padding: 18px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 6px 10px;
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 90%, transparent);
+    }
+    .brand-icon {
+      width: 26px; height: 26px; border-radius: 8px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #1d4ed8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      color: white;
+    }
+    .brand-text { display: flex; flex-direction: column; gap: 2px; }
+    .brand-name { font-size: 14px; font-weight: 650; }
+    .brand-sub { font-size: 11px; color: var(--muted); }
+    .menu { margin-top: 6px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+    .menu-section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted2);
+      margin: 8px 4px 2px;
+    }
+    .menu-item {
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .menu-item:hover { background: color-mix(in srgb, var(--border) 25%, transparent); }
+    .menu-item.active {
+      background: linear-gradient(90deg, color-mix(in srgb, var(--accent1) 35%, transparent), color-mix(in srgb, var(--accent2) 22%, transparent));
+      color: var(--text);
+    }
+    .menu-item span:first-child { display: flex; align-items: center; gap: 8px; }
+    .menu-item .badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--panel2) 80%, transparent);
+      border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+      color: var(--text);
+    }
+    .sidebar-footer {
+      margin-top: auto;
+      font-size: 11px;
+      color: var(--muted2);
+      border-top: 1px solid color-mix(in srgb, var(--border) 90%, transparent);
+      padding-top: 8px;
+    }
+    .sidebar-footer strong { color: var(--text); }
+
+    /* Main */
+    .main {
+      padding: 14px 22px 22px;
+      background: radial-gradient(circle at top center, color-mix(in srgb, var(--accent1) 16%, transparent), transparent 55%);
+      min-width: 0;
+    }
+
+    /* Top bar */
+    .top-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .top-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .top-title { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .top-title-main { font-size: 18px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .top-title-sub { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .top-right { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); flex-wrap: wrap; justify-content: flex-end; }
+    .top-right-time { font-variant-numeric: tabular-nums; min-width: 175px; text-align: right; }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: color-mix(in srgb, var(--panel2) 85%, transparent);
+      white-space: nowrap;
+      color: var(--text);
+    }
+    .pill-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 25%, transparent); }
+
+    /* Buttons / inputs */
+    .btn {
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+      background: color-mix(in srgb, var(--panel2) 85%, transparent);
+      color: var(--text);
+      font-size: 12px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform .05s ease, opacity .2s ease;
+      touch-action: manipulation;
+    }
+    .btn-primary {
+      border-color: color-mix(in srgb, var(--accent1) 70%, transparent);
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      color: white;
+    }
+    .btn-ghost {
+      background: transparent;
+      border-color: color-mix(in srgb, var(--border) 55%, transparent);
+    }
+    .btn:active { transform: translateY(0.5px); }
+    .btn[disabled] { opacity: .55; cursor: not-allowed; }
+
+    .input {
+      border-radius: 10px;
+      border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+      background: color-mix(in srgb, var(--panel2) 85%, transparent);
+      color: var(--text);
+      font-size: 13px;
+      padding: 10px 10px;
+      min-width: 0;
+      outline: none;
+    }
+    .input:focus {
+      border-color: color-mix(in srgb, var(--accent2) 75%, transparent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent2) 20%, transparent);
+    }
+    .select {
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+      background: color-mix(in srgb, var(--panel2) 85%, transparent);
+      color: var(--text);
+      font-size: 12px;
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+
+    /* Grid + cards */
+    .grid { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(290px, 1.2fr); gap: 16px; }
+    .card {
+      background: var(--panel);
+      border-radius: 14px;
+      border: 1px solid color-mix(in srgb, var(--border) 90%, transparent);
+      box-shadow: 0 18px 45px var(--shadow);
+      padding: 14px 16px 12px;
+      min-width: 0;
+    }
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+    .card-title { font-size: 13px; font-weight: 600; }
+    .card-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .card-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .right-section { display: flex; flex-direction: column; gap: 12px; }
+
+    /* Stats */
+    .stats-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 10px; }
+    .stat-block {
+      padding: 10px 10px;
+      border-radius: 12px;
+      background: radial-gradient(circle at top left, color-mix(in srgb, var(--accent1) 18%, transparent), color-mix(in srgb, var(--panel) 92%, transparent));
+      border: 1px solid color-mix(in srgb, var(--border2) 95%, transparent);
+      min-width: 0;
+    }
+    .stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 3px; }
+    .stat-value { font-size: 18px; font-weight: 700; }
+    .stat-extra { font-size: 11px; color: var(--muted); }
+    .bar { margin-top: 6px; height: 6px; border-radius: 999px; background: color-mix(in srgb, var(--bg2) 60%, transparent); overflow: hidden; }
+    .bar-fill { height: 100%; background-image: linear-gradient(90deg, var(--ok), var(--warn)); }
+
+    /* Table */
+    .table-toolbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 10px 0 10px;
+    }
+    .table-toolbar-left { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .table-toolbar-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+    .table-wrapper {
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--panel2) 90%, transparent);
+      border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 720px; }
+    thead { background: color-mix(in srgb, var(--panel) 95%, transparent); position: sticky; top: 0; }
+    th, td { padding: 10px 10px; text-align: left; vertical-align: middle; }
+    th { font-weight: 600; color: var(--muted); border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent); }
+    tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--panel2) 72%, transparent); }
+    tbody tr:nth-child(even) { background: color-mix(in srgb, var(--panel2) 88%, transparent); }
+
+    .file-name { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .file-main { display: flex; align-items: center; gap: 6px; min-width: 0; }
+    .file-main .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file-tag { font-size: 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--border) 70%, transparent); padding: 1px 6px; color: var(--muted); flex: 0 0 auto; }
+    .file-desc { font-size: 10px; color: var(--muted2); }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .pager {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .page-info { font-size: 12px; color: var(--muted); }
+
+    /* KV */
+    .kv-row { display: flex; flex-direction: column; gap: 4px; font-size: 12px; }
+    .kv-row span:first-child { color: var(--muted); }
+    .divider { border-top: 1px dashed color-mix(in srgb, var(--border) 75%, transparent); margin: 10px 0; }
+
+    /* Login box */
+    .login-box {
+      margin-top: 4px;
+      padding: 12px 12px 10px;
+      border-radius: 12px;
+      background: radial-gradient(circle at top left, color-mix(in srgb, var(--accent1) 18%, transparent), color-mix(in srgb, var(--panel) 96%, transparent));
+      border: 1px solid color-mix(in srgb, var(--accent1) 55%, transparent);
+      font-size: 12px;
+    }
+    .login-inputs {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+    }
+    .login-muted { margin-top: 6px; font-size: 11px; color: var(--muted); }
+
+    /* Logs */
+    .log-box {
+      height: 220px;
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+      background: color-mix(in srgb, var(--panel2) 92%, transparent);
+      overflow: auto;
+      padding: 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      -webkit-overflow-scrolling: touch;
+    }
+    .log-line { color: var(--text); opacity: .92; }
+    .log-line .t { color: var(--muted); margin-right: 8px; }
+    .log-line .lvl { display: inline-block; width: 52px; }
+    .lvl.ok { color: var(--ok); }
+    .lvl.warn { color: var(--warn); }
+    .lvl.err { color: var(--err); }
+
+    .footer { margin-top: 10px; font-size: 11px; color: var(--muted2); text-align: right; }
+
+    /* Mobile drawer */
+    .hamburger {
+      display: none;
+      border-radius: 10px;
+      padding: 8px 10px;
+      line-height: 1;
+    }
+    .drawer-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.45);
+      opacity: 0; pointer-events: none;
+      transition: opacity .2s ease;
+      z-index: 40;
+    }
+    .drawer {
+      position: fixed;
+      top: 0; left: 0; height: 100%;
+      width: 86vw; max-width: 320px;
+      transform: translateX(-105%);
+      transition: transform .2s ease;
+      z-index: 50;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+
+    /* Notification center drawer (right) */
+    .notify-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.45);
+      opacity: 0; pointer-events: none;
+      transition: opacity .2s ease;
+      z-index: 60;
+    }
+    .notify-drawer {
+      position: fixed;
+      top: 0; right: 0; height: 100%;
+      width: min(420px, 92vw);
+      transform: translateX(105%);
+      transition: transform .2s ease;
+      z-index: 70;
+      background: var(--panel);
+      border-left: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+      box-shadow: -18px 0 45px var(--shadow);
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .notify-backdrop.open { opacity: 1; pointer-events: auto; }
+    .notify-drawer.open { transform: translateX(0); }
+
+    .notify-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .notify-title { font-size: 14px; font-weight: 700; }
+    .notify-list {
+      flex: 1 1 auto;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-right: 4px;
+    }
+    .notify-item {
+      border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--panel2) 92%, transparent);
+      padding: 10px 10px;
+      font-size: 12px;
+    }
+    .notify-item.unread { border-color: color-mix(in srgb, var(--accent2) 55%, transparent); }
+    .notify-item .meta { color: var(--muted); font-size: 11px; margin-top: 4px; display: flex; justify-content: space-between; gap: 8px; }
+
+    .icon-btn {
+      position: relative;
+      border-radius: 999px;
+      padding: 8px 10px;
+    }
+    .unread-badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      border-radius: 999px;
+      background: var(--err);
+      color: white;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid color-mix(in srgb, var(--panel) 100%, transparent);
+    }
+
+    /* Toast */
+    .toast-wrap {
+      position: fixed;
+      bottom: 14px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+      width: min(560px, calc(100vw - 24px));
+    }
+    .toast {
+      border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 18px 45px var(--shadow);
+      font-size: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .toast strong { font-weight: 750; }
+    .toast small { color: var(--muted); display: block; margin-top: 2px; }
+    .toast .dot {
+      width: 10px; height: 10px; border-radius: 999px;
+      margin-top: 3px;
+      background: var(--ok);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 22%, transparent);
+      flex: 0 0 auto;
+    }
+    .toast.warn .dot { background: var(--warn); box-shadow: 0 0 0 4px color-mix(in srgb, var(--warn) 22%, transparent); }
+    .toast.err .dot  { background: var(--err);  box-shadow: 0 0 0 4px color-mix(in srgb, var(--err)  22%, transparent); }
+
+    /* Responsive */
+    @media (max-width: 880px) {
+      .layout { grid-template-columns: minmax(0, 1fr); }
+      .sidebar.desktop { display: none; }
+      .hamburger { display: inline-flex; }
+      .top-right-time { min-width: auto; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .main { padding: 12px 12px 18px; }
+      .stats-row { grid-template-columns: 1fr; }
+      .login-inputs { grid-template-columns: 1fr; }
+      .card-actions { justify-content: flex-start; }
+      .top-right { justify-content: flex-end; }
+      .top-right-time { text-align: left; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Mobile nav drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="sidebar drawer" id="drawer" aria-label="Navigation drawer">
+    <div class="brand">
+      <div class="brand-icon">?</div>
+      <div class="brand-text">
+        <div class="brand-name">Edge Storage</div>
+        <div class="brand-sub" data-i18n="brandSub">Node HK-01 · demo mode</div>
+      </div>
+    </div>
+
+    <div class="menu" id="menu-mobile">
+      <div class="menu-section-title" data-i18n="menuOverview">Overview</div>
+      <div class="menu-item active" data-nav="dashboard">
+        <span><span>●</span> <span data-i18n="navDashboard">Dashboard</span></span><span class="badge">LIVE</span>
+      </div>
+      <div class="menu-item" data-nav="volumes"><span><span>?</span> <span data-i18n="navVolumes">Volumes</span></span></div>
+      <div class="menu-item" data-nav="logs"><span><span>?</span> <span data-i18n="navLogs">Logs</span></span></div>
+
+      <div class="menu-section-title" data-i18n="menuNode">Node</div>
+      <div class="menu-item" data-nav="interfaces"><span><span>?</span> <span data-i18n="navInterfaces">Interfaces</span></span></div>
+      <div class="menu-item" data-nav="maintenance"><span><span>?</span> <span data-i18n="navMaintenance">Maintenance</span></span></div>
+    </div>
+
+    <div class="sidebar-footer">
+      <span data-i18n="connectedAs">Connected as</span> <strong>guest</strong><br />
+      <span data-i18n="uptime">Node uptime</span>: <span id="uptime-text">–</span>
+    </div>
+  </aside>
+
+  <!-- Notifications drawer -->
+  <div class="notify-backdrop" id="notify-backdrop" aria-hidden="true"></div>
+  <aside class="notify-drawer" id="notify-drawer" aria-label="Notification center">
+    <div class="notify-header">
+      <div class="notify-title" data-i18n="notifyTitle">Notification Center</div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button class="btn btn-ghost" id="btn-mark-all" type="button" data-i18n="markAll">Mark all read</button>
+        <button class="btn" id="btn-close-notify" type="button" aria-label="Close">?</button>
+      </div>
+    </div>
+
+    <div class="notify-list" id="notify-list"></div>
+
+    <div style="display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap;">
+      <button class="btn btn-ghost" id="btn-clear-notify" type="button" data-i18n="clearAll">Clear all</button>
+      <button class="btn btn-primary" id="btn-add-notify" type="button" data-i18n="addTestNotify">Add test</button>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <!-- Desktop sidebar -->
+    <aside class="sidebar desktop" aria-label="Sidebar navigation">
+      <div class="brand">
+        <div class="brand-icon">?</div>
+        <div class="brand-text">
+          <div class="brand-name">Edge Storage</div>
+          <div class="brand-sub" data-i18n="brandSub">Node HK-01 · demo mode</div>
+        </div>
+      </div>
+
+      <div class="menu" id="menu-desktop">
+        <div class="menu-section-title" data-i18n="menuOverview">Overview</div>
+        <div class="menu-item active" data-nav="dashboard">
+          <span><span>●</span> <span data-i18n="navDashboard">Dashboard</span></span><span class="badge">LIVE</span>
+        </div>
+        <div class="menu-item" data-nav="volumes"><span><span>?</span> <span data-i18n="navVolumes">Volumes</span></span></div>
+        <div class="menu-item" data-nav="logs"><span><span>?</span> <span data-i18n="navLogs">Logs</span></span></div>
+
+        <div class="menu-section-title" data-i18n="menuNode">Node</div>
+        <div class="menu-item" data-nav="interfaces"><span><span>?</span> <span data-i18n="navInterfaces">Interfaces</span></span></div>
+        <div class="menu-item" data-nav="maintenance"><span><span>?</span> <span data-i18n="navMaintenance">Maintenance</span></span></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span data-i18n="connectedAs">Connected as</span> <strong>guest</strong><br />
+        <span data-i18n="uptime">Node uptime</span>: <span id="uptime-text-desktop">–</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="top-bar">
+        <div class="top-left">
+          <button class="btn hamburger" id="hamburger" type="button" aria-label="Open menu">?</button>
+          <div class="top-title">
+            <div class="top-title-main" data-i18n="topTitle">Node status · HK-01</div>
+            <div class="top-title-sub" data-i18n="topSub"></div>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span data-i18n="online">Online</span>
+            <span>· TLS 1.3</span>
+          </div>
+
+          <!-- Notification bell -->
+          <button class="btn icon-btn" id="btn-notify" type="button" aria-label="Notifications">
+            ?? <span data-i18n="notifyBtn">Notifications</span>
+            <span class="unread-badge" id="unread-badge" style="display:none;">0</span>
+          </button>
+
+          <!-- Theme toggle -->
+          <button class="btn" id="btn-theme" type="button">?? <span data-i18n="theme">Theme</span></button>
+
+          <!-- Lang select -->
+          <select class="select" id="lang-select" aria-label="Language">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+
+          <div class="top-right-time" id="header-time">--</div>
+        </div>
+      </header>
+
+      <section class="grid">
+        <!-- Left: main -->
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title" data-i18n="storageTitle">Storage & throughput</div>
+              <div class="card-sub" data-i18n="storageSub"></div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="btn-check" type="button">? <span data-i18n="checkUpdates">Check updates</span></button>
+              <button class="btn" id="btn-restart" type="button">? <span data-i18n="restartNode">Restart node</span></button>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-block">
+              <div class="stat-label" data-i18n="capacity">Capacity</div>
+              <div class="stat-value">2.4 TB</div>
+              <div class="stat-extra">Pool: storage-main</div>
+            </div>
+
+            <div class="stat-block">
+              <div class="stat-label" data-i18n="used">Used</div>
+              <div class="stat-value" id="used-val">842 GB</div>
+              <div class="bar"><div class="bar-fill" id="used-bar" style="width:35%"></div></div>
+              <div class="stat-extra" id="used-extra">34.9% of pool</div>
+            </div>
+
+            <div class="stat-block">
+              <div class="stat-label" data-i18n="traffic">Traffic (5 min)</div>
+              <div class="stat-value" id="traffic-val">121 Mbps</div>
+              <div class="stat-extra" data-i18n="trafficSub">Read / write mixed</div>
+            </div>
+          </div>
+
+          <!-- Table toolbar -->
+          <div class="table-toolbar">
+            <div class="table-toolbar-left">
+              <input class="input" id="search-input" type="search" placeholder="Search files…" />
+              <select class="select" id="page-size">
+                <option value="4">4 / page</option>
+                <option value="6" selected>6 / page</option>
+                <option value="10">10 / page</option>
+              </select>
+            </div>
+            <div class="table-toolbar-right">
+              <button class="btn btn-ghost" id="btn-reset-filter" type="button" data-i18n="reset">Reset</button>
+            </div>
+          </div>
+
+          <div class="table-wrapper" aria-label="Files table">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="thFile">File / volume</th>
+                  <th data-i18n="thActivity">Last activity</th>
+                  <th data-i18n="thSize">Size</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="file-tbody"></tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <div class="page-info" id="page-info">—</div>
+            <div class="pager">
+              <button class="btn btn-ghost" id="btn-prev" type="button" data-i18n="prev">Prev</button>
+              <button class="btn btn-ghost" id="btn-next" type="button" data-i18n="next">Next</button>
+            </div>
+          </div>
+
+          <div class="footer" data-i18n="demoFooter">
+            Demo UI only. Actions are simulated and do not control any real device.
+          </div>
+        </section>
+
+        <!-- Right: panels -->
+        <aside class="right-section">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title" data-i18n="nodeDetails">Node details</div>
+                <div class="card-sub" data-i18n="readOnly">Read-only · guest session</div>
+              </div>
+            </div>
+
+            <div class="kv-row"><span data-i18n="hostname">Hostname</span><span>edge-hk01.lan</span></div>
+            <div class="kv-row"><span data-i18n="system">System</span><span>Linux 6.6 · x86_64</span></div>
+            <div class="kv-row"><span data-i18n="lastReboot">Last reboot</span><span>2025-12-31 03:17 (scheduled)</span></div>
+
+            <div class="divider"></div>
+
+            <div class="kv-row"><span data-i18n="primaryIf">Primary interface</span><span>eth0 · 1 Gbps · DHCP</span></div>
+            <div class="kv-row"><span data-i18n="mode">Endpoint mode</span><span>Private / LAN first · WAN relay</span></div>
+
+            <div class="divider"></div>
+
+            <div class="login-box">
+              <strong data-i18n="localSignin">Local sign-in (Demo)</strong><br />
+              <span data-i18n="localSigninSub">This is a UI demo. No credentials are sent anywhere.</span>
+
+              <div class="login-inputs">
+                <input class="input" id="username" type="text" autocomplete="username" placeholder="Username" />
+                <input class="input" id="password" type="password" autocomplete="current-password" placeholder="Password" />
+                <button class="btn btn-primary" id="btn-signin" type="button">→ <span data-i18n="signin">Sign in</span></button>
+              </div>
+
+              <div class="login-muted" data-i18n="signinHint">
+                Tip: demo accepts any non-empty username and password length ≥ 4.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title" data-i18n="health">Health summary</div>
+                <div class="card-sub" data-i18n="healthSub">Synthetic check · informational only</div>
+              </div>
+            </div>
+            <div class="kv-row"><span data-i18n="disks">Disks</span><span id="disk-health">2 / 2 OK · SMART: good</span></div>
+            <div class="kv-row"><span data-i18n="services">Services</span><span>File service, snapshot, metrics</span></div>
+            <div class="kv-row"><span data-i18n="alerts">Alerts</span><span id="alerts">None in the last 24 hours</span></div>
+          </div>
+
+          <!-- Event log panel -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title" data-i18n="eventLog">Event log</div>
+                <div class="card-sub" data-i18n="eventLogSub">Streaming · auto-scroll · demo feed</div>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-ghost" id="btn-log-pause" type="button" data-i18n="pause">Pause</button>
+                <button class="btn btn-ghost" id="btn-log-clear" type="button" data-i18n="clear">Clear</button>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:10px; margin-bottom:10px; flex-wrap:wrap;">
+              <input class="input" id="log-input" type="text" placeholder="Type a log line…" style="flex:1 1 220px;" />
+              <button class="btn" id="btn-log-add" type="button">＋ <span data-i18n="add">Add</span></button>
+            </div>
+
+            <div class="log-box" id="log-box" aria-label="Event log output"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast-wrap" id="toast-wrap" aria-live="polite" aria-relevant="additions"></div>
+
+  <script>
+    /* --------------------------
+      i18n
+    --------------------------- */
+    const I18N = {
+      zh: {
+        brandSub: "Node HK-01 · 模式",
+        menuOverview: "概览",
+        menuNode: "节点",
+        navDashboard: "仪表盘",
+        navVolumes: "卷",
+        navLogs: "日志",
+        navInterfaces: "网卡",
+        navMaintenance: "维护",
+
+        connectedAs: "当前用户",
+        uptime: "运行时长",
+
+        topTitle: "节点状态 · HK-01",
+        topSub: "",
+        online: "在线",
+        notifyBtn: "通知",
+        theme: "主题",
+
+        storageTitle: "存储与吞吐",
+        storageSub: "",
+        checkUpdates: "检查更新",
+        restartNode: "重启节点",
+
+        capacity: "容量",
+        used: "已用",
+        traffic: "流量（5分钟）",
+        trafficSub: "读 / 写混合",
+
+        thFile: "文件 / 卷",
+        thActivity: "最近活动",
+        thSize: "大小",
+        reset: "重置",
+        prev: "上一页",
+        next: "下一页",
+        demoFooter: "仅 UI。所有动作都为模拟，不控制任何真实设备。",
+
+        nodeDetails: "节点信息",
+        readOnly: "只读 · 访客会话",
+        hostname: "主机名",
+        system: "系统",
+        lastReboot: "最近重启",
+        primaryIf: "主网卡",
+        mode: "模式",
+
+        localSignin: "本地登录（）",
+        localSigninSub: "。",
+        signin: "登录",
+        signinHint: "提示：接受任意非空用户名，且密码长度 ≥ 4。",
+
+        health: "健康概览",
+        healthSub: "合成检测 · 仅供参考",
+        disks: "磁盘",
+        services: "服务",
+        alerts: "告警",
+
+        eventLog: "事件日志",
+        eventLogSub: "流式新增 · 自动滚动 · 数据",
+        pause: "暂停",
+        clear: "清空",
+        add: "添加",
+
+        notifyTitle: "通知中心",
+        markAll: "全部已读",
+        clearAll: "清空通知",
+        addTestNotify: "添加测试",
+      },
+      en: {
+        brandSub: "Node HK-01 · demo mode",
+        menuOverview: "Overview",
+        menuNode: "Node",
+        navDashboard: "Dashboard",
+        navVolumes: "Volumes",
+        navLogs: "Logs",
+        navInterfaces: "Interfaces",
+        navMaintenance: "Maintenance",
+
+        connectedAs: "Connected as",
+        uptime: "Node uptime",
+
+        topTitle: "Node status · HK-01",
+        topSub: "",
+        online: "Online",
+        notifyBtn: "Notifications",
+        theme: "Theme",
+
+        storageTitle: "Storage & throughput",
+        storageSub: "",
+        checkUpdates: "Check updates",
+        restartNode: "Restart node",
+
+        capacity: "Capacity",
+        used: "Used",
+        traffic: "Traffic (5 min)",
+        trafficSub: "Read / write mixed",
+
+        thFile: "File / volume",
+        thActivity: "Last activity",
+        thSize: "Size",
+        reset: "Reset",
+        prev: "Prev",
+        next: "Next",
+        demoFooter: "Demo UI only. Actions are simulated and do not control any real device.",
+
+        nodeDetails: "Node details",
+        readOnly: "Read-only · guest session",
+        hostname: "Hostname",
+        system: "System",
+        lastReboot: "Last reboot",
+        primaryIf: "Primary interface",
+        mode: "Endpoint mode",
+
+        localSignin: "Local sign-in (Demo)",
+        localSigninSub: "UI demo. No credentials are sent anywhere.",
+        signin: "Sign in",
+        signinHint: "Tip: demo accepts any non-empty username and password length ≥ 4.",
+
+        health: "Health summary",
+        healthSub: "Synthetic check · informational only",
+        disks: "Disks",
+        services: "Services",
+        alerts: "Alerts",
+
+        eventLog: "Event log",
+        eventLogSub: "Streaming · auto-scroll · demo feed",
+        pause: "Pause",
+        clear: "Clear",
+        add: "Add",
+
+        notifyTitle: "Notification Center",
+        markAll: "Mark all read",
+        clearAll: "Clear all",
+        addTestNotify: "Add test",
+      }
+    };
+
+    function setLang(lang) {
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "zh") ? "zh-CN" : "en";
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
+      });
+
+      // Update placeholders
+      const search = document.getElementById("search-input");
+      const logInput = document.getElementById("log-input");
+      const u = document.getElementById("username");
+      const p = document.getElementById("password");
+      if (lang === "zh") {
+        search.placeholder = "搜索文件…";
+        logInput.placeholder = "输入一条日志…";
+        u.placeholder = "用户名";
+        p.placeholder = "密码";
+      } else {
+        search.placeholder = "Search files…";
+        logInput.placeholder = "Type a log line…";
+        u.placeholder = "Username";
+        p.placeholder = "Password";
+      }
+
+      renderTable();
+      updatePageInfo();
+    }
+
+    /* --------------------------
+      Toast
+    --------------------------- */
+    function toast(title, detail, type = "ok", ms = 2200) {
+      const wrap = document.getElementById("toast-wrap");
+      const el = document.createElement("div");
+      el.className = "toast" + (type === "warn" ? " warn" : type === "err" ? " err" : "");
+      el.innerHTML = `
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <strong>${escapeHtml(title)}</strong>
+          <small>${escapeHtml(detail || "")}</small>
+        </div>
+      `;
+      wrap.appendChild(el);
+      setTimeout(() => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(6px)";
+        el.style.transition = "opacity .2s ease, transform .2s ease";
+        setTimeout(() => el.remove(), 220);
+      }, ms);
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+      }[c]));
+    }
+
+    /* --------------------------
+      Mobile drawer
+    --------------------------- */
+    const drawer = document.getElementById("drawer");
+    const backdrop = document.getElementById("drawer-backdrop");
+    const hamburger = document.getElementById("hamburger");
+
+    function openDrawer() {
+      drawer.classList.add("open");
+      backdrop.classList.add("open");
+      backdrop.setAttribute("aria-hidden", "false");
+    }
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      backdrop.classList.remove("open");
+      backdrop.setAttribute("aria-hidden", "true");
+    }
+    hamburger?.addEventListener("click", openDrawer);
+    backdrop?.addEventListener("click", closeDrawer);
+
+    /* --------------------------
+      Notification center
+    --------------------------- */
+    const notifyBackdrop = document.getElementById("notify-backdrop");
+    const notifyDrawer = document.getElementById("notify-drawer");
+    const notifyList = document.getElementById("notify-list");
+    const unreadBadge = document.getElementById("unread-badge");
+
+    let notifications = []; // {id, title, body, time, unread}
+
+    function openNotify() {
+      notifyBackdrop.classList.add("open");
+      notifyDrawer.classList.add("open");
+      notifyBackdrop.setAttribute("aria-hidden", "false");
+    }
+    function closeNotify() {
+      notifyBackdrop.classList.remove("open");
+      notifyDrawer.classList.remove("open");
+      notifyBackdrop.setAttribute("aria-hidden", "true");
+    }
+    document.getElementById("btn-notify")?.addEventListener("click", openNotify);
+    document.getElementById("btn-close-notify")?.addEventListener("click", closeNotify);
+    notifyBackdrop?.addEventListener("click", closeNotify);
+
+    function updateUnreadBadge() {
+      const unread = notifications.filter(n => n.unread).length;
+      if (unread > 0) {
+        unreadBadge.style.display = "inline-flex";
+        unreadBadge.textContent = String(unread);
+      } else {
+        unreadBadge.style.display = "none";
+      }
+    }
+
+    function renderNotifications() {
+      notifyList.innerHTML = "";
+      if (notifications.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "notify-item";
+        empty.innerHTML = `<strong>—</strong><div class="meta"><span>${escapeHtml(currentLang() === "zh" ? "暂无通知" : "No notifications")}</span><span></span></div>`;
+        notifyList.appendChild(empty);
+        updateUnreadBadge();
+        return;
+      }
+      notifications.slice().reverse().forEach(n => {
+        const item = document.createElement("div");
+        item.className = "notify-item" + (n.unread ? " unread" : "");
+        item.innerHTML = `
+          <div style="display:flex; justify-content:space-between; gap:10px;">
+            <strong>${escapeHtml(n.title)}</strong>
+            <button class="btn btn-ghost" style="padding:6px 10px;" data-mark="${n.id}">
+              ${escapeHtml(currentLang() === "zh" ? (n.unread ? "已读" : "未读") : (n.unread ? "Read" : "Unread"))}
+            </button>
+          </div>
+          <div style="margin-top:6px; color: var(--muted);">${escapeHtml(n.body)}</div>
+          <div class="meta">
+            <span>${escapeHtml(n.time)}</span>
+            <span>${escapeHtml(n.unread ? (currentLang()==="zh"?"未读":"Unread") : (currentLang()==="zh"?"已读":"Read"))}</span>
+          </div>
+        `;
+        item.querySelector("[data-mark]")?.addEventListener("click", () => {
+          n.unread = !n.unread;
+          renderNotifications();
+        });
+        notifyList.appendChild(item);
+      });
+      updateUnreadBadge();
+    }
+
+    function addNotification(title, body, unread = true) {
+      notifications.push({
+        id: cryptoRandomId(),
+        title, body,
+        time: new Date().toLocaleString(),
+        unread
+      });
+      renderNotifications();
+      if (unread) toast(currentLang()==="zh" ? "新通知" : "New notification", title, "ok", 1800);
+    }
+
+    document.getElementById("btn-mark-all")?.addEventListener("click", () => {
+      notifications.forEach(n => n.unread = false);
+      renderNotifications();
+      toast(currentLang()==="zh" ? "已完成" : "Done", currentLang()==="zh" ? "全部标记为已读" : "All marked as read", "ok");
+    });
+
+    document.getElementById("btn-clear-notify")?.addEventListener("click", () => {
+      notifications = [];
+      renderNotifications();
+      toast(currentLang()==="zh" ? "已清空" : "Cleared", currentLang()==="zh" ? "通知已清空" : "Notifications cleared", "warn");
+    });
+
+    document.getElementById("btn-add-notify")?.addEventListener("click", () => {
+      const zh = currentLang() === "zh";
+      const samples = [
+        { t: zh ? "快照完成" : "Snapshot completed", b: zh ? "nightly-snap-01 已写入并校验。" : "nightly-snap-01 written and verified." },
+        { t: zh ? "存储使用率升高" : "Storage usage increased", b: zh ? "已用空间超过 80%（）。" : "Usage crossed 80% (demo)." },
+        { t: zh ? "服务重启已排队" : "Service restart queued", b: zh ? "metrics-agent 将在低负载窗口重启。" : "metrics-agent will restart during low load window." },
+      ];
+      const pick = samples[Math.floor(Math.random()*samples.length)];
+      addNotification(pick.t, pick.b, true);
+    });
+
+    /* --------------------------
+      Theme toggle
+    --------------------------- */
+    function currentTheme() {
+      return document.documentElement.getAttribute("data-theme") || "dark";
+    }
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      toast(currentLang()==="zh" ? "主题" : "Theme", theme === "dark" ? "Dark" : "Light", "ok", 1400);
+    }
+    document.getElementById("btn-theme")?.addEventListener("click", () => {
+      setTheme(currentTheme() === "dark" ? "light" : "dark");
+    });
+
+    /* --------------------------
+      Menu highlight
+    --------------------------- */
+    function bindMenu(menuId) {
+      const menu = document.getElementById(menuId);
+      if (!menu) return;
+      menu.addEventListener("click", (e) => {
+        const item = e.target.closest(".menu-item");
+        if (!item) return;
+        menu.querySelectorAll(".menu-item").forEach(x => x.classList.remove("active"));
+        item.classList.add("active");
+        toast(currentLang()==="zh" ? "导航" : "Navigation",
+              (currentLang()==="zh" ? "切换到：" : "Switched to: ") + item.dataset.nav,
+              "ok", 1400);
+        closeDrawer();
+      });
+    }
+    bindMenu("menu-mobile");
+    bindMenu("menu-desktop");
+
+    /* --------------------------
+      Clock + metrics
+    --------------------------- */
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+    function updateClockAndTraffic() {
+      const now = new Date();
+      const formatted =
+        now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate()) + " " +
+        pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
+
+      const headerTime = document.getElementById("header-time");
+      if (headerTime) headerTime.textContent = formatted;
+
+      // bandwidth jitter
+      const base = 118;
+      const jitter = Math.floor(Math.random() * 10); // 0–9
+      document.getElementById("traffic-val").textContent = (base + jitter) + " Mbps";
+
+      // uptime demo
+      const boot = new Date("2025-12-31T03:17:00Z");
+      const diffSec = Math.max(0, Math.floor((now - boot) / 1000));
+      const days = Math.floor(diffSec / 86400);
+      const hours = Math.floor((diffSec % 86400) / 3600);
+      const mins = Math.floor((diffSec % 3600) / 60);
+      const uptimeStr = days + "d " + pad(hours) + "h " + pad(mins) + "m";
+      const ut = document.getElementById("uptime-text");
+      const utd = document.getElementById("uptime-text-desktop");
+      if (ut) ut.textContent = uptimeStr;
+      if (utd) utd.textContent = uptimeStr;
+
+      // used simulate
+      const usedBase = 842; // GB
+      const usedJitter = (Math.random() * 3 - 1.5);
+      const used = Math.max(0, usedBase + usedJitter);
+      const pct = (used / 2400) * 100;
+      document.getElementById("used-val").textContent = used.toFixed(1) + " GB";
+      document.getElementById("used-extra").textContent = pct.toFixed(1) + "% of pool";
+      document.getElementById("used-bar").style.width = Math.min(100, Math.max(0, pct)).toFixed(1) + "%";
+    }
+    updateClockAndTraffic();
+    setInterval(updateClockAndTraffic, 1000);
+
+    /* --------------------------
+      Files data + filter + pagination
+    --------------------------- */
+    const FILES = [
+      {
+        name: "Ubuntu releases (Demo)",
+        tag: "iso",
+        desc: "Public mirror · official releases",
+        activity: "2026-01-10 23:41",
+        size: "~2–3 GB",
+        actionText: "Download",
+        href: "https://releases.ubuntu.com/",
+        kind: "link"
+      },
+      {
+        name: "Sample videos (Demo)",
+        tag: "media",
+        desc: "Public test files · streaming check",
+        activity: "2026-01-08 18:02",
+        size: "varies",
+        actionText: "Open",
+        href: "https://sample-videos.com/",
+        kind: "link"
+      },
+      {
+        name: "Hetzner test downloads (Demo)",
+        tag: "tools",
+        desc: "Public bandwidth test resources",
+        activity: "2025-12-24 09:17",
+        size: "small–large",
+        actionText: "Download",
+        href: "https://speed.hetzner.de/",
+        kind: "link"
+      },
+      {
+        name: "Encrypted archive (Demo)",
+        tag: "locked",
+        desc: "Simulated · guest cannot unlock",
+        activity: "2025-11-15 01:06",
+        size: "55.0 GB",
+        actionText: "Unlock",
+        href: "",
+        kind: "button"
+      },
+      {
+        name: "Quarterly report export (Demo)",
+        tag: "csv",
+        desc: "Synthetic export for UI demo",
+        activity: "2026-01-07 12:20",
+        size: "18.2 MB",
+        actionText: "Download",
+        href: "https://speed.hetzner.de/100MB.bin",
+        kind: "link"
+      },
+      {
+        name: "Backup catalog (Demo)",
+        tag: "index",
+        desc: "Read-only preview data",
+        activity: "2026-01-06 01:48",
+        size: "3.1 MB",
+        actionText: "Open",
+        href: "https://speed.hetzner.de/1GB.bin",
+        kind: "link"
+      },
+      {
+        name: "Media manifest (Demo)",
+        tag: "json",
+        desc: "Synthetic media manifest file",
+        activity: "2026-01-05 09:10",
+        size: "0.9 MB",
+        actionText: "Open",
+        href: "https://speed.hetzner.de/10MB.bin",
+        kind: "link"
+      }
+    ];
+
+    let page = 1;
+    function pageSize() {
+      return parseInt(document.getElementById("page-size").value, 10);
+    }
+    function currentQuery() {
+      return (document.getElementById("search-input").value || "").trim().toLowerCase();
+    }
+    function filteredFiles() {
+      const q = currentQuery();
+      if (!q) return FILES;
+      return FILES.filter(f =>
+        (f.name + " " + f.tag + " " + f.desc + " " + f.activity + " " + f.size)
+          .toLowerCase()
+          .includes(q)
+      );
+    }
+    function totalPages() {
+      const total = filteredFiles().length;
+      return Math.max(1, Math.ceil(total / pageSize()));
+    }
+    function clampPage() {
+      page = Math.min(Math.max(1, page), totalPages());
+    }
+
+    function renderTable() {
+      clampPage();
+      const lang = currentLang();
+      const tbody = document.getElementById("file-tbody");
+      const list = filteredFiles();
+      const start = (page - 1) * pageSize();
+      const end = start + pageSize();
+      const rows = list.slice(start, end);
+
+      tbody.innerHTML = "";
+      if (rows.length === 0) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td colspan="4" style="padding:16px; color: var(--muted);">
+          ${lang==="zh" ? "没有匹配结果" : "No results found"}
+        </td>`;
+        tbody.appendChild(tr);
+        return;
+      }
+
+      for (const f of rows) {
+        const tr = document.createElement("tr");
+        const actionLabel = (lang==="zh")
+          ? (f.kind === "button" ? "解锁" : (f.actionText === "Open" ? "打开" : "下载"))
+          : f.actionText;
+
+        tr.innerHTML = `
+          <td>
+            <div class="file-name">
+              <div class="file-main">
+                <span class="name">${escapeHtml(f.name)}</span>
+                <span class="file-tag">${escapeHtml(f.tag)}</span>
+              </div>
+              <div class="file-desc">${escapeHtml(f.desc)}</div>
+            </div>
+          </td>
+          <td>${escapeHtml(f.activity)}</td>
+          <td>${escapeHtml(f.size)}</td>
+          <td style="text-align:right; white-space:nowrap;">
+            ${
+              f.kind === "link"
+                ? `<a class="btn" href="${escapeHtml(f.href)}" target="_blank" rel="noopener">${escapeHtml(actionLabel)}</a>`
+                : `<button class="btn" type="button" data-action="unlock">${escapeHtml(actionLabel)}</button>`
+            }
+          </td>
+        `;
+        tr.querySelector('[data-action="unlock"]')?.addEventListener("click", async () => {
+          toast(lang==="zh" ? "解锁" : "Unlock", lang==="zh" ? "访客会话无权限（）" : "Guest has no permission (demo)", "err", 2400);
+          addLog("WARN", lang==="zh" ? "unlock denied: guest session" : "unlock denied: guest session");
+          addNotification(lang==="zh" ? "访问被拒绝" : "Access denied",
+                          lang==="zh" ? "访客尝试解锁受保护归档（已阻止）。" : "Guest attempted to unlock protected archive (blocked).",
+                          true);
+        });
+        tbody.appendChild(tr);
+      }
+    }
+
+    function updatePageInfo() {
+      clampPage();
+      const lang = currentLang();
+      const total = filteredFiles().length;
+      const tp = totalPages();
+      const start = total === 0 ? 0 : (page - 1) * pageSize() + 1;
+      const end = Math.min(total, (page - 1) * pageSize() + pageSize());
+
+      document.getElementById("page-info").textContent =
+        lang === "zh"
+          ? `第 ${page} / ${tp} 页 · 显示 ${start}-${end} / ${total}`
+          : `Page ${page} / ${tp} · Showing ${start}-${end} of ${total}`;
+    }
+
+    document.getElementById("search-input").addEventListener("input", () => {
+      page = 1;
+      renderTable(); updatePageInfo();
+    });
+    document.getElementById("page-size").addEventListener("change", () => {
+      page = 1;
+      renderTable(); updatePageInfo();
+    });
+    document.getElementById("btn-prev").addEventListener("click", () => {
+      page--; renderTable(); updatePageInfo();
+    });
+    document.getElementById("btn-next").addEventListener("click", () => {
+      page++; renderTable(); updatePageInfo();
+    });
+    document.getElementById("btn-reset-filter").addEventListener("click", () => {
+      document.getElementById("search-input").value = "";
+      page = 1;
+      renderTable(); updatePageInfo();
+      toast(currentLang()==="zh" ? "已重置" : "Reset", currentLang()==="zh" ? "已清空过滤条件" : "Filters cleared", "ok", 1400);
+    });
+
+    /* --------------------------
+      Buttons simulate
+    --------------------------- */
+    function withLoading(btn, task) {
+      const old = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = (currentLang()==="zh" ? "处理中…" : "Working…");
+      return Promise.resolve()
+        .then(task)
+        .finally(() => {
+          btn.disabled = false;
+          btn.innerHTML = old;
+        });
+    }
+
+    document.getElementById("btn-check").addEventListener("click", (e) => {
+      const btn = e.currentTarget;
+      withLoading(btn, async () => {
+        toast(currentLang()==="zh" ? "检查更新" : "Update check",
+              currentLang()==="zh" ? "正在联系更新服务器（）…" : "Contacting update server (demo)…",
+              "warn", 1200);
+        addLog("INFO", currentLang()==="zh" ? "update check started" : "update check started");
+        await sleep(850);
+        toast(currentLang()==="zh" ? "已是最新" : "Up to date",
+              currentLang()==="zh" ? "未发现可用更新（）。" : "No updates available (demo).",
+              "ok");
+        addLog("OK", currentLang()==="zh" ? "update check: up to date" : "update check: up to date");
+      });
+    });
+
+    document.getElementById("btn-restart").addEventListener("click", (e) => {
+      const btn = e.currentTarget;
+      withLoading(btn, async () => {
+        toast(currentLang()==="zh" ? "重启请求" : "Restart requested",
+              currentLang()==="zh" ? "已进入队列，将在低负载窗口执行（）" : "Queued for low-load window (demo)",
+              "warn", 1600);
+        addLog("WARN", currentLang()==="zh" ? "restart queued (demo)" : "restart queued (demo)");
+        addNotification(currentLang()==="zh" ? "维护计划" : "Maintenance scheduled",
+                        currentLang()==="zh" ? "节点重启已排队（，不会真实执行）。" : "Node restart queued (demo, not executed).",
+                        true);
+        await sleep(900);
+        toast(currentLang()==="zh" ? "模式" : "Demo mode",
+              currentLang()==="zh" ? "未执行真实重启。" : "No real restart executed.",
+              "err", 2400);
+        addLog("ERR", currentLang()==="zh" ? "restart blocked: demo mode" : "restart blocked: demo mode");
+      });
+    });
+
+    /* --------------------------
+      Login (inputs are now editable)
+    --------------------------- */
+    document.getElementById("btn-signin").addEventListener("click", async (e) => {
+      const btn = e.currentTarget;
+      const lang = currentLang();
+      const u = document.getElementById("username").value.trim();
+      const p = document.getElementById("password").value;
+
+      await withLoading(btn, async () => {
+        if (!u || p.length < 4) {
+          toast(lang==="zh" ? "登录失败" : "Sign-in failed",
+                lang==="zh" ? "请输入用户名，且密码至少 4 位（校验）。" : "Enter a username and a password ≥ 4 chars (demo check).",
+                "err", 2400);
+          addLog("WARN", "signin rejected (demo validation)");
+          return;
+        }
+        toast(lang==="zh" ? "正在登录" : "Signing in",
+              lang==="zh" ? "本地校验中…" : "Local demo validation…",
+              "warn", 1200);
+        addLog("INFO", `signin attempt user="${u}" (demo)`);
+        await sleep(900);
+        toast(lang==="zh" ? "登录成功" : "Signed in",
+              lang==="zh" ? `欢迎，${u}（会话）` : `Welcome, ${u} (demo session)`,
+              "ok", 2200);
+        addNotification(lang==="zh" ? "会话已建立" : "Session created",
+                        lang==="zh" ? `用户 ${u} 进入会话。` : `User ${u} entered demo session.`,
+                        false);
+        addLog("OK", "signin success (demo)");
+      });
+    });
+
+    /* --------------------------
+      Event log
+    --------------------------- */
+    const logBox = document.getElementById("log-box");
+    let logPaused = false;
+    let logTimer = null;
+
+    function ts() {
+      const d = new Date();
+      return `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    }
+
+    function addLog(level, message) {
+      const lvl = String(level).toUpperCase();
+      const line = document.createElement("div");
+      line.className = "log-line";
+      const lvlClass = (lvl === "OK" ? "ok" : (lvl === "WARN" ? "warn" : (lvl === "ERR" ? "err" : "")));
+      line.innerHTML = `<span class="t">${ts()}</span><span class="lvl ${lvlClass}">${escapeHtml(lvl)}</span> ${escapeHtml(message)}`;
+      logBox.appendChild(line);
+      if (!logPaused) {
+        logBox.scrollTop = logBox.scrollHeight;
+      }
+    }
+
+    function startLogStream() {
+      if (logTimer) clearInterval(logTimer);
+      logTimer = setInterval(() => {
+        if (logPaused) return;
+        const lang = currentLang();
+        const samples = [
+          { lvl: "INFO", msg: lang==="zh" ? "metrics scrape ok" : "metrics scrape ok" },
+          { lvl: "OK",   msg: lang==="zh" ? "snapshot verified" : "snapshot verified" },
+          { lvl: "INFO", msg: lang==="zh" ? "lan client connected" : "lan client connected" },
+          { lvl: "WARN", msg: lang==="zh" ? "latency spike detected" : "latency spike detected" },
+          { lvl: "INFO", msg: lang==="zh" ? "gc cycle completed" : "gc cycle completed" },
+        ];
+        const pick = samples[Math.floor(Math.random()*samples.length)];
+        addLog(pick.lvl, pick.msg);
+
+        // Occasionally emit a notification
+        if (Math.random() < 0.12) {
+          addNotification(
+            lang==="zh" ? "状态更新" : "Status update",
+            lang==="zh" ? "后台任务完成" : "Background task finished (demo)",
+            true
+          );
+        }
+      }, 1600);
+    }
+
+    document.getElementById("btn-log-pause").addEventListener("click", (e) => {
+      logPaused = !logPaused;
+      e.currentTarget.textContent = logPaused ? (currentLang()==="zh" ? "继续" : "Resume") : (currentLang()==="zh" ? "暂停" : "Pause");
+      toast(currentLang()==="zh" ? "日志" : "Log", logPaused ? (currentLang()==="zh" ? "已暂停" : "Paused") : (currentLang()==="zh" ? "已继续" : "Resumed"), "ok", 1400);
+    });
+
+    document.getElementById("btn-log-clear").addEventListener("click", () => {
+      logBox.innerHTML = "";
+      toast(currentLang()==="zh" ? "日志" : "Log", currentLang()==="zh" ? "已清空" : "Cleared", "warn", 1400);
+    });
+
+    document.getElementById("btn-log-add").addEventListener("click", () => {
+      const v = document.getElementById("log-input").value.trim();
+      if (!v) return;
+      addLog("INFO", v);
+      document.getElementById("log-input").value = "";
+    });
+
+    document.getElementById("log-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("btn-log-add").click();
+    });
+
+    /* --------------------------
+      Helpers + init
+    --------------------------- */
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+    function cryptoRandomId() {
+      return Math.random().toString(16).slice(2) + Date.now().toString(16);
+    }
+    function currentLang() {
+      return localStorage.getItem("lang") || "zh";
+    }
+
+    // ESC closes drawers
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { closeDrawer(); closeNotify(); }
+    });
+
+    // Init: theme/lang
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+    const savedLang = currentLang();
+    document.getElementById("lang-select").value = savedLang;
+    document.getElementById("lang-select").addEventListener("change", (e) => setLang(e.target.value));
+    setLang(savedLang);
+
+    // Init notifications + logs + table
+    addNotification(savedLang==="zh" ? "欢迎" : "Welcome",
+                    savedLang==="zh" ? "欢迎。" : "This is a demo notification center. Mark read or clear anytime.",
+                    true);
+    renderNotifications();
+
+    renderTable();
+    updatePageInfo();
+    startLogStream();
+    addLog("OK", savedLang==="zh" ? "console booted (demo)" : "console booted (demo)");
+  </script>
+</body>
+</html>

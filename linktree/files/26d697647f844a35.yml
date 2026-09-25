@@ -1,0 +1,712 @@
+mixed-port: 7890
+ipv6: true
+allow-lan: true
+mode: rule
+log-level: warning
+disable-keep-alive: false
+keep-alive-idle: 10
+keep-alive-interval: 15
+unified-delay: true
+geo-auto-update: true
+geo-update-interval: 168
+external-controller: 127.0.0.1:9090
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui: ui
+external-controller-cors:
+  allow-origins:
+  - '*'
+  allow-private-network: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  listen: 127.0.0.1:1053
+  respect-rules: true
+  use-system-hosts: false
+  nameserver:
+  - 1.1.1.1#⚪AUTO
+  proxy-server-nameserver:
+  - 8.8.8.8#DIRECT
+  direct-nameserver:
+  - 8.8.8.8#DIRECT
+  direct-nameserver-follow-policy: true
+  nameserver-policy:
+    rule-set:ir: 8.8.8.8#DIRECT
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - geosite:private
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  strict-route: true
+  endpoint-independent-nat: false
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+  mtu: 9000
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
+    TLS:
+      ports:
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
+
+proxies:
+- name: 🇸🇪Wind1-Stockholm-Sweden
+  type: wireguard
+  server: 79.142.76.199
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: P5X43E/SgvnJtbrKnJwLFxqFoZGsCghW2SxlXvfdzm0=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇸🇪Wind2-Stockholm-Sweden
+  type: wireguard
+  server: 79.142.76.199
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: P5X43E/SgvnJtbrKnJwLFxqFoZGsCghW2SxlXvfdzm0=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇭Wind3-Zurich-Switzerland
+  type: wireguard
+  server: 89.187.165.99
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇭Wind4-Zurich-Switzerland
+  type: wireguard
+  server: 89.187.165.99
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇮🇸Wind5-Reykjavik-Iceland
+  type: wireguard
+  server: 185.165.170.3
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇮🇸Wind6-Reykjavik-Iceland
+  type: wireguard
+  server: 185.165.170.3
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇬🇧Wind7-Edinburgh-UnitedKingdom
+  type: wireguard
+  server: 193.36.118.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: bGn6yuCFQWWF8+ZMGlJ0M6+IJRlkLXn0/UI/mvIyYwQ=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇸🇬Wind8-Singapore
+  type: wireguard
+  server: 103.107.198.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇸🇬Wind9-Singapore
+  type: wireguard
+  server: 103.107.198.228
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇾Wind10-Nicosia-Cyprus
+  type: wireguard
+  server: 46.199.75.107
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 90fjr1sq0Hgv2l+DgMaaGQ009SDw7VxmzJwaYmclaFs=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇾Wind11-Nicosia-Cyprus
+  type: wireguard
+  server: 46.199.75.107
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 90fjr1sq0Hgv2l+DgMaaGQ009SDw7VxmzJwaYmclaFs=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇲🇰Wind12-NorthMacedonia
+  type: wireguard
+  server: 185.225.28.52
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 9J0kA4c4i7N/+6B+3j0zFkDTHocZNsw6eK6+sLZ1qCQ=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇲🇰Wind13-NorthMacedonia
+  type: wireguard
+  server: 185.225.28.52
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 9J0kA4c4i7N/+6B+3j0zFkDTHocZNsw6eK6+sLZ1qCQ=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind14-Boston-UnitedStates
+  type: wireguard
+  server: 199.217.104.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 5yBJlSpfxd8Hq4+X4ZD60MYc6tosaMh5inQwA18XCCk=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind15-Detroit-UnitedStates
+  type: wireguard
+  server: 104.244.210.244
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: IMHoX/bhNghQVQB0pYKi14pwJhkOcLevpiMa7Khaz2I=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind16-Orlando-UnitedStates
+  type: wireguard
+  server: 198.147.22.227
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: b5fIKEXhihCI7f4NOkQO/2BOd+bYHa0c05OylImgB0E=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind17-Orlando-UnitedStates
+  type: wireguard
+  server: 198.147.22.227
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: b5fIKEXhihCI7f4NOkQO/2BOd+bYHa0c05OylImgB0E=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind18-SantaClara-UnitedStates
+  type: wireguard
+  server: 167.88.60.244
+  port: 443
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: /oz2frQv99JveBgmTXW22QXIEulQURK79BW+ugk8fCE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇧🇦Wind19-NoviTravnik-Bosnia
+  type: wireguard
+  server: 185.99.3.25
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇧🇦Wind20-NoviTravnik-Bosnia
+  type: wireguard
+  server: 185.99.3.25
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇦Wind21-Toronto-Canada
+  type: wireguard
+  server: 149.57.28.226
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: vwimooPysZvNdJULeFQVovYfqhsLG5gVdzgoTnfm+iE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇦Wind22-Halifax-Canada
+  type: wireguard
+  server: 23.191.80.4
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: w262TI0UyIg9pFunMiekVURYUuT/z4qXRor2Z7VcOn4=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇦Wind23-Toronto-Canada
+  type: wireguard
+  server: 149.57.28.226
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: vwimooPysZvNdJULeFQVovYfqhsLG5gVdzgoTnfm+iE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind24-Sydney-Australia
+  type: wireguard
+  server: 103.1.213.212
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: jCi1I5HBTtwCblBbMzOFmOOFNG1GilYOZgst0kyq9gY=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind25-Melbourne-Victoria
+  type: wireguard
+  server: 116.206.228.180
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind26-Melbourne-Victoria
+  type: wireguard
+  server: 116.206.228.180
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind28-Brisbane-Queensland
+  type: wireguard
+  server: 103.108.95.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: iY4MhQqQTP4uT7U4w9DfUEVxi5I3HJvjZcIL2dwmtTw=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind29-Adelaide-Australia
+  type: wireguard
+  server: 103.108.92.84
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Sb5VSMZhhqSo5absckjzPn9HWhT7UrKk1AQv0me0zhI=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind30-Perth-WesternAustralia
+  type: wireguard
+  server: 103.77.234.212
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Jhhq6jvPxABM8OmzaM4/zJbcoRBR5OZalIHrZaFuXAU=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind31-Sydney-Australia
+  type: wireguard
+  server: 103.77.232.76
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: eSxX+L8qX+1MdmwjtlZGIDbDivFdURBh5Rm1KfUpYzc=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇰🇪Wind32-Nairobi-Kenya
+  type: wireguard
+  server: 45.138.86.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: S/qPJPWnfwfb1pWIcKN8FH71j5dFt9eH2KbEeU1+QlE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇭🇰Wind33-HongKong
+  type: wireguard
+  server: 84.17.57.115
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: zi62xnrtbvAbaavB8MLoTF36BX/stxjfnGJ6mIsZYzg=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇵🇦Wind34-Panama
+  type: wireguard
+  server: 138.186.142.204
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 3L8yhe+v7TzBeesOFxSdU2VUa8FG4PTuoiiUoV7DAGY=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇿🇦Wind35-Johannesburg-SouthAfrica
+  type: wireguard
+  server: 197.242.159.229
+  port: 443
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇿🇦Wind36-Johannesburg-SouthAfrica
+  type: wireguard
+  server: 197.242.159.229
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇷Wind37-BuenosAires-Argentina
+  type: wireguard
+  server: 190.103.176.148
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 2+O8VAshLkyWM1b6Ye2Cuoa3R/guKZgQ+YLoCsseWCU=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇻🇳Wind38-Vietnam
+  type: wireguard
+  server: 103.9.79.220
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: SxBT11IISNRou7thGo5A1QtaMjfzPIzZXDxdYEbDxhE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+proxy-groups:
+- name: ⚪AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 25
+  tolerance: 50
+  timeout: 5000
+  max-failed-times: 3
+  proxies: &id001
+  - 🇸🇪Wind1-Stockholm-Sweden
+  - 🇸🇪Wind2-Stockholm-Sweden
+  - 🇨🇭Wind3-Zurich-Switzerland
+  - 🇨🇭Wind4-Zurich-Switzerland
+  - 🇮🇸Wind5-Reykjavik-Iceland
+  - 🇮🇸Wind6-Reykjavik-Iceland
+  - 🇬🇧Wind7-Edinburgh-UnitedKingdom
+  - 🇸🇬Wind8-Singapore
+  - 🇸🇬Wind9-Singapore
+  - 🇨🇾Wind10-Nicosia-Cyprus
+  - 🇨🇾Wind11-Nicosia-Cyprus
+  - 🇲🇰Wind12-NorthMacedonia
+  - 🇲🇰Wind13-NorthMacedonia
+  - 🇺🇸Wind14-Boston-UnitedStates
+  - 🇺🇸Wind15-Detroit-UnitedStates
+  - 🇺🇸Wind16-Orlando-UnitedStates
+  - 🇺🇸Wind17-Orlando-UnitedStates
+  - 🇺🇸Wind18-SantaClara-UnitedStates
+  - 🇧🇦Wind19-NoviTravnik-Bosnia
+  - 🇧🇦Wind20-NoviTravnik-Bosnia
+  - 🇨🇦Wind21-Toronto-Canada
+  - 🇨🇦Wind22-Halifax-Canada
+  - 🇨🇦Wind23-Toronto-Canada
+  - 🇦🇺Wind24-Sydney-Australia
+  - 🇦🇺Wind25-Melbourne-Victoria
+  - 🇦🇺Wind26-Melbourne-Victoria
+  - 🇦🇺Wind28-Brisbane-Queensland
+  - 🇦🇺Wind29-Adelaide-Australia
+  - 🇦🇺Wind30-Perth-WesternAustralia
+  - 🇦🇺Wind31-Sydney-Australia
+  - 🇰🇪Wind32-Nairobi-Kenya
+  - 🇭🇰Wind33-HongKong
+  - 🇵🇦Wind34-Panama
+  - 🇿🇦Wind35-Johannesburg-SouthAfrica
+  - 🇿🇦Wind36-Johannesburg-SouthAfrica
+  - 🇦🇷Wind37-BuenosAires-Argentina
+  - 🇻🇳Wind38-Vietnam
+- name: ⚫FALLBACK
+  type: fallback
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies: *id001
+- name: SELECT
+  type: select
+  proxies:
+  - ⚪AUTO
+  - ⚫FALLBACK
+  - 🇸🇪Wind1-Stockholm-Sweden
+  - 🇸🇪Wind2-Stockholm-Sweden
+  - 🇨🇭Wind3-Zurich-Switzerland
+  - 🇨🇭Wind4-Zurich-Switzerland
+  - 🇮🇸Wind5-Reykjavik-Iceland
+  - 🇮🇸Wind6-Reykjavik-Iceland
+  - 🇬🇧Wind7-Edinburgh-UnitedKingdom
+  - 🇸🇬Wind8-Singapore
+  - 🇸🇬Wind9-Singapore
+  - 🇨🇾Wind10-Nicosia-Cyprus
+  - 🇨🇾Wind11-Nicosia-Cyprus
+  - 🇲🇰Wind12-NorthMacedonia
+  - 🇲🇰Wind13-NorthMacedonia
+  - 🇺🇸Wind14-Boston-UnitedStates
+  - 🇺🇸Wind15-Detroit-UnitedStates
+  - 🇺🇸Wind16-Orlando-UnitedStates
+  - 🇺🇸Wind17-Orlando-UnitedStates
+  - 🇺🇸Wind18-SantaClara-UnitedStates
+  - 🇧🇦Wind19-NoviTravnik-Bosnia
+  - 🇧🇦Wind20-NoviTravnik-Bosnia
+  - 🇨🇦Wind21-Toronto-Canada
+  - 🇨🇦Wind22-Halifax-Canada
+  - 🇨🇦Wind23-Toronto-Canada
+  - 🇦🇺Wind24-Sydney-Australia
+  - 🇦🇺Wind25-Melbourne-Victoria
+  - 🇦🇺Wind26-Melbourne-Victoria
+  - 🇦🇺Wind28-Brisbane-Queensland
+  - 🇦🇺Wind29-Adelaide-Australia
+  - 🇦🇺Wind30-Perth-WesternAustralia
+  - 🇦🇺Wind31-Sydney-Australia
+  - 🇰🇪Wind32-Nairobi-Kenya
+  - 🇭🇰Wind33-HongKong
+  - 🇵🇦Wind34-Panama
+  - 🇿🇦Wind35-Johannesburg-SouthAfrica
+  - 🇿🇦Wind36-Johannesburg-SouthAfrica
+  - 🇦🇷Wind37-BuenosAires-Argentina
+  - 🇻🇳Wind38-Vietnam
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt
+    path: ./ruleset/ir.txt
+    interval: 86400
+  ir-cidr:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
+    path: ./ruleset/ir-cidr.txt
+    interval: 86400
+rules:
+- RULE-SET,ir,DIRECT
+- RULE-SET,ir-cidr,DIRECT,no-resolve
+- MATCH,⚪AUTO
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30

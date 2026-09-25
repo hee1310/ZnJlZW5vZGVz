@@ -1,0 +1,560 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 🇷🇺_RU_俄罗斯
+    type: vless
+    server: 212.118.52.236
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇮🇷 @ShadowProxy66
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇮🇷_IR_伊朗->🇺🇸_US_美国
+    type: vless
+    server: 31.59.121.155
+    port: 2053
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇨🇳_CN_中国
+    type: ss
+    server: hk3.network-cdn-gw-yd.net
+    port: 32058
+    cipher: chacha20-ietf-poly1305
+    password: 66f89621-49f0-4788-85ce-f9a62537a8e4
+  - name: 🇺🇸_US_美国
+    type: vless
+    server: 172.67.153.156
+    port: 8443
+    uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8
+    network: ws
+    servername: ovhwuxian.pai50288.uk
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /57ba2ab1
+      headers:
+        Host: ovhwuxian.pai50288.uk
+  - name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+    type: vless
+    server: 89.169.13.12
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 104.18.32.47
+    port: 80
+    uuid: 1e35b4bf-b270-4c0b-918d-62746eedd2ad
+    network: ws
+    tls: false
+    ws-opts:
+      path: /?ed
+      headers:
+        Host: EveRLaSTinG-fiNANcE439p1sxXHY.SPORtLAND.CompanY.
+  - name: 🇧🇪_BE_比利时
+    type: vless
+    server: fr.locations-service.com
+    port: 3032
+    uuid: e59083aa-d933-4952-8cf0-eec74f718705
+    servername: refersion.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI
+  - name: 🇺🇸_US_美国_2
+    type: vless
+    server: vip2.kaixincloud.top
+    port: 443
+    uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6
+    network: ws
+    servername: DiprOX.pages.DEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /assets
+      headers:
+        Host: DiprOX.pages.DEV
+  - name: 🇬🇧_GB_英国
+    type: vless
+    server: uk1.miyazono-kaori.com
+    port: 443
+    uuid: 2e82cda5-e020-4c63-8271-e58a00831447
+    servername: www.bp.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: _dsOu_vxEU7pY3sIeGJxIpR0Ac2KoqIyBor2Bx0CwGA
+      short-id: d923
+  - name: 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+    type: vless
+    server: 188.253.17.9
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇺🇸_US_美国_3
+    type: vless
+    server: 138.2.39.24
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇮🇷_IR_伊朗
+    type: vless
+    server: 31.59.121.227
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇳🇱_NL_荷兰
+    type: vless
+    server: 37.1.217.225
+    port: 2053
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+    type: vless
+    server: 176.109.109.58
+    port: 51101
+    uuid: 08d6280b-90c8-41e1-a809-3132cfb706f5
+    servername: m.vk.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: _CjW0Khlrr5z5oc9Oy6-w2ZEanz-zMBktVn5EOX9oTM
+      short-id: 4ffc99daad0f261f
+  - name: 🇺🇸_US_美国_4
+    type: vless
+    server: vip1.kaixincloud.top
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+    type: vless
+    server: 103.90.75.121
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+    type: vless
+    server: 158.160.223.36
+    port: 443
+    uuid: 8009bc13-0c64-4ae9-9a74-24ce12cc71e8
+    servername: yandex.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg
+      short-id: 04bf0403f96e5b4b
+  - name: 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+    type: vless
+    server: 146.56.42.21
+    port: 7777
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇺🇸_US_美国_5
+    type: vless
+    server: v2.dabache.top
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本
+    type: vless
+    server: 155.248.181.189
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇷🇺_RU_俄罗斯
+      - 🇮🇷_IR_伊朗->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国
+      - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_3
+      - 🇮🇷_IR_伊朗
+      - 🇳🇱_NL_荷兰
+      - 🇷🇺_RU_俄罗斯->🇮🇹_IT_意大利
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度->🇳🇱_NL_荷兰
+      - 🇻🇪_VE_委内瑞拉->🇪🇸_ES_西班牙
+      - 🇯🇵_JP_日本->🇰🇵_KP_朝鲜
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼

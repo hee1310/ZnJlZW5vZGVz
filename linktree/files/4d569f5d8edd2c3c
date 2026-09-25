@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>点击开始</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-radius: 10px;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1d23;
+            --card-bg: #272b33;
+            --text-primary: #e8e8e8;
+            --text-secondary: #b0b0b0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            transition: background-color .3s, color .3s;
+            transform: translateY(-22px);
+        }
+        .wrap{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:10px;
+        }
+        header { text-align: center; }
+        header h1 { font-size:1.4rem; margin-bottom:4px; }
+        header p { color: var(--text-secondary); font-size:0.8rem; }
+        .header-actions {
+            margin-top:8px;
+            display:flex;
+            gap:8px;
+            justify-content:center;
+        }
+        button {
+            padding:4px 10px;
+            border-radius:6px;
+            border:none;
+            cursor:pointer;
+            background:#4080ff;
+            color:#fff;
+            font-size:0.75rem;
+        }
+        button:active{opacity:0.85;}
+        .nav-grid {
+            width:100%;
+            max-width:1200px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-auto-rows: minmax(80px,1fr);
+            gap:10px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding:12px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            overflow:hidden;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-size:0.95rem;
+            font-weight:600;
+            margin-bottom:4px;
+            text-align:center;
+        }
+        .card-desc { font-size:0.7rem; color: var(--text-secondary); margin-bottom:8px; flex-grow:1; }
+        .latency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap:4px;
+            font-size:0.65rem;
+            font-weight:500;
+            padding:2px 7px;
+            border-radius:14px;
+            background: #eee;
+            color:#888;
+            align-self:center;
+            /* 百度，微博，腾讯，淘宝，微信，支付宝，电影，苹果，安卓 */
+            pointer-events: none;
+        }
+        [data-theme="dark"] .latency-badge {
+            background:#383c44;
+            color:#aaa;
+        }
+        .dot { width:6px; height:6px; border-radius:50%; background:#ccc; }
+        .latency-good { background: #e6f7ee; color: #27ae60; }
+        .latency-good .dot { background: #27ae60; }
+        .latency-warn { background: #fff8e6; color: #f39c12; }
+        .latency-warn .dot { background: #f39c12; }
+        .latency-bad { background: #fde8e8; color: #e74c3c; }
+        .latency-bad .dot { background: #e74c3c; }
+        [data-theme="dark"] .latency-good { background:#1f3b30; color:#42d480;}
+        [data-theme="dark"] .latency-warn { background:#423820; color:#ffbc42;}
+        [data-theme="dark"] .latency-bad { background:#442828; color:#ff6b6b;}
+        .footer{
+            text-align:center;
+            font-size:13px;
+            color:var(--text-secondary);
+            padding:24px 0 16px;
+        }
+        @media (max-width:600px) {
+            body { padding:8px 8px; }
+            header h1 { font-size:1.1rem; }
+            .nav-grid { grid-template-columns: repeat(2,1fr); gap:8px; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>🚀 线路安全检测</h1>
+        <p>若点击线路无法打开，请尝试切换网络（如WiFi/流量）或刷新页面重试，下载遇到异常，建议更换浏览器</p>
+        <div class="header-actions">
+            <button id="refreshPing">🔄刷新</button>
+            <button id="toggleTheme">🌙暗色</button>
+        </div>
+    </header>
+    <div class="nav-grid" id="navGrid"></div>
+</div>
+<script>
+function updateGridColumns(){
+    const grid = document.getElementById('navGrid');
+    const w = grid.clientWidth;
+    const minColWidth = 200;
+    let cols = Math.floor(w / minColWidth);
+    if(cols < 2) cols = 2;
+    if(cols > 6) cols = 6;
+    grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+}
+window.addEventListener('resize', updateGridColumns);
+
+    const routes = [
+        { name: "线路1", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoMTUuY29tOjMwNzAwL2VudHJ5L3JlZ2lzdGVy", ping: "aHR0cHM6Ly93d3cuYmFpZHUuY29tL2Zhdmljb24uaWNv" },
+        { name: "线路2", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoMjEuY29tOjMwMDUwL2VudHJ5L3JlZ2lzdGVy", ping: "aHR0cHM6Ly93d3cuYWxpeXVuLmNvbS9mYXZpY29uLmljbw==" },
+        { name: "线路3", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoNDAudmlwOjM1NTYwL2VudHJ5L3JlZ2lzdGVy", ping: "aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9mYXZpY29uLmljbw==" },
+        { name: "线路4", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoNDAuY29tOjMwNDY4L2VudHJ5L3JlZ2lzdGVy", ping: "aHR0cHM6Ly93d3cudGFvYmFvLmNvbS9mYXZpY29uLmljbw==" },
+        { name: "线路5", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoMTQudmlwOjMyMTAxLw==", ping: "aHR0cHM6Ly93d3cuemhpaHUuY29tL2Zhdmljb24uaWNv" },
+        { name: "线路6", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoMjAudmlwOjMwNDUyL2Rvd25sb2FkLXBhZ2U=", ping: "aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL2Zhdmljb24uaWNv" },
+        { name: "线路7", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoMTgudmlwOjMwNzAwL2VudHJ5L3JlZ2lzdGVy", ping: "aHR0cHM6Ly9qdWVqaW4uY24vZmF2aWNvbi5pY28=" },
+        { name: "线路8", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoNDUuY29tOjMwMTEzL2Rvd25sb2FkLXBhZ2U=", ping: "aHR0cHM6Ly93ZXJlYWQucXEuY29tL2Zhdmljb24uaWNv" },
+        { name: "线路9", desc: "", url: "aHR0cHM6Ly93d3cud2VuZGluZ2h1aTE2OC5jb206MzAxMjMvZW50cnkvcmVnaXN0ZXI=", ping: "aHR0cHM6Ly93d3cud2VpYm8uY29tL2Zhdmljb24uaWNv" },
+        { name: "线路10", desc: "", url: "aHR0cHM6Ly93d3cudmlwd2RoNDUuY29tOjMwMTEyL2Rvd25sb2FkLXBhZ2U=", ping: "aHR0cHM6Ly93d3cuY3Nkbi5uZXQvZmF2aWNvbi5pY28=" }
+    ];
+    const grid = document.getElementById('navGrid');
+    routes.forEach((route, index) => {
+        const realUrl = atob(route.url);
+        const card = document.createElement('div');
+        card.className = "card";
+        card.dataset.url = route.url;
+        card.innerHTML = `
+            <div>
+                <div class="card-title">${route.name}</div>
+                <div class="card-desc">${route.desc}</div>
+            </div>
+            <div class="latency-badge" id="badge-${index}">
+                <span class="dot"></span>
+                <span class="text">测速中...</span>
+            </div>
+        `;
+        // 左键打开链接666，抖音
+        card.addEventListener('click', function() {
+            const u = atob(this.dataset.url);
+            window.open(u, "_blank", "noopener,noreferrer");
+        })
+        // 右键复制链接666，快手
+        card.addEventListener('contextmenu',async (e)=>{
+            e.preventDefault();
+            try{
+                await navigator.clipboard.writeText(realUrl);
+                alert("链接已复制剪贴板");
+            }catch(err){
+                alert("复制失败，请手动复制链接：\n"+realUrl);
+            }
+        })
+        grid.appendChild(card);
+    });
+    // 小红书，浏览器
+    function checkLatency(index, base64PingUrl) {
+        return new Promise(resolve=>{
+            const badge = document.getElementById(`badge-${index}`);
+            const textEl = badge.querySelector('.text');
+            textEl.textContent = "测速中...";
+            badge.className = "latency-badge";
+            const start = performance.now();
+            let done = false;
+            const pingUrl = atob(base64PingUrl)+"?"+Date.now();
+            const img = new Image();
+            function finish(success){
+                if(done) return;
+                done = true;
+                const latency = Math.round(performance.now() - start);
+                if(success){
+                    textEl.textContent = `${latency} ms`;
+                    badge.classList.remove('latency-bad', 'latency-warn','latency-good');
+                    if (latency <2000) badge.classList.add('latency-good');
+                    else if (latency <3000) badge.classList.add('latency-warn');
+                    else badge.classList.add('latency-bad');
+                }else{
+                    textEl.textContent = "9527";
+                    badge.className = "latency-badge latency-bad";
+                }
+                resolve();
+            }
+            img.onload = ()=>finish(true);
+            img.onerror = ()=>finish(false);
+            setTimeout(()=>finish(false),4000);
+            img.src = pingUrl;
+        })
+    }
+    // 淘宝闪购，知乎，成功
+    async function runAllChecks() {
+        const tasks = routes.map((r,i)=> checkLatency(i, r.ping));
+        await Promise.all(tasks);
+    }
+    const toggleBtn = document.querySelector('#toggleTheme');
+    toggleBtn.onclick = ()=>{
+        if(document.body.dataset.theme === 'dark'){
+            document.body.removeAttribute('data-theme');
+            toggleBtn.textContent = '🌙暗色';
+        }else{
+            document.body.dataset.theme = 'dark';
+            toggleBtn.textContent = '☀️亮色';
+        }
+    }
+    document.querySelector('#refreshPing').onclick = runAllChecks;
+    window.onload = function(){
+        updateGridColumns();
+        runAllChecks();
+    };
+</script>
+<div class="tip"></div>
+<div class="footer">Copyright©All Rights Reserved.</div>
+</body>
+</html>

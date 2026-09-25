@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPrivate Cloud · Node-HK01</title>
+    <style>
+        :root { color-scheme: light dark; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background-color: #fff;
+            padding: 16px 32px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .logo span { font-size: 20px; }
+        .nav {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .nav-item { cursor: default; }
+        .nav-time {
+            font-size: 12px;
+            color: #9ca3af;
+            min-width: 170px;
+            text-align: right;
+        }
+        .container {
+            max-width: 1040px;
+            margin: 32px auto;
+            padding: 0 16px 40px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(15,23,42,0.04);
+            padding: 24px 24px 16px;
+        }
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .sub-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+        }
+        .sub-desc {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+        .badge {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background-color: #ecfdf5;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #f3f4f6;
+            padding-bottom: 14px;
+        }
+        .stat-item { flex: 1; min-width: 0; }
+        .stat-label {
+            font-size: 11px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+        .stat-value {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+        }
+        .stat-extra {
+            font-size: 11px;
+            color: #6b7280;
+        }
+        .progress {
+            margin-top: 6px;
+            background-color: #e5e7eb;
+            border-radius: 999px;
+            overflow: hidden;
+            height: 6px;
+        }
+        .progress-fill {
+            height: 100%;
+            background-image: linear-gradient(90deg, #3b82f6, #0ea5e9);
+        }
+        .tabs {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: #6b7280;
+            margin: 10px 0 6px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .tab {
+            padding: 6px 0;
+            cursor: default;
+            position: relative;
+        }
+        .tab.active {
+            color: #111827;
+            font-weight: 500;
+        }
+        .tab.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 32px;
+            height: 2px;
+            border-radius: 999px;
+            background-color: #2563eb;
+        }
+        .file-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .file-list thead { background-color: #f9fafb; }
+        .file-list th {
+            text-align: left;
+            color: #9ca3af;
+            font-weight: 500;
+            padding: 8px 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .file-list td {
+            padding: 10px 10px;
+            border-bottom: 1px solid #f3f4f6;
+            color: #374151;
+        }
+        .file-name {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .file-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+        .file-badge {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 999px;
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+        .file-muted {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .btn:active { transform: translateY(0.5px); }
+        .footer-note {
+            margin-top: 10px;
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        .login-overlay {
+            position: fixed;
+            bottom: 14px;
+            right: 16px;
+            background: rgba(15,23,42,0.86);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(6px);
+        }
+        .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34,197,94,0.2);
+        }
+        @media (max-width: 640px) {
+            .status-bar { flex-direction: column; }
+            .header { padding: 12px 16px; }
+            .container { margin-top: 20px; }
+            .card { padding: 18px 14px; }
+            .file-list th:nth-child(3),
+            .file-list td:nth-child(3) { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <span>☁️</span> MyPrivate Cloud
+    </div>
+    <div class="nav">
+        <div class="nav-item">Node: HK‑01</div>
+        <div class="nav-item">Mode: Personal</div>
+        <div class="nav-item">Auth: Local only</div>
+        <div class="nav-time" id="now-time">--</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="sub-header">
+            <div>
+                <div class="sub-title">Storage overview</div>
+                <div class="sub-desc">Home archive / media / backup snapshot</div>
+            </div>
+            <span class="badge">ONLINE · Private endpoint</span>
+        </div>
+
+        <div class="status-bar">
+            <div class="stat-item">
+                <div class="stat-label">Total capacity</div>
+                <div class="stat-value">2.4 TB</div>
+                <div class="stat-extra">RAID1 · ext4</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Used</div>
+                <div class="stat-value">842 GB</div>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 35%;"></div>
+                </div>
+                <div class="stat-extra">≈ 34.9% used</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Uplink</div>
+                <div class="stat-value">121 Mbps</div>
+                <div class="stat-extra">Average last 5 min</div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">Recent activity</div>
+            <div class="tab">Snapshots</div>
+            <div class="tab">System log</div>
+        </div>
+
+        <table class="file-list">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last modified</th>
+                <th>Size</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="file-name">
+                        <span class="file-icon">ZIP</span>
+                        <span>Backup_2024_Q4_archive.zip</span>
+                    </div>
+                    <div class="file-muted">Home‑PC incremental backup</div>
+                </td>
+                <td>2026‑01‑10 23:41</td>
+                <td>4.2 GB</td>
+                <td>
+                    <a class="btn" href="/download/backup_2024_q4.zip">Download</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="file-name">
+                        <span class="file-icon">MP4</span>
+                        <span>Family_trip_4K_2023.mp4</span>
+                    </div>
+                    <div class="file-muted">Shared: LAN only</div>
+                </td>
+                <td>2026‑01‑08 18:02</td>
+                <td>12.5 GB</td>
+                <td>
+                    <a class="btn" href="/stream/family_trip_4k_2023.mp4">Open</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="file-name">
+                        <span class="file-icon">ISO</span>
+                        <span>ubuntu-24.04-server-amd64.iso</span>
+                    </div>
+                    <div class="file-muted">ISO images / lab</div>
+                </td>
+                <td>2025‑12‑24 09:17</td>
+                <td>2.8 GB</td>
+                <td>
+                    <a class="btn" href="/iso/ubuntu-24.04-server-amd64.iso">Download</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="file-name">
+                        <span class="file-icon">TAR</span>
+                        <span>media_audio_lossless.tar</span>
+                    </div>
+                    <div class="file-muted">
+                        Encrypted volume · <span class="file-badge">Locked</span>
+                    </div>
+                </td>
+                <td>2025‑11‑15 01:06</td>
+                <td>55.0 GB</td>
+                <td>
+                    <button class="btn" type="button">Unlock</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="footer-note">
+            Remote access is restricted. Use local dashboard for sign‑in and administration.
+        </div>
+    </div>
+</div>
+
+<div class="login-overlay">
+    <span class="dot"></span>
+    <span id="overlay-time">Secure endpoint · TLS 1.3</span>
+</div>
+
+<script>
+    function pad(n) {
+        return n < 10 ? "0" + n : n;
+    }
+    function updateTime() {
+        const now = new Date();
+        const y = now.getFullYear();
+        const m = pad(now.getMonth() + 1);
+        const d = pad(now.getDate());
+        const h = pad(now.getHours());
+        const min = pad(now.getMinutes());
+        const s = pad(now.getSeconds());
+        const formatted = y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s;
+
+        const timeEl = document.getElementById("now-time");
+        const overlayEl = document.getElementById("overlay-time");
+        if (timeEl) timeEl.textContent = formatted;
+        if (overlayEl) overlayEl.textContent = "Secure endpoint · TLS 1.3 · " + formatted;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+</body>
+</html>

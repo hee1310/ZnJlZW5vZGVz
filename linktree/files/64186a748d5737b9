@@ -1,0 +1,65 @@
+		<style>ul#admin_menu li:not(.frontend_link) {display: none}</style><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Redirect</title>
+    <script>
+        function countdown() {
+            var seconds = 5;
+            var countdown = document.getElementById('countdown');
+            var interval = setInterval(function() {
+                countdown.innerHTML = seconds;
+                seconds--;
+                if (seconds < 0) {
+                    clearInterval(interval);
+                    window.location.href = 'https://sub.dxdyzh.tk/sub?target=clash&url=vless%3A%2F%2F58877aea-dfdc-44b3-818e-231dbc1e47dc%4047.242.202.230%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhk.xujiang.link%26type%3Dws%26host%3Dhk.xujiang.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-5%7Cvless%3A%2F%2F58877aea-dfdc-44b3-818e-231dbc1e47dc%4047.243.107.148%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhk.xujiang.link%26type%3Dws%26host%3Dhk.xujiang.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-6%7Cvless%3A%2F%2Fe9b9b46b-3a65-4216-be55-4c176be5a277%408.210.156.6%3A2096%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dxiaoer88602.xiaoer886.dynv6.net%26type%3Dws%26host%3Dxiaoer88602.xiaoer886.dynv6.net%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-7%7Cvless%3A%2F%2F6f995056-7802-4a1d-bff7-61678e626c3f%4020.206.176.5%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Ddhfthyt6.azurewebsites.net%26type%3Dws%26host%3Ddhfthyt6.azurewebsites.net%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-8%7Cvless%3A%2F%2Fa13df940-020c-465f-bc89-ee5279b5cd6a%40205.233.181.41%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhkd.ylks.link%26type%3Dws%26host%3Dhkd.ylks.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-9&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FCitizenScyu%2Fclash-rules%2Fmaster%2FDNS.ini&emoji=true&list=false&xudp=false&udp=true&tfo=false&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true'; // Redirect
+                }
+            }, 1000);
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            color: #111;
+        }
+        .advertise, .advertise iframe {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        button {
+            margin: 20px auto;
+            width: 300px;
+            height: 36px;
+            background: #4AB2FF;
+            border: 0;
+            color: #fff;
+            font-size: 16px;
+            display: block;
+        }
+        p {
+            margin: 8px auto;
+            padding: 0 20px;
+            max-width: 320px;
+        }
+        .center {
+            text-align: center;
+        }
+        p span {
+            color: red;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body onload="countdown()">
+<h2 class="center">Attention</h2>
+<p class="center">Be cautious of the security on the upcoming page.</p>
+<button onclick="window.location.href = 'https://sub.dxdyzh.tk/sub?target=clash&url=vless%3A%2F%2F58877aea-dfdc-44b3-818e-231dbc1e47dc%4047.242.202.230%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhk.xujiang.link%26type%3Dws%26host%3Dhk.xujiang.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-5%7Cvless%3A%2F%2F58877aea-dfdc-44b3-818e-231dbc1e47dc%4047.243.107.148%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhk.xujiang.link%26type%3Dws%26host%3Dhk.xujiang.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-6%7Cvless%3A%2F%2Fe9b9b46b-3a65-4216-be55-4c176be5a277%408.210.156.6%3A2096%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dxiaoer88602.xiaoer886.dynv6.net%26type%3Dws%26host%3Dxiaoer88602.xiaoer886.dynv6.net%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-7%7Cvless%3A%2F%2F6f995056-7802-4a1d-bff7-61678e626c3f%4020.206.176.5%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Ddhfthyt6.azurewebsites.net%26type%3Dws%26host%3Ddhfthyt6.azurewebsites.net%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-8%7Cvless%3A%2F%2Fa13df940-020c-465f-bc89-ee5279b5cd6a%40205.233.181.41%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhkd.ylks.link%26type%3Dws%26host%3Dhkd.ylks.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-9&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FCitizenScyu%2Fclash-rules%2Fmaster%2FDNS.ini&emoji=true&list=false&xudp=false&udp=true&tfo=false&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true';">Redirect Now</button>
+    <p class="center">Redirecting in <span id="countdown">5</span> seconds...</p>
+<p>The URL for the next page is:<span>https://sub.dxdyzh.tk/sub?target=clash&url=vless%3A%2F%2F58877aea-dfdc-44b3-818e-231dbc1e47dc%4047.242.202.230%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhk.xujiang.link%26type%3Dws%26host%3Dhk.xujiang.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-5%7Cvless%3A%2F%2F58877aea-dfdc-44b3-818e-231dbc1e47dc%4047.243.107.148%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhk.xujiang.link%26type%3Dws%26host%3Dhk.xujiang.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-6%7Cvless%3A%2F%2Fe9b9b46b-3a65-4216-be55-4c176be5a277%408.210.156.6%3A2096%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dxiaoer88602.xiaoer886.dynv6.net%26type%3Dws%26host%3Dxiaoer88602.xiaoer886.dynv6.net%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-7%7Cvless%3A%2F%2F6f995056-7802-4a1d-bff7-61678e626c3f%4020.206.176.5%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Ddhfthyt6.azurewebsites.net%26type%3Dws%26host%3Ddhfthyt6.azurewebsites.net%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-8%7Cvless%3A%2F%2Fa13df940-020c-465f-bc89-ee5279b5cd6a%40205.233.181.41%3A443%3Fencryption%3Dnone%26security%3Dtls%26sni%3Dhkd.ylks.link%26type%3Dws%26host%3Dhkd.ylks.link%26path%3DTG%2540juzibaipiao-%25E6%25A9%2598%25E5%25AD%2590%25E5%2588%2586%25E4%25BA%25AB%23TG%2540juzibaipiao-9&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FCitizenScyu%2Fclash-rules%2Fmaster%2FDNS.ini&emoji=true&list=false&xudp=false&udp=true&tfo=false&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true</span></p>
+<p>Be sure to confirm the security of the website before entering user information and beware of fake websites.</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+		<style>ul#admin_menu li:not(.frontend_link) {display: none}</style><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Redirect</title>
+    <script>
+        function countdown() {
+            var seconds = 5;
+            var countdown = document.getElementById('countdown');
+            var interval = setInterval(function() {
+                countdown.innerHTML = seconds;
+                seconds--;
+                if (seconds < 0) {
+                    clearInterval(interval);
+                    window.location.href = 'https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fjuzibaipiao.5112233.xyz%2Ff775978b-6e22-41a8-ae5e-5f9779e6745f&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FCitizenScyu%2Fclash-rules%2Fmaster%2FDNS.ini&exclude=CMLiussss&filename=%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8A&rename=%60HK%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AHK%60%7C%60US%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AUS%60%7C%60SG%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ASG%60%7C%60KR%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AKR%60%7C%60JP%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AJP%60%7C%60DE%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ADE%60%7C%60NL%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ANL%60%7C%60CT%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACT%60%7C%60CMCC%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACM%60%7C%60CN%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACN%60%7C%60TW%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ATW%60&emoji=false&list=false&xudp=false&udp=true&tfo=false&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true'; // Redirect
+                }
+            }, 1000);
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            color: #111;
+        }
+        .advertise, .advertise iframe {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        button {
+            margin: 20px auto;
+            width: 300px;
+            height: 36px;
+            background: #4AB2FF;
+            border: 0;
+            color: #fff;
+            font-size: 16px;
+            display: block;
+        }
+        p {
+            margin: 8px auto;
+            padding: 0 20px;
+            max-width: 320px;
+        }
+        .center {
+            text-align: center;
+        }
+        p span {
+            color: red;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body onload="countdown()">
+<h2 class="center">Attention</h2>
+<p class="center">Be cautious of the security on the upcoming page.</p>
+<button onclick="window.location.href = 'https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fjuzibaipiao.5112233.xyz%2Ff775978b-6e22-41a8-ae5e-5f9779e6745f&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FCitizenScyu%2Fclash-rules%2Fmaster%2FDNS.ini&exclude=CMLiussss&filename=%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8A&rename=%60HK%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AHK%60%7C%60US%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AUS%60%7C%60SG%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ASG%60%7C%60KR%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AKR%60%7C%60JP%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AJP%60%7C%60DE%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ADE%60%7C%60NL%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ANL%60%7C%60CT%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACT%60%7C%60CMCC%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACM%60%7C%60CN%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACN%60%7C%60TW%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ATW%60&emoji=false&list=false&xudp=false&udp=true&tfo=false&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true';">Redirect Now</button>
+    <p class="center">Redirecting in <span id="countdown">5</span> seconds...</p>
+<p>The URL for the next page is:<span>https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fjuzibaipiao.5112233.xyz%2Ff775978b-6e22-41a8-ae5e-5f9779e6745f&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FCitizenScyu%2Fclash-rules%2Fmaster%2FDNS.ini&exclude=CMLiussss&filename=%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8A&rename=%60HK%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AHK%60%7C%60US%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AUS%60%7C%60SG%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ASG%60%7C%60KR%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AKR%60%7C%60JP%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8AJP%60%7C%60DE%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ADE%60%7C%60NL%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ANL%60%7C%60CT%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACT%60%7C%60CMCC%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACM%60%7C%60CN%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ACN%60%7C%60TW%40%E6%A9%98%E5%AD%90%E5%85%AC%E7%9B%8ATW%60&emoji=false&list=false&xudp=false&udp=true&tfo=false&expand=true&scv=false&fdn=false&clash.doh=true&new_name=true</span></p>
+<p>Be sure to confirm the security of the website before entering user information and beware of fake websites.</p>
+</body>
+</html>

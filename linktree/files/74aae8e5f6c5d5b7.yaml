@@ -1,0 +1,16 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Global
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: HK1 @mfjdpindao, server: 156.224.78.21, port: 27249, type: vmess, uuid: f993617b-9aa9-411f-85f5-5b7650b8ff45, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: HK2 @mfjdpindao, server: 156.224.78.21, port: 35074, type: vless, uuid: 7c9ad2de-cab3-4361-b49f-73d0e346a46e, tls: false, tfo: false, skip-cert-verify: true, network: tcp}
+  - {name: HK3 @mfjdpindao, server: 45.196.222.113, port: 33707, type: vmess, uuid: 7b1373cc-f34c-4d12-822c-90e2a3e70658, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: HK4 @mfjdpindao, server: 45.196.222.113, port: 18066, type: vless, uuid: d57015cc-6702-4974-a6d7-0bcc5e651ecb, tls: false, tfo: false, skip-cert-verify: true, network: tcp}
+  - {name: JP1 @mfjdpindao, server: 156.246.91.239, port: 26389, type: vless, uuid: 637cc851-f4df-4977-81d0-25d9a3d7f553, tls: false, tfo: false, skip-cert-verify: true, network: tcp}
+  - {name: JP2 @mfjdpindao, server: 156.246.91.239, port: 18744, type: vmess, uuid: b2259281-bad1-499a-bde4-4df89ff286bd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: JP3 @mfjdpindao, server: 156.246.89.152, port: 24596, type: vmess, uuid: b05fdde3-0efd-4461-ab57-259b44121d57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: JP4 @mfjdpindao, server: 156.246.89.152, port: 13064, type: vless, uuid: 1b340a04-f3a1-4d64-8cba-46083f65c24f, tls: false, tfo: false, skip-cert-verify: true, network: tcp}
+  - {name: JP5 @mfjdpindao, server: 156.246.88.103, port: 12152, type: vmess, uuid: a49b4de8-d019-452b-80f6-35333c2aa2e8, alterId: 0, cipher: auto, tls: false}

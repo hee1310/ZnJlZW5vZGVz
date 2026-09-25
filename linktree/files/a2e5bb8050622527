@@ -1,0 +1,515 @@
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+hosts:
+  localhost: 127.0.0.1
+dns:
+  enable: true
+  listen: 0.0.0.0:10053
+  default-nameserver:
+    - 119.29.29.29
+    - 8.8.8.8
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - https://beacon.dog/dns-query
+    - https://x0.beacon.dog/dns-query
+    - https://x1.beacon.dog/dns-query
+    - tls://8.8.8.8:853
+    - https://1.1.1.1/dns-query
+    - https://doh.pub/dns-query
+proxy-groups:
+  - name: 🌏 当前选择
+    type: select
+    proxies:
+      - 🇭🇰 香港自动
+      - 🇨🇳 台湾自动
+      - 🇸🇬 新加坡自动
+      - 🇯🇵 日本自动
+      - 🇺🇸 美国自动
+      - DG-HK-6(https)[expired]
+      - IG-HK-6(https)[expired]
+      - TG-HK-6(https)[expired]
+      - UG-HK-6(https)[expired]
+      - DG-TW-6(https)[expired]
+      - IG-TW-6(https)[expired]
+      - TG-TW-6(https)[expired]
+      - UG-TW-6(https)[expired]
+      - DG-SG-6(https)[expired]
+      - IG-SG-6(https)[expired]
+      - TG-SG-6(https)[expired]
+      - UG-SG-6(https)[expired]
+      - DG-JP-6(https)[expired]
+      - IG-JP-6(https)[expired]
+      - TG-JP-6(https)[expired]
+      - UG-JP-6(https)[expired]
+      - DG-US-6(https)[expired]
+      - IG-US-6(https)[expired]
+      - TG-US-6(https)[expired]
+      - UG-US-6(https)[expired]
+      - DG-DE-6(https)[expired]
+      - IG-DE-6(https)[expired]
+      - DG-KR-6(https)[expired]
+      - IG-KR-6(https)[expired]
+      - DG-ES-6(https)[expired]
+      - IG-ES-6(https)[expired]
+  - name: 🇭🇰 香港自动
+    type: fallback
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - UG-HK-6(https)[expired]
+      - DG-HK-6(https)[expired]
+      - TG-HK-6(https)[expired]
+      - IG-HK-6(https)[expired]
+  - name: 🇨🇳 台湾自动
+    type: fallback
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - DG-TW-6(https)[expired]
+      - IG-TW-6(https)[expired]
+      - TG-TW-6(https)[expired]
+      - UG-TW-6(https)[expired]
+  - name: 🇸🇬 新加坡自动
+    type: fallback
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - DG-SG-6(https)[expired]
+      - IG-SG-6(https)[expired]
+      - TG-SG-6(https)[expired]
+      - UG-SG-6(https)[expired]
+  - name: 🇯🇵 日本自动
+    type: fallback
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - UG-JP-6(https)[expired]
+      - TG-JP-6(https)[expired]
+      - IG-JP-6(https)[expired]
+      - DG-JP-6(https)[expired]
+  - name: 🇺🇸 美国自动
+    type: fallback
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - DG-US-6(https)[expired]
+      - IG-US-6(https)[expired]
+      - UG-US-6(https)[expired]
+      - TG-US-6(https)[expired]
+proxies:
+  - name: DG-HK-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20443
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-HK-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20443
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: TG-HK-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-04-atsks.flare.today
+    port: 20443
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: UG-HK-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-03-cmqgi.flare.today
+    port: 20443
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-TW-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20445
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-TW-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20445
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: TG-TW-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-04-atsks.flare.today
+    port: 20445
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: UG-TW-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-03-cmqgi.flare.today
+    port: 20445
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-SG-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20447
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-SG-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20447
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: TG-SG-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-04-atsks.flare.today
+    port: 20447
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: UG-SG-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-03-cmqgi.flare.today
+    port: 20447
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-JP-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20444
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-JP-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20444
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: TG-JP-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-04-atsks.flare.today
+    port: 20444
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: UG-JP-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-03-cmqgi.flare.today
+    port: 20444
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-US-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20446
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-US-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20446
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: TG-US-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-04-atsks.flare.today
+    port: 20446
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: UG-US-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-03-cmqgi.flare.today
+    port: 20446
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+      - iepl
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-DE-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20448
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-DE-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20448
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-KR-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20450
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-KR-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20450
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: DG-ES-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-06-fyedb.flare.today
+    port: 20454
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+  - name: IG-ES-6(https)[expired]
+    username: b1ad184b80
+    password: df04084078
+    type: http
+    server: gz-05-ugpgd.flare.today
+    port: 20454
+    tls: true
+    sni: 106-110-192-225.d.cjjd20.com
+    skip-cert-verify: true
+    tags:
+      - star
+    load-username: b1ad184b80
+    load-password: df04084078
+rules:
+  - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,whormhole.org,DIRECT
+  - DOMAIN-SUFFIX,flare.today,DIRECT
+  - DOMAIN-KEYWORD,linkedin,🌏 当前选择
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,ipdata.co,DIRECT
+  - DOMAIN-SUFFIX,ip.sb,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,outlook.com,DIRECT
+  - DOMAIN-SUFFIX,live.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,azure.com,DIRECT
+  - DOMAIN-SUFFIX,onedrive.com,DIRECT
+  - DOMAIN-SUFFIX,bing.com,DIRECT
+  - DOMAIN-SUFFIX,msn.com,DIRECT
+  - DOMAIN-SUFFIX,skype.com,DIRECT
+  - DOMAIN-SUFFIX,xbox.com,DIRECT
+  - DOMAIN-SUFFIX,visualstudio.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftstore.com,DIRECT
+  - DOMAIN-SUFFIX,windowsupdate.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,sharepoint.com,DIRECT
+  - DOMAIN-SUFFIX,teams.microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,dynamics.com,DIRECT
+  - DOMAIN-SUFFIX,windowsazure.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,appsto.re, DIRECT
+  - DOMAIN,books.itunes.apple.com,DIRECT
+  - DOMAIN,apps.apple.com,DIRECT
+  - DOMAIN,itunes.apple.com,DIRECT
+  - DOMAIN,api-glb-sea.smoot.apple.com,DIRECT
+  - DOMAIN-SUFFIX,smoot.apple.com,DIRECT
+  - DOMAIN,lookup-api.apple.com,DIRECT
+  - DOMAIN,beta.music.apple.com,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - PROCESS-NAME,aria2c.exe,DIRECT
+  - PROCESS-NAME,BitComet.exe,DIRECT
+  - PROCESS-NAME,fdm.exe,DIRECT
+  - PROCESS-NAME,NetTransport.exe,DIRECT
+  - PROCESS-NAME,qbittorrent.exe,DIRECT
+  - PROCESS-NAME,Thunder.exe,DIRECT
+  - PROCESS-NAME,ThunderVIP.exe,DIRECT
+  - PROCESS-NAME,transmission-daemon.exe,DIRECT
+  - PROCESS-NAME,transmission-qt.exe,DIRECT
+  - PROCESS-NAME,uTorrent.exe,DIRECT
+  - PROCESS-NAME,WebTorrent.exe,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - MATCH,🌏 当前选择
+subscription-extension:
+  - description: 用量： 0.02 GB / 50 GB, 过期时间：2025-03-23

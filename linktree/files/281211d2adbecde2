@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="icon" href="./favicon.ico">
+
+    <title>K8凯发·天生赢家</title>
+
+    <link rel="preload" href="./media/pc5.webp" as="image" media="(min-width: 769px)">
+    <link rel="preload" href="./imgs/bg.webp" as="image" media="(max-width: 768px)">
+
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script>
+        (function () {
+            var isMobile =
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(
+                    navigator.userAgent
+                ) || window.innerWidth <= 768;
+
+            document.documentElement.className = isMobile
+                ? 'js-mobile'
+                : 'js-pc';
+        })();
+    </script>
+
+    <script src="./js/config.js" defer></script>
+</head>
+
+<body>
+
+    <main class="main">
+
+        <div class="logo">
+            <img
+                src="./imgs/logo.png"
+                alt="K8凯发"
+                width="180"
+                decoding="async"
+            >
+        </div>
+
+        <section class="content">
+
+            <div class="progress">
+                <svg
+                    class="progress-svg"
+                    viewBox="0 0 200 200"
+                    width="200"
+                    height="200"
+                    aria-label="加载进度"
+                    role="img"
+                >
+                    <circle
+                        class="circle-bg"
+                        cx="100"
+                        cy="100"
+                        r="88"
+                    ></circle>
+
+                    <circle
+                        class="circle"
+                        cx="100"
+                        cy="100"
+                        r="88"
+                    ></circle>
+                </svg>
+
+                <div class="percentage">100%</div>
+            </div>
+
+            <div class="continue_btn"></div>
+
+            <div class="help">
+                K8凯发·亚洲娱乐第一品牌
+            </div>
+
+            <div class="tips">
+                注册享豪礼·亿万奖池·开户送8888
+            </div>
+
+            <div class="domains"></div>
+
+        </section>
+
+        <div class="corp-h5">
+            <img
+                src="./imgs/sponsors-1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+            >
+
+            <img
+                src="./imgs/sponsors-2.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+            >
+
+            <img
+                src="./imgs/sponsors-3.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+            >
+        </div>
+
+        <div class="corp">
+            <img
+                src="./imgs/corp.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+            >
+        </div>
+
+    </main>
+
+    <script>
+        (function () {
+            var lastMobile = window.innerWidth <= 768;
+
+            function updateDeviceClass() {
+                var mobile = window.innerWidth <= 768;
+
+                if (mobile === lastMobile) {
+                    return;
+                }
+
+                lastMobile = mobile;
+
+                document.documentElement.classList.toggle(
+                    'js-mobile',
+                    mobile
+                );
+
+                document.documentElement.classList.toggle(
+                    'js-pc',
+                    !mobile
+                );
+
+                document.body.classList.toggle(
+                    'is-mobile',
+                    mobile
+                );
+
+                document.body.classList.toggle(
+                    'is-pc',
+                    !mobile
+                );
+            }
+
+            function initDeviceClass() {
+                var mobile = window.innerWidth <= 768;
+
+                document.body.classList.toggle(
+                    'is-mobile',
+                    mobile
+                );
+
+                document.body.classList.toggle(
+                    'is-pc',
+                    !mobile
+                );
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener(
+                    'DOMContentLoaded',
+                    initDeviceClass,
+                    { once: true }
+                );
+            } else {
+                initDeviceClass();
+            }
+
+            window.addEventListener(
+                'resize',
+                updateDeviceClass,
+                { passive: true }
+            );
+        })();
+    </script>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3NwXiga8Wjg3yFB7",ck:"3NwXiga8Wjg3yFB7"})</script>
+
+</body>
+</html>

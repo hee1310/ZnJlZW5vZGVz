@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="tanglu" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  <meta name="description" content="tanglu blog" />
+  
+  
+  
+  <title>
+    
+      链式代理优化代理速度 
+      
+      
+      |
+    
+     tanglu blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="https://img.tanglu.me/image.webp">
+    <link rel="icon" href="https://img.tanglu.me/image.webp">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8CHQT28KM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X8CHQT28KM');
+    </script>
+  
+
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="https://img.tanglu.me/image.webp" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">tanglu</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">主页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/incidents/">
+          <a href="/incidents/">事件</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">友链</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">关于我</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">链式代理优化代理速度</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2026-07-06 20:06:02
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <blockquote>
+<p>本文链接：<a href="https://blog.tanglu.me/chains-proxies/">https://blog.tanglu.me/chains-proxies</a></p>
+</blockquote>
+<p><strong>更新：</strong></p>
+<p>2023.05.27    增加 ‘使用鸡场动态订阅加速自建节点’</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>链式代理可以实现通过机场节点来优化线路差的代理，类似于中转机，相当于为落地鸡提供前置代理</p>
+<p>支持<code>socks</code> <code>http</code> <code>vmess</code> <code>vless</code> <code>trojan</code> <code>Shadowsocks</code>主流代理协议</p>
+<p>链式代理无需更改服务端配置，只需要在客户端进行配置即可</p>
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>本文以clash演示，v2rayN可以参考官方文档</p>
+<blockquote>
+<p>clash relay：<a target="_blank" rel="noopener" href="https://github.com/tanglu1323123/clash_config_backup">Configuration Reference | Clash)</a></p>
+<p>v2rayN：<a target="_blank" rel="noopener" href="https://guide.v2fly.org/advanced/outboundproxy.html#%E9%93%BE%E5%BC%8F%E4%BB%A3%E7%90%86%E8%BD%AC%E5%8F%91">代理转发 | 新 V2Ray 白话文指南 (v2fly.org)</a></p>
+</blockquote>
+<p>可以看到有两个代理 “az_hk1”和”ddp-us”,假设我落地鸡为”ddp-us”(IP干净，但是线路不好移动丢包率达到一半以上),”az_hk1”为公益不限速节点 但是万人骑</p>
+<figure class="highlight plaintext"><figcaption><span>7890</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">socks-port: 7891</span><br><span class="line">allow-lan: true</span><br><span class="line">mode: Rule</span><br><span class="line">log-level: info</span><br><span class="line">external-controller: :9090</span><br><span class="line">proxies:</span><br><span class="line">  - name: az_hk1</span><br><span class="line">    server: gddx.fosi.hk</span><br><span class="line">    port: &quot;22220&quot;</span><br><span class="line">    type: vmess</span><br><span class="line">    uuid: 9354294e-6741-4c40-d7aa-e23acc57d0e8</span><br><span class="line">    alterId: 0</span><br><span class="line">    cipher: auto</span><br><span class="line">    tls: false</span><br><span class="line">    skip-cert-verify: false</span><br><span class="line">    network: ws</span><br><span class="line">    ws-opts:</span><br><span class="line">      path: /</span><br><span class="line">  - name: ddp-us</span><br><span class="line">    server: ahhfb.fosi.hk</span><br><span class="line">    port: &quot;22211&quot;</span><br><span class="line">    type: vmess</span><br><span class="line">    uuid: 7a94cf94-cdb6-4114-cb82-06721845cc3a</span><br><span class="line">    alterId: 0</span><br><span class="line">    cipher: auto</span><br><span class="line">    tls: false</span><br><span class="line">    skip-cert-verify: false</span><br><span class="line">    network: ws</span><br><span class="line">    ws-opts:</span><br><span class="line">      path: /</span><br><span class="line"></span><br><span class="line">proxy-groups:</span><br><span class="line">  - name: 🚀 节点选择</span><br><span class="line">    type: select</span><br><span class="line">    proxies:</span><br><span class="line">      - ♻️ 自动选择</span><br><span class="line">      - DIRECT</span><br><span class="line">      - az_hk1</span><br><span class="line">      - ddp-us</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>“proxy-groups”更改为如下配置即可通过az-hk1加速ddp-us，链式代理网络为：大陆境内客户端&gt;&gt;az-hk1&gt;&gt;ddp-us</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">proxy-groups:</span><br><span class="line"></span><br><span class="line">  - name: &quot;az2ddp&quot;</span><br><span class="line">    type: relay</span><br><span class="line">    proxies:</span><br><span class="line">      - az_hk1</span><br><span class="line">      - ddp-us</span><br><span class="line">  - name: 🚀 节点选择</span><br><span class="line">    type: select</span><br><span class="line">    proxies:</span><br><span class="line">      - ♻️ 自动选择</span><br><span class="line">      - DIRECT</span><br><span class="line">      - az_hk1</span><br><span class="line">      - ddp-us</span><br><span class="line">      - az2ddp</span><br></pre></td></tr></table></figure>
+
+<p>过程：数据包先通过ddp-vmess协议加密再经过azhk-vmess协议加密，加密后的双重vmess数据包发送到公益节点服务器az-hk1 服务器将最外层vmess解密后的数据包发送到ddp落地机，ddp将vmess解密</p>
+<blockquote>
+<p>单独使用公益节点是否可以查看隐私数据？</p>
+<p>答：访问https站点服务器可以看到你访问的网站域名，但不知道其他信息；访问http未加密站点，服务器可以看到全部隐私数据</p>
+</blockquote>
+<blockquote>
+<p>使用链式代理时 公益节点是否可以查看隐私数据？</p>
+<p>答：取决于你的其他代理协议是否为明文，例如如果ddp-us为http代理(明文)，则可以看到</p>
+<p>只要不是明文协议，公益节点都不会看到数据，只有落地机可以看到你访问的网站</p>
+</blockquote>
+<blockquote>
+<p>落地鸡是否会被防火墙封锁？</p>
+<p>一般中转节点在境外，被封锁也是中转节点。中转节点与落地鸡交互并不经过防火墙（中转节点在国内的除外）</p>
+</blockquote>
+<h2 id="动态节点配置"><a href="#动态节点配置" class="headerlink" title="动态节点配置"></a>动态节点配置</h2><p>上节内容已经可以实现加速效果，但通常情况下 作为中转用途的加速节点往往是动态的机场节点，落地节点一般是我们自己建的静态节点。</p>
+<p>这里会有一个问题就是：机场节点的配置往往是经常变动的，比如上午我们下载的机场配置文件中某个节点是1479端口 中午这个端口被墙了，这时机场主会将端口改为14799 ，而你的配置却仍然是1479这个端口，这时就需要手动在配置文件中将端口更改为14799，或者更新订阅链接然后重新配置落地鸡创建链式代理</p>
+<p>参考了 <a target="_blank" rel="noopener" href="https://hostloc.com/thread-1097176-1-1.html">这篇文章</a> 后，我才知道clash对这种情况有解决办法的，即可以直接relay链式代理模式嵌套 <code>自动选择</code></p>
+<p>自动选择是clash最常见的一种规则，小白一般都选这个，因为自动选择会默认每5分钟测试所有节点的延时，选择延时最低的节点，这样基本就可以保证任何时候都可以正常使用。当然坏处就是节点IP可能经常变化。</p>
+<p>我们将自动选择用于链式代理 线路就变为 ：<code>用户的电脑 </code>&gt; <code>延时最低的节点</code> &gt; <code>自建的静态节点</code> &gt; <code>目标网站</code> ，这样就不用每次手动配置了 非常的方便</p>
+<h4 id="教程："><a href="#教程：" class="headerlink" title="教程："></a><strong>教程：</strong></h4><p>这里我以机场订阅和我自己的一个静态socks代理为例，给出一份最简化的配置</p>
+<p>你只需要打开clash客户端，在订阅文件中(profiles)中粘贴这个示例文件链接 <a target="_blank" rel="noopener" href="https://file.1323123.xyz/relay-demo.yaml">https://file.1323123.xyz/relay-demo.yaml</a> 然后下载（记得关闭自动更新 不然你自己修改的配置会丢失）</p>
+<p>再修改图片红框标记的三个部分即可，修改好保存</p>
+<p>在clash面板 <code>profies</code> 中选择  <code>手动选择</code> 中 <code>jichang2zijian</code> 这个节点即可使用</p>
+<p><img src="https://img.tanglu.me/2023/06/09/w5nia5.webp" alt="image"></p>
+<p><img src="https://img.tanglu.me/2023/06/09/w8pla1.webp" alt="image"></p>
+<p><img src="https://img.tanglu.me/2023/05/27/tzhq8c.webp" alt="image"><br><img src="https://img.tanglu.me/2023/05/27/tzrcnx.webp" alt="image"></p>
+<p><img src="https://img.tanglu.me/2023/05/27/txuco3.webp" alt="image"></p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>机场为了避免节点机吃投诉等滥用，一般会用iptables封禁出站数据包的目的端口<br>比如封禁 21 22 53 3389 10000+的高位端口等，甚至一些机场只允许出站数据包的目标端口为80 443，其他端口全部屏蔽</p>
+<p>此时如果你的IP正好处在这些端口，那么数据包在节点服务器出站到落地时，iptables会拦截这些数据包，所以推荐自建节点的端口为低位端口 比如1000-2000之间 也可以用 80、443端口大部分是可以的，不要选用 22 3389这些搞破坏的端口</p>
+<h2 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h2><p>不成功可能会有以下几个原因：</p>
+<ul>
+<li><p>节点是无效的，即节点不通</p>
+</li>
+<li><p>未选中订阅文件，选中状态左边的边框是绿色的</p>
+</li>
+<li><p>延时太高导致clash判断为超时，因为clash默认是3000ms以上为超时，链式代理经过多层中转很容易超出这一限制 造成误判，可以在 clash客户端 &gt;&gt; setting &gt;&gt; proxies &gt;&gt;Latency Test Timeout 处将默认的3000ms更改为30000ms</p>
+</li>
+<li><p>部分机场节点会封禁出站数据的目标端口，此时如果自建节点的端口可能在封禁端口中</p>
+</li>
+<li><p>机场的URL是加密的，需要通过订阅转换等方式转成明文yaml配置（ <a target="_blank" rel="noopener" href="https://img.tanglu.me/2023/11/14/j3swr7.webp">https://img.tanglu.me/2023/11/14/j3swr7.webp</a> )</p>
+</li>
+</ul>
+<p>clash的测速是测试延迟，这注定了一些延时大的中转节点永远不会被选中，即 <strong>动态节点配置</strong> 中选择的节点基本肯定全为亚洲节点，想自定义节点（比如挑选出美国节点）就需要用到clash中的 <code>filter</code> 字段自定义选择某些节点形成一个代理组，具体可以参考：<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/pull/1511">add filter in proxy provider · Pull Request #1511</a></p>
+<p>软路由的openclash也可以用，只要是clash客户端或基于clash的我想应该都可以使用</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/WARP-for-Android/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2026-07-06 20:06:02
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/select-ip-for-CDN/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%94%E7%A4%BA"><span class="toc-text">演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">动态节点配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%99%E7%A8%8B%EF%BC%9A"><span class="toc-text">教程：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="toc-text">注意：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%82%E8%B0%88"><span class="toc-text">杂谈</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+  <div id="waline-comments"></div>
+
+  <script>
+    function loadWalineSuc(func) {
+      func({
+        el: '#waline-comments',
+        path: location.pathname,
+        serverURL: 'https://waline.tanglu.me',
+        emoji: false,
+        dark: 'auto',
+        requiredMeta: ['nick', 'mail'],
+        wordLimit: 150,
+        imageUploader: false,
+        search: false,
+        reaction: false,
+        pageSize: 30,
+        lang: 'zh'
+      })
+    }
+  </script>
+
+  
+    <link rel="stylesheet" href="">
+    <script type="module">
+      import { init } from ''
+      loadWalineSuc(init)
+    </script>
+  
+
+
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="rss" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+    <div class="footer-views">
+      
+      
+          <span id="busuanzi_value_site_uv"></span>访客
+        
+      
+          <span id="busuanzi_value_page_pv"></span>阅读
+        
+      
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E9%93%BE%E5%BC%8F%E4%BB%A3%E7%90%86%E4%BC%98%E5%8C%96%E4%BB%A3%E7%90%86%E9%80%9F%E5%BA%A6 + '&url=' + https%3A%2F%2Fblog.tanglu.me%2Fchains-proxies%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://blog.tanglu.me/chains-proxies/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>

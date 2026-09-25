@@ -1,0 +1,1500 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Mar 12 2026 20:58:53 GMT+0000 (Coordinated Universal Time)  -->
+<html lang="en" data-wf-page="69ae08b325b440f5eeacae14" data-wf-site="69a89ec78e99420a9d8963bd">
+<head>
+  <meta charset="utf-8">
+  <style>
+    .banner-slider-box{margin-top:-314px;margin-bottom:89px;position:relative;z-index:15}
+    .hero-title,.hero-discriptions{opacity:1}
+    @media(max-width:991px){.banner-slider-box{margin-top:42px;margin-bottom:0}}
+  </style>
+  <title>GreatFireVPN - Bypass Censorship in China, Russia, Iran, India</title>
+  <meta content="Trusted VPN for bypassing internet censorship in China, Russia, Iran and India. Also used in Cuba. 10+ years fighting the Great Firewall. 30-day free trial." name="description">
+  <meta content="GreatFireVPN - Bypass Censorship in China, Russia, Iran, India" property="og:title">
+  <meta content="Trusted VPN for bypassing internet censorship in China, Russia, Iran and India. Also used in Cuba. 10+ years fighting the Great Firewall. 30-day free trial." property="og:description">
+  <meta content="/vpn/assets/og-image-square.png" property="og:image">
+  <meta content="1200" property="og:image:width">
+  <meta content="1200" property="og:image:height">
+  <meta content="GreatFireVPN" property="og:image:alt">
+  <meta content="GreatFireVPN - Bypass Censorship in China, Russia, Iran, India" property="twitter:title">
+  <meta content="Trusted VPN for bypassing internet censorship in China, Russia, Iran and India. Also used in Cuba. 10+ years fighting the Great Firewall. 30-day free trial." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta property="og:url" content="/vpn/en/">
+  <meta content="/vpn/assets/og-image-square.png" name="twitter:image">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="robots" content="max-image-preview:large">
+  <meta content="Webflow" name="generator">
+  <link href="../css/normalize.css?v=7" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css?v=7" rel="stylesheet" type="text/css">
+  <link href="../css/new-greatfirevpn.webflow.css?v=30" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <link rel="preload" as="image" imagesrcset="../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-500.webp 500w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-800.webp 800w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-1080.webp 1080w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-1600.webp 1600w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-2000.webp 2000w, ../images/mainscreen_image.webp 2809w" imagesizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GreatFireVPN",
+  "description": "Trusted VPN for bypassing internet censorship in China, Russia, Iran, India, and other censored countries, including Cuba. Fast, secure, stable with 10+ years of experience fighting the Great Firewall.",
+  "url": "/vpn/",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Android 8.0+, iOS 15+, macOS 14+, Windows 10+",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "30 days",
+      "price": "4.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "90 days",
+      "price": "13.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "180 days",
+      "price": "24.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "365 days",
+      "price": "39.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "15"
+  },
+  "featureList": [
+    "8 circumvention methods",
+    "100+ servers worldwide",
+    "30-day free trial",
+    "No-logs policy",
+    "Split-tunneling",
+    "Automatic server selection",
+    "Works in China, Russia, Iran, India, Turkmenistan, Myanmar, and Cuba",
+    "Up to 10 simultaneous devices per account"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "GreatFire.org",
+    "url": "https://en.greatfire.org/",
+    "sameAs": [
+      "https://twitter.com/greatfireCN",
+      "https://github.com/greatfire",
+      "https://www.patreon.com/greatfire",
+      "https://t.me/greatfirevpn"
+    ]
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "GreatFire.org",
+    "description": "Anti-censorship organization founded in 2011"
+  },
+  "downloadUrl": [
+    "/vpn/downloads/greatfirevpn.apk",
+    "/vpn/downloads/GreatFireVPN-Setup.exe?v=1.4.3"
+  ],
+  "screenshot": [
+    "/vpn/images/UI1.webp",
+    "/vpn/images/UI2.webp",
+    "/vpn/images/UI3.webp",
+    "/vpn/images/UI4.webp"
+  ],
+  "image": {
+    "@type": "ImageObject",
+    "url": "/vpn/assets/og-image-square.png",
+    "width": 1200,
+    "height": 1200
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does GreatFireVPN work in China?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, GreatFireVPN is specifically designed to bypass censorship in countries with strict internet restrictions, including China. We've been fighting the Great Firewall since 2011, using multiple circumvention methods to ensure stable connections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GreatFireVPN work in Russia and Iran?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, GreatFireVPN works in Russia, Iran, Turkmenistan, Myanmar, and other countries with internet censorship. Our app automatically selects the optimal server and connection method to bypass restrictions. It is also used in Cuba."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GreatFireVPN work in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Internet blocking in India is applied at the ISP level, so which sites are blocked differs between providers such as Jio, Airtel and BSNL. GreatFireVPN routes around these DNS and IP-level blocks, and its multiple circumvention methods keep working during the regional shutdowns and throttling that are common in India. Our Singapore servers keep latency low from most Indian cities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I pay from inside Iran?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Direct rial payments are blocked by sanctions, but there are three reliable ways — crypto (best), Google Play / App Store, or an international card. See our step-by-step guide: How to pay from inside Iran."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GreatFireVPN safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GreatFireVPN is developed by GreatFire.org, an anti-censorship organization founded in 2011. We don't log your activity and don't collect personal data. No registration required — you can use the VPN anonymously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is GreatFireVPN different from other VPNs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike commercial VPNs focused on streaming, we specialize in censorship circumvention. We use multiple fallback strategies and over 10 years of experience fighting internet restrictions worldwide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer 30 days of free access when you first install the app. If you install through a friend's referral link and activate the bonus, you get an extra 10 days. No registration or credit card required — just download and start using the free internet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the referral program work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Share your unique referral link with friends. When they download, install, and launch the app on a new device, you'll receive an extra 30 days of free access added to your account, and they get an extra 10 days added to their trial. There's no limit to the number of friends you can invite — so you can use GreatFireVPN for free indefinitely!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which protocols does GreatFireVPN support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GreatFireVPN supports multiple censorship circumvention protocols: Meek, Webtunnel, V2Ray-Websocket, V2Ray-HTTP, Hysteria2, XRay-XHTTP, DNSTT, and VK-TURN. The app automatically selects the best protocol based on your network conditions to ensure a reliable connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many devices can I use simultaneously?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single GreatFireVPN account supports up to 10 simultaneous devices. You can use the VPN on your phone, tablet, laptop, and more — all under one subscription, at the same time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens during a whitelist-based internet shutdown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GreatFireVPN is built for the harshest censorship scenarios, including \"whitelist\" mode, when the authorities allow access only to a limited list of approved sites. Thanks to multiple circumvention methods, the app keeps finding a working connection and opens up the whole internet for you. This applies to Russia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I access banks and government services while the VPN is on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GreatFireVPN has a local bypass: government sites, banks and other local services open directly, without the VPN, even while the VPN is on. This way you keep access to local services and to the free internet at the same time. The feature is available in Russia, China, Iran, Turkmenistan and Myanmar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the VPN keep disconnecting on my Android phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many phones — especially Xiaomi, Redmi, Samsung and Huawei — silently close background apps to save battery. A VPN has to stay running. See our guide: Stop Android from killing the VPN."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en" href="/vpn/en/">
+  <link rel="alternate" hreflang="ru" href="/vpn/ru/">
+  <link rel="alternate" hreflang="zh-Hans" href="/vpn/zh/">
+  <link rel="alternate" hreflang="fa" href="/vpn/fa/">
+  <link rel="alternate" hreflang="vi" href="/vpn/vi/">
+  <link rel="alternate" hreflang="my" href="/vpn/my/">
+  <link rel="alternate" hreflang="tr" href="/vpn/tr/">
+  <link rel="alternate" hreflang="es" href="/vpn/es/">
+  <link rel="canonical" href="/vpn/en/">
+  <link rel="alternate" hreflang="x-default" href="/vpn/en/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K1MNBSGKK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0K1MNBSGKK');
+  </script>
+<script src="/analytics.js?pageID=vpn" data-origin="greatfirevpn.com"></script></head>
+<body>
+  <div class="page-wrapper">
+    <div data-animation="default" data-collapse="medium" data-duration="500" data-easing="ease" data-easing2="ease" role="banner" class="header w-nav">
+      <div class="container w-container">
+        <div class="header-wrapper">
+          <div class="split-content">
+            <a href="/vpn/en/" class="brand w-nav-brand"><img width="181" loading="eager" alt="GreatFireVPN logo" src="../images/logo-header.webp" class="header-logo"></a>
+          </div>
+          <div class="split-content">
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <div class="header-navigation">
+                <div class="nav-item-wrapper">
+                  <a href="/vpn/en/#faq" class="nav-link">FAQ</a>
+                </div>
+                <div class="nav-item-wrapper">
+                  <a href="/vpn/en/status" class="nav-link">Server status</a>
+                </div>
+                <div class="nav-item-wrapper">
+                  <a href="/vpn/en/#pricing" class="nav-link">Pricing</a>
+                </div>
+                <div class="nav-item-wrapper">
+                  <a href="/vpn/en/blog" class="nav-link">Blog</a>
+                </div>
+                <div class="nav-item-wrapper">
+                  <a href="/vpn/en/#about" class="nav-link">About us</a>
+                </div>
+                <div class="top-up-wrapper mobile">
+                  <a href="/vpn/en/payment" target="_blank" rel="noopener" class="nav-link">Payment</a>
+                </div>
+                <div class="nav-item-wrapper for-dextop">
+                  <div class="button-wrapper">
+                    <a href="/vpn/en/#download" data-w-id="0926005b-50b5-8bf7-e23f-9543aac6b939" class="primary-button-link w-inline-block">
+                      <div class="button-text-02 dark">Download</div>
+                      <div class="button-text-02 is-absolute dark">Download</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="split-content">
+            <div class="top-up-wrapper desktop">
+              <a href="/vpn/en/payment" target="_blank" rel="noopener" class="nav-link">Payment</a>
+            </div>
+            <div class="button-wrapper for-dextop">
+              <a href="/vpn/en/#download" data-w-id="0926005b-50b5-8bf7-e23f-9543aac6b940" class="primary-button-link w-inline-block">
+                <div class="button-text-02 dark">Download</div>
+                <div class="button-text-02 is-absolute dark">Download</div>
+              </a>
+            </div>
+            <div class="language-dropdown-wrapper">
+              <div data-delay="0" data-hover="false" data-w-id="0926005b-50b5-8bf7-e23f-9543aac6b946" class="dropdown w-dropdown">
+                <div class="dropdown-toggle w-dropdown-toggle">
+                  <div class="nav-main-link">EN</div><img loading="lazy" src="../images/DropIcon.svg" alt="Dropdown icon" class="icon-font icon">
+                </div>
+                <nav class="dropdown-list-2 w-dropdown-list">
+                  <a href="/vpn/zh/" class="dropdown-link w-dropdown-link">中文</a>
+                  <a href="/vpn/ru/" class="dropdown-link w-dropdown-link">РУС</a>
+                  <a href="/vpn/fa/" class="dropdown-link w-dropdown-link"><strong>فارسی</strong></a>
+                  <a href="/vpn/vi/" class="dropdown-link w-dropdown-link">Tiếng Việt</a>
+                  <a href="/vpn/my/" class="dropdown-link w-dropdown-link">မြန်မာ</a>
+                  <a href="/vpn/tr/" class="dropdown-link w-dropdown-link">Türkçe</a>
+                  <a href="/vpn/es/" class="dropdown-link w-dropdown-link">Español</a>
+                </nav>
+              </div>
+            </div>
+            <div class="menu-button manubar w-nav-button">
+              <div class="hamburger-menu-icon" data-w-id="0926005b-50b5-8bf7-e23f-9543aac6b953" data-src="/vpn/js/menu-animation.json" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="2.4791666666666665" data-duration="0"></div>
+            </div>
+          </div>
+          <div class="nav-overlay"></div>
+        </div>
+      </div>
+    </div>
+    <section class="hero-section">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="banner-main-title-box">
+          <h1 data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc60a" class="hero-title"><span class="gradient-text">GreatFireVPN</span><br>No firewall can stop us</h1>
+          <p data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc60f" class="hero-discriptions">Reliable access to the open internet in China, Russia, Iran, and other censored countries. Fast, secure, stable.</p>
+          <div class="button-wrapper">
+            <a data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc612" href="/vpn/en/#download" class="primary-button-link w-inline-block">
+              <div class="button-text-02 dark">Activate free trial</div>
+              <div class="button-text-02 is-absolute dark">Activate free trial</div>
+            </a>
+          </div>
+          <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc617" class="banner-slider-wrapper">
+            <div class="banner-slider-bg">
+              <div class="banner-slider-bg-inner"><img style="opacity:0" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="" role="presentation" src="../images/BShape_orange.webp" loading="lazy" srcset="../images/44f5afd2e56fae8f18daaf685fe388f5_BShape_orange-p-500.webp 500w, ../images/44f5afd2e56fae8f18daaf685fe388f5_BShape_orange-p-800.webp 800w, ../images/44f5afd2e56fae8f18daaf685fe388f5_BShape_orange-p-1080.webp 1080w, ../images/BShape_orange.webp 2878w" class="banner-slider-mobile-shape"><img style="-webkit-transform:translate3d(0, 28px, 0) scale3d(1, 1, 1) rotateX(38deg) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 28px, 0) scale3d(1, 1, 1) rotateX(38deg) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 28px, 0) scale3d(1, 1, 1) rotateX(38deg) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 28px, 0) scale3d(1, 1, 1) rotateX(38deg) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="GreatFireVPN for reliable access to the open internet" src="../images/mainscreen_image.webp" loading="eager" fetchpriority="high" srcset="../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-500.webp 500w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-800.webp 800w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-1080.webp 1080w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-1600.webp 1600w, ../images/27c9a3111db8838c96f645640360a60f_mainscreen_image-p-2000.webp 2000w, ../images/mainscreen_image.webp 2809w" class="banner-slider-bg-mobile"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-slider-box">
+        <div data-delay="2000" data-animation="slide" class="banner-slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+          <div class="slider-cart-border-bg"><img loading="eager" src="../images/Slider-Cart-Border-Bg.webp" alt="" role="presentation" class="slider-cart-border-bg-img"></div>
+          <div class="banner-mask w-slider-mask">
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/ch.svg" alt="Connect to GreatFireVPN&#x27;s server in Switzerland" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Switzerland</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/nl.svg" alt="Connect to GreatFireVPN&#x27;s server in Netherlands" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Netherlands</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/sg.svg" alt="Connect to GreatFireVPN&#x27;s server in Singapore" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Singapore</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/jp.svg" alt="Connect to GreatFireVPN&#x27;s server in Japan" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Japan</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/us.svg" alt="Connect to GreatFireVPN&#x27;s server in United States" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">United States</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/ee.svg" alt="Connect to GreatFireVPN&#x27;s server in Estonia" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Estonia</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/fi.svg" alt="Connect to GreatFireVPN&#x27;s server in Finland" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Finland</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/de.svg" alt="Connect to GreatFireVPN&#x27;s server in Germany" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Germany</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/gb.svg" alt="Connect to GreatFireVPN&#x27;s server in United Kingdom" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">United Kingdom</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/ro.svg" alt="Connect to GreatFireVPN&#x27;s server in Romania" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Romania</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-items w-slide">
+              <div class="slider-single-cart">
+                <div class="slider-single">
+                  <div class="slider-cart-icon-flex"><img loading="eager" src="../images/ru.svg" alt="GreatFireVPN works in Russia" class="slider-cart-flag">
+                    <div class="slider-cart-network-flex"><img loading="eager" src="../images/GF_Net3.svg" alt="Network icon" class="slider-cart-network">
+                      <div class="slider-cart-network-button">Connect</div>
+                    </div>
+                  </div>
+                  <div class="banner-slider-catr-title-wrap">
+                    <div class="banner-slider-catr-loction">Location</div>
+                    <h6 class="banner-slider-catr-title">Russia</h6>
+                  </div>
+                  <div class="slider-blur-bg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-link w-slider-arrow-left">
+            <div class="w-icon-slider-left"></div>
+          </div>
+          <div class="slider-link w-slider-arrow-right">
+            <div class="w-icon-slider-right"></div>
+          </div>
+          <div class="slider-link w-slider-nav w-round w-num"></div>
+        </div>
+      </div>
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="business-freedom-content-wrapper">
+          <div class="figures-counter-wrapper-copy">
+            <div class="figures-count-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc6cf" class="figure-count-single-blue">
+                <div class="count-overflow-heddin">
+                  <div class="review-count-wrapper">
+                    <div class="review-count-inner">
+                      <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc6d3" style="opacity:0" class="review-count-number-overflow">
+                        <div class="review-count-number-wrap">
+                          <h4 class="review-count-number">8</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-counter-icon-box"><img loading="lazy" src="../images/Review-Count-Icon3.svg" alt="GreatFireVPN uses eight different circumvention methods" class="review-count-icon">
+                  <div class="review-count-title">Circumvention methods</div>
+                </div>
+              </div>
+            </div>
+            <div class="figures-count-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc6ee" class="figure-count-single-blue">
+                <div class="count-overflow-heddin">
+                  <div class="review-count-wrapper">
+                    <div class="review-count-inner">
+                      <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc6f2" style="opacity:0" class="review-count-number-overflow">
+                        <div class="review-count-number-wrap">
+                          <h4 class="review-count-number">30</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-counter-icon-box"><img loading="lazy" src="../images/Review-Count-Icon2.svg" alt="30-day free trial" class="review-count-icon">
+                  <div class="review-count-title">Days of free trial</div>
+                </div>
+              </div>
+            </div>
+            <div class="figures-count-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc722" class="figure-count-single-blue">
+                <div class="count-overflow-heddin">
+                  <div class="review-count-wrapper">
+                    <div class="review-count-inner">
+                      <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc726" style="opacity:0" class="review-count-number-overflow">
+                        <div class="review-count-number-wrap">
+                          <h4 class="review-count-number">100+</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-counter-icon-box"><img loading="lazy" src="../images/Review-Counter-Icon-1.svg" alt="GreatFireVPN has over 100 servers online" class="review-count-icon">
+                  <div class="review-count-title">Servers worldwide</div>
+                </div>
+              </div>
+            </div>
+            <div class="figures-count-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc76d" class="figure-count-single-blue">
+                <div class="count-overflow-heddin">
+                  <div class="review-count-wrapper">
+                    <div class="review-count-inner">
+                      <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc771" style="opacity:0" class="review-count-number-overflow">
+                        <div class="review-count-number-wrap">
+                          <h4 class="review-count-number">5M+</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-counter-icon-box"><img loading="lazy" src="../images/Review-Count-Icon4.svg" alt="Over 5 million users trust GreatFire" class="review-count-icon">
+                  <div class="review-count-title">Users that trust us</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="section">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="services-title-wrapper">
+          <div class="section-title-flex flex-bottom">
+            <div class="section-left-content">
+              <h2 data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc794" style="opacity:0" class="section-title">GreatFireVPN for your ultimate online privacy protection</h2>
+              <p class="section-discriptions">Our approach to circumvention<br></p>
+            </div>
+            <div class="section-right-content">
+              <div class="button-wrapper">
+                <a href="/vpn/en/#download" data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc79b" class="primary-button-link w-inline-block">
+                  <div class="button-text-02 dark">Activate free trial</div>
+                  <div class="button-text-02 is-absolute dark">Activate free trial</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="services-wrapper">
+          <div class="services-single-box">
+            <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7a2" style="opacity:0" class="w-layout-grid features-grid-up">
+              <div class="services-cart-single">
+                <div class="services-icon-wrap"><img loading="lazy" src="../images/shield-checkered-duotone-1.svg" alt="Secure VPN" class="services-icon"><img loading="lazy" src="../images/Services-Shape.svg" alt="" role="presentation" class="services-icon-shape"></div>
+                <div class="services-post-details">
+                  <div class="services-title">for heavy censorship</div>
+                  <h3 class="services-post-title">Reliability</h3>
+                  <div class="services-description">We use different robust fallback strategies so you don&#x27;t lose access to the free internet.</div>
+                </div>
+              </div>
+              <div class="services-cart-single">
+                <div class="services-icon-wrap"><img loading="lazy" src="../images/lightning-duotone-2.svg" alt="Fast VPN" class="services-icon"><img loading="lazy" src="../images/Services-Shape-blue.svg" alt="" role="presentation" class="services-icon-shape"></div>
+                <div class="services-post-details">
+                  <div class="services-title">smart algorithms</div>
+                  <h3 class="services-post-title">Speed</h3>
+                  <div class="services-description">We automatically connect you to the fastest server for your censorship environment.</div>
+                </div>
+              </div>
+            </div>
+            <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7bb" style="opacity:0" class="w-layout-grid features-grid-down">
+              <div class="services-cart-single">
+                <div class="services-icon-wrap"><img loading="lazy" src="../images/tree-structure-duotone-3.svg" alt="Split-tunneling" class="services-icon"><img loading="lazy" src="../images/Services-Shape.svg" alt="" role="presentation" class="services-icon-shape"></div>
+                <div class="services-post-details">
+                  <div class="services-title">flexible</div>
+                  <h3 class="services-post-title">Split-tunneling</h3>
+                  <div class="services-description">Select which apps use the VPN and which connect directly for maximum flexibility.<br><span style="font-size:13px;opacity:.7;">* Android only</span></div>
+                </div>
+              </div>
+              <div class="services-cart-single">
+                <div class="services-icon-wrap"><img loading="lazy" src="../images/keyhole-duotone.svg" alt="Private VPN" class="services-icon"><img loading="lazy" src="../images/Services-Shape.svg" alt="" role="presentation" class="services-icon-shape"></div>
+                <div class="services-post-details">
+                  <div class="services-title">No-logs policy</div>
+                  <h3 class="services-post-title">Your data is yours alone</h3>
+                  <div class="services-description">We don&#x27;t track your online activities and don&#x27;t collect personal data. No email required — try GreatFireVPN without registration.</div>
+                </div>
+              </div>
+            </div>
+            <div class="w-layout-grid features-grid-down">
+              <div class="services-cart-single">
+                <div class="services-icon-wrap"><img loading="lazy" src="../images/shield-check-duotone-2.svg" alt="Whitelist bypass" class="services-icon"><img loading="lazy" src="../images/Services-Shape.svg" alt="" role="presentation" class="services-icon-shape"></div>
+                <div class="services-post-details">
+                  <div class="services-title">whitelist shutdowns</div>
+                  <h3 class="services-post-title">Bypass whitelist-based shutdowns</h3>
+                  <div class="services-description">Even when the authorities allow access only to an approved &quot;whitelist&quot; of sites, GreatFireVPN keeps working and opens up the whole internet for you.<br><span style="font-size:13px;opacity:.7;">* Russia only</span></div>
+                </div>
+              </div>
+              <div class="services-cart-single">
+                <div class="services-icon-wrap"><img loading="lazy" src="../images/map-pin-duotone.svg" alt="Local bypass" class="services-icon"><img loading="lazy" src="../images/Services-Shape-blue.svg" alt="" role="presentation" class="services-icon-shape"></div>
+                <div class="services-post-details">
+                  <div class="services-title">local bypass</div>
+                  <h3 class="services-post-title">Direct access to local services</h3>
+                  <div class="services-description">Government sites, banks and other local services open directly, without the VPN, even while the VPN is on.<br><span style="font-size:13px;opacity:.7;">* Available only in Russia, China, Iran, Turkmenistan and Myanmar</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section business-freedom">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="business-freedom-title-wtapper">
+          <h2 class="section-title business-freedom">Works in countries with heavy censorship</h2>
+          <p class="section-discriptions business-freedom">10+ years of experience bypassing internet restrictions worldwide.</p>
+        </div>
+        <div class="business-freedom-content-wrapper">
+          <div class="world-map-wrap"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/1bcbff9dc76e703d2613fd97e79c32dd_Wold-Map-p-500.webp 500w, ../images/1bcbff9dc76e703d2613fd97e79c32dd_Wold-Map-p-800.webp 800w, ../images/1bcbff9dc76e703d2613fd97e79c32dd_Wold-Map-p-1080.webp 1080w, ../images/1bcbff9dc76e703d2613fd97e79c32dd_Wold-Map-p-1600.webp 1600w, ../images/Wold-Map.webp 2098w" alt="World map" src="../images/Wold-Map.webp" loading="lazy" class="world-map-gf">
+            <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7df" class="contry-location"></div>
+            <div class="contry-location _2"></div>
+            <div class="contry-location _3"></div>
+            <div class="contry-location _4"></div>
+            <div class="contry-location _5"></div>
+            <div class="contry-location _6"></div>
+            <div class="contry-location _7"></div>
+          </div>
+          <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7e6" style="opacity:0" class="countries-wrapper">
+            <div class="countries-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7e8" class="countries-single">
+                <div class="countries-image"><img loading="lazy" src="../images/cn.svg" alt="GreatFireVPN works in China" class="contry-icon"></div>
+                <div class="countries-text">
+                  <div class="country-name">China</div>
+                  <div class="country-description">Defeating the Great Firewall since 2011.</div>
+                </div>
+              </div>
+            </div>
+            <div class="countries-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7f1" class="countries-single">
+                <div class="countries-image"><img loading="lazy" src="../images/ru.svg" alt="GreatFireVPN works in Russia" class="contry-icon"></div>
+                <div class="countries-text">
+                  <div class="country-name">Russia</div>
+                  <div class="country-description">Bypass Roskomnadzor blocks and access restricted services. </div>
+                </div>
+              </div>
+            </div>
+            <div class="countries-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc7fa" class="countries-single">
+                <div class="countries-image"><img loading="lazy" src="../images/ir.svg" alt="GreatFireVPN works in Iran" class="contry-icon"></div>
+                <div class="countries-text">
+                  <div class="country-name">Iran</div>
+                  <div class="country-description">Helping people to stay in contact with the rest of the world.</div>
+                </div>
+              </div>
+            </div>
+            <div class="countries-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc803" class="countries-single">
+                <div class="countries-image"><img loading="lazy" src="../images/tm.svg" alt="GreatFireVPN works in Turkmenistan" class="contry-icon"></div>
+                <div class="countries-text">
+                  <div class="country-name">Turkmenistan</div>
+                  <div class="country-description">Works in one of the world&#x27;s most closed countries.</div>
+                </div>
+              </div>
+            </div>
+            <div class="countries-single-bg">
+              <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc80c" class="countries-single">
+                <div class="countries-image"><img loading="lazy" src="../images/mr.svg" alt="GreatFireVPN works in Myanmar" class="contry-icon"></div>
+                <div class="countries-text">
+                  <div class="country-name">Myanmar</div>
+                  <div class="country-description">Access information under military censorship. </div>
+                </div>
+              </div>
+            </div>
+            <div class="countries-single-bg">
+              <div class="countries-single">
+                <div class="countries-image"><img loading="lazy" src="../images/in.svg" alt="GreatFireVPN works in India" class="contry-icon"></div>
+                <div class="countries-text">
+                  <div class="country-name">India</div>
+                  <div class="country-description">Bypass ISP blocks and regional internet shutdowns.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-cta-trial">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="cta-trial-wrapper">
+          <div class="section-title-flex flex-bottom">
+            <div class="section-left-content">
+              <h2 data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc819" style="opacity:0" class="section-title white">Try GreatFireVPN for free</h2>
+              <p class="cta-trial-section-discriptions white">Get 30 days of free access to the open internet. <br></p>
+            </div>
+            <div class="section-right-content">
+              <div class="button-wrapper">
+                <a href="/vpn/en/#download" data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc820" class="seckendry-button w-inline-block">
+                  <div class="button-text-02 dark">Download GreatFireVPN<br></div>
+                  <div class="button-text-02 is-absolute dark">Download GreatFireVPN </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section interface">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="about-us-title-wtapper">
+          <h2 class="section-title about-us">Simple interface.<br>Functional and easy-to-use.</h2>
+          <p class="section-discriptions about-us">Open internet is just one click away.</p>
+        </div>
+        <div>
+          <div class="interface-grid">
+            <div class="interface-img-wrap"><img class="interface-img" src="../images/UI1.webp" alt="GreatFireVPN automatically selects the best server" style="opacity:0" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc830" loading="lazy" srcset="../images/c976b5916af32909dd9582d78bc9d0ab_UI1-p-500.webp 500w, ../images/c976b5916af32909dd9582d78bc9d0ab_UI1-p-800.webp 800w, ../images/UI1.webp 1210w"></div>
+            <div class="interface-img-wrap"><img class="interface-img" src="../images/UI2.webp" alt="GreatFireVPN connection settings" style="opacity:0" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc832" loading="lazy" srcset="../images/595688d37fc84a5dedfbf3ce06ad73c6_UI2-p-500.webp 500w, ../images/595688d37fc84a5dedfbf3ce06ad73c6_UI2-p-800.webp 800w, ../images/UI2.webp 1214w"></div>
+            <div class="interface-img-wrap"><img class="interface-img" src="../images/UI3.webp" alt="GreatFireVPN pricing plans and payment options" style="opacity:0" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc834" loading="lazy" srcset="../images/49458f948f89f6c715af95e40dc1088f_UI3-p-500.webp 500w, ../images/49458f948f89f6c715af95e40dc1088f_UI3-p-800.webp 800w, ../images/UI3.webp 1214w"></div>
+            <div class="interface-img-wrap"><img class="interface-img" src="../images/UI4.webp" alt="GreatFireVPN referral program" style="opacity:0" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc836" loading="lazy" srcset="../images/c752f715116f0b5a8948d4e74169e4eb_UI4-p-500.webp 500w, ../images/c752f715116f0b5a8948d4e74169e4eb_UI4-p-800.webp 800w, ../images/UI4.webp 1214w"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download" class="section four-figures">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="business-freedom-title-wtapper">
+          <h2 class="section-title four-figures">Download GreatFireVPN</h2>
+          <p class="section-discriptions about-us">Available on Android, iOS/macOS and Windows. OpenWRT version coming soon.</p>
+        </div>
+        <div class="download-vpn-wrapper">
+          <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc83f" class="download-vpn-single">
+            <div class="download-vpn-img-wrap"><img sizes="(max-width: 572px) 100vw, 572px" srcset="../images/download-vpn_android-p-500.webp 500w, ../images/download-vpn_android.webp 572w" alt="GreatFireVPN for Android" src="../images/download-vpn_android.webp" loading="lazy"></div>
+            <div class="download-vpn-title-wrap">
+              <h3 class="features-single-inner-title">Android app</h3>
+              <p class="features-single-details">Works on Android 8.0+</p>
+            </div>
+            <div class="download-vpn-button-wrap">
+              <div class="download-button-up">
+                <a id="google-play-link" href="https://play.google.com/store/apps/details?id=org.greatfire.gfvpn" target="_blank" rel="noopener" class="w-inline-block"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/googleplay-p-500.webp 500w, ../images/googleplay-p-800.webp 800w, ../images/googleplay.webp 1770w" alt="Get GreatFireVPN on Google Play" src="../images/googleplay.webp" loading="lazy" class="image"></a>
+              </div>
+              <p class="download-or">or</p>
+              <div class="referral-step">
+                <div class="download-button-down">
+                  <a id="apk-download-link" href="../downloads/greatfirevpn.apk?v=1.6.5.au" class="primary-button-link-copy w-inline-block">
+                    <div class="button-text-02 dark">Download APK</div>
+                    <div class="button-text-02 is-absolute dark">Download APK</div>
+                  </a>
+                </div>
+              </div>
+              <p class="referral-step-join referral-action">After you install</p>
+              <div class="referral-step referral-action">
+                <div class="download-button-down">
+                  <a href="#" id="activate-bonus-link" class="primary-button-link-copy referral-step-btn w-inline-block">
+                    <div class="button-text-02 dark">🎁 Activate Bonus</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc851" class="download-vpn-single">
+            <div class="download-vpn-img-wrap"><img sizes="(max-width: 554px) 100vw, 554px" srcset="../images/download-vpn_apple-p-500.webp 500w, ../images/download-vpn_apple.webp 554w" alt="GreatFireVPN for iOS and macOS" src="../images/download-vpn_apple.webp" loading="lazy"></div>
+            <div class="download-vpn-title-wrap">
+              <h3 class="features-single-inner-title">iOS and macOS app</h3>
+              <p class="features-single-details">Supports iOS 15+ and macOS 14+</p>
+            </div>
+            <div class="download-vpn-button-wrap">
+              <div class="referral-step">
+                <div class="download-button-up">
+                  <a id="app-store-button" href="https://apps.apple.com/app/greatfirevpn/id6761056824" target="_blank" rel="noopener" class="w-inline-block"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="../images/appstore-p-500.webp 500w, ../images/appstore-p-800.webp 800w, ../images/appstore-p-1080.webp 1080w, ../images/appstore.webp 1773w" alt="Get GreatFireVPN on App Store" src="../images/appstore.webp" loading="lazy" class="image"></a>
+                </div>
+              </div>
+              <p class="referral-step-join referral-action">Then paste in Settings</p>
+              <div class="referral-step referral-action">
+                <div class="download-button-down">
+                  <a href="#" id="copy-referral-ios" class="primary-button-link-copy referral-step-btn w-inline-block">
+                    <div class="button-text-02 dark">Copy referral code</div>
+                  </a>
+                </div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;text-align:left;background:linear-gradient(135deg,rgba(255,127,17,0.12),rgba(231,14,2,0.06));border:1px solid rgba(255,127,17,0.35);border-left:4px solid #ff7f11;border-radius:14px;padding:13px 15px;margin-top:18px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e25b00" stroke-width="2" style="flex:0 0 auto;margin-top:2px;"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+                <div style="font-family:'Open Sans',sans-serif;font-size:13.5px;line-height:1.5;color:#4a4a4a;">
+                  <strong style="display:block;color:#011140;font-size:14.5px;margin-bottom:2px;">Don't see GreatFireVPN in the App Store?</strong>
+                  Apple removes VPN apps from some regions' stores. You'll likely need a free second Apple ID first — it takes about 5 min, no card required. <a href="/vpn/en/install-deleted-appstore-app" target="_blank" rel="noopener" style="color:#e25b00;font-weight:600;white-space:nowrap;">See how &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="8706baf9-8455-fd3b-24ba-12af37e304e9" class="download-vpn-single">
+            <div class="download-vpn-img-wrap"><img sizes="(max-width: 563px) 100vw, 563px" srcset="../images/download-vpn_windows-p-500.webp 500w, ../images/download-vpn_windows.webp 563w" alt="GreatFireVPN for Windows" src="../images/download-vpn_windows.webp" loading="lazy"></div>
+            <div class="download-vpn-title-wrap">
+              <h3 class="features-single-inner-title">Windows</h3>
+              <p class="features-single-details">Requires Windows 10+</p>
+            </div>
+            <div class="download-vpn-button-wrap">
+              <div class="referral-step">
+                <div class="download-button-down">
+                  <a id="windows-download-link" data-w-id="30e91ce6-ebb9-b9d2-4efc-af543d313c4d" href="../downloads/GreatFireVPN-Setup.exe?v=1.4.3" class="primary-button-link-copy w-inline-block">
+                    <div class="button-text-02 dark">Download</div>
+                    <div class="button-text-02 is-absolute dark">Download</div>
+                  </a>
+                </div>
+              </div>
+              <p class="referral-step-join referral-action">Then paste in Settings</p>
+              <div class="referral-step referral-action">
+                <div class="download-button-down">
+                  <a href="#" id="copy-referral-windows" class="primary-button-link-copy referral-step-btn w-inline-block">
+                    <div class="button-text-02 dark">Copy referral code</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pricing" class="section plan">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="plan-ttile-wrapper">
+          <h2 class="section-title plan">Choose your plan and stay online</h2>
+          <p class="section-discriptions plan">Download GreatFireVPN and get 30 days of uninterrupted access to the open internet for free.</p>
+          <p style="text-align:center;margin-top:6px;font-size:15px;color:#4a4a4a">Paying from inside Iran? <a href="/vpn/en/pay-from-iran" style="color:#e25b00;font-weight:600;text-decoration:none">Read our payment guide →</a></p>
+        </div>
+        <div class="plan-tab-wrapper">
+          <div class="plan-features-wrapper">
+            <div class="div-block-2">
+              <div><img loading="lazy" src="../images/lightning-duotone-3.svg" alt="Instant activation" class="image-2"></div>
+              <div>
+                <div class="text-block-3">Instant activation</div>
+              </div>
+            </div>
+            <div class="div-block-2">
+              <div><img loading="lazy" src="../images/shield-check-duotone-2.svg" alt="Secure payments" class="image-2"></div>
+              <div>
+                <div class="text-block-3">Secure payments</div>
+              </div>
+            </div>
+            <div class="div-block-2">
+              <div><img loading="lazy" src="../images/currency-btc-duotone.svg" alt="Crypto" class="image-2"></div>
+              <div>
+                <div class="text-block-3">We accept crypto</div>
+              </div>
+            </div>
+            <div class="div-block-2">
+              <div><img loading="lazy" src="../images/tree-structure-duotone-3.svg" alt="Multiple devices" class="image-2"></div>
+              <div>
+                <div class="text-block-3">Up to 10 devices per account</div>
+              </div>
+            </div>
+          </div>
+          <div class="price-tab-single">
+            <div class="w-layout-grid grid-pricing-plan">
+              <div class="inner-tab-link">
+                <div class="inner-tab-link-flex">
+                  <div class="price-plan-content-flex">
+                    <div class="price-plan-icon-box"><img loading="lazy" src="../images/flag-fill.svg" alt="Flag icon" class="price-plan-icon _2"></div>
+                    <div class="price-plan-title-box">
+                      <h3 class="price-plan-title">30 days</h3>
+                    </div>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="price-2">$4.99</div>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-tab-link">
+                <div class="inner-tab-link-flex">
+                  <div class="price-plan-content-flex">
+                    <div class="price-plan-icon-box"><img loading="lazy" src="../images/rocket-launch-fill.svg" alt="Rocket icon" class="price-plan-icon _2"></div>
+                    <div class="price-plan-title-box">
+                      <h3 class="price-plan-title">90 days</h3>
+                    </div>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="price-2">$13.99</div>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-tab-link">
+                <div class="inner-tab-link-flex">
+                  <div class="price-plan-content-flex">
+                    <div class="price-plan-icon-box"><img loading="lazy" src="../images/star-fill.svg" alt="Star icon" class="price-plan-icon _2"></div>
+                    <div class="price-plan-title-box">
+                      <h3 class="price-plan-title">180 days</h3>
+                    </div>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="price-2">$24.99</div>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-tab-link best-value">
+                <div class="inner-tab-link-flex">
+                  <div class="price-plan-content-flex">
+                    <div class="price-plan-icon-box"><img loading="lazy" src="../images/fire-fill.svg" alt="Fire icon" class="price-plan-icon _2"></div>
+                    <div class="price-plan-title-box">
+                      <h3 class="price-plan-title best-value">365 days</h3>
+                      <div class="price-plan-title-saving">Best value</div>
+                    </div>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="price-2">$39.99</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="pricing-store-note">Prices shown apply to purchases made on this website. If you subscribe inside the app through Google Play or the App Store, you are charged in your local currency and the amount may differ — regional pricing and taxes there are set by Google and Apple.</p>
+        <div class="div-block-3">
+          <a data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc8af" href="/vpn/en/#download" class="primary-button-link w-inline-block">
+            <div class="button-text-02 dark">Download now</div>
+            <div class="button-text-02 is-absolute dark">Download now</div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="section faq">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="faq-wrapper">
+          <div class="faq-title-wrapper">
+            <h2 class="section-title faq">FAQ</h2>
+            <p class="section-discriptions faq">Answers to common questions about GreatFireVPN.</p>
+            <div class="button-wrapper faq">
+              <a href="/vpn/cdn-cgi/l/email-protection#a7d4d2d7d7c8d5d3e7c0d5c2c6d3c1ced5c2d1d7c989c4c8ca" class="primary-button-link w-inline-block">
+                <div class="button-text-02 dark">Get in touch</div>
+                <div class="button-text-02 is-absolute dark">Get in touch</div>
+              </a>
+              <a href="https://t.me/greatfirevpn" target="_blank" rel="noopener" class="primary-button-link w-inline-block">
+                <div class="button-text-02 dark">Telegram</div>
+                <div class="button-text-02 is-absolute dark">Telegram</div>
+              </a>
+            </div>
+          </div>
+          <div class="faq-content-box">
+            <div class="faq-content-flex">
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Does GreatFireVPN work in China?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Yes, GreatFireVPN is specifically designed to bypass censorship in countries with strict internet restrictions, including China. We&#x27;ve been fighting the Great Firewall since 2011, using multiple circumvention methods to ensure stable connections.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Does GreatFireVPN work in Russia and Iran?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Yes, GreatFireVPN works in Russia, Iran, Turkmenistan, Myanmar, and other countries with internet censorship. Our app automatically selects the optimal server and connection method to bypass restrictions. It is also used in Cuba.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Does GreatFireVPN work in India?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Yes. Internet blocking in India is applied at the ISP level, so which sites are blocked differs between providers such as Jio, Airtel and BSNL. GreatFireVPN routes around these DNS and IP-level blocks, and its multiple circumvention methods keep working during the regional shutdowns and throttling that are common in India. Our Singapore servers keep latency low from most Indian cities.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">How do I pay from inside Iran?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Direct rial payments are blocked by sanctions, but there are three reliable ways — crypto (best), Google Play / App Store, or an international card. See our step-by-step guide: <a href="/vpn/en/pay-from-iran">How to pay from inside Iran</a>.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Is GreatFireVPN safe?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">GreatFireVPN is developed by <a href="https://en.greatfire.org/" target="_blank" rel="noopener" class="text-link-orange">GreatFire.org</a>, an anti-censorship organization founded in 2011. We don&#x27;t log your activity and don&#x27;t collect personal data. No registration required — you can use the VPN anonymously.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">How is GreatFireVPN different from other VPNs?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Unlike commercial VPNs focused on streaming, we specialize in censorship circumvention. We use multiple fallback strategies and over 10 years of experience fighting internet restrictions worldwide.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Is there a free trial?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Yes, we offer 30 days of free access when you first install the app. If you install through a friend's referral link and activate the bonus, you get an extra 10 days. No registration or credit card required — just download and start using the free internet.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">How does the referral program work?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Share your unique referral link with friends. When they download, install, and launch the app on a new device, you&#x27;ll receive an extra 30 days of free access added to your account, and they get an extra 10 days added to their trial. There&#x27;s no limit to the number of friends you can invite — so you can use GreatFireVPN for free indefinitely!</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Which protocols does GreatFireVPN support?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">GreatFireVPN supports multiple censorship circumvention protocols: Meek, Webtunnel, V2Ray-Websocket, V2Ray-HTTP, Hysteria2, XRay-XHTTP, DNSTT, and VK-TURN. The app automatically selects the best protocol based on your network conditions to ensure a reliable connection.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">How many devices can I use simultaneously?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">A single GreatFireVPN account supports up to 10 simultaneous devices. You can use the VPN on your phone, tablet, laptop, and more — all under one subscription, at the same time.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">What happens during a whitelist-based internet shutdown?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">GreatFireVPN is built for the harshest censorship scenarios, including "whitelist" mode, when the authorities allow access only to a limited list of approved sites. Thanks to multiple circumvention methods, the app keeps finding a working connection and opens up the whole internet for you. This applies to Russia.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Can I access banks and government services while the VPN is on?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Yes. GreatFireVPN has a local bypass: government sites, banks and other local services open directly, without the VPN, even while the VPN is on. This way you keep access to local services and to the free internet at the same time. The feature is available in Russia, China, Iran, Turkmenistan and Myanmar.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" class="faq-dropdown w-dropdown">
+                <div class="faq-dropdown-toggle w-dropdown-toggle">
+                  <h6 class="faq-qustion">Why does the VPN keep disconnecting on my Android phone?</h6><img loading="lazy" src="../images/angle-down-solid.svg" alt="Dropdown icon" class="faq-qustion-arrow">
+                </div>
+                <nav class="faq-dropdown-list w-dropdown-list">
+                  <div class="ans-wrap">
+                    <p class="ans">Many phones — especially Xiaomi, Redmi, Samsung and Huawei — silently close background apps to save battery. A VPN has to stay running. See the guide: <a href="/vpn/en/android-killing-vpn">Stop Android from killing the VPN</a>.</p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section four-figures">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="business-freedom-title-wtapper">
+          <h2 class="section-title four-figures">We fight censorship with technology since 2011</h2>
+        </div>
+        <div class="business-freedom-content-wrapper">
+          <div class="w-layout-grid grid">
+            <div class="div-block-9">
+              <p class="paragraph">We are an anti-censorship organization founded in 2011. Our work began with countering censorship in China — one of the most closed countries in the world. The Chinese authorities recognize the significance of our activities and have made unsuccessful attempts to disrupt them with unprecedented cyberattacks. <br><br>Today we use our accumulated experience and implement innovative projects to fight censorship worldwide. Our work has been referenced in hundreds of <a href="https://en.greatfire.org/#academic-research" target="_blank" rel="noopener" class="text-link-orange">academic studies</a>, and our data is frequently cited in <a href="https://en.greatfire.org/#media-mentions" target="_blank" rel="noopener" class="text-link-orange">major news stories</a>. Here are some of our projects.</p>
+            </div>
+            <div class="div-block-4">
+              <div class="w-layout-grid grid-2">
+                <div class="figure-count-single">
+                  <a href="https://applecensorship.com/" target="_blank" rel="noopener" class="link-block w-inline-block">
+                    <div class="div-block-5"><img width="31" loading="lazy" alt="AppleCensorship logo" src="../images/apsnsrhip-picture_1apsnsrhip-picture.webp"></div>
+                    <div class="text-block-5">AppleCensorship</div>
+                    <div class="text-block-4">Monitoring and exposing app censorship on major app stores.</div>
+                  </a>
+                </div>
+                <div class="figure-count-single">
+                  <a href="https://googlecensorship.org/" target="_blank" rel="noopener" class="link-block w-inline-block">
+                    <div class="div-block-6"><img width="44" loading="lazy" alt="GoogleCensorship logo" src="../images/gsensrhip.svg"></div>
+                    <div class="text-block-5">GoogleCensorship</div>
+                    <div class="text-block-4">Monitoring and exposing app censorship on major app stores.</div>
+                  </a>
+                </div>
+              </div>
+              <div class="w-layout-grid grid-3">
+                <div class="figure-count-single">
+                  <a href="https://freebrowser.org/" target="_blank" rel="noopener" class="link-block w-inline-block">
+                    <div class="div-block-7"><img width="44" loading="lazy" alt="FreeBrowser logo" src="../images/freebrowser-logo.svg" class="image-3"></div>
+                    <div class="text-block-5">FreeBrowser</div>
+                    <div class="text-block-4">Our censorship-resistant browser for accessing blocked websites.</div>
+                  </a>
+                </div>
+                <div class="figure-count-single">
+                  <a href="https://blocky.greatfire.org/" target="_blank" rel="noopener" class="link-block w-inline-block">
+                    <div class="div-block-8"><img width="44" loading="lazy" alt="Blocky logo" src="../images/blocky-logo-picture.webp"></div>
+                    <div class="text-block-5">Blocky</div>
+                    <div class="text-block-4">Monitoring website blocking in Mainland China in real-time.</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc927" class="section testimonial">
+      <div class="testimonial-animation-wrap">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="testimonial-title-wrapper">
+            <div class="section-title-flex">
+              <div class="section-left-content features">
+                <h2 data-w-id="fe7eed13-7840-ba08-b4bc-88fbcfcbc92d" style="opacity:0" class="section-title features">From our users around the world.</h2>
+              </div>
+              <div class="section-right-content features">
+                <p class="section-discriptions">At GreatFireVPN, we prioritize your privacy, security and speed. It makes us a trusted choice for secure online access:</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-content-wrapper">
+            <div class="testimonial-grid">
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">I tested on 3 operators (TCI, MCI and Irancell) which makes very heavy censorship on IP ranges and most protocols, it works like a charm.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Mehdi</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">A very good VPN! It works incredibly well and adapts to the circumstances. Of all of them, I think this one is the best — I only use it!</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Aleksandra</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">For guys going to China it&#x27;s the best VPN in my opinion, as I&#x27;ve tried over 20 VPNs. Proton is also good, but the server gets crowded — meanwhile GreatFire is an absolute beast. Love it ❤️</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Barney</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">I really like this app because it&#x27;s the only VPN that works properly in Turkmenistan.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Azym</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Good and cool. No ads! Works nicely in Iran. Works great with Irancell, Hamrah-e Aval and home WiFi. You can tunnel only the apps you want, like Psiphon. The fact that there are no ads is great.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Ninja</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Thank you, creators, for a wonderful VPN 🥰🥰🥰</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Natalya</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">There are no other VPNs that work properly besides this one.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Kümüș</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">GreatFireVPN is truly one of the best apps available right now, and I highly recommend downloading it. Thanks to the team ❤️❤️</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Tattoo_</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">On behalf of the Iranian people, thank you very much for your support ❤️</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Mobin</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Convenient app, all my hope is in it.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Svetla</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Very good VPN, works immediately.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Maral</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">The app is still very good. Please keep it up, and thank you very much.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Hamza</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Good, no lag, but you need to find a good server.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Abubakir</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Great customer service.</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Mek</div>
+                </div>
+              </div>
+              <div class="testimonial-single-cart">
+                <div class="testimonial-author-quord"><img loading="lazy" src="../images/quotes-fill.svg" alt="Quotes icon" class="testimonial-author-quord-img"></div>
+                <div class="testimonial-author-details-wrap">
+                  <div class="testimonial-post">Great for gaming and web browsing ♥</div>
+                </div>
+                <div class="author-wrap">
+                  <div class="author">Mehdi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section one">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="cta-content-wrapper">
+          <div class="cta-title-inner">
+            <h2 class="cta-title">Access open internet with GreatFireVPN</h2>
+            <p class="cta-discriptions">Your privacy-first VPN service for secure internet access.</p>
+            <div class="button-wrapper">
+              <a href="/vpn/en/#download" class="primary-button-link w-inline-block">
+                <div class="button-text-02 dark">Download now</div>
+                <div class="button-text-02 is-absolute dark">Download now</div>
+              </a>
+            </div>
+          </div>
+          <div class="cta-mobile-wrap"><img id="w-node-_2095a67d-5bd6-b076-66ff-e604245e10eb-245e10d7" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="GreatFireVPN for online privacy" src="../images/cta-main-screen_reclined.webp" loading="lazy" srcset="../images/ab231eec8b67a2604b244eff52c2acd3_cta-main-screen_reclined-p-500.webp 500w, ../images/ab231eec8b67a2604b244eff52c2acd3_cta-main-screen_reclined-p-800.webp 800w, ../images/ab231eec8b67a2604b244eff52c2acd3_cta-main-screen_reclined-p-1080.webp 1080w, ../images/cta-main-screen_reclined.webp 1622w" class="cta-mobile one"><img id="w-node-_2095a67d-5bd6-b076-66ff-e604245e10ec-245e10d7" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" alt="Automatic server selection" src="../images/cta-servers-screen_reclined.webp" loading="lazy" srcset="../images/2d1b7a82e10b5c09fb1a7161c3f05631_cta-servers-screen_reclined-p-500.webp 500w, ../images/2d1b7a82e10b5c09fb1a7161c3f05631_cta-servers-screen_reclined-p-800.webp 800w, ../images/2d1b7a82e10b5c09fb1a7161c3f05631_cta-servers-screen_reclined-p-1080.webp 1080w, ../images/cta-servers-screen_reclined.webp 1750w" class="cta-mobile two"></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-top-content-flex">
+            <div class="footer-top-content">
+              <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e0b" class="footer-brand-wrap">
+                <a href="/vpn/en/" class="footer-logo-wrap w-inline-block"><img width="295" loading="lazy" alt="GreatFireVPN logo" src="../images/logo-and-moto.webp" class="footer-logo"></a>
+                <p class="footer-details">We fight censorship worldwide and help bypass internet restrictions in countries with heavy censorship.</p>
+                <div class="footer-media-wrapper">
+                  <a href="https://t.me/greatfirevpn" target="_blank" rel="noopener" class="footer-media-link w-inline-block"><img loading="lazy" src="../images/telegram-logo-fill.svg" alt="Telegram icon" class="footer-media-icon"></a>
+                  <a href="https://x.com/GreatFireVPN" target="_blank" rel="noopener" class="footer-media-link w-inline-block"><img loading="lazy" src="../images/twi.svg" alt="X icon" class="footer-media-icon"></a>
+                  <a href="https://github.com/greatfire" target="_blank" rel="noopener" class="footer-media-link w-inline-block"><img loading="lazy" src="../images/github-logo-fill.svg" alt="GitHub icon" class="footer-media-icon"></a>
+                  <a href="https://www.patreon.com/greatfire" target="_blank" rel="noopener" class="footer-media-link w-inline-block"><img loading="lazy" src="../images/patreon-logo-fill.svg" alt="Patreon icon" class="footer-media-icon"></a>
+                </div>
+                <!-- Begin Brevo newsletter form -->
+                <div class="footer-subscribe">
+                  <div id="sib-form-container" class="sib-form-container">
+                    <div id="error-message" class="sib-form-message-panel footer-subscribe-msg footer-subscribe-msg--error">
+                      <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+                    </div>
+                    <div id="success-message" class="sib-form-message-panel footer-subscribe-msg footer-subscribe-msg--success">
+                      <span class="sib-form-message-panel__inner-text">Thanks for subscribing! Please check your email to confirm subscription.</span>
+                    </div>
+                    <div id="sib-container" class="sib-container--large sib-container--horizontal">
+                      <form id="sib-form" method="POST" action="https://0206b1ff.sibforms.com/serve/MUIFABvxzSJRz_ytV0oG24XvpTCbFhoDWiOx3LcnUhSHz4Wai6aTJxLDItkNuLOR2wBslAeuna4TuXtdwK4Flpyy62IKFBE3hwO4T05UBw0MS3rdhqk2gk9LTuLmfQgoRDYrs-8c8AsrZDk83E252rRhkqn5_5PoLEwKwfAnr5m0ksbr1iqr1Y3V1iiFIJZFxeIwWw9UADbqxR_YBQ==" data-type="subscription" data-msg-loading="Subscribing…" data-msg-invalid="Please enter a valid email address." data-msg-captcha="Please complete the verification.">
+                        <h5 class="footer-subscribe-title">Subscribe to our newsletter</h5>
+                        <p class="footer-subscribe-text">Sign up to receive our monthly product updates and special offers.</p>
+                        <div class="footer-subscribe-row">
+                          <div class="sib-input sib-form-block footer-subscribe-input-wrap">
+                            <div class="form__entry entry_block">
+                              <div class="form__label-row">
+                                <div class="entry__field">
+                                  <input class="input footer-subscribe-input" type="text" id="EMAIL" name="EMAIL" autocomplete="email" value="" placeholder="Enter your email" data-required="true" required />
+                                </div>
+                              </div>
+                              <label class="entry__error entry__error--primary footer-subscribe-error"></label>
+                            </div>
+                          </div>
+                          <div class="footer-subscribe-captcha" id="sib-captcha"></div>
+                          <div class="sib-form-block footer-subscribe-btn-wrap">
+                            <button class="sib-form-block__button sib-form-block__button-with-loader footer-subscribe-btn" form="sib-form" type="submit">
+                              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512"><path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" /></svg>
+                              <span class="footer-subscribe-btn-text">Subscribe</span>
+                            </button>
+                          </div>
+                        </div>
+                        <input type="text" name="email_address_check" value="" class="input--hidden">
+                        <input type="hidden" name="locale" value="en">
+                        <input type="hidden" name="LANGUAGE" value="en">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Brevo newsletter form -->
+
+              </div>
+            </div>
+          </div>
+          <div class="footer-content-wrap">
+            <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e18" class="footer-single">
+              <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e19" class="footer-single-inner">
+                <h5 class="footer-menu-title">Quick links</h5>
+                <div class="footer-menu-wrap">
+                  <a href="/vpn/en/#features" class="footer-menu-link">Why GreatFireVPN?</a>
+                  <a href="/vpn/en/payment" class="footer-menu-link">Payment</a>
+                  <a href="/vpn/en/#download" class="footer-menu-link">Download app</a>
+                  <a href="/vpn/en/#faq" class="footer-menu-link">FAQ</a>
+                  <a href="/vpn/en/#about" class="footer-menu-link">About us</a>
+                  <a href="/vpn/en/blog" class="footer-menu-link">Blog</a>
+                  <a href="/vpn/en/status" class="footer-menu-link">Server status</a>
+                </div>
+              </div>
+            </div>
+            <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e27" class="footer-single">
+              <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e28" class="footer-single-inner">
+                <h5 class="footer-menu-title">Legal</h5>
+                <div class="footer-menu-wrap-flex">
+                  <div class="footer-menu-wrap">
+                    <a href="/vpn/en/privacy" target="_blank" rel="noopener" class="footer-menu-link">Privacy policy</a>
+                    <a href="/vpn/en/terms" target="_blank" rel="noopener" class="footer-menu-link">Terms of service</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e38" class="footer-single">
+              <div data-w-id="3849a826-8fd2-7dfd-0ee0-0a5408b08e39" class="footer-single-inner">
+                <h5 class="footer-menu-title">About</h5>
+                <div class="footer-menu-wrap-flex">
+                  <div class="footer-menu-wrap">
+                    <a href="https://en.greatfire.org/" target="_blank" rel="noopener" class="footer-menu-link">Developed by GreatFire.org</a>
+                    <a href="/vpn/cdn-cgi/l/email-protection#d0a3a5a0a0bfa2a490b7a2b5b1a4b6b9a2b5a6a0befeb3bfbd" class="footer-menu-link">Contact us at <span class="__cf_email__" data-cfemail="cdbeb8bdbda2bfb98daabfa8acb9aba4bfa8bbbda3e3aea2a0">[email&#160;protected]</span></a>
+                    <a href="https://t.me/greatfirevpn" target="_blank" rel="noopener" class="footer-menu-link">Telegram — news &amp; support</a>
+                    <a href="https://www.patreon.com/greatfire" target="_blank" rel="noopener" class="footer-menu-link">Support us on Patreon</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-text-wrap">
+          <div class="copyright-text">© 2026, GreatFireVPN. All rights reserved</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Language config consumed by site.js (referral popups, deep-link fallbacks, etc.)
+    window.GFVPN_LANG = {
+      lang: 'en',
+      messages: {
+        apkDownloadPopup: '🎁 You have a referral bonus!\n\nReferral code: {code}\n\nYou get an extra 10 days of trial. After installing the app, click the "Activate Bonus" button to activate your bonus.\n\nClick OK to download the app.',
+        windowsDownloadPopup: '🎁 You have a referral bonus!\n\nReferral code: {code}\n\nYou get an extra 10 days of trial. The code has been copied. After installing, paste it in the app\'s Settings to activate your bonus.\n\nClick OK to download.',
+        clipboardSuccess: 'Referral code {code} copied! Paste it in the app after installing.',
+        appStoreNoticeTitle: "Can't find the app? Read this first",
+        appStoreNoticeBody: "Apple removes VPN apps from some regions' App Stores. If GreatFireVPN doesn't appear in yours, you'll most likely need a free second Apple ID — it takes about 5 minutes, no card required.",
+        appStoreNoticeContinue: 'Continue to App Store',
+        appStoreNoticeGuide: 'How to install \u2192',
+        appNotInstalled: 'Please make sure GreatFireVPN app is installed and try again.',
+        desktopOnly: 'Please open this link on your mobile device where GreatFireVPN is installed.',
+        androidOnly: 'This feature is only available on Android. Please download the APK and activate your bonus from an Android device.'
+      }
+    };
+  </script>
+  <script src="../js/site.js?v=26" type="text/javascript"></script>
+</body>
+</html>

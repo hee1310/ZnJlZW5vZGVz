@@ -1,0 +1,1004 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+geodata-mode: true
+geo-auto-update: true
+geodata-loader: standard
+geo-update-interval: 24
+geox-url:
+  geoip: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geosite: >-
+    https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: >-
+    https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
+  asn: >-
+    https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb
+rule-providers:
+  geolocation-cn:
+    type: http
+    format: mrs
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-cn.mrs
+    path: ./ruleset/geolocation-cn.mrs
+    interval: 86400
+  cn:
+    type: http
+    format: mrs
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs
+    path: ./ruleset/cn.mrs
+    interval: 86400
+  geolocation-!cn:
+    type: http
+    format: mrs
+    behavior: domain
+    url: >-
+      https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-!cn.mrs
+    path: ./ruleset/geolocation-!cn.mrs
+    interval: 86400
+  private:
+    type: http
+    format: mrs
+    behavior: ipcidr
+    url: >-
+      https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs
+    path: ./ruleset/private.mrs
+    interval: 86400
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://120.53.53.53/dns-query
+    - https://223.5.5.5/dns-query
+  proxy-server-nameserver:
+    - https://120.53.53.53/dns-query
+    - https://223.5.5.5/dns-query
+  nameserver-policy:
+    geosite:cn,private:
+      - https://120.53.53.53/dns-query
+      - https://223.5.5.5/dns-query
+    geosite:geolocation-!cn:
+      - https://dns.cloudflare.com/dns-query
+      - https://dns.google/dns-query
+proxies:
+  - name: 通知-防失联-tg
+    type: ss
+    server: us1.wanfeng88.top
+    port: 39492
+    cipher: 2022-blake3-aes-256-gcm
+    password: >-
+      a1EH6Hc0ChILGoUw7l6W44xNh/0iELsWVbut7e2UR7M=:57X5VB7wF9l5noC2D3sGYZy6rMkK5WzbtpET6eD+K5A=
+  - name: TG：-https://t.me/+pmrSbr411Gs1OGFk
+    type: vless
+    server: us1.wanfeng88.top
+    port: 20706
+    uuid: 136e4198-d2d9-42aa-8c23-937ef1e1682a
+    tls: false
+    servername: ''
+    network: tcp
+    tfo: false
+  - name: 收代理-只要三个
+    type: vless
+    server: us1.wanfeng88.top
+    port: 58357
+    uuid: e25b43e5-56c2-4a92-ba8e-328e56f5be61
+    tls: true
+    servername: ''
+    network: tcp
+    tfo: false
+    skip-cert-verify: false
+  - name: TG:-@wanfengk88
+    type: vless
+    server: us1.wanfeng88.top
+    port: 27757
+    uuid: d71a5005-c98b-42eb-b7c1-a024441d558f
+    tls: false
+    servername: ''
+    network: tcp
+    tfo: false
+  - name: 香港 00
+    type: ss
+    server: bhk00.ppofo.biz
+    port: 32566
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 01
+    type: ss
+    server: fhk01.ppofo.biz
+    port: 10001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 02
+    type: ss
+    server: rhk02.ppofo.biz
+    port: 10002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 03
+    type: ss
+    server: chk03.ppofo.biz
+    port: 10003
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 04
+    type: ss
+    server: nhk04.ppofo.biz
+    port: 10004
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 05
+    type: ss
+    server: thk05.ppofo.biz
+    port: 10005
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 06
+    type: ss
+    server: whk06.ppofo.biz
+    port: 10006
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 07
+    type: ss
+    server: mhk07.ppofo.biz
+    port: 10007
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 08
+    type: ss
+    server: hhk08.ppofo.biz
+    port: 10008
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 香港 09
+    type: ss
+    server: uhk09.ppofo.biz
+    port: 10009
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 00
+    type: ss
+    server: osg00.ppofo.biz
+    port: 12000
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 01
+    type: ss
+    server: ssg01.ppofo.biz
+    port: 12001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 02
+    type: ss
+    server: fsg02.ppofo.biz
+    port: 12002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 03
+    type: ss
+    server: jsg03.ppofo.biz
+    port: 12003
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 04
+    type: ss
+    server: qsg04.ppofo.biz
+    port: 12004
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 05
+    type: ss
+    server: lsg05.ppofo.biz
+    port: 12005
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 新加坡 06
+    type: ss
+    server: usg06.ppofo.biz
+    port: 12006
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 台湾 00
+    type: ss
+    server: rtw00.ppofo.biz
+    port: 14000
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 台湾 01
+    type: ss
+    server: mtw01.ppofo.biz
+    port: 14001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 台湾 02
+    type: ss
+    server: etw02.ppofo.biz
+    port: 14002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 台湾 03
+    type: ss
+    server: btw03.ppofo.biz
+    port: 14003
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 台湾 04
+    type: ss
+    server: atw04.ppofo.biz
+    port: 14004
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 00
+    type: ss
+    server: ojp00.ppofo.biz
+    port: 11000
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 01
+    type: ss
+    server: vjp01.ppofo.biz
+    port: 11001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 02
+    type: ss
+    server: ajp02.ppofo.biz
+    port: 11002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 03
+    type: ss
+    server: kjp03.ppofo.biz
+    port: 11003
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 04
+    type: ss
+    server: yjp04.ppofo.biz
+    port: 11004
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 05
+    type: ss
+    server: ijp05.ppofo.biz
+    port: 11005
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 日本 06
+    type: ss
+    server: ejp06.ppofo.biz
+    port: 11006
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 韩国 01
+    type: ss
+    server: hkr01.ppofo.biz
+    port: 25001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 韩国 02
+    type: ss
+    server: hkr01.ppofo.biz
+    port: 25002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 00
+    type: ss
+    server: jus00.ppofo.biz
+    port: 13000
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 01
+    type: ss
+    server: cus01.ppofo.biz
+    port: 13001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 02
+    type: ss
+    server: vus02.ppofo.biz
+    port: 13002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 03
+    type: ss
+    server: gus03.ppofo.biz
+    port: 13003
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 04
+    type: ss
+    server: xus04.ppofo.biz
+    port: 13004
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 05
+    type: ss
+    server: mus05.ppofo.biz
+    port: 13005
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 美国 06
+    type: ss
+    server: aus06.ppofo.biz
+    port: 13006
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 印度 01
+    type: ss
+    server: pin01.ppofo.biz
+    port: 26001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 印度 02
+    type: ss
+    server: bin02.ppofo.biz
+    port: 26002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 西班牙
+    type: ss
+    server: ses01.ppofo.biz
+    port: 40510
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 俄罗斯
+    type: ss
+    server: rru01.ppofo.biz
+    port: 22001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 土耳其
+    type: ss
+    server: jtr01.ppofo.biz
+    port: 19001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 乌克兰
+    type: ss
+    server: wua01.ppofo.biz
+    port: 40957
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 阿联酋
+    type: ss
+    server: lae01.ppofo.biz
+    port: 40010
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 菲律宾
+    type: ss
+    server: tph01.ppofo.biz
+    port: 20001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 泰国
+    type: ss
+    server: pth01.ppofo.biz
+    port: 24001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 德国
+    type: ss
+    server: fde01.ppofo.biz
+    port: 17001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 智利
+    type: ss
+    server: dcl01.ppofo.biz
+    port: 40310
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 法国
+    type: ss
+    server: qfr01.ppofo.biz
+    port: 40937
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 荷兰
+    type: ss
+    server: onl01.ppofo.biz
+    port: 40210
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 冰岛
+    type: ss
+    server: xis01.ppofo.biz
+    port: 51234
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 巴西
+    type: ss
+    server: nbr01.ppofo.biz
+    port: 27001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 柬埔寨
+    type: ss
+    server: kkh01.ppofo.biz
+    port: 40001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 阿根廷
+    type: ss
+    server: zar01.ppofo.biz
+    port: 23001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 澳大利亚
+    type: ss
+    server: wau01.ppofo.biz
+    port: 28001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 越南 01
+    type: ss
+    server: dvn01.ppofo.biz
+    port: 21001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 越南 02
+    type: ss
+    server: kvn02.ppofo.biz
+    port: 21002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 加拿大 01
+    type: ss
+    server: mca01.ppofo.biz
+    port: 18001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 加拿大 02
+    type: ss
+    server: gca02.ppofo.biz
+    port: 18002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 尼日利亚
+    type: ss
+    server: rng01.ppofo.biz
+    port: 40930
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 巴基斯坦
+    type: ss
+    server: xpk01.ppofo.biz
+    port: 40810
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 马来西亚 01
+    type: ss
+    server: amy01.ppofo.biz
+    port: 16001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 马来西亚 02
+    type: ss
+    server: imy02.ppofo.biz
+    port: 16002
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 印度尼西亚
+    type: ss
+    server: qid01.ppofo.biz
+    port: 40110
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 尼泊尔
+    type: ss
+    server: vnp01.ppofo.biz
+    port: 27008
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 卡塔尔
+    type: ss
+    server: qqa01.ppofo.biz
+    port: 27038
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 英国
+    type: ss
+    server: ygb01.ppofo.biz
+    port: 15001
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+  - name: 南非
+    type: ss
+    server: cza01.ppofo.biz
+    port: 40710
+    cipher: aes-256-gcm
+    password: 8fa80831-c48b-470a-b08c-b5fce62563b4
+proxy-groups:
+  - type: select
+    name: 🚀 节点选择
+    proxies:
+      - DIRECT
+      - REJECT
+      - ⚡ 自动选择
+      - 通知-防失联-tg
+      - TG：-https://t.me/+pmrSbr411Gs1OGFk
+      - 收代理-只要三个
+      - TG:-@wanfengk88
+      - 香港 00
+      - 香港 01
+      - 香港 02
+      - 香港 03
+      - 香港 04
+      - 香港 05
+      - 香港 06
+      - 香港 07
+      - 香港 08
+      - 香港 09
+      - 新加坡 00
+      - 新加坡 01
+      - 新加坡 02
+      - 新加坡 03
+      - 新加坡 04
+      - 新加坡 05
+      - 新加坡 06
+      - 台湾 00
+      - 台湾 01
+      - 台湾 02
+      - 台湾 03
+      - 台湾 04
+      - 日本 00
+      - 日本 01
+      - 日本 02
+      - 日本 03
+      - 日本 04
+      - 日本 05
+      - 日本 06
+      - 韩国 01
+      - 韩国 02
+      - 美国 00
+      - 美国 01
+      - 美国 02
+      - 美国 03
+      - 美国 04
+      - 美国 05
+      - 美国 06
+      - 印度 01
+      - 印度 02
+      - 西班牙
+      - 俄罗斯
+      - 土耳其
+      - 乌克兰
+      - 阿联酋
+      - 菲律宾
+      - 泰国
+      - 德国
+      - 智利
+      - 法国
+      - 荷兰
+      - 冰岛
+      - 巴西
+      - 柬埔寨
+      - 阿根廷
+      - 澳大利亚
+      - 越南 01
+      - 越南 02
+      - 加拿大 01
+      - 加拿大 02
+      - 尼日利亚
+      - 巴基斯坦
+      - 马来西亚 01
+      - 马来西亚 02
+      - 印度尼西亚
+      - 尼泊尔
+      - 卡塔尔
+      - 英国
+      - 南非
+  - name: ⚡ 自动选择
+    type: url-test
+    proxies:
+      - 通知-防失联-tg
+      - TG：-https://t.me/+pmrSbr411Gs1OGFk
+      - 收代理-只要三个
+      - TG:-@wanfengk88
+      - 香港 00
+      - 香港 01
+      - 香港 02
+      - 香港 03
+      - 香港 04
+      - 香港 05
+      - 香港 06
+      - 香港 07
+      - 香港 08
+      - 香港 09
+      - 新加坡 00
+      - 新加坡 01
+      - 新加坡 02
+      - 新加坡 03
+      - 新加坡 04
+      - 新加坡 05
+      - 新加坡 06
+      - 台湾 00
+      - 台湾 01
+      - 台湾 02
+      - 台湾 03
+      - 台湾 04
+      - 日本 00
+      - 日本 01
+      - 日本 02
+      - 日本 03
+      - 日本 04
+      - 日本 05
+      - 日本 06
+      - 韩国 01
+      - 韩国 02
+      - 美国 00
+      - 美国 01
+      - 美国 02
+      - 美国 03
+      - 美国 04
+      - 美国 05
+      - 美国 06
+      - 印度 01
+      - 印度 02
+      - 西班牙
+      - 俄罗斯
+      - 土耳其
+      - 乌克兰
+      - 阿联酋
+      - 菲律宾
+      - 泰国
+      - 德国
+      - 智利
+      - 法国
+      - 荷兰
+      - 冰岛
+      - 巴西
+      - 柬埔寨
+      - 阿根廷
+      - 澳大利亚
+      - 越南 01
+      - 越南 02
+      - 加拿大 01
+      - 加拿大 02
+      - 尼日利亚
+      - 巴基斯坦
+      - 马来西亚 01
+      - 马来西亚 02
+      - 印度尼西亚
+      - 尼泊尔
+      - 卡塔尔
+      - 英国
+      - 南非
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    lazy: false
+  - type: select
+    name: 🏠 私有网络
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+      - REJECT
+      - ⚡ 自动选择
+      - 通知-防失联-tg
+      - TG：-https://t.me/+pmrSbr411Gs1OGFk
+      - 收代理-只要三个
+      - TG:-@wanfengk88
+      - 香港 00
+      - 香港 01
+      - 香港 02
+      - 香港 03
+      - 香港 04
+      - 香港 05
+      - 香港 06
+      - 香港 07
+      - 香港 08
+      - 香港 09
+      - 新加坡 00
+      - 新加坡 01
+      - 新加坡 02
+      - 新加坡 03
+      - 新加坡 04
+      - 新加坡 05
+      - 新加坡 06
+      - 台湾 00
+      - 台湾 01
+      - 台湾 02
+      - 台湾 03
+      - 台湾 04
+      - 日本 00
+      - 日本 01
+      - 日本 02
+      - 日本 03
+      - 日本 04
+      - 日本 05
+      - 日本 06
+      - 韩国 01
+      - 韩国 02
+      - 美国 00
+      - 美国 01
+      - 美国 02
+      - 美国 03
+      - 美国 04
+      - 美国 05
+      - 美国 06
+      - 印度 01
+      - 印度 02
+      - 西班牙
+      - 俄罗斯
+      - 土耳其
+      - 乌克兰
+      - 阿联酋
+      - 菲律宾
+      - 泰国
+      - 德国
+      - 智利
+      - 法国
+      - 荷兰
+      - 冰岛
+      - 巴西
+      - 柬埔寨
+      - 阿根廷
+      - 澳大利亚
+      - 越南 01
+      - 越南 02
+      - 加拿大 01
+      - 加拿大 02
+      - 尼日利亚
+      - 巴基斯坦
+      - 马来西亚 01
+      - 马来西亚 02
+      - 印度尼西亚
+      - 尼泊尔
+      - 卡塔尔
+      - 英国
+      - 南非
+  - type: select
+    name: 🔒 国内服务
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+      - REJECT
+      - ⚡ 自动选择
+      - 通知-防失联-tg
+      - TG：-https://t.me/+pmrSbr411Gs1OGFk
+      - 收代理-只要三个
+      - TG:-@wanfengk88
+      - 香港 00
+      - 香港 01
+      - 香港 02
+      - 香港 03
+      - 香港 04
+      - 香港 05
+      - 香港 06
+      - 香港 07
+      - 香港 08
+      - 香港 09
+      - 新加坡 00
+      - 新加坡 01
+      - 新加坡 02
+      - 新加坡 03
+      - 新加坡 04
+      - 新加坡 05
+      - 新加坡 06
+      - 台湾 00
+      - 台湾 01
+      - 台湾 02
+      - 台湾 03
+      - 台湾 04
+      - 日本 00
+      - 日本 01
+      - 日本 02
+      - 日本 03
+      - 日本 04
+      - 日本 05
+      - 日本 06
+      - 韩国 01
+      - 韩国 02
+      - 美国 00
+      - 美国 01
+      - 美国 02
+      - 美国 03
+      - 美国 04
+      - 美国 05
+      - 美国 06
+      - 印度 01
+      - 印度 02
+      - 西班牙
+      - 俄罗斯
+      - 土耳其
+      - 乌克兰
+      - 阿联酋
+      - 菲律宾
+      - 泰国
+      - 德国
+      - 智利
+      - 法国
+      - 荷兰
+      - 冰岛
+      - 巴西
+      - 柬埔寨
+      - 阿根廷
+      - 澳大利亚
+      - 越南 01
+      - 越南 02
+      - 加拿大 01
+      - 加拿大 02
+      - 尼日利亚
+      - 巴基斯坦
+      - 马来西亚 01
+      - 马来西亚 02
+      - 印度尼西亚
+      - 尼泊尔
+      - 卡塔尔
+      - 英国
+      - 南非
+  - type: select
+    name: 🌐 非中国
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+      - REJECT
+      - ⚡ 自动选择
+      - 通知-防失联-tg
+      - TG：-https://t.me/+pmrSbr411Gs1OGFk
+      - 收代理-只要三个
+      - TG:-@wanfengk88
+      - 香港 00
+      - 香港 01
+      - 香港 02
+      - 香港 03
+      - 香港 04
+      - 香港 05
+      - 香港 06
+      - 香港 07
+      - 香港 08
+      - 香港 09
+      - 新加坡 00
+      - 新加坡 01
+      - 新加坡 02
+      - 新加坡 03
+      - 新加坡 04
+      - 新加坡 05
+      - 新加坡 06
+      - 台湾 00
+      - 台湾 01
+      - 台湾 02
+      - 台湾 03
+      - 台湾 04
+      - 日本 00
+      - 日本 01
+      - 日本 02
+      - 日本 03
+      - 日本 04
+      - 日本 05
+      - 日本 06
+      - 韩国 01
+      - 韩国 02
+      - 美国 00
+      - 美国 01
+      - 美国 02
+      - 美国 03
+      - 美国 04
+      - 美国 05
+      - 美国 06
+      - 印度 01
+      - 印度 02
+      - 西班牙
+      - 俄罗斯
+      - 土耳其
+      - 乌克兰
+      - 阿联酋
+      - 菲律宾
+      - 泰国
+      - 德国
+      - 智利
+      - 法国
+      - 荷兰
+      - 冰岛
+      - 巴西
+      - 柬埔寨
+      - 阿根廷
+      - 澳大利亚
+      - 越南 01
+      - 越南 02
+      - 加拿大 01
+      - 加拿大 02
+      - 尼日利亚
+      - 巴基斯坦
+      - 马来西亚 01
+      - 马来西亚 02
+      - 印度尼西亚
+      - 尼泊尔
+      - 卡塔尔
+      - 英国
+      - 南非
+  - type: select
+    name: 🐟 漏网之鱼
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+      - REJECT
+      - ⚡ 自动选择
+      - 通知-防失联-tg
+      - TG：-https://t.me/+pmrSbr411Gs1OGFk
+      - 收代理-只要三个
+      - TG:-@wanfengk88
+      - 香港 00
+      - 香港 01
+      - 香港 02
+      - 香港 03
+      - 香港 04
+      - 香港 05
+      - 香港 06
+      - 香港 07
+      - 香港 08
+      - 香港 09
+      - 新加坡 00
+      - 新加坡 01
+      - 新加坡 02
+      - 新加坡 03
+      - 新加坡 04
+      - 新加坡 05
+      - 新加坡 06
+      - 台湾 00
+      - 台湾 01
+      - 台湾 02
+      - 台湾 03
+      - 台湾 04
+      - 日本 00
+      - 日本 01
+      - 日本 02
+      - 日本 03
+      - 日本 04
+      - 日本 05
+      - 日本 06
+      - 韩国 01
+      - 韩国 02
+      - 美国 00
+      - 美国 01
+      - 美国 02
+      - 美国 03
+      - 美国 04
+      - 美国 05
+      - 美国 06
+      - 印度 01
+      - 印度 02
+      - 西班牙
+      - 俄罗斯
+      - 土耳其
+      - 乌克兰
+      - 阿联酋
+      - 菲律宾
+      - 泰国
+      - 德国
+      - 智利
+      - 法国
+      - 荷兰
+      - 冰岛
+      - 巴西
+      - 柬埔寨
+      - 阿根廷
+      - 澳大利亚
+      - 越南 01
+      - 越南 02
+      - 加拿大 01
+      - 加拿大 02
+      - 尼日利亚
+      - 巴基斯坦
+      - 马来西亚 01
+      - 马来西亚 02
+      - 印度尼西亚
+      - 尼泊尔
+      - 卡塔尔
+      - 英国
+      - 南非
+rules:
+  - RULE-SET,geolocation-cn,🔒 国内服务
+  - RULE-SET,cn,🔒 国内服务
+  - RULE-SET,geolocation-!cn,🌐 非中国
+  - RULE-SET,private,🏠 私有网络,no-resolve
+  - RULE-SET,cn,🔒 国内服务,no-resolve
+  - MATCH,🐟 漏网之鱼

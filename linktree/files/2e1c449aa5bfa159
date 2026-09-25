@@ -1,0 +1,352 @@
+
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<title>恋空机场 订阅编辑</title>
+					<meta charset="utf-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<style>
+						body {
+							margin: 0;
+							padding: 15px; /* 调整padding */
+							box-sizing: border-box;
+							font-size: 13px; /* 设置全局字体大小 */
+						}
+						.editor-container {
+							width: 100%;
+							max-width: 100%;
+							margin: 0 auto;
+						}
+						.editor {
+							width: 100%;
+							height: 300px; /* 调整高度 */
+							margin: 15px 0; /* 调整margin */
+							padding: 10px; /* 调整padding */
+							box-sizing: border-box;
+							border: 1px solid #ccc;
+							border-radius: 4px;
+							font-size: 13px;
+							line-height: 1.5;
+							overflow-y: auto;
+							resize: none;
+						}
+						.save-container {
+							margin-top: 8px; /* 调整margin */
+							display: flex;
+							align-items: center;
+							gap: 10px; /* 调整gap */
+						}
+						.save-btn, .back-btn {
+							padding: 6px 15px; /* 调整padding */
+							color: white;
+							border: none;
+							border-radius: 4px;
+							cursor: pointer;
+						}
+						.save-btn {
+							background: #4CAF50;
+						}
+						.save-btn:hover {
+							background: #45a049;
+						}
+						.back-btn {
+							background: #666;
+						}
+						.back-btn:hover {
+							background: #555;
+						}
+						.save-status {
+							color: #666;
+						}
+					</style>
+					<script src="https://cdn.jsdelivr.net/npm/@keeex/qrcodejs-kx@1.0.2/qrcode.min.js"></script>
+				</head>
+				<body>
+					################################################################<br>
+					Subscribe / sub 订阅地址, 点击链接自动 <strong>复制订阅链接</strong> 并 <strong>生成订阅二维码</strong> <br>
+					---------------------------------------------------------------<br>
+					自适应订阅地址:<br>
+					<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/loveskyvpn?b64','qrcode_0')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/loveskyvpn</a><br>
+					<div id="qrcode_0" style="margin: 10px 10px 10px 10px;"></div>
+					Base64订阅地址:<br>
+					<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/loveskyvpn?b64','qrcode_1')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/loveskyvpn?b64</a><br>
+					<div id="qrcode_1" style="margin: 10px 10px 10px 10px;"></div>
+					clash订阅地址:<br>
+					<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/loveskyvpn?clash','qrcode_2')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/loveskyvpn?clash</a><br>
+					<div id="qrcode_2" style="margin: 10px 10px 10px 10px;"></div>
+					singbox订阅地址:<br>
+					<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/loveskyvpn?sb','qrcode_3')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/loveskyvpn?sb</a><br>
+					<div id="qrcode_3" style="margin: 10px 10px 10px 10px;"></div>
+					surge订阅地址:<br>
+					<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/loveskyvpn?surge','qrcode_4')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/loveskyvpn?surge</a><br>
+					<div id="qrcode_4" style="margin: 10px 10px 10px 10px;"></div>
+					loon订阅地址:<br>
+					<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/loveskyvpn?loon','qrcode_5')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/loveskyvpn?loon</a><br>
+					<div id="qrcode_5" style="margin: 10px 10px 10px 10px;"></div>
+					&nbsp;&nbsp;<strong><a href="javascript:void(0);" id="noticeToggle" onclick="toggleNotice()">查看访客订阅∨</a></strong><br>
+					<div id="noticeContent" class="notice-content" style="display: none;">
+						---------------------------------------------------------------<br>
+						访客订阅只能使用订阅功能，无法查看配置页！<br>
+						GUEST（访客订阅TOKEN）: <strong>1ef76ef2422e0b600309cc1231fe4e2c</strong><br>
+						---------------------------------------------------------------<br>
+						自适应订阅地址:<br>
+						<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c','guest_0')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c</a><br>
+						<div id="guest_0" style="margin: 10px 10px 10px 10px;"></div>
+						Base64订阅地址:<br>
+						<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&b64','guest_1')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&b64</a><br>
+						<div id="guest_1" style="margin: 10px 10px 10px 10px;"></div>
+						clash订阅地址:<br>
+						<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&clash','guest_2')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&clash</a><br>
+						<div id="guest_2" style="margin: 10px 10px 10px 10px;"></div>
+						singbox订阅地址:<br>
+						<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&sb','guest_3')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&sb</a><br>
+						<div id="guest_3" style="margin: 10px 10px 10px 10px;"></div>
+						surge订阅地址:<br>
+						<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&surge','guest_4')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&surge</a><br>
+						<div id="guest_4" style="margin: 10px 10px 10px 10px;"></div>
+						loon订阅地址:<br>
+						<a href="javascript:void(0)" onclick="copyToClipboard('https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&loon','guest_5')" style="color:blue;text-decoration:underline;cursor:pointer;">https://loveskyvpn.pages.dev/sub?token=1ef76ef2422e0b600309cc1231fe4e2c&loon</a><br>
+						<div id="guest_5" style="margin: 10px 10px 10px 10px;"></div>
+					</div>
+					---------------------------------------------------------------<br>
+					################################################################<br>
+					订阅转换配置<br>
+					---------------------------------------------------------------<br>
+					SUBAPI（订阅转换后端）: <strong>https://SUBAPI.cmliussss.net</strong><br>
+					SUBCONFIG（订阅转换配置文件）: <strong>[custom]
+;不要随意改变关键字，否则会导致出错
+;acl4SSR规则-在线更新版
+
+;去广告：支持
+;自动测速：支持
+;微软分流：支持
+;苹果分流：支持
+;增强中国IP段：不支持
+;增强国外GFW：不支持
+;多国家分组：支持港/日/美
+
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/CFnat.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=🛑 全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+ruleset=🍃 应用净化,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+ruleset=🍃 应用净化,https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/adobe.list
+ruleset=📢 谷歌FCM,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+ruleset=🍎 苹果服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+ruleset=📲 电报信息,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+ruleset=🤖 OpenAi,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+ruleset=🤖 OpenAi,https://raw.githubusercontent.com/juewuy/ShellClash/master/rules/ai.list
+ruleset=🤖 OpenAi,https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Copilot.list
+ruleset=🤖 OpenAi,https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/GithubCopilot.list
+ruleset=🤖 OpenAi,https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Claude.list
+ruleset=📹 油管视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=🎥 奈飞视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=🌍 国外媒体,https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Emby.list
+ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+ruleset=🚀 节点选择,https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/CMBlog.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+;ruleset=🎯 全球直连,[]GEOIP,LAN
+ruleset=🎯 全球直连,[]GEOIP,CN
+ruleset=🐟 漏网之鱼,[]FINAL
+
+custom_proxy_group=☑️ 手动切换`select`.*
+States|ATL|BUF|DFW|EWR|IAD|LAX|MCI|MIA|ORD|PHX|PDX|SEA|SJC)`http://www.gstatic.com/generate_204`300,,150
+
+
+
+enable_rule_generator=true
+overwrite_original_rules=true</strong><br>
+					---------------------------------------------------------------<br>
+					################################################################<br>
+					恋空机场 汇聚订阅编辑: 
+					<div class="editor-container">
+						
+						<textarea class="editor" 
+							placeholder="LINK示例（一行一个节点链接即可）：
+vless://246aa795-0637-4f4c-8f64-2c8fb24c1bad@127.0.0.1:1234?encryption=none&security=tls&sni=TG.CMLiussss.loseyourip.com&allowInsecure=1&type=ws&host=TG.CMLiussss.loseyourip.com&path=%2F%3Fed%3D2560#CFnat
+trojan://aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856@218.190.230.207:41288?security=tls&sni=hk12.bilibili.com&allowInsecure=1&type=tcp&headerType=none#HK
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyRXRQcW42SFlqVU5jSG9oTGZVcEZRd25makNDUTVtaDFtSmRFTUNCdWN1V1o5UDF1ZGtSS0huVnh1bzU1azFLWHoyRm82anJndDE4VzY2b3B0eTFlNGJtMWp6ZkNmQmI%3D@84.19.31.63:50841#DE
+
+
+订阅链接示例（一行一条订阅链接即可）：
+https://sub.xf.free.hr/auto"
+							id="content">vless://459b4a80-bd61-4ecd-a26b-e9c1809d9e45@csuzhou01.1cooldns.com:41279/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.nvidia.com&fp=chrome&security=reality&pbk=qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY&sid=&packetEncoding=xudp#%F0%9F%87%AD%F0%9F%87%B0%E9%A6%99%E6%B8%AF
+
+vless://459b4a80-bd61-4ecd-a26b-e9c1809d9e45@shenzhou05.mysynology.net:17278/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.yahoo.com&fp=chrome&security=reality&pbk=qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY&sid=&packetEncoding=xudp#%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC
+</textarea>
+						<div class="save-container">
+							<button class="save-btn" onclick="saveContent(this)">保存</button>
+							<span class="save-status" id="saveStatus"></span>
+						</div>
+						
+					</div>
+					<br>
+					################################################################<br>
+					telegram 交流群 技术大佬~在线发牌!<br>
+<a href='https://t.me/CMLiussss'>https://t.me/CMLiussss</a><br>
+---------------------------------------------------------------<br>
+github 项目地址 Star!Star!Star!!!<br>
+<a href='https://github.com/cmliu/CF-Workers-SUB'>https://github.com/cmliu/CF-Workers-SUB</a><br>
+---------------------------------------------------------------<br>
+################################################################
+					<br><br>UA: <strong>Mozilla/5.0 (compatible; GitHubActions/1.0)</strong>
+					<script>
+					function copyToClipboard(text, qrcode) {
+						navigator.clipboard.writeText(text).then(() => {
+							alert('已复制到剪贴板');
+						}).catch(err => {
+							console.error('复制失败:', err);
+						});
+						const qrcodeDiv = document.getElementById(qrcode);
+						qrcodeDiv.innerHTML = '';
+						new QRCode(qrcodeDiv, {
+							text: text,
+							width: 220, // 调整宽度
+							height: 220, // 调整高度
+							colorDark: "#000000", // 二维码颜色
+							colorLight: "#ffffff", // 背景颜色
+							correctLevel: QRCode.CorrectLevel.Q, // 设置纠错级别
+							scale: 1 // 调整像素颗粒度
+						});
+					}
+						
+					if (document.querySelector('.editor')) {
+						let timer;
+						const textarea = document.getElementById('content');
+						const originalContent = textarea.value;
+		
+						function goBack() {
+							const currentUrl = window.location.href;
+							const parentUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
+							window.location.href = parentUrl;
+						}
+		
+						function replaceFullwidthColon() {
+							const text = textarea.value;
+							textarea.value = text.replace(/：/g, ':');
+						}
+						
+						function saveContent(button) {
+							try {
+								const updateButtonText = (step) => {
+									button.textContent = `保存中: ${step}`;
+								};
+								// 检测是否为iOS设备
+								const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+								
+								// 仅在非iOS设备上执行replaceFullwidthColon
+								if (!isIOS) {
+									replaceFullwidthColon();
+								}
+								updateButtonText('开始保存');
+								button.disabled = true;
+
+								// 获取textarea内容和原始内容
+								const textarea = document.getElementById('content');
+								if (!textarea) {
+									throw new Error('找不到文本编辑区域');
+								}
+
+								updateButtonText('获取内容');
+								let newContent;
+								let originalContent;
+								try {
+									newContent = textarea.value || '';
+									originalContent = textarea.defaultValue || '';
+								} catch (e) {
+									console.error('获取内容错误:', e);
+									throw new Error('无法获取编辑内容');
+								}
+
+								updateButtonText('准备状态更新函数');
+								const updateStatus = (message, isError = false) => {
+									const statusElem = document.getElementById('saveStatus');
+									if (statusElem) {
+										statusElem.textContent = message;
+										statusElem.style.color = isError ? 'red' : '#666';
+									}
+								};
+
+								updateButtonText('准备按钮重置函数');
+								const resetButton = () => {
+									button.textContent = '保存';
+									button.disabled = false;
+								};
+
+								if (newContent !== originalContent) {
+									updateButtonText('发送保存请求');
+									fetch(window.location.href, {
+										method: 'POST',
+										body: newContent,
+										headers: {
+											'Content-Type': 'text/plain;charset=UTF-8'
+										},
+										cache: 'no-cache'
+									})
+									.then(response => {
+										updateButtonText('检查响应状态');
+										if (!response.ok) {
+											throw new Error(`HTTP error! status: ${response.status}`);
+										}
+										updateButtonText('更新保存状态');
+										const now = new Date().toLocaleString();
+										document.title = `编辑已保存 ${now}`;
+										updateStatus(`已保存 ${now}`);
+									})
+									.catch(error => {
+										updateButtonText('处理错误');
+										console.error('Save error:', error);
+										updateStatus(`保存失败: ${error.message}`, true);
+									})
+									.finally(() => {
+										resetButton();
+									});
+								} else {
+									updateButtonText('检查内容变化');
+									updateStatus('内容未变化');
+									resetButton();
+								}
+							} catch (error) {
+								console.error('保存过程出错:', error);
+								button.textContent = '保存';
+								button.disabled = false;
+								const statusElem = document.getElementById('saveStatus');
+								if (statusElem) {
+									statusElem.textContent = `错误: ${error.message}`;
+									statusElem.style.color = 'red';
+								}
+							}
+						}
+		
+						textarea.addEventListener('blur', saveContent);
+						textarea.addEventListener('input', () => {
+							clearTimeout(timer);
+							timer = setTimeout(saveContent, 5000);
+						});
+					}
+
+					function toggleNotice() {
+						const noticeContent = document.getElementById('noticeContent');
+						const noticeToggle = document.getElementById('noticeToggle');
+						if (noticeContent.style.display === 'none' || noticeContent.style.display === '') {
+							noticeContent.style.display = 'block';
+							noticeToggle.textContent = '隐藏访客订阅∧';
+						} else {
+							noticeContent.style.display = 'none';
+							noticeToggle.textContent = '查看访客订阅∨';
+						}
+					}
+			
+					// 初始化 noticeContent 的 display 属性
+					document.addEventListener('DOMContentLoaded', () => {
+						document.getElementById('noticeContent').style.display = 'none';
+					});
+					</script>
+				</body>
+			</html>
+		

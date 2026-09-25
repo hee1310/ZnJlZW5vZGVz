@@ -1,0 +1,379 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: :9090
+external-ui: ui
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+geox-url:
+  geosite: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  geoip: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  mmdb: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
+  asn: https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb
+geo-auto-update: true
+geo-update-interval: 24
+profile:
+  store-selected: true
+  store-fake-ip: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+tcp-concurrent: true
+unified-delay: true
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+    QUIC:
+      ports:
+      - 443
+      - 8443
+  force-domain:
+  - +.v2ex.com
+  - www.google.com
+  - google.com
+  skip-domain:
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - +.apple.com
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+dns:
+  enable: true
+  prefer-h3: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  fake-ip-range: 198.18.0.1/16
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+  - rule-set:fakeip-filter,private,cn
+  - 111.198.46.148
+  nameserver:
+  - https://223.5.5.5/dns-query
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+proxies:
+- grpc-opts:
+    grpc-service-name: api.v1.StreamService
+  name: DE_Frankfurt am Main_UAB Cherry Servers_Claude
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: S8O8R938N960cpQfIIDXsJTxeGAkbVv6PlIqP0-d30w
+    short-id: 1ea59febb8d4fc8e
+  server: 88.216.220.87
+  servername: api.noneok.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
+- cipher: aes-256-cfb
+  name: JP_Tokyo_Amazon Technologies Inc._Claude
+  password: amazonskr05
+  port: 443
+  server: 13.231.227.228
+  type: ss
+- name: JP_Tokyo_Amazon.com, Inc._Claude
+  password: ND91608427
+  port: 443
+  server: definite-sturgeon.rooster465.autos
+  skip-cert-verify: false
+  sni: definite-sturgeon.rooster465.autos
+  type: trojan
+- name: SG_Singapore_Dromatics Systems Pte Ltd_Claude
+  password: 55354c2b8ee339571bd657a9bb9858cc
+  port: 40783
+  server: 106.75.132.91
+  skip-cert-verify: true
+  type: trojan
+- name: TW_Yuanlin_Chunghwa Telecom Co., Ltd._Claude
+  network: tcp
+  password: 55354c2b8ee339571bd657a9bb9858cc
+  port: 39221
+  server: speed-01.aliyun-web-tracker.cn
+  skip-cert-verify: true
+  sni: speed-01.aliyun-web-tracker.cn
+  type: trojan
+- cipher: aes-256-cfb
+  name: 🟠🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_6efb
+  password: amazonskr05
+  port: 443
+  server: 3.85.61.177
+  type: ss
+proxy-groups:
+- name: PROXY
+  type: select
+  proxies:
+  - Best
+  - Fallback
+  - Select
+  - HK
+  - TW
+  - JP
+  - SG
+  - US
+- name: Select
+  type: select
+  filter: .*
+  proxies:
+  - DE_Frankfurt am Main_UAB Cherry Servers_Claude
+  - JP_Tokyo_Amazon Technologies Inc._Claude
+  - JP_Tokyo_Amazon.com, Inc._Claude
+  - SG_Singapore_Dromatics Systems Pte Ltd_Claude
+  - TW_Yuanlin_Chunghwa Telecom Co., Ltd._Claude
+  - 🟠🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_6efb
+- name: Best
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  filter: _Gemini_Claude
+  proxies:
+  - DIRECT
+- name: Fallback
+  type: fallback
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  filter: .*
+  proxies:
+  - DE_Frankfurt am Main_UAB Cherry Servers_Claude
+  - JP_Tokyo_Amazon Technologies Inc._Claude
+  - JP_Tokyo_Amazon.com, Inc._Claude
+  - SG_Singapore_Dromatics Systems Pte Ltd_Claude
+  - TW_Yuanlin_Chunghwa Telecom Co., Ltd._Claude
+  - 🟠🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_6efb
+- name: HK
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - DIRECT
+  filter: (?i)港|HK|HongKong|hong kong
+- name: TW
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - TW_Yuanlin_Chunghwa Telecom Co., Ltd._Claude
+  filter: 台湾|TW|Tw|Taiwan|新北|彰化|CHT|HINET
+- name: JP
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - JP_Tokyo_Amazon Technologies Inc._Claude
+  - JP_Tokyo_Amazon.com, Inc._Claude
+  filter: (?i)日|东京|大阪|JP|Japan|Tokyo|Osaka|Saitama
+- name: SG
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - SG_Singapore_Dromatics Systems Pte Ltd_Claude
+  filter: (?i)新|狮城|SG|Singapore
+- name: US
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  lazy: true
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - DIRECT
+  filter: (?i)美|洛杉矶|芝加哥|西雅图|America|US|United.*?States
+- name: Claude
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - DE_Frankfurt am Main_UAB Cherry Servers_Claude
+  - JP_Tokyo_Amazon Technologies Inc._Claude
+  - JP_Tokyo_Amazon.com, Inc._Claude
+  - SG_Singapore_Dromatics Systems Pte Ltd_Claude
+  - TW_Yuanlin_Chunghwa Telecom Co., Ltd._Claude
+  filter: _Claude
+- name: Gemini
+  type: url-test
+  url: https://www.google.com/generate_204
+  expected-status: 204
+  timeout: 2000
+  interval: 600
+  tolerance: 50
+  proxies:
+  - PROXY
+  filter: _Gemini
+rules:
+- RULE-SET,ads,REJECT
+- DOMAIN-SUFFIX,boundaryx.net,DIRECT
+- RULE-SET,applications,DIRECT
+- RULE-SET,private,DIRECT
+- RULE-SET,apple-cn,DIRECT
+- RULE-SET,games-cn,DIRECT
+- RULE-SET,google-cn,DIRECT
+- RULE-SET,bilibili,DIRECT
+- RULE-SET,cn,DIRECT
+- RULE-SET,claude,Claude
+- RULE-SET,gemini,Gemini
+- RULE-SET,youtube,PROXY
+- RULE-SET,telegramip,PROXY,no-resolve
+- RULE-SET,privateip,DIRECT,no-resolve
+- RULE-SET,cnip,DIRECT,no-resolve
+- GEOIP,LAN,DIRECT,no-resolve
+- GEOIP,CN,DIRECT,no-resolve
+- MATCH,PROXY
+rule-providers:
+  fakeip-filter:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/fakeip-filter.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
+    interval: 86400
+  ads:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/ads.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ads.list
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    format: text
+    path: ./rules/applications.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/applications.list
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/private.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
+    interval: 86400
+  games-cn:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/games-cn.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
+    interval: 86400
+  microsoft-cn:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/microsoft-cn.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
+    interval: 86400
+  apple-cn:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/apple-cn.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
+    interval: 86400
+  google-cn:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/google-cn.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/google-cn.list
+    interval: 86400
+  bilibili:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/bilibili.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/bilibili.list
+    interval: 86400
+  gemini:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/gemini.list
+    url: https://github.com/ReaJason/Clash-Butler/raw/refs/heads/master/rules/gemini/gemini.list
+    interval: 86400
+  claude:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/claude.list
+    url: https://github.com/ReaJason/Clash-Butler/raw/refs/heads/master/rules/claude/claude.list
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/youtube.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/youtube.list
+    interval: 86400
+  cn:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/cn.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+    interval: 86400
+  telegramip:
+    type: http
+    behavior: ipcidr
+    format: text
+    path: ./rules/telegramip.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.list
+    interval: 86400
+  privateip:
+    type: http
+    behavior: ipcidr
+    format: text
+    path: ./rules/privateip.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.list
+    interval: 86400
+  cnip:
+    type: http
+    behavior: ipcidr
+    format: text
+    path: ./rules/cnip.list
+    url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.list
+    interval: 86400

@@ -1,0 +1,243 @@
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+allow-lan: false
+mode: rule
+log-level: error
+ipv6: false
+enable-process: true
+find-process-mode: strict
+tcp-concurrent: false
+disable-keep-alive: true
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  listen: :1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - +.lan
+    - +.local
+    - +.localhost
+    - +.localdomain
+    - +.ip6-localhost
+    - +.ip6-loopback
+    - "*.example"
+    - "*.invalid"
+    - "*.test"
+    - "*.home.arpa"
+    - time.nist.gov
+    - time.windows.com
+    - time.android.com
+    - pool.ntp.org
+    - time.*.com
+    - ntp.*.com
+  default-nameserver:
+    - https://8.8.8.8/dns-query
+  direct-nameserver:
+    - system
+  proxy-server-nameserver:
+    - quic://dns.adguard-dns.com
+    - system
+  nameserver:
+    - https://dns.quad9.net/dns-query
+    - https://security.cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  direct-nameserver-follow-policy: false
+  prefer-h3: false
+  respect-rules: false
+  use-hosts: true
+  use-system-hosts: true
+  fallback: []
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 10.10.34.0/24
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  device: Mihomo
+proxy-providers:
+  q:
+    type: http
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/prov_clash.yaml
+    interval: 24400
+    path: ./proxy-providers/q.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: https://www.gstatic.com/generate_204
+      timeout: 10000
+    override:
+      udp: true
+  b:
+    type: http
+    url: https://raw.githubusercontent.com/xtoolkit/TVC/main/subscriptions/meta/vless
+    interval: 24400
+    path: ./proxy-providers/b.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: https://www.gstatic.com/generate_204
+      timeout: 10000
+    exclude-type: ss|http|trojan|vmess|https|anytls|tuic|socks4|socks5|hysteria2
+    override:
+      udp: true
+  k:
+    type: http
+    url: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
+    interval: 24400
+    path: ./proxy-providers/k.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: https://www.gstatic.com/generate_204
+      timeout: 10000
+    exclude-type: ss|http|trojan|vmess|https|anytls|tuic|socks4|socks5|hysteria2
+    override:
+      udp: true
+  l:
+    type: http
+    url: https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+    interval: 24400
+    path: ./proxy-providers/l.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: https://www.gstatic.com/generate_204
+      timeout: 10000
+    exclude-type: ss|http|trojan|vmess|https|anytls|tuic|socks4|socks5|hysteria2
+    override:
+      udp: true
+  w:
+    type: http
+    url: https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/clash.yaml
+    interval: 24400
+    path: ./proxy-providers/w.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: https://www.gstatic.com/generate_204
+      timeout: 10000
+    exclude-type: ss|http|trojan|vmess|https|anytls|tuic|socks4|socks5|hysteria2
+    override:
+      udp: true
+proxy-groups:
+  - name: QQOLI
+    type: select
+    proxies:
+      - MMOBI
+    use:
+      - q
+      - b
+      - k
+      - l
+      - w
+  - name: MMOBI
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 1200
+    tolerance: 500
+    use:
+      - q
+      - b
+      - k
+      - l
+      - w
+rule-providers:
+  aff_l:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/aff_l.mrs
+    path: ./rule-providers/aff_l.mrs
+    interval: 86400
+  yun:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/yun.mrs
+    path: ./rule-providers/yun.mrs
+    interval: 86400
+  oki:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/oki.mrs
+    path: ./rule-providers/oki.mrs
+    interval: 86400
+  doki:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/doki.mrs
+    path: ./rule-providers/doki.mrs
+    interval: 86400
+  xal:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/xal.mrs
+    path: ./rule-providers/xal.mrs
+    interval: 86400
+  loo:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/liketolivefree/kobabi/main/loo.mrs
+    path: ./rule-providers/loo.mrs
+    interval: 86400
+rules:
+  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,localdomain,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
+  - RULE-SET,aff_l,REJECT
+  - RULE-SET,yun,REJECT,no-resolve
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - RULE-SET,xal,DIRECT
+  - RULE-SET,oki,QQOLI
+  - RULE-SET,loo,DIRECT,no-resolve
+  - RULE-SET,doki,QQOLI,no-resolve
+  - MATCH,QQOLI
+geo-auto-update: false
+geo-update-interval: 90
+geodata-mode: false
+geox-url:
+  geoip: https://github.com/Chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
+  geosite: https://github.com/Chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+  mmdb: https://github.com/Chocolate4u/Iran-clash-rules/releases/latest/download/geoip.metadb
+  asn: https://github.com/Chocolate4U/Iran-v2ray-rules/raw/geolite2/GeoLite2-ASN.mmdb
+hosts:
+  "github.com": ["140.82.121.3", "140.82.121.4", "185.8.175.145", "20.26.156.215", "50.7.5.83", "91.212.174.133"]
+  "raw.githubusercontent.com": ["185.199.108.133", "185.199.109.133", "185.199.110.133", "185.199.111.133", "2606:50c0:8000::154", "2606:50c0:8001::154", "2606:50c0:8002::154", "2606:50c0:8003::154"]
+  "security.cloudflare-dns.com": ["1.0.0.2", "1.1.1.2", "2606:4700:4700::1002", "2606:4700:4700::1112"]
+  "cloudflare-dns.com": ["104.16.248.249", "104.16.249.249", "2606:4700::6810:f8f9", "2606:4700::6810:f9f9"]
+  "dns.quad9.net": ["149.112.112.112", "9.9.9.9", "2620:fe::9", "2620:fe::fe"]
+  "dns9.quad9.net": ["149.112.112.9", "9.9.9.9", "2620:fe::9", "2620:fe::fe:9"]
+  "dns10.quad9.net": ["149.112.112.10", "9.9.9.10", "2620:fe::10", "2620:fe::fe:10"]
+  "dns11.quad9.net": ["149.112.112.11", "9.9.9.11", "2620:fe::11", "2620:fe::fe:11"]
+  "dns12.quad9.net": ["149.112.112.12", "9.9.9.12", "2620:fe::12", "2620:fe::fe:12"]
+  "dns.adguard-dns.com": ["94.140.14.14", "94.140.15.15", "2a10:50c0::ad1:ff", "2a10:50c0::ad2:ff"]
+  "dns.google": ["8.8.4.4", "8.8.8.8", "2001:4860:4860::8844", "2001:4860:4860::8888"]
+  "dns.opendns.com": ["208.67.220.220", "208.67.222.222", "2620:119:35::35", "2620:119:53::53"]
+  "dns.umbrella.com": ["208.67.220.220", "208.67.222.222", "2620:119:35::35", "2620:119:53::53"]
+  "doh.opendns.com": ["146.112.41.2", "2620:119:fc::2"]
+  "doh.umbrella.com": ["146.112.41.5", "2620:119:fc::5"]

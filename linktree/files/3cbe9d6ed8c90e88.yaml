@@ -1,0 +1,591 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: 🇺🇸_US_美国
+    type: vless
+    server: 162.159.38.62
+    port: 80
+    uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vip.yaml7.ggff.net
+    udp: true
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 172.66.40.99
+    port: 2083
+    uuid: ce035748-9913-40c9-9fb6-c8389f7cdcf3
+    network: ws
+    servername: yousef.varzesh.dpdns.org
+    tls: true
+    ws-opts:
+      headers:
+        Host: yousef.varzesh.dpdns.org
+    udp: true
+  - name: 🇬🇧_GB_英国
+    type: vless
+    server: 46.101.81.245
+    port: 443
+    uuid: bafacd98-136a-4530-838d-4e5c51838dac
+    network: ws
+    servername: juzi8186.qea.ccwu.cc
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /lessons/dload/juzibaipiao?ed=2560
+      headers:
+        Host: juzi8186.qea.ccwu.cc
+    udp: true
+  - name: 🇺🇸_US_美国_2
+    type: vless
+    server: 8.6.112.6
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.jpmj.dev
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.jpmj.dev
+    udp: true
+  - name: 🇬🇧_GB_英国_1
+    type: vless
+    server: 185.238.228.238
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.jpmj.dev
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.jpmj.dev
+    udp: true
+  - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
+    type: vless
+    server: 23.173.104.209
+    port: 2053
+    uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+    network: ws
+    servername: babayaga-6i7.pages.dev
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳@WangCai2
+      headers:
+        Host: babayaga-6i7.pages.dev
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 45.140.169.216
+    port: 40412
+    cipher: aes-256-gcm
+    password: c5fcdf7829112cb4
+    udp: true
+  - name: 🇳🇱_NL_荷兰
+    type: vless
+    server: 45.92.1.35
+    port: 30047
+    uuid: a5554072-0d6d-4b9a-93b1-9c8726fc2c0b
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+    udp: true
+  - name: 🇳🇱_NL_荷兰_1
+    type: vless
+    server: 45.131.209.191
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.my111000.tech
+    tls: true
+    ws-opts:
+      path: Telegram%F0%9F%87%A8%F0%9F%87%B3@WangCai2/
+      headers:
+        Host: sni.my111000.tech
+    udp: true
+  - name: 🇺🇸_US_美国_3
+    type: hysteria2
+    server: vpn-us-004.fastervpn.world
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    sni: vpn-us-004.fastervpn.world
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国_4
+    type: vless
+    server: 104.17.72.206
+    port: 2053
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.111000.indevs.in
+    udp: true
+  - name: 🇺🇸_US_美国_5
+    type: vless
+    server: 104.18.32.47
+    port: 2053
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.111000.indevs.in
+    udp: true
+  - name: 🇭🇰_HK_中国香港
+    type: vless
+    server: 8.218.117.111
+    port: 443
+    uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+    servername: wcs.adobe.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+    udp: true
+  - name: 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+    type: vmess
+    server: v36.hdacd.com
+    port: 30836
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸_US_美国_6
+    type: vless
+    server: 104.25.242.61
+    port: 443
+    uuid: a6f1755f-0140-4bea-8727-0db1bed7c4df
+    network: ws
+    servername: juzi.qea.ccwu.cc
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: juzi.qea.ccwu.cc
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯_1
+    type: ss
+    server: 185.22.154.51
+    port: 9012
+    cipher: aes-256-gcm
+    password: f34579d0148b2581
+    udp: true
+  - name: 🇹🇭_TH_泰国
+    type: trojan
+    server: svip-tg.xiaobaivpn.icu
+    port: 28805
+    password: 99a2b3c7-c32e-402c-a052-83498bd0fc88
+    sni: svip-tg.xiaobaivpn.icu
+    skip-cert-verify: false
+    tls: true
+    udp: true
+  - name: 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+    type: vless
+    server: 135.84.67.38
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇺🇸_US_美国_7
+    type: vless
+    server: 199.34.228.182
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇺🇸_US_美国_8
+    type: vless
+    server: 38.76.149.219
+    port: 39738
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: xfxl35a.node-edge.gfw.hidns.co
+    tls: true
+    ws-opts:
+      path: /danfengfp=chrome
+      headers:
+        Host: xfxl35a.node-edge.gfw.hidns.co
+    udp: true
+  - name: 🇺🇸_US_美国_9
+    type: vless
+    server: 172.66.3.201
+    port: 443
+    uuid: a6f1755f-0140-4bea-8727-0db1bed7c4df
+    network: ws
+    servername: juzi.qea.ccwu.cc
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: juzi.qea.ccwu.cc
+    udp: true
+  - name: 🇯🇵_JP_日本
+    type: hysteria2
+    server: vpn-jp-003.fastervpn.world
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    sni: vpn-jp-003.fastervpn.world
+    skip-cert-verify: true
+    udp: true
+  - name: 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+    type: vmess
+    server: v24.hdacd.com
+    port: 30824
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: 🇺🇸_US_美国_10
+    type: vless
+    server: 172.64.155.209
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?ed
+      headers:
+        Host: sni.111000.indevs.in
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国_1
+      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇭🇰_HK_中国香港
+      - 🇲🇾_MY_马来西亚->🇬🇧_GB_英国
+      - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇹🇭_TH_泰国
+      - 🇺🇸_US_美国->🇱🇻_LV_拉脱维亚
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_9
+      - 🇯🇵_JP_日本
+      - 🇲🇾_MY_马来西亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_10
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
