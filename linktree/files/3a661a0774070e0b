@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Cloudupup</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0e1114;
+            color: #e8eaed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 32px 20px 24px;
+        }
+        .header-overline {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #8ab4f8;
+            margin-bottom: 8px;
+            display: block;
+            opacity: 0.8;
+        }
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.25;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        .list-container {
+            padding: 0 20px;
+            flex: 1;
+        }
+        .list_1 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            counter-reset: result-counter;
+        }
+        .list-item {
+            margin: 0;
+            padding: 0;
+        }
+        .dir-link {
+            display: flex;
+            align-items: center;
+            background-color: #181b21;
+            border: 1px solid #2a2e37;
+            border-radius: 12px;
+            padding: 18px 16px;
+            text-decoration: none;
+            color: inherit;
+            min-height: 76px;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        .dir-link:active {
+            background-color: #20242c;
+            transform: scale(0.98);
+        }
+        .dir-link::before {
+            counter-increment: result-counter;
+            content: "0" counter(result-counter);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5f6368;
+            align-self: flex-start;
+            margin-top: 4px;
+            margin-right: 16px;
+        }
+        .dir-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .kw-text {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.35;
+            color: #e8eaed;
+        }
+        .dir-icon {
+            color: #5f6368;
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dir-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+        .list-item:first-child .dir-link {
+            background-color: #141f2e;
+            border-color: rgba(138, 180, 248, 0.4);
+            padding: 24px 16px;
+            min-height: 94px;
+        }
+        .list-item:first-child .dir-link::before {
+            color: #8ab4f8;
+            opacity: 0.9;
+        }
+        .list-item:first-child .dir-content::before {
+            content: "Top result";
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #8ab4f8;
+            background: rgba(138, 180, 248, 0.15);
+            align-self: flex-start;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .list-item:first-child .kw-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .list-item:first-child .dir-icon {
+            color: #8ab4f8;
+        }
+        .no-results {
+            padding: 24px;
+            text-align: center;
+            color: #9aa0a6;
+            font-size: 16px;
+        }
+        .footer {
+            padding: 48px 20px 32px;
+            text-align: center;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .footer a {
+            color: #5f6368;
+            text-decoration: none;
+        }
+        .footer a:active {
+            color: #9aa0a6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="header">
+            <span class="header-overline">Directory Index</span>
+            <h1 class="header-title">Cloudupup</h1>
+        </header>
+
+        <div class="list-container">
+            <ul class="list_1">
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="42Gs9StNkJG3TxgNBFIPjXSS47WkQdlMBeGKUCkzxHqmIN6NTJfeyqj2xcQloJ7a6oc03stUEHFYs5aQczIQRQ0qg86FJ3Vhs3F25aDkBrj9y6AdunPdAg6vGeFoUO0xxhY1Q5y0cviWh-iuhgk1dGZ5eh0pZL7ow24KXsINZFLvT2ELtjRupOJnwAhPPtPf0i3YKHWoiw3CAFTBzTuJwX3YTuekJjtDJ38kVQqSgCZHZ6n9VeJ4M1KyZewAsyPiJgs5z3fzI6kHSS3ryrdOhcZjJ0lV1-ue05EkkOn5v9bPEQW6pQc0u6wQUGKFXcgF33js8AwTT9q2HO29PMLfV-tsPA1Bjs8MK8xKGYskM02uHGBT99A2xojbHbvPf3hO4T5M_xFs7PTazQUkokVKQtBJrWWvAsagjMuZap-gF_J37-Uofiq3S1BcFGQkCa3Ax-8x5-YASi-F81_IhVasjqyl4HyCCDprZ9Xe-h7IWQuJKFtOPlDwXNxA3a6A2xwbvhr6dPscwIjiJEZLw9oCOO2tFKFq8mI-J77bDemcl9gVv0S7rF3BX8ZlDRiDQWE7qBsZ96tLC8P85934n6GaC50JCKmKT5srsa6y0ktvxXQwllJCfgbUU6An6GZmcvTp_GG4w7bNuDgqbs_vLcWtE_PWVVNOhJcHb70kmXZZZ7ApIvn71pspbLkSASt0wqI2myqqNurDCAPWnfaHKVUcGrue9YKNUFFzCNSkkP3lFZtaS0XbRED4qVBAOVBpTiLI8h9bkcYj-qn8uDE-khMww0Xgro9v6bLleb2XafCNAar3JUTlXsKI_RDiWlxAFvd7SUMa5MGY3RyJQcAYnQKprqHI4ISIFRfyNktJxd-JzGpybDl2B3ubAF5vs6QNnADez30otrK8i5rLiDArYOcBjD0Z1xuU9tcvEr-p7IiQX_yKuQgEUA_94bfVAvzoDe4qJvyeF1dgfepXwj8U2gk6TNCGiijhOAhnWqvghxAzjMdoRim9vcSkkbsV2lndWeCTPPOzc8suA5T4qcpMQmgB-Utmj23Dirmnpa7uQvCbEE5xW853obbO3vWdGnnpIz4FcPIy9tW8jrxD90_svdWRjq4QyNfR-GW91ODHUwuhwUKLnT42S0vUmzcbTf-PjZzz65kQuylK2295W0p_AjpLs54A_xAV00A8bRVweT3lHpGLY5YxhkHvHDc-5_eQfnyVSEiETOoqoApv5i69pEskIM6y_xmQO05zblzk9ZfHkXo-BlduMa_XWaMBa1s6I2GAOgGW84KwcXMs5-QO_pFjnI0yPa5rqc716oqcJX6VlnoHWz0Dt_WLeG3sh132EtWtzGd2XaW5MeLscEuuSFI2arowKyzEprSWQ8JX1XT18KJmHbJGkaH2TKO0Bm53zEb0vfZ_EqL_fK4ItYrLgca3hHghP_S8I_L_dR6_RTra-Xisyk-O_HgGTorv0ggblNs4o9FnU2U45sHnrDz7sWro048kHb0MM3DJ0I568OciL6TsV3yu6RxEt92JD7O04SmLk9AAxQGnghYHYFR-7rvc6gDseEbFcHIneQgUVzQ_4LrkF3cVoAyOxqtKiIcLhfpnpdVQAaNAuVKEJ_HHLZ2lGiyL6uFBmXwMYJ0oDvMSJD9ltDN-SVAl8VXl2YV1Z4VVfjTzfsR3zLjv5lSpIj3C7M2l108O_5HnIHvnAULukIesxhP0IZMAFXzQPbqSgh4iEREYClqtnRx3kSp9H6gRAO8k8FnOwZNF3g" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">cloud storage solutions</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="-QVfuymQo9Cil6HCuyUaHAeh_3ublt0XmgbO5HO87zyOyWXSTLHiy4AhRSM0O5u6_hTKwn0ieA-hrWpz2BldCbZKUI6lWVoJTzxaegMt9kP6tLsEfPF4EmgN3VvexX40ac22SoDl24Rc_XyB-RzGIy3lmLFqN-DTfvjjhEjwoBHOhy3bVwzsCjinunRJ8xuwOi0x65Fj_kVyXFli50B2b55uZEfiea839uMLWoWK9w8EXfS53eUx-u1t_MJafcwcwHGOWjs4D7TIzHAiGQlD3zTRAkxU_doBvi4345FTXEC2aNM4VR1XtGszw1tWQnkd31B1zunf-_gDSGwwvYs-GipJBuY8Q_DV9AShg2f6aPS_CIPcL3hcv6tZUd9wbH2479gnXfOKwBv1ir96nQKfxi31I02ycw8OROrf20pj8Yq0Fe1RdJtVahEcn1KYeVPYTVduRhKYQpHC1KzJD8KtsG-VZKgANYtXr5R55uzfTdrSmTD9IvBxt0uzKAB6OLWPQqBFYRyoQwBnMCEa1PJgQvYfBPworfiJmSVDI9Ye6_oK1heGvAQgKmB3-H6mPFKOnETf-wAnRTEg9dLL5hjYU-Y4Qxp_mH7uRh9L2UPLWUMwasYvB89IWrXDmwnjyLexlg4Di-QsB0LOtnx_wWhLIEKPocScRE26LoaqeeXkGD5N76O5cD_8kkGXw6-KZZnZoXUZVfvBHKXy8TvMlxuvYNXMUGPOAzqaUPxkh1G2ZIcbo6KLbj0dkTsL4IgiWSY73kb1Di-uOjpmwrn7w8zNrA-u6QGAzWKDKT9FF22m2TYjDbeXMGCLPvLYNbJuvHKLSXxuWIF1zEsggMhemw0wS5KBRo2H2K7Q9mnLN-H49FjhmFAmmc3ICTZFnY6ms9ej5ktqswC5aSNvd0xLgu1ytCoE1hBiKliXoX3I2Zk70fNjJQk3YDT1UC9S7XcW9BTQs3va5Tc1urBmeYysL4XmDmHADe8r0g1yCJz9MHVMheMeyw_e2z9tyt0k2rjnAs2nS0pCAOT0d9nHk_G0vn4muGkuN0yLk3XzkCu3-e2sglCQMwksFKdea6ewQhwAKtdj0vXx6SEcMm8F47Pg-0rg7RKE0rUrhzy9dbdcyIpeWFZqSCXU-9ZghUjePH-0jfQRaUs7qPn16S6qUqFGz9xrCHjqfetgRDvxtjzBaTrDlAmOmSX05YBbihjzKZSwm6vIutWZzWMcFG1kxaxAOpyHHR_Fb6c4t7OckC8x8MplJBMheFxCy1F-Qmvda2koqxkHAF_bfzxysNWGHttbEBeB9ljW13oEBlUGLHLHbLqI-tvyiPraI0Oxb17xeeS17DeTz1gjOCTRZbiucudQXDdcNd6T6dZKyL7G3eZN3zO-JIKeer65EamNFbSyX-IfYCC_hK08UcVr9edWR650-BuWh0-VS8ppsqWeTaPZ5MGH6Y8fKaNBMPw35M2kZDK7qE0dYRqoWFlb2E4RV8LVU4Yf5IFPYexjGe5-BBQ6-MzKDt0MUX7T1L85f8FhDk5xkFzeLzv50VpFdBYSapzK3iZ4ivjJTNbs2De709TQ4lL_MaAXgOygdI1u4uojPhOlEdcqQbyLo3oG4nm0t2NZKnuoAxOarKz0uNWwT8EYg6GoBhBSBbU5ecQeunHUPZjQM76YuvP4Z7UKnQaLHSIEccB-4f_Jq8rqwKBIGV7KENbCvI05kiAPTvYJGZqX0D-EVj6usQVfzmTNDa7PHQq4OC74MRe9ng" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">best cloud computing</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="B5x9M50QrBug5NUZu0UlgTvAhetoUKt5nZ_3LRDTBd_uQ_lJR5BjcpqVZb4M3Vv93uBJEQZcPU90_s9cnAQBE5aCmZmAuqOeZeySz3ZXCoh8fyUPMH1T7wX9JRe9CMlCxFWcHlAyxM5IOs13VtemMb1g5UTEMxeD51L0r-nlw-tl7At5IoNbJyti3o_ZttJJxcwiDxtD6I_8NxjcV-2qUoF8mKAKWZkuNZ-JvylIErKinruAJffsXXRTt7-ERQ_XGvYgXb-S091282KuKzOf7qoOunq_KSN_tDWdu6vtpPovs6o8KTC7-nDxnIN3X6dSOFYFanTa_fELIR24vBNN7S-wwy0GeVfq3y6xs0f52PHPowL0XsQtLwC7j2dGa7rdDp1SMgzZSUHR6pviakLnB3ORpa4BcL-E2y82d-pQ9D7OFWXOtpOelQy2nhJg3IT5txAtOdDu9JhbjnX2hAmJ47U8xsx_tFsKG-LVooVgzjGDGBn62mJkCyBdkqv-FR5w4ZCBI-1rCoXiQRHyYwh1CaGJCBYs7MJT9LCJAxENOO11wpo4NOEQhZXM69vAPuuXkY9G1p7uKXcK4N4jS6vm02rVYPM_J3X4-vn9bgivYlewRgcambPmDQ8K_M3FX0_z7TcTx_jCcA_ybaBy2j93iWYrM0V1nta6capcSaS1GfkLp2GyTXQtMg_SJvZn_XsXyvJk7wdWSIwjcrOHj80ZGBY82hRGKjJYTyATABI35W0RL10_uWqfpj-dHxGBRz2pzG6NlguIaN1z_LXqbaq58kBgFKr2b_BWf9IIzuhLm9HNpxJcgALpxuApsySTV3Z9WEjK77-nUf73588mSYUFR46R70KrY4jOI8mlxB0G7Fj-k-gWtYOQf56UDGxXe1GTizibr2DROLwPmkpvC0DpKGbLeHCkwwfCvvTiJRwUlbnBcHhWMNxtLhOvmQbSR8iZgZTn89jOE3mb6BXVTn1bpV-ZP_6rvY_4P82Of6EIdKf9-5HBDImtscuV3wCH20DNETpWGMQXt1iBUBWVvOkMGPMWIW-STZ0pH9ti0LPEhSsuPym63BjUOTDc-Y9VTenAgptJcLxZtU1xvfF4qp4YMPKEMeUixWlamiQe5yFGC3hYY2ZN0-lfOJmYqW1PiUfkFHUQuIT3GTsh93bWJMmRz1VvoSOZzS7atVdkJmkmXKKI-BUnpAxmujGrJrcYMDxBqcXO1syzPU4FdgctweEci4NEq7usuag6f6TVzwIld7_3J__ehbHv9jE-F1LLM60GNSueUFyDfctNlkGnVjMMkyMTxXNH78loFIowOUcqpdi6f6Z-Lp4qLZOnbyDTOxy1Bo3R-boCAT5tyx8uzUcqF0tWnYRfjKR6rOL99QZPFLK9NMpgr2LimfAXk05ElPEYgW5I0_BQj6l2QPpr9qUdjaUd6q0Jrx8ajgGuFuQvXXQ97eZNLh8o7Jd4Gk2nNiX39kwL61FaROA0BV-60ueI4x3DhrPkLimRl7BUi-tjWOyecw2N8jhcHqxHUa-WAIcscDhEZVk9oFg_8M2APRZTtf6oirWfyIRX6JvseIcvBQGpsAlKhGkV8r3TBpVb75U_AjyQreNqWE1tixNEkNEupX5VzHsxweLM1Xm1y-0fbtV8oy8zJOabIeqqzTIAvEHGe5kJmxtHsp_X-IMS4IXI1eeeYBAIJ_QU51UriQYXaQY0Aikdc_n43nYt91IiVbM4s0v5ttKsO87BRPB80xZnPhTk-7pu6w4" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">file sharing platforms</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="Gu1n3GeZqDpPiZCTBcY2kKUL57AtTyEtM9bC_jKmdYx0otv5Jb6YOccQiTjWAR_yTZiaBODQzYR5nVBjyS6fh7E_owIm4dcnPI2Ur-Ei1nRy-Y0NbKHML7HxsHO_RYmn0IGqgTjYlBvE4iuzQ05iuVhzcfi7fs7xobSmmHxdpqSf8wGYANJmqG8SF3sgqyjDGA5ueax9xJVJDeZx6X-hA9crkyuZpigKcR1JrNrWUKenODPSXODv39a061EBbGOo_JE0n93Y8Zd1h80J4LvREY23JZT-K97PIHITRkOkH1kh8pm6wyfH15Aq6b-stml8tsRXFe4bWRWUBCW-TUKeBpnit9VagZXQkOkJ3GTkooDIYXUC6NXnaI18ts5-EXnWqWqMUm8P_U9nlcMktRdMBrJ97FzOr0xivU0aDF4gLjrP6KiFzijj_V9Q0_Ppmq3l7_7gQ1u6SCy1OhW7Hz17qPC9cW8ajC8Y0R0Ey7kC4PwzUq2L-1WmViJrLPf5XD4QhHQitJk0B8z0b5wzr_6spEONhunct-UTnwitf_WOA1SakdrPM23Ngw5v-8iO1Lqtnekl0BeVWVXJ6TTilt-RiyNHrHa6XpjvKYC0L7MJUWigJb-IV-xcRd1iSkgJt6gx2Rq61L9zLZPYP-j4EFnR1mRs67RdyBRM9MKA4-AusJyOrKPpLw0i-mHV2eHl2PS1Fd5wverFSKh4KQ5Gt3qmPN9sz4E9TD4p-qptwXW7YP44Yl6i0ZC6s2B9o4h-qJdv8HbxJLJs8geBtkvFDnFPNm4hu1V-0-vS49cHD2CEuQzkWBMROLLMjmKkWwiiI8QbYWkRSuZs18L2CP8dWLOS1gm6zxhIQUwwz_wJKLW5jaX4p4-e9nfdk6d94gnUzij5dzoGvsDEX6YPjtlNVXKEU8GijfaeTgWhnicxICp9weoAV5iq9qZBoKYHkDvY2cPdWiyBQBGGQzo1Q4jxzxF3fETl1EjXNGGUWx_7Z8YfRimvOHwT-DHUgnyD6XG0h9x4SunNL3k_JEs2iW78KbrVd9DSmh2jbyCbJhnJXnFijXGOe71omfuylrhoLpwe-L4sDFkq34IoOerwV9VoZ3uYd_7iVatLv0x9cb1RW7TXHYbb69wx0FJauHJbOMiE5xc8PQgz3USturjpdoJ6jx0_a-Paac6-7S8t6KjfKS0khudWhvVBQS0c4TbgcOo5wlk6xeRQk4wk-ADYR0TvNl_WYyg5J6SkxVa8BxpDMkPiSiY0zRuYUCH6w9F_eT7vS8Gdz4mcYYHzWgdb1BhM49n1_X_NiCo8BXey2WtjK7QRO05_oqu0wNivvrWAVOgHmRWNd63gMeI02uuvacNVXG1CpoEJjDWrhNZJinO56R7mzhWdIjThGCIVuNv7tyxIsXtyMITjU99VKaoQxzWGQjl287V7MBI_P_K8eM8OGLgYKYKqlePbWZv-2cNdGJWAZrR6haitUuQNf0jG3b3lBOw4q48EiWlkRoS6_QBBTsDGbucFt2PFwx1vrAAGzO1BHZta4WAbvWf2_l-KPvbMtTNXVh5Q5ucKkp8fEdldrkxZe3PY6XXpyDuiGIHKhBwxomG6RYGiRq9BmhbYvnJ2XeObpHmpj2gIOZ4uxIyKT41SAscDr5ZcXGB90FJYG5OUG36RSsw4YHTLmRAkhy-OpU045OAMHdjsVYI1vtFMlqGxPgPrw9Peh5lPUAoTypGMMEimxlUsT6euBsG3-b_k1qsOfFtII6SQlqFpfhbDaHYlEuCbUG-G49p2" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">data backup for small business</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="K3jOqvNJpVz-yeaeyI53FNINZBAMuiACvyCKCc_FrwNAH0_SVIyFtWJ-1zZ22NHf17lY22SXNYcWE2Lu84wS4P0KMeoDsTqFvqssrPcvLVW14S1SOfN9ZjzBrVaOsN9X5mtmEAylHBbPG0buTeunHA6Nv5FjOkVx2AeQuSGS1ZcgYs0O4yFWMrLD7gDBEAw97gaBc0Ckevsadri_l4YOgddHuImx8sm6V-xhPZwc882rA8RLjnGzMOKVa-ho9U0mT3KxEeACHA_bFb0Q4Xt-r6Jie4GLOAg9iyL81GrafOZIRwtNI35bQrmPQfyaL6LAn0QxQXbLBZxAfHtlgWDksmA6aTMyqsbCZiXOZkcrIR9fXMyQLa_-MdWFkAFq56Alt-s6sOvebBbfjIpjxXCg-r9Xs8u3Y5Mh6O_1hoE1YJ7kC0NS6sbuc_kDbKHAaoW_rdlJufCBa4-lfedkCO84qaiYDw8Enr4FIvgqCa55OglXY19A5sslKriUIiNYpr2VIMaHNaD-NihhX5JXtXmW_G4GIeYpL5KaSyE5xZ-t4eprpSN3g0UYgnn-qvak1HojQruxbpRYJCIr7gHONwK_JdcO3ccnGnIE2DdxX94ujZxiNNnY75hlsKeNT8Mk9xEwskAuzitCRUlkzVVZugyQgP5NkTF_n4TPaIy9J1EDFXQVXmhSGlHmpR7k01yVqsm0e7OvRyGQCaMSm51YV2mdKZ2XLNSkBx4Bx7D2vD9nfvZqaHGWSt4Gzo0eQ8iVfVEwgBxfw2kXzzL0x_sDjz7NrNM2pLjUGJwsf9CeRhnRUue-AjNfTjd_GPugdHot-F44hO_PKazN331vbJYVPNJnd39-9NZPHgnby4mh-7Bw9kI_esH-YUbVmFRPOyt_BLeryfEXd_NErDiobIjE1t7H1bIf_-1VDir70TZ8Kl4r3vDp5AoqRvBBgNsuRnpsNnraZI4523NaSWU6le7DtQgiV0DDFb7W8ivpKSCRg9E2LMYkHb69d_whDhJyzT-8HSgtowRZY-f3mJCX2e7Zk9iEtW7_so6B5Y1n6GGrO5pOFDnLSfEJlAqtJr7fPz32s1P_Qsg2UL-ExI2DyVXHkmauxs7eCuyZuu_I25lO66zSE2GYrihS2cgBRxaneGKawdSrHVs0f_F993NlhDqAhwphtdqjTIqdJEvS4sMI7lThdYoYFJPY3Xy9AlvtahOplo4RUFMM01gJ05hXUH0ZJd-g6B2yqOca1I4a6JLr1tMK_2hXxPes0PWEZ5pXK-H7VlNlEZfFXAXoxf_C9mnpVgXNOO0p1XpC-tkSX4OJ2PzcoOZpQSGhyDACocqvrQq05YxSfzPfK4ZKF6nHrtSvVg_NP4odFr-gAQvZaWkhY1MtRssdMyKNop5RX4cCRZzgOSNNxEw4SCUf1LaT_hj5S7lTBeX3TO56n77agYVgaaWjQX4NSpQZiwKWUZ9MASnxAR4FqppCp-rIiBUSiEutb5fQqkZFv0tfW3pYBBGXpCobEEN4iA_xnfKDska5523Aefp9p5_27E3YtIFTiKyfr7NhW6Na6IIZLEEnLPiPIXZMr4LH2v_z0-cFDDcH9l7UmWDglS79VuNPtTGfDGPW2E0kjKKq6NfwOeAfVcIR6kfNmY7etnV7ynI8kAS8OUdqzSMnTfxKsEvnVUokt5c_6KR6QVo1lt8lMnxhfIRkFPXgALuBiHU9pExkFpDwcwsrY780paJmDEWLc58vHmNL7nljobHYBo8eS4q90MmPsc7g_BgXqwIiad_b" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">affordable online file sharing</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="https://intivesearch.com/privacy?dmn=cloudupup.com&testId=23" target="_blank">Privacy Policy</a>
+        <a href="https://intivesearch.com/terms?dmn=cloudupup.com&testId=23" target="_blank">Terms of Service</a>
+    </footer>
+
+    <script>
+        window.__cherami = {
+            sessionId: "26214d04-b9d9-11f1-857d-9e8d55b1d3da",
+            source: "",
+            tkn: "19vnMT3S",
+            reportUrl: window.location.origin + '/cherami/report'
+        };
+    
+        // Report an event. `payload.wa` is sent to the legacy report, `payload.dmFeed`
+        // to the new dm-feed report; include only the destinations this event needs.
+        function report(action, payload) {
+            payload = payload || {};
+            const data = { action: action, _ts: String(Date.now()) };
+            const source = window.__cherami.source;
+            const sessionId = window.__cherami.sessionId;
+            const tkn = window.__cherami.tkn;
+    
+            // Carry the partner token so the server resolves the correct campaign
+            // instead of falling back to the default token.
+            if (tkn) data.tkn = tkn;
+    
+            if (payload.wa) {
+                const wa = Object.assign({}, payload.wa);
+                if (source) wa.cid = source;
+                if (sessionId) wa.sid = sessionId;
+                data.wa = JSON.stringify(wa);
+            }
+            if (payload.dmFeed) {
+                const dmFeed = Object.assign({}, payload.dmFeed);
+                if (source) dmFeed.source = source;
+                if (sessionId) dmFeed.session_id = sessionId;
+                data.dmFeed = JSON.stringify(dmFeed);
+            }
+    
+            const reportUrl = new URL(window.__cherami.reportUrl);
+            reportUrl.search = new URLSearchParams(data).toString();
+    
+            const img = new Image();
+            img.src = reportUrl.toString();
+        }
+    
+        function getCanvasFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                if (!ctx) return null;
+    
+                canvas.width = 200;
+                canvas.height = 50;
+                ctx.textBaseline = 'top';
+                ctx.font = '14px Arial';
+                ctx.textBaseline = 'alphabetic';
+                ctx.fillStyle = '#f60';
+                ctx.fillRect(125, 1, 62, 20);
+                ctx.fillStyle = '#069';
+                ctx.fillText('Cherami fingerprint', 2, 15);
+                ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+                ctx.fillText('Cherami fingerprint', 4, 17);
+    
+                return canvas.toDataURL().substring(0, 100);
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function getWebGLFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (!gl) return null;
+    
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    return {
+                        vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL) || '',
+                        renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || '',
+                    };
+                }
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function reportClientAttestation() {
+            try {
+                const c = window.__cherami || {};
+                if (!c || !c.sessionId) {
+                    return;
+                }
+    
+                const canvasFp = getCanvasFingerprint();
+                const webglFp = getWebGLFingerprint();
+    
+                const attestation = JSON.stringify({
+                    jsExecuted: true,
+                    screenW: window.screen.width,
+                    screenH: window.screen.height,
+                    dpr: window.devicePixelRatio || 1,
+                    maxTouchPoints: navigator.maxTouchPoints || 0,
+                    webdriver: navigator.webdriver === true,
+                    tzOffset: new Date().getTimezoneOffset(),
+                    cookieEnabled: navigator.cookieEnabled,
+                    languagesCount: navigator.languages ? navigator.languages.length : 0,
+                    platform: navigator.platform || '',
+                    canvasFp: canvasFp,
+                    webglVendor: webglFp ? webglFp.vendor : null,
+                    webglRenderer: webglFp ? webglFp.renderer : null,
+                    hardwareConcurrency: navigator.hardwareConcurrency || 0,
+                    deviceMemory: navigator.deviceMemory || 0,
+                });
+    
+                const payload = {
+                    action: 'clientCheck',
+                    wa: { extraString1: attestation, sid: c.sessionId || null },
+                    dmFeed: { extra_string1: attestation, source: c.source || null, session_id: c.sessionId || null },
+                };
+    
+                if (navigator.sendBeacon) {
+                    const blob = new Blob([JSON.stringify({ action: payload.action, payload })], {
+                        type: 'application/json',
+                    });
+                    navigator.sendBeacon(c.reportUrl, blob);
+                    return;
+                }
+    
+                fetch(c.reportUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: payload.action, payload }),
+                    keepalive: true,
+                    credentials: 'include',
+                }).catch(function() {
+                    // Silent fail - don't break page
+                });
+            } catch (err) {
+                // Silent fail - don't break page
+            }
+        }
+    
+        window.addEventListener('load', function() {
+            reportClientAttestation();
+        });
+    
+        // ─── Funnel click tracking ────────────────────────────────────────────
+        var pageOpenedAt = Date.now();
+    
+        function msSincePageOpen() {
+            return Date.now() - pageOpenedAt;
+        }
+    
+        // Which part of the result the user clicked (stored as click_zone).
+        function keywordClickZone(clicked) {
+            if (clicked.closest('.arrow') || clicked.closest('.kw-arrow')) return 'arrow';
+            if (clicked.closest('.anchortext') || clicked.closest('.kw-text')) return 'text';
+            return 'row';
+        }
+    
+        function adClickZone(clicked) {
+            if (clicked.closest('.arrow_wrap')) return 'cta';
+            if (clicked.closest('.title')) return 'title';
+            if (clicked.closest('.desc')) return 'description';
+            if (clicked.closest('.url')) return 'domain';
+            return 'ad';
+        }
+    
+        // Assembled here rather than rendered into the page, so a scrape comes away with nothing to replay.
+        function armKeywordLink(link, clicked) {
+            link.href = '/kw-click?t=' + encodeURIComponent(link.dataset.ct)
+                + '&ttc=' + msSincePageOpen()
+                + '&zone=' + encodeURIComponent(keywordClickZone(clicked));
+        }
+    
+        function trackAdClick(link, clicked) {
+            var ads = document.querySelectorAll('a.content-wrap');
+            report('adClick', {
+                dmFeed: {
+                    page: 'ads',
+                    step: 'click',
+                    ads_variant: '',
+                    test_id: '23',
+                    root_domain: 'cloudupup.com',
+                    position: Array.prototype.indexOf.call(ads, link) + 1,
+                    click_zone: adClickZone(clicked),
+                    time_to_click_ms: msSincePageOpen()
+                }
+            });
+        }
+    
+        // pointerdown/keydown fire before the new tab's URL is locked in; middle- and ctrl-click reach
+        // only these two, plain click only the third.
+        function onKeywordIntent(event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+                if (event.type === 'keydown' && event.key !== 'Enter') return;
+    
+                var keywordLink = clicked.closest('a[data-ct]');
+                if (keywordLink) armKeywordLink(keywordLink, clicked);
+            } catch (err) {}
+        }
+    
+        document.addEventListener('pointerdown', onKeywordIntent, true);
+        document.addEventListener('keydown', onKeywordIntent, true);
+        // Capture-phase click still precedes the default navigation, and catches the activations
+        // pointerdown never sees. Without it those hits reach /kw-click with no token and get a 400.
+        document.addEventListener('click', onKeywordIntent, true);
+    
+        document.addEventListener('click', function (event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+    
+                var adLink = clicked.closest('a.content-wrap');
+                if (adLink) {
+                    trackAdClick(adLink, clicked);
+                }
+            } catch (err) {}
+        }, true);
+    </script>    <script>
+        (function () {
+            var props = {"trafficSrc":"intango_park_dm_1638_1","ysid":"04N762LLBG44T"} || {};
+            
+    
+            var startedAt = Date.now();
+            var called = false;
+            var reported = null;
+    
+            function send(step) {
+                try {
+                    if (typeof report !== 'function') return;
+                    report('yahooBeacon', {
+                        dmFeed: {
+                            page: 'keywords',
+                            step: step,
+                            test_id: '23',
+                            root_domain: 'cloudupup.com',
+                            
+                            kw_variant: 'keywords-test-9',
+                            extra_integer1: Date.now() - startedAt
+                        }
+                    });
+                } catch (e) {}
+            }
+    
+            function settle(step) {
+                if (reported) return;
+                reported = step;
+                send(step);
+            }
+    
+            function argument() {
+                props.ykws = Array.prototype.map.call(document.querySelectorAll('.list_1 a'), function (a) {
+                    return a.textContent ? a.textContent.trim() : '';
+                }).filter(Boolean).join(',');
+                return props;
+            }
+    
+            // Never gated on `reported`: the deadline gives up on measuring, not on billing.
+            function run() {
+                if (called) return true;
+                if (typeof window.initDMKeywords !== 'function') return false;
+    
+                called = true;
+                try {
+                    window.initDMKeywords(argument());
+                    reported ? send('late-ok') : settle('ok');
+                } catch (e) {
+                    settle('threw');
+                }
+                return true;
+            }
+    
+            function poll() {
+                if (run() || reported) return;
+                if (Date.now() - startedAt < 15000) setTimeout(poll, 50);
+                else settle('timeout');
+            }
+    
+            var script = document.createElement('script');
+            // Dated, not per-request: a unique query string made every impression a cache miss.
+            script.src = 'https://s.appreports.net/serenity.js?v=' + new Date().toISOString().slice(0, 10);
+            script.async = true;
+            script.onload = run;
+            script.onerror = function () { settle('load-failed'); };
+    
+            document.head.appendChild(script);
+            poll();
+        })();
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            try {
+                var anchors = document.querySelectorAll('.list_1 a');
+                var kws = Array.prototype.map.call(anchors, function (a) {
+                    var kwTextNode = a.querySelector('.kw-text');
+                    return (kwTextNode && kwTextNode.textContent ? kwTextNode.textContent.trim() : '');
+                }).filter(function (s) { return s.length > 0; }).join(',');
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: kws,
+                        extraString2: 'cloudupup.com',
+                        extraString3: '23'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '23',
+                        root_domain: 'cloudupup.com',
+                        item_count: kws ? kws.split(',').length : 0
+                    }
+                });
+            } catch (e) {
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: '',
+                        extraString2: 'cloudupup.com',
+                        extraString3: '23'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '23',
+                        root_domain: 'cloudupup.com',
+                        item_count: 0
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

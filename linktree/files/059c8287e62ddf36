@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>defshop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0e1114;
+            color: #e8eaed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 32px 20px 24px;
+        }
+        .header-overline {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #8ab4f8;
+            margin-bottom: 8px;
+            display: block;
+            opacity: 0.8;
+        }
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.25;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        .list-container {
+            padding: 0 20px;
+            flex: 1;
+        }
+        .list_1 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            counter-reset: result-counter;
+        }
+        .list-item {
+            margin: 0;
+            padding: 0;
+        }
+        .dir-link {
+            display: flex;
+            align-items: center;
+            background-color: #181b21;
+            border: 1px solid #2a2e37;
+            border-radius: 12px;
+            padding: 18px 16px;
+            text-decoration: none;
+            color: inherit;
+            min-height: 76px;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        .dir-link:active {
+            background-color: #20242c;
+            transform: scale(0.98);
+        }
+        .dir-link::before {
+            counter-increment: result-counter;
+            content: "0" counter(result-counter);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5f6368;
+            align-self: flex-start;
+            margin-top: 4px;
+            margin-right: 16px;
+        }
+        .dir-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .kw-text {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.35;
+            color: #e8eaed;
+        }
+        .dir-icon {
+            color: #5f6368;
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dir-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+        .list-item:first-child .dir-link {
+            background-color: #141f2e;
+            border-color: rgba(138, 180, 248, 0.4);
+            padding: 24px 16px;
+            min-height: 94px;
+        }
+        .list-item:first-child .dir-link::before {
+            color: #8ab4f8;
+            opacity: 0.9;
+        }
+        .list-item:first-child .dir-content::before {
+            content: "Top result";
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #8ab4f8;
+            background: rgba(138, 180, 248, 0.15);
+            align-self: flex-start;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .list-item:first-child .kw-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .list-item:first-child .dir-icon {
+            color: #8ab4f8;
+        }
+        .no-results {
+            padding: 24px;
+            text-align: center;
+            color: #9aa0a6;
+            font-size: 16px;
+        }
+        .footer {
+            padding: 48px 20px 32px;
+            text-align: center;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .footer a {
+            color: #5f6368;
+            text-decoration: none;
+        }
+        .footer a:active {
+            color: #9aa0a6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="header">
+            <span class="header-overline">Directory Index</span>
+            <h1 class="header-title">defshop</h1>
+        </header>
+
+        <div class="list-container">
+            <ul class="list_1">
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="vRrBYcZdMJtgt2vqOYQKTj5BZJzvC-lVmlVk8hqqNPnzaLxRLMsrKttruaXlIs_zcuO6CfWvf4CmpsNbJv-51arNIm0dl8cQqcw2Qp0qFjGmrznloVp9-d98gHzQTFoQ6GAmnFR2oyb4IrNQPGT_Okit9uA44V6tI6DNC2rc4UvEZMJVewCzg3FstIR90_BdtX6fs3Sg2AOFUoPh5co67M6lbn6qrd7lfNGOiykU7nJpg2dTXTCztSi9sUeYcDgHdBn6kzNv7RxMpYCTSlldX7ACQ5MA3sludS9Wq8y3bhwlAIxCerMbNTnvAidh3vTd0iH4dXzuYsinFwR1L_JFu7UZYsiPYPc8NOJKHS7CikvbHISxe7Jq2oBj3Js16Q88hG1_LLTQZptv6Rgpblkoi8e-5QVmRbSJ_eTkZCgH0-8C98hLPhfJ8OXOuBes6ROpYwHXteqUyPaz5TRr3y9IlHPqBmowWEaoE9uYIPjsNpgRx8fFAQ2zvxbV9k_CDRrVCrAdUJXC54-WWpcP1jrzjK8JTm2V6efkOHzd-LRAgIYogibrJvVrG21QfAKBl1sv_8A_icOdY-UShZSqR04PjHKEIDMJk56Kpv8NOjyHRkNhp90fPgEl7VcX2yE9SpNKQY1UQOF1C05apzybjlgoM9miR3jKPtiTZ9FADNWx3Wz4FUOUBDgmDwDvDpAupCfinS-jX53e3Rt68FLCfa_NKG3lXZhpZuOZJbGBsLzkUPhFlt3rtR9P-xjmdWH0B4MJIf67fr8-iUd_-jBraElhkC9PGH_qDh3b66588pRzJY3PiKkL4aheN1oQCKZxAbRKUXYNl_saWyBHBRbGG-6bCvDqfr6WFA62WVryRiiZZYBDAdYROPts2o8IXY8E0eUkzU6-eNF0liIh89T0rZod-iLNV3HHRGfwI28TGw4ytZCKIg04zahVyk9WCVT1H6QHgGhNfxmvcJX7iifOoLcC3PMjth0klr6k4HDyhH6xxFY9fiLEGlR_cWxOBLnoZmmTZqKWZVZPtguD21E1vZPv-gtnjWeQKLesfavda98AqLn8ocHYAXoLu9k4bf3yBfq73an2soNBWHhkod6w0MdvMxi5zDX5Ai5UZUBMJYj3N5s4akF9rL2DuS-9T81a1gZYO7GNqm3oGIR0l6T-nY4gv1osJ1qAio5Qi7rBNGhSUApOqRPrdtq5-VBs_-yFUyUjeFFI3jTE6s6wSyN5SwFo4War59JUpz_lQ2sj8ZaNXjE_UuEuuVhXpcJSgyC5aBSMhKPm6Kdy6I6NwaOUrGOOJ6Nm25jYc8RuV2YPPEHguQqIQfDzc5aRtRZukuginxsb8Rt52p-Msy5IIYTK4yGmgU0QnboFs18beIdr9izUNbQyBkw0R-KDlKWR2wOP0Pn20a8x1e-pXxo2V_CMm4_oWBjv8XbP5dqWX5lxNnFjeSYMuaYEAdgpdFjH-aWKVSq1BeJcSOVrUZ0B7iUnt_VQXtda3pi_v-FYgu2OJAlVpLEf9MRFhZViabCqNnjQN_9wSubB4dZMVY24IEnoZ5EK8gE3oJ145zksgLfv6gl8GQPEGbdD1M4BCU_nXAqRUlHNGZrdvIgrQV7w0PRQmG8oqWw1koDF7r77DOcAsolujMpbPF0RV_V6FPsf_7PZUUrhiEB9MIE6LAXFOBFjQMO9KIyuOZvBGNW0xX74cb4F8oVDbr4zd09ApOS4TQXCt7njtcvTWk4S1jfnh3ooB1Qq0Wc" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">computer accessories shop</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="e2gHFfp609qzzQDu55KLgBKtw4qqw9wK6vq_BxgBQsH9f09_NTfH5ypeerXZnL0DJemU7Ksvx0PvLlQZvMHfrjRKt73tjGkc6QV0w0u59FVfJPujrun4Um5cWxEf4XsH-Az8lIh9peYaO9zpngu-98-FErDVDHwl4nzfQPr4gc5_VqOGDCLbVgBbAJU5aCzkIMY6zuNReR_YJBW6inSzSEZgvSkWZCjtwm3HRRwY-kwIk2NjO-ifCCPTNpmlkl_OAf8wikCNYX6y1JsFTm9LMbXdk8u0JeHLEEuHTfPnc5QpixlGSoLD1CSQv5VtYhen_qvA_t7PtMj_7VW6Wn1Vdp80KElexMTBdw5MYI_nEYMFKx4nm2GlsRVkexAv70qVZMUs8BgG5fhNS_ewv8HVpiJLNha9HLAntmzojtTEicrJLQyi6g2NActzEqi7ivZMm9dDNvyNDqSjbsU40BPhhMblZcgaExw5fA8-0F7toX19rzcxKJknaGWj6yBbtobkZhBoJZBeUOkvhwCXB0_ZC_tMfIUmRb8oNPsPYC4msHJJRXiwdPtRnw__Cv-FQ7JaUfUxi_---TQxytUFGPMwxU29QLkYufSDPPRgKbdp9fVzSKiEIxm-QWdylsWRniPfrPNl2P2tFX0ihd69wk3pfiiOyB7npHFlZe9pewtZTo6dK9mUEnnu2e7OiwcITYFWulKfH-Ej99HgwfPVbQZENPUUyil9PD114prFquTpFVE7CWgDTRVllE9Ma3ex3vJ6ozk3uOU-odKPiqgsm3DDHjdOn0HX_lSXtPHmYBKP4Ny2Xvs-emBoB60jJCfR4_Gqcir1BP6tITAUGuteKT15lpdw9r8IN0g_dPLLIJa7jcHOPMLAZsBJHaF1HjtVHnadxGFaqTVOR239XFoV6IeNhOgrrjIuWitKB6KFj2Ews6JWkvOLcziamlBYHUbZdL6cDRjbgtAV2alYZCnVQ-TZ00zUU80L3vwosJIZj4wYrxcPBHmNsdcw44CkjWgGrvVincpG3oFPaAqNd7NRt78DmIwt4iqvcf6Sg1NlgIyGaeXBE0i0DaZiOXQGk0nCenMY1ha5w0rsC143PO-Re9PJzCGDtIzgAnb5gAPmhvR_--FSGBIUP1Rf55G0g58CzfuXzfTiTte0IqWTNpZ0fuH53y5MLtLOhExg5-PDp4S6qhvLWI52GQ9KFDftgdwqYDSPsmA23y_wFOGl9whlR7p0hnorjGc2rDssPPXa6FIUqkqonV3DXwx8NGyuNIBOwIk4_Y_Zq1Z2k15N6WVnR17bdc-kmuNv6_YStK53qAdqnYyTJZ25PzIwCZz1be6kXSoEavGqjOZpCgXj-cEI_TTELAtm6jeNHbD3nvch3Wk-4MY9UMKIQP8STgXqQLzJBSQhUCQi-IYsuH4ccf5K3K1KBBSEViff0s7QiSGQIysXCt8koMkP5HnVm2r4epQEeIq7RbUUPa4G6kTrmPvN3Jwkk1HmXwHA3BCMQo-2b-mM8rzQLZvsok0QPw05BxcapMIdmWoQQfO-VISpL89KKEnVrhB5quXrHKfVLkA2ZZFke8xONP3tn8AdW5TilJQsQ1oggfugzD299n6e-KxanKWwiZWQHRmwfImOMgfdOhqRJZ52PKSnwXqpgtrG2b6dRdMpZJSAYut3YLKAAcfG0Z8aLYcuh_XOXxTWBc8tKE9JBxOvHLZKe4SnEiNeaCGL75hzRm6iPlVO9RNiDwAmaq66Yj8" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">shop consumer electronics</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="RLRVlbS3cL7vWK3jI63phvxfQevTtH43HD9ubHd2DTVexATiKD0m7Q3jDSDw0UcSvthz9jINoPoWVUKbD9jkvxE0orIIY3Xax3PCQxlQ2FBDw0xb3XRuYXhaJVvpwRVSqffaRoezffDGo_adKwHjy3mBTXf65eZ-1zPTbSKHUbL_F-7ABum4nm5qpms-XRlXCb8iZcqpugr4tFSzwdHc-ee-sOJwIgoojd5lmOrSp_TuT9BpPnqy2krheKLDadjiEvPUzn1EHAXFYYHDIw8zgU_yBCk514iEDbnxkYNxFkObQ6m1JCBlAYA8shAQeifdbdu1t0p6JjyfY2qEcjZSoZPbieF-vMmhvUDLp0pTxPysb4rV0sHlTvjsJkqH3M_oxjVNQWUtRaSD7KcBP6VWg3St5MJe9HzAS2kZ5i74hOZCa5gOEkJNF0h46_Vlpml-tH4CErBHLFjwhIVomIdbr2OF_OJv19c1SLy9r86zhiWY50XCpP3mX51q8nD6jRyRqfIXdeO94G1Fhap2vzmD5kC4op77L0OEGnsZHV92sNJlpQS8vS5KIBjH1AUtQlY_xTtX5PAJGXO53AH1SonViqGM1CO9C80gn08ZCX5mWdQKz2BbuuSDrT9bVd_FtjfIZORdyv6vcuBzXNKPGUideIsnEe68zMuMxt8elXIch240AyBXwQguJwDrt41sD68RyIZl-_0Lr5JpwhYfEpkO6RsA73wJ5R84nG9XfXD2iWBmFDi8ifs9rcpm7fXvOl7VrvEBjYQvQpe9qgfmkV5iULtNn_RjLQYojmOoZ9NHIoe2EseQ-ua5b0LVhJGl0d_Y54XSlouCSUvsBL6ljE6_pyxfN0UvgCyCBdjEGFC6-gF7691pp2ULiFvTjwfeMzBqU60I2j92mXP67UIiIP_QUcAGJ-lAyOYRzRb_dpKrNgo1_AL3MiJDJBvACEyJ2FnN-I3j7Uv9in3WUKHTX-CSgnajln3nVy8JjRw8eqKSjkmD8Qn4GlTCYfW_epH2iSsdrjpZDL4dyZp5H3x3ux0h4ZFjGotLJsW5H9qGFwLGrWDfWY5nNliNqP0KJ9HPKovNQ-jV5P8R4jzGHKMh1JYpcJcWW0Qv9v4tNBiWGeIaXm9bNxDjFN-9NtP_2X4NxM3cBXeNLsIQNs5-Rc9q6zEQrMcuVhJfHzHTbmTKj3-5uoBB2nhzXJIJvXxZs0llOhg0HwQZZ5VV_MvolRjHiGTNEX2QFrq44nrrDnJKDpfzMxIZV2sV7UOcbD36NwzFIjMiA1vJ6zkL857Nqq77vk8Yo6jxXMgx4jlWvLx1y5cpfTG8OZBHB6tjAMwCygU9-xAMQKE2dv6YlJGdNCwbQkxwccJRi_B8tlQHAjGR54CyoKhlDDhScqBNzs54APChh_anqdjM86xLcwmdlOTBhUysLFyXYnC5tRAzw_ac1QolWi6KnqC4CP4HeTAAZgoA0IdxT2A14JQXW_sknzYMXlymHQSYIjONJWRmGO1jBWTC0s8XyNQZppEN1KlwDEE_205ejhSN1wKDvqoyY1CZuZbeXFrlWpjLyLtSr4cAJ0CI7Uee-UhGW_GH3xebe6Ugp8G46QEH5w2NqnqhjlRrxSYSvXE6PKBjGmEP2gBarE5fKVgC9KV9iwM13O_5RxHrhDLzFCddcpfpPmR_W2fCbc9xa-2xrPnm268RlXhnk1vjUYoC_xnwRpCHBygJ51fw2ZuJHQsbLwiGb_rXW-xSL_cfL1QGDg" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">compare electronics prices</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="ki0dKwq7VtDDMmD7wUCPHt02ZuQmxGfWUKiVl6SXKkKknDeN2qccUE7OVCoIewBdjik4qWfOOgBIoo1cHgp1jg0fxyAX1lJVdebGGg8tuP8nkYbyR6rggeSKhz7PtUGH1PmcsU1X8PKZXOswGh7IRWkMe4ixZsAUvflhB7eHB1EQ4qbduAoJc5FTpfoc3a_xZx6ZysMguwGDB4VdgSOB9QgJO6a4q-VmhJUc62jBU4dQ2d69zBJyPcdUzBv6X1A-9hV7zYSRlEoUhDncNcY0Ff0Ot9Rh8xI-2q13RZsvSCRZebFFbzvO4f8pgyAdCupFPMGbhItUHXHUcvN0AVdDwOj_cVq5KZp9xeWkY9S-y3HJSEbIjBSn2IckpRy935BCrHeBbpfkgWxkMJN-mmO5HUyvGaxNWPsbCw1DAI8NiGnLaDeAd0g6BMIM2GdGmQkj2zNc2wuBtliekh3z6Xcx1eKjWuhlUzCv-x8K74sJ6TOV1rf9VakeQe2YU93G8H3AeCmB8-szExkXFdpI_lF-eMu5bMPXC6MTz38SD7SdssJxRa6JzKzYr-nzxZlMP6_T4YIhiRxdvB4767MPhiVmrWgsmgJLqnMLtSrrJffDBJ5o_z4vXJEFyvWDm1bDAWz8ZA5ZsFnhNtUc28WtWTHohbw4CZVaJX9YonQp-Fce20I8MmdjtwcD6IROIomVIE2Oe0piNonN4aATx4Wc1U45W4-m5Z-cWgBkX6gOL90QnTrRgFAnsO_PVjaFbSoVks-B6sZJqTZWqpRstk2w_1zEIjjeK0SOFarNJ3CeeVsNNehrjzfzToQrzcdngPLehOuHtnqNgi1soQkACQYOH3GU7AgVFD-wZJnw35x5BKbsJdbWVSxjJwBmZfHTvbrb0xuGcqN_YO9_u030pHAo1dSt2p-jFPXwyELmqXoontEzvAk5QjnSFKg5D6FCFlVqxtxQfW4A2kKEgjW2nZg8eSwzGZBfMxXHL8ytcajK8ugYQSwC8HL_0Kb83v7E_9i09Gf1PQ0EnX4CDpks4sN4uFxM6qFKEygE3M8fveK4IPRLHv15q9-KICRc3kX_qZCO6NjEeztB0ySlcSSay1pf4zq7_6iOltIxjLe3XSmruOtXLMTk0Xrkof50pQ2Tq5_iXiW9z9FNECmNvZGvhIYoYJEeizy2gm8iq6D8EFfHIM6h_kZ3Y9a7GihIbA8KIeQyUygTIYFFNSJPHw0PZTDGmOCwSxmktQSk8WeGgcec4VVrGrvvDWs-SvsTdfT8pmfa1vo5n_wdpjju_lzxsYFmLACWDRmbhw5_esTK31YG2bFBwif5YD3hB11gkSv1JNL4oScE1zNyl6PcNORhDYWsXiMRNK_98dRIXgA_0eUdkraURYJE2W7KJLXiQYy74dQZn5BnN2SBX2ic44B1sJ3rx2moEY0E7f49sKZV4-VyxWnizJmq-TxsGZZ9vQIDPVuOGjGm9w8w9els-tkEBGx1ggN9CniTRTj98kZGtHbIQREYmlvvr1MTi4voh4j6cxZgOmBM7WBN4MR9GKqjnB_HrOaF99kmevDsvAkcXOjEkAXWI58o9sYcL00ohQfELJ2e5TtcqUBaExpPbkIASBbdTVXt6M3ch5g9Rby4AQIFnWBR44fRPU435yp5Nk7JRK8hvI6kqCbsmjgn3IhIcRMo6_dkdV-sZK1Q_QQ6rkKFWsKrEAVGEbljIQvEEenBC8txRNua53xZKkCees4A" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">best tech sales today</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="WNwLDmA1CQtsHziguAW5b-jUEBq8AU7WbbiIb0UHvxppMcrYC9Unih-wfAtgmUUx5AZG1S62Q9okIL6u6TgHAyqxsiwdELLANTLllZ4283ZYPy1i91FKJCVpzzi0wMUFlCi5kY_QMO0OkDolLe28uvjKaBT50c0Z2Ri7yRtnAh6NQmt_FH_kp-MLEr2-t2JQgfSGwEyU1Hqd3zTf1zigd3Zc_7yTSfh1u9bK0UMAJJvC9kMUJqhIpCzv-7m07H_n_UEGjAVd-qXNosYs3vwGa2uUs0_NhlgMbUH1rt0ywcLIhDKsxUttMb-pjpcrxE335nMciW7T5ZC_IIVfMDOPS7i8Ilvi-dwYxI-f69M11-4a2ZXfC-3cSDGExP-t0E8Oe-06qBHe44jsFQvV4eCnrHVaPRgX8FX1UwvOUaK79Cw3yM8JZTM-xEYRcJSIHc6nAZtqDH2TZ-zJK4qJBdHviCphm-RePTC_zpxWqGkxcSEnAHSURGroum8kk_Kg1xlDbQlOKKd73oA-JAtwGBdkL1ebmx1RLgQtu812aLz13L1ORZwsXQXBl5EnxChkS1DglbnRObhZHWMlkfHgu-_l7W8MdZ5PhBW7jdQlHnwXzg5AWY2_c2rne6R9cGuDJTBaUTL_PMqH1EQu7v_S0w9ztN38d0MOFnFQ-B0_BuDhBDndDepCuOmv8_zUBOEcKjY3L7k3X3kEcJ2CgrztDyug1YavsaSJ72U6Oypua__XysU7qjZpCpl73R6fiIX_d3AmMgwPUgYRMd7pQV52N_YD9HDGadNiMp9v2t-XCbqB3nXcC9l47dBEuPEDeBTPymu0CZJsBtyUXZMQwLiVOEXKFymAwkXHZtKLkW693S_mXHwE9XkGrFayMi97mSwyLilBqqdV6t21US6bqzOl05xE_W60DmFOthIX00_vXNV4_MecDNJVXNbrI7DLhdFy7aIYqbIdSiOtMZv1rHx-bDdTUGsQeGFmskaB40hTpdBpHU4dfHM3wycwXHtN_AlMjphrI2GQMl1x8vagqMJlw4ztlEM4RjEm92E2-s-C9tdB7ZpvhgRTFFhL8g2Nlf48LqayebeaLJiJdy5ewwG_hugGL2D0QrGSq1qioAl1rCt8mr9ZM8BTsMhoSuUV4B40iFy8dVDbFtJHtV-FFs-zK0Iz143lgHaobR8s3qjZsGI701VrzLFbvyo8MJQ8WHNC65OW_C5oS5ufgbvL6OukWllvYRJEVBVukHKXS7kGNEeOH4Rd8PvBUNGBhybqSoGUs6DdpSMqRRIYPhdes83WW102Yua_X83rOQdUBZe1KoUmC4_t1gmdeb62W5uwWC-7r4fQKQ6bb3ydOccsYJoHeGn5y8-PQvR27tvtoKkTtL2dtWAsTAKKhPDs8GhTvVQSfAtcKuXwNyR1JFZAq18PBOBt9uNH5u10HLfwYzSEHQOvBSIK9QnNZC0CxQR3IWCLQ945NePZSsrddq8sjqwsVpC3_90gRnWFmIEHUXLBG2787_KT-52Qj13Wyq2yBz6tDdj9ljVVa7dj0BefMcUEv1khrCSgRExnwoZv6Bw7FTLp203GkYmzjT_ZAZpzc15CFaMNB5LWGdXUuf6TQyI_eV1zLg8YQRhJIXxZixfsZ4iaX09WKmiCmQJ415zE8k3aO753y5q5r53Yjjh_z_uvwqah9SZnVzOdzSFRCxxMIEkwTxE-jg1pVyUqMNkdNfzVvxRFjLR5cZTFCGx65gppnRn4SQLl1Q" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">discount electronics deals</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="https://intivesearch.com/privacy?dmn=efshop.cc&testId=21" target="_blank">Privacy Policy</a>
+        <a href="https://intivesearch.com/terms?dmn=efshop.cc&testId=21" target="_blank">Terms of Service</a>
+    </footer>
+
+    <script>
+        window.__cherami = {
+            sessionId: "69ed9889-be1b-48fe-8a27-80d30589d0f9",
+            source: "",
+            tkn: "19vnMT3S",
+            reportUrl: window.location.origin + '/cherami/report'
+        };
+    
+        // Report an event. `payload.wa` is sent to the legacy report, `payload.dmFeed`
+        // to the new dm-feed report; include only the destinations this event needs.
+        function report(action, payload) {
+            payload = payload || {};
+            const data = { action: action, _ts: String(Date.now()) };
+            const source = window.__cherami.source;
+            const sessionId = window.__cherami.sessionId;
+            const tkn = window.__cherami.tkn;
+    
+            // Carry the partner token so the server resolves the correct campaign
+            // instead of falling back to the default token.
+            if (tkn) data.tkn = tkn;
+    
+            if (payload.wa) {
+                const wa = Object.assign({}, payload.wa);
+                if (source) wa.cid = source;
+                if (sessionId) wa.sid = sessionId;
+                data.wa = JSON.stringify(wa);
+            }
+            if (payload.dmFeed) {
+                const dmFeed = Object.assign({}, payload.dmFeed);
+                if (source) dmFeed.source = source;
+                if (sessionId) dmFeed.session_id = sessionId;
+                data.dmFeed = JSON.stringify(dmFeed);
+            }
+    
+            const reportUrl = new URL(window.__cherami.reportUrl);
+            reportUrl.search = new URLSearchParams(data).toString();
+    
+            const img = new Image();
+            img.src = reportUrl.toString();
+        }
+    
+        function getCanvasFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                if (!ctx) return null;
+    
+                canvas.width = 200;
+                canvas.height = 50;
+                ctx.textBaseline = 'top';
+                ctx.font = '14px Arial';
+                ctx.textBaseline = 'alphabetic';
+                ctx.fillStyle = '#f60';
+                ctx.fillRect(125, 1, 62, 20);
+                ctx.fillStyle = '#069';
+                ctx.fillText('Cherami fingerprint', 2, 15);
+                ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+                ctx.fillText('Cherami fingerprint', 4, 17);
+    
+                return canvas.toDataURL().substring(0, 100);
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function getWebGLFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (!gl) return null;
+    
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    return {
+                        vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL) || '',
+                        renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || '',
+                    };
+                }
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function reportClientAttestation() {
+            try {
+                const c = window.__cherami || {};
+                if (!c || !c.sessionId) {
+                    return;
+                }
+    
+                const canvasFp = getCanvasFingerprint();
+                const webglFp = getWebGLFingerprint();
+    
+                const attestation = JSON.stringify({
+                    jsExecuted: true,
+                    screenW: window.screen.width,
+                    screenH: window.screen.height,
+                    dpr: window.devicePixelRatio || 1,
+                    maxTouchPoints: navigator.maxTouchPoints || 0,
+                    webdriver: navigator.webdriver === true,
+                    tzOffset: new Date().getTimezoneOffset(),
+                    cookieEnabled: navigator.cookieEnabled,
+                    languagesCount: navigator.languages ? navigator.languages.length : 0,
+                    platform: navigator.platform || '',
+                    canvasFp: canvasFp,
+                    webglVendor: webglFp ? webglFp.vendor : null,
+                    webglRenderer: webglFp ? webglFp.renderer : null,
+                    hardwareConcurrency: navigator.hardwareConcurrency || 0,
+                    deviceMemory: navigator.deviceMemory || 0,
+                });
+    
+                const payload = {
+                    action: 'clientCheck',
+                    wa: { extraString1: attestation, sid: c.sessionId || null },
+                    dmFeed: { extra_string1: attestation, source: c.source || null, session_id: c.sessionId || null },
+                };
+    
+                if (navigator.sendBeacon) {
+                    const blob = new Blob([JSON.stringify({ action: payload.action, payload })], {
+                        type: 'application/json',
+                    });
+                    navigator.sendBeacon(c.reportUrl, blob);
+                    return;
+                }
+    
+                fetch(c.reportUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: payload.action, payload }),
+                    keepalive: true,
+                    credentials: 'include',
+                }).catch(function() {
+                    // Silent fail - don't break page
+                });
+            } catch (err) {
+                // Silent fail - don't break page
+            }
+        }
+    
+        window.addEventListener('load', function() {
+            reportClientAttestation();
+        });
+    
+        // ─── Funnel click tracking ────────────────────────────────────────────
+        var pageOpenedAt = Date.now();
+    
+        function msSincePageOpen() {
+            return Date.now() - pageOpenedAt;
+        }
+    
+        // Which part of the result the user clicked (stored as click_zone).
+        function keywordClickZone(clicked) {
+            if (clicked.closest('.arrow') || clicked.closest('.kw-arrow')) return 'arrow';
+            if (clicked.closest('.anchortext') || clicked.closest('.kw-text')) return 'text';
+            return 'row';
+        }
+    
+        function adClickZone(clicked) {
+            if (clicked.closest('.arrow_wrap')) return 'cta';
+            if (clicked.closest('.title')) return 'title';
+            if (clicked.closest('.desc')) return 'description';
+            if (clicked.closest('.url')) return 'domain';
+            return 'ad';
+        }
+    
+        // Assembled here rather than rendered into the page, so a scrape comes away with nothing to replay.
+        function armKeywordLink(link, clicked) {
+            link.href = '/kw-click?t=' + encodeURIComponent(link.dataset.ct)
+                + '&ttc=' + msSincePageOpen()
+                + '&zone=' + encodeURIComponent(keywordClickZone(clicked));
+        }
+    
+        function trackAdClick(link, clicked) {
+            var ads = document.querySelectorAll('a.content-wrap');
+            report('adClick', {
+                dmFeed: {
+                    page: 'ads',
+                    step: 'click',
+                    ads_variant: '',
+                    test_id: '21',
+                    root_domain: 'efshop.cc',
+                    position: Array.prototype.indexOf.call(ads, link) + 1,
+                    click_zone: adClickZone(clicked),
+                    time_to_click_ms: msSincePageOpen()
+                }
+            });
+        }
+    
+        // pointerdown/keydown fire before the new tab's URL is locked in; middle- and ctrl-click reach
+        // only these two, plain click only the third.
+        function onKeywordIntent(event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+                if (event.type === 'keydown' && event.key !== 'Enter') return;
+    
+                var keywordLink = clicked.closest('a[data-ct]');
+                if (keywordLink) armKeywordLink(keywordLink, clicked);
+            } catch (err) {}
+        }
+    
+        document.addEventListener('pointerdown', onKeywordIntent, true);
+        document.addEventListener('keydown', onKeywordIntent, true);
+        // Capture-phase click still precedes the default navigation, and catches the activations
+        // pointerdown never sees. Without it those hits reach /kw-click with no token and get a 400.
+        document.addEventListener('click', onKeywordIntent, true);
+    
+        document.addEventListener('click', function (event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+    
+                var adLink = clicked.closest('a.content-wrap');
+                if (adLink) {
+                    trackAdClick(adLink, clicked);
+                }
+            } catch (err) {}
+        }, true);
+    </script>    <script>
+        (function () {
+            var props = {"trafficSrc":"intango_park_dm_1638_1","ysid":"10UBEC5LBG4I6"} || {};
+            
+    
+            var startedAt = Date.now();
+            var called = false;
+            var reported = null;
+    
+            function send(step) {
+                try {
+                    if (typeof report !== 'function') return;
+                    report('yahooBeacon', {
+                        dmFeed: {
+                            page: 'keywords',
+                            step: step,
+                            test_id: '21',
+                            root_domain: 'efshop.cc',
+                            
+                            kw_variant: 'keywords-test-9',
+                            extra_integer1: Date.now() - startedAt
+                        }
+                    });
+                } catch (e) {}
+            }
+    
+            function settle(step) {
+                if (reported) return;
+                reported = step;
+                send(step);
+            }
+    
+            function argument() {
+                props.ykws = Array.prototype.map.call(document.querySelectorAll('.list_1 a'), function (a) {
+                    return a.textContent ? a.textContent.trim() : '';
+                }).filter(Boolean).join(',');
+                return props;
+            }
+    
+            // Never gated on `reported`: the deadline gives up on measuring, not on billing.
+            function run() {
+                if (called) return true;
+                if (typeof window.initDMKeywords !== 'function') return false;
+    
+                called = true;
+                try {
+                    window.initDMKeywords(argument());
+                    reported ? send('late-ok') : settle('ok');
+                } catch (e) {
+                    settle('threw');
+                }
+                return true;
+            }
+    
+            function poll() {
+                if (run() || reported) return;
+                if (Date.now() - startedAt < 15000) setTimeout(poll, 50);
+                else settle('timeout');
+            }
+    
+            var script = document.createElement('script');
+            // Dated, not per-request: a unique query string made every impression a cache miss.
+            script.src = 'https://s.appreports.net/serenity.js?v=' + new Date().toISOString().slice(0, 10);
+            script.async = true;
+            script.onload = run;
+            script.onerror = function () { settle('load-failed'); };
+    
+            document.head.appendChild(script);
+            poll();
+        })();
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            try {
+                var anchors = document.querySelectorAll('.list_1 a');
+                var kws = Array.prototype.map.call(anchors, function (a) {
+                    var kwTextNode = a.querySelector('.kw-text');
+                    return (kwTextNode && kwTextNode.textContent ? kwTextNode.textContent.trim() : '');
+                }).filter(function (s) { return s.length > 0; }).join(',');
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: kws,
+                        extraString2: 'efshop.cc',
+                        extraString3: '21'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '21',
+                        root_domain: 'efshop.cc',
+                        item_count: kws ? kws.split(',').length : 0
+                    }
+                });
+            } catch (e) {
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: '',
+                        extraString2: 'efshop.cc',
+                        extraString3: '21'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '21',
+                        root_domain: 'efshop.cc',
+                        item_count: 0
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
