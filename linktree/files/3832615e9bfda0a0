@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Fengqun</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0e1114;
+            color: #e8eaed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 32px 20px 24px;
+        }
+        .header-overline {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #8ab4f8;
+            margin-bottom: 8px;
+            display: block;
+            opacity: 0.8;
+        }
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.25;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        .list-container {
+            padding: 0 20px;
+            flex: 1;
+        }
+        .list_1 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            counter-reset: result-counter;
+        }
+        .list-item {
+            margin: 0;
+            padding: 0;
+        }
+        .dir-link {
+            display: flex;
+            align-items: center;
+            background-color: #181b21;
+            border: 1px solid #2a2e37;
+            border-radius: 12px;
+            padding: 18px 16px;
+            text-decoration: none;
+            color: inherit;
+            min-height: 76px;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        .dir-link:active {
+            background-color: #20242c;
+            transform: scale(0.98);
+        }
+        .dir-link::before {
+            counter-increment: result-counter;
+            content: "0" counter(result-counter);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5f6368;
+            align-self: flex-start;
+            margin-top: 4px;
+            margin-right: 16px;
+        }
+        .dir-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .kw-text {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.35;
+            color: #e8eaed;
+        }
+        .dir-icon {
+            color: #5f6368;
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dir-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+        .list-item:first-child .dir-link {
+            background-color: #141f2e;
+            border-color: rgba(138, 180, 248, 0.4);
+            padding: 24px 16px;
+            min-height: 94px;
+        }
+        .list-item:first-child .dir-link::before {
+            color: #8ab4f8;
+            opacity: 0.9;
+        }
+        .list-item:first-child .dir-content::before {
+            content: "Top result";
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #8ab4f8;
+            background: rgba(138, 180, 248, 0.15);
+            align-self: flex-start;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .list-item:first-child .kw-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .list-item:first-child .dir-icon {
+            color: #8ab4f8;
+        }
+        .no-results {
+            padding: 24px;
+            text-align: center;
+            color: #9aa0a6;
+            font-size: 16px;
+        }
+        .footer {
+            padding: 48px 20px 32px;
+            text-align: center;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .footer a {
+            color: #5f6368;
+            text-decoration: none;
+        }
+        .footer a:active {
+            color: #9aa0a6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="header">
+            <span class="header-overline">Directory Index</span>
+            <h1 class="header-title">Fengqun</h1>
+        </header>
+
+        <div class="list-container">
+            <ul class="list_1">
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="65oYVQwkj38ZaWHWgnkWoVIE2Irf9M1_aVDoGEXst97EA6ITVHsoagek1WbEozYloXH-Ud__vHSM3wqyBB4Or2iHmlbM7ukYkXKfm1aNBoHh5rZIwe8LyfU9v7ZswWEf3_XYyWp90DiQXPVEZ4OIHyscpUAXj8MOJvpLLV78KYgx7G9Csd-1vQHzpfp6Wzv0hf7Ge2Re0E734hB7SxM4rIvOwQzYpN-rLRHzHsc9ILtLVhWSe_p66dnKDXuqwrNrMzZSBT2ZAFdCwNQ21aOBpFjZpGrf4ta55r-cAS_je0pWs-XwE33INi4Rd32ehYuYkYFDUq2Kp0WCeM-jSCY9a6K5h6iC1HHdzaxTDEG217lk3CMNf6uuX-en3cTtgVBrapOhME5iulzMk_7JvLSZozluiWa4K_a_PPQ6DB8DzqM3fN8DohTrD3TNRu7rSKgTKkTCocV_BwUajZgLjEK3DBGtnYtmvfMFcUYTQhBofU7l_N9nMTQCQSJ2my5J3UEy-OiAONnoz0hocE2VR23ZzR4uozr5-UUR1g_j8jA9BbIHFXChXY3Nzb_-8loPVO3e0B9tw2sM7Vvr9K1nDf6ibPt57sKcrYDcPeVUsa-yCLD52AamIct7Al8Px5_8FETaIlQ6J-JDs0PbQIV5I5dNRiQnGSEU6xeoqy-YxWMGu_jy82rBW6YNqN0bkmi8sg1DE6ZR6kEfOkMD7UGwVANncovyCiF9sQVSyEiAqNG_p63hMz2wP8fFVZpMDXJLbJxtrOcJ90CCLD9R4VdbNuaPT0WeeIvtErzh-zG_-wFBpFlwPenLCmqbQvf6jPiQ5BDDZ__vsh701pw2NZpzbJdM5JcpIumL_lodGH9CbOQOZXbyhvDb-nrnCZwBr9Sfk8xmhT2eD1EPjqQTqfKEgwQD7GpFbBjvnS9cu1_dqkfascGVYgiC5BqkzpkWrpxCyX5WpnF9WT9csdD93rbJGKKO2oxqNnT3k3ALiT7DzC1-tLy13mqy3jw5aBUaqlhqYLSYoiup1Afz2Tqjk94bYW3P-xwyFuO_NaEoMBc2PDmPuC2KhoFHPqLWWqVXD4MFEGQHgZXXXQMvoxQSiMB7r8vGPAyy7uSe8clEjf4egHj840TSaK4Vz4RvqDbRArjAYqb43Wcb-ezsPOCin2V4es9lSAQoN4xKL7nD01xXAGOktAdtMNOhMqBZoklXSSBGAmYI3IB9mMTziPeUC8QBDBIRbEyDJcQ3630Iuw9_NoSTBthUigD5LCXAthN0wxZQ55VKyB0yw5ZGq91UUBc1T4Q5KeCoNUdkNf_J8yMaNVLPnxDDYoUsss3Ip8W7j0m9Jd7kStx3VSr_-GDK6vx-p8bdeueTB7rpJOsK8so0Ma63ikZ8krDkgG7ACucwkQVlKHVMxjcdod1i4My9ovWgF3FcyrKbne-6uvhWn3zEzV0W_ZQAIFcvrm-dsMg45NuxQHr8tCiyiYyCjRpyFzD5FXZdSsmAWFcEj1UaeBqbx46uSVYa88qXsBbNBO2XySoaVqr1BVRfoJaPtw9pW4KeqnoG_x9sj2iDbMXpXVvdq3_5zpmSgn6ol-PQKT8ZNizQPpcbj9GqkN14pNvCtccyWjRL9Xz3hwpGkKZQr7pyGTPxK7P53ye3MIcIShCx6VrFpxZh4uB5InMmhwgfojH_mTgmJ8X0OfFg7ywrgvBLBSpg1Rlno9afEqxE8nZEtv9mtahEx_S_y47DBU8lEX7fnnI03yxQEr3D3rK6N0HSvb9fZQDI" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">women&#x27;s activewear shop</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="bg1qjjkNIcIrNrdDPQC4baVFo-WrCLTl5T7-79BVqaiR-oGuVjytFinb-zQvNt_gz3jV3xfK33FB-kVSo0VQ9klQai9RDHS6O8w74GPfACwxI1NEQukgXxtwjB8Y3CLOVcojxm1gBNajSEiB_b1rTfwqRuZwQ0ug67ORE-V25TQozBCG06Onz-0WvcdI38KK5r-5w9P1TzrZlNt0SXYrUrLavvC3Rh8oylPOALP0pZ4hYpzCbizAq8nTtdHVZKyX5F0RMWZzjIXGd9wtj4-jIrAgS7306ciBdZUTBMVx2s7TURAxwwwAI98r-6Mn511KpakX6iqHPVE9WaVnG0wwj26Iii2ZG1_nPY0Gigyp_gOrsC4qKShIl3PIfj1xBI39IbyUSs2Tf6WKsDxQXGmIyK6M-UVgCV7mnisBDSfhuAMHKxtoxKA42dcmslq2aVhyybXOs9AbfPnKPpBr_mZBScZ6lUKf2gtTBD9W1cvFIwvRQCDxb8BTLjVRBKHNMpwMjk27H2_p894--SL6oQxUB_2a0wQouEEO5yIZysA-iFxyI96FbhP8ppGahpo0L0bnjNPN1JrB6R8WFVTTuXhkgUOswXnUjxV2z9xfr6JgyyonUXZrqcI46G84oPLovpvJaxP5cvbNgOVrk5G_kCpHKCbbC-i_2yOdMOnd6X5TDklJbGrWQJu8o1bpyG3eRJUjIBPRe6o5DcCcWAU2SE8M4SWjqwiBH8EpAh1H-3BTWekLoxBHEj4OAT7V7YW3hiv4byzI3NQMgiq-mWVDzpw7x03ggs_Zu2r4xN_vDj5PPX4FzSGtQmXEW8XeQKv1golBbXasB1UW_xdXjATGt3TZCeauqMEwBqrrnzCjk4zpBti87fgnCI_797j7rvEsaz30nBpm6CozGh8oy2Xvv113M1wq1HUKBhfCGT5739fuMROqGUwMoFXny9MxxyWPfc6xwg08Iyb934v6BgCvhZfFo4ZdCUHynRm4AQR707P_wwILGHw_vhzg33mg9mh4e7bR9kHi-gwf_bgo2ri8FxoZIDhCczGSXCqQO7GDEDKPPmMdYOC7cixpqzFcD0SRZFFDSKIe8IrqLvSGdwJaE9ADnOIR-ats0JhBNvyxgRE0mbK96TVBs--ZM5HtXRGrcW_NK7wxl6K4Es36GLPSs0VMqWDm9cyiLiv3HaBAoCwbEM4wc74xvjoF9OT8pA-CTNIyzFrA8McNX0FpwQi4CK9o--VS3AH274BqqDgvNZ0AxIUMxQs1eFNLffpjkGyeHNYVjZbzlB1HfoPB3VPNasoJh31o-WhqzieQZiZBXpq94UW_97TPpELzfY2wQnE3VNrCIGxBJCCgLBwbBQU-23dTnVNjqQin9L60D8gv61jvzVofR_wWFD9aeTKNlgpOHrx4kNMiy7avqKLilRhXhY5ovqwkJ_impdK73iBZ3xZ9HoKUlQpCuyQ75F_GEsuM4NtLEYkyhol7rhIN0aUNM_6S-oyCO2xLdynFnYW6aEh2mEg36z11N9VJnL4NbZGlrslMjKGDRGvKsU_p8ruq8tPpzc0m1Gv3gVYEbgpqvjjQB4zEZNGESxx4IiSGMM425yifc5lZ3c-BOXPK43hAk4fRpZpiYpmpaeUEIJMrl1YciPKKbBE-BpJP__i0rP236RuYePJx8ILhZlBFom6viBT_4ZI20uwwuhNB2KrRUpoTlKzTe1_IpYwqq3I1Da_q4n0sUNA_cgyvroAb8R9YJGlEWKPt0j9EdQOgF1M0oDma9G4Wub4" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">affordable women&#x27;s shoes</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="Cxv1-HVptM5v-TV5ztOVAUF3zj7leNPiDsopUpKLpQAtCoOsgkgLcCRk2FoZAxlFqwwJWYqkFWl2oS7Q8MjqMuX2NK1Zj3V9Fy1bNR1FYCN0889vAS8yssCTlKnrw_TBRwf--Zuax3nV6HwexLZ34idT02TzxdNqeMKNgp17BuD5te0mgP5WCJpwoLVDUFtEDEb8URvOByEXSVvd-I84kCUdTb3PNZcwH29uNGWP-WTmGSsSt7gGRyDt7eDwxCRCKpUj2Y_wYNjmpw7eOoZFstHHm_sk2KpTbj2x4AkBtfwxWFH1Unj6iEqkZhthFP-QVbrEvQhDc6Y86FWIjjEunm3Lh3qJHPMwOFs_PJhRddpam4bFYXOkSFS1LCOcNhfTUqLfCF5rFgxYbW7nL0j9eUIXp12VYDkf1vqGNc_nZtLCCm6estRJnR_UIp20ENDsoYZQ8m7_zXMXFkVfShzM9aMxeUBzGcgwiYpseHZVSt4WqRJxfT_CB1VResKHgfvHR9teIRo3LTYXv7EK268b2ELsPaC8D_R-A5QSSkMxcNpFjjeV4Oj2IZM6hQeNPb9mqgmVSv9i-8HVPuPi2yBSxdJTpU45AMDH5DPxz-pyzKem4e6rt55niO9DK_jUp_kEZPEdTRme78JVZAHZwtj3MDqWSWj8xibFbXN_V3hkkXjLabDUOFhIMS3ALDP-smLwILqMOyCrJOfd3Q5YcdX14SdUB5MPaLYmzItLBcdbu4I4nHNwNhF8pCfr2RHojjduFgdZdvW-FFkfuzO3ej-s6o5QkdbxAvl00rBCkHuVTGpS0Uq74-rs8hHmwsyTNEygfy6jp7TWmdKPNhWzwYk3CW7XeN6FM1iupQui92vLzPXbedO82IRigPIqSXxtRD8KhpktgZVYEK89aHK24OZVUtIdrDLldstc6ljDA7FnW2xaXSkS5gL7C_x1IEY-dBfIS5UbVbYccSnwwCVpxq-kvEAlJffxNLNTZgyiU6-wqEWZclp03dmSPFzzrQnMlVgKckGvhG5UgrmWcU135iN-zV7XL72BzYwRya8EJGcDcIpcFYSrP7jvYIW-SsAjxHdmp1cQeQviwvw-4sJScPt6Bqcird_NnCDh81LGXwtYj0CnFRSVJPAX4P6xwNTNWXmjBR8IW6c-V6V4BSdVaAMhFZ8r1m8X1-myFvwAJqSKMOb0qVNwwbVnobFFZ4Wsx13I8WIhroiFq7bTSViqrOAsmxjz78aVNwDNudOQJAUOA1IjMGE4iRMYX5Tex402SmyU7xJxpcTzy23VhbAYgWLWK4K5JsnFA8s2XFyh85ni5TbiPSPFh6cUE8MHsQFWdTpur_fkp1UqfBR-Qzall0Uaia-hbdHfiUfZ27nMdyRHc9ppsXrtE1kDCTnD8NsRpRk8qRE6QNvAL_pHXhX1rJn7NAlLjtUXi2MOI4gJLiDEg7m-l0IyvTRx0Wy371c7YqKFNspcwNmwoSn0tBhs5nqvE9Phg4q3HJFUzPV9VPS9lQa4KTooUtpIet57H0CUWuNidhUliVFEDSUPT4wcpJHj-ZDAD6Rwy-BEi7UHAtRKQerwxz6uyPgcUWdQIva9Rid7afYKuQkVbEPe_KmlKzKyVLMGtpXcpzY-4r6PJK2YuixJTq90hSL72v8EcwHWwwi34IMTOsNySJpnzjmA3vSSGY5CMgqCocAddEJIcTDjqCNO4CDRE-BqGXxLgAlfJLAcIfz_wF1r-H8Y7ZiTJx2m259xoSeVs5nGonMwUn8GA4NKzLyrw6X9" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">buy women&#x27;s fashion online</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="FsHf1NmVEEMntWQ_VTZbBjAmxQbrfhF1xT_lV2AM-odIJCcFyXMPtkOOYn3pKueRkdZLaC-G0VkcYEw3mRMpTU1WoZbXSKFllRLECBt7qWOp3vqxiRNvo2F4GZMK6oPYmo1UII13BJxc0tJoGyLmFLwDUXDxQe3oGkuQrMBARsRRR9Tww6Hbk55ud0_HiP83GOyeG1P5SfuEL5_F1OmbNrxDZuMVU5M3xkBul_9twrtiYGxt_A3SXbWQLboA5MwZ04zYAfnnsOlj07jZ6e7gG_na5VIkRy-XCAEayu3ZEL-4mfbmrr5bV98Ze-BlUkoVt7ZFLm9xd2RZHNXnyFAtaCL6C7U_FggVoWXltNXF1RxkCT_Q_6KSLYiSkjDGmkO7MCYMz15mbw2AXKIB4rVOKn3_iwJttkNA2kOz2U_xlEz2fwoYYYTUA3h7GMNzpbPb0MUyKuHhaqwNU1IyFVDlCEd6MWnNWE1KhE6973eO4lOKynUrJ91IyXblo2_GvqZjDqOgmrpu1btZrfSp5ZWb5kY3SyNWgIa1iExGiekKiPCEJ6aLXin4WtoNHIgBnWiNAH44OiaRj2jccw6BCFMbA_ZVVN4JeAG6wEeHs8uizIfejH_pQYzBxbslWUViqwFVYDQ0zDybFp44XfkT3t1p7WfFCPsqhiklS9wSRg6Xm1g8tNlVx5wYZoyYFQR0bK31M02R0IMtqakIvqoyRnVz6hdp7kHeFJ1rJUq7a9UsnvFVilr1VqhGzaNpKYlGHmrJo0Sf-5kRiiByx0nqPpZ3gPGdQLIJBOJ1wZaJOyajFzRUXwtMGAruvjHFXx-d2TiZi6DNT4RQO3_jWZCL9JBFmUkM2oBZeFNyvTb3BpKrbk10cA_wGttllA87DuLgRjiFIAf2pACwrSxtBDJ-AeWURe8Ic2pFsuut6HXLS097QZJfFl4T1bdfIhcZik7d6ga1Jkh4l9A_yvP9sG8WDTLSnfOfziWFkg56lTta4TiIrkHfx_Y4IhS8PqStL9jXh_ghx7xEOuVKyxI3ff4d4CY08MTtH8pGG0JIYEfnj5z2JgXv-nh16GxbFbxVlz6i2zT7vMBLZp8BUxMfXqiOzs5rhD6D3LI8-ovl7JmMeY9EdEKe-5EAPI8ejBfv9pYVIoAEedu0VeQyOXPhpzEe8L8l1Ka4-xsvcTc81qkeqRwZyk8T9gMuXwnalBMWYDWhzYV4ZGIi9dWqzhmzqXnwiDbDHjQvwmqHHMn3TxsO8N6T61Z-Ku_lximpwtaXI79BEbqYEb-v35sjmGn00UiI42ajo4NX4IaxrYnSZHbQV55ZLyiCYxX2-9y79XRp0CxIz5bBCyYSdXdhQaF4HjoAOoQAaafwNo1_ebvlnz9KC3Sgm7SF525qSm602MfH1DmVfNCH7taY7YCYjM2HlP0XOddc-db9i9Z1MQsCRE8rdGJAI1RWYHa_ZkcmWC_fL2380nCfI_i6nxyU6WL67XDISG72hu3oWlHqeLznrhfYMGJUdnNGW4EnsGLOt2RTANTGmUHqik1OzTMLVB75iY5Szysr-wwxHjCgW_DrewkDYyd_z2FaQs__4lYkT_jBSrsM_O6jd0mqhOONDBEoD7faO6YbF2ZabQ9c1usOueIV_oyXLf6-atY4DwqeVvyxHWQfl9oCs264vWwoEtVx6KnD0sDlPcKW5hJepzGfFbep6noIZLsyGt4GohR9hvSgCha_qXZz9TGWdFpb0GITVvbrJiVFIu5AOZCxWSDA5Ur7E5rQ_BiD590" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">trendy clothing for women</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="sL51h5LEboX7OJf8XS-OqwqQar6GJsl3x9aQwPnySWhAi2arRhKLuAP3b5IeXFIjFnvTDBMsooXiWUvecw0JmOJqRHYQS24EW5h_NcElFAy4yj5mo6OQH96pfgP_fDM_8if5SEdD2lQI2c_wMt5rCivlCrPbdFhkPir_1Fo3M5ghK0UBTE3So79r9K_9x1bNDvN5RmBHNz2bg4ZTFB-XoM9MMIGNaDsYpU4zShPw5-qNxkzlUNTGrI6DXdj0Udi9IXCfrAOw-JBU9VZVVMA2ff5cICmA1EZjUhz2too3KEOg9b9xex3VYLrPZ_Umulr469lhaCmQFT-gBLV-tnUEE_CA7eGDHeAzO74nPoWTadcDbmNkYkEchMQ6-MpbffeeVYpIYSjUDkzHUc1xqok8lZHL6tcfK1iFbLggNlBWD2VYKCWEKaYQpKcCYpXSTtFBJf1h-BZXSyZc0UhG5tNOtIaZ2XbA7fojWcnqqVYc__8jPtlM_LAAwq8B8xoK5YwrEbmDcjGQV65kuMfRIkagtj3swVVetEZguShnD5uwssgXZ6o6i4Kx7Czdo-jzmHcm_5oUGezIR-HjrvQxqK-3eyje-XcqIFIDKcXoeCp-Vn9snLGI3oTEpvx8UkxFLrcW-Dz-ZzPtnJkRH2gAFtEOpj-f1qx8Sd20AxzHfk94tyR4uZfwynlb6j2ps3F39GeUA44KOmiK229FUs-5q5whK00veCNfNB-jROCpy4FHhgHY8_AbeEvfAWSc2goVzjiKdHPlQBM1Lh5qBum_5y6og61irbPgrKbZnwh9ZTIYvm4hbUN204pKc825ZJ__pewPge3ancpY6dAi3tjsjQ50KH89crdqeg4feQwmbUvb2Se5V8WnURl6T5fyuJD0TlhaRQoQK0g3xG3-7fyuZm9GbBTiWGqWJdNifAargmDMcv0Lr1a3Zh59jFh709-Yihd5JQwB48k_zigEMdszYEP-ytzj1XCLJPyUWegesQoepWax_6LqN_2cJidRqlgUJcDtzGQNjETE5v3ANnFFTabbD7LfTn5B38x5M1GvZdAF3tzvB1iRFoKyAZceIp5I5soi7rP86ayQDCU2-D0awezdncY2g9KKbFMdHPk3fZKNgyl5-6R23Fi_K7RPBnw7naOCSHMr5uMU34SS0wNJMWBLwHUyoSjFs19Lr827ae66DAMHxDei3QojNJnIe7pHw12Z2dVBjbVpbDJgeFkuerTJIFRe7_MvjOGIx2dB5WLS2yGLFQ8OTPN1TNDFYHe9-bqKMY2dgz2NjN9oTKchkpl-KtjHeZaulOoTgTD4Cb_edUL5Bsaas-UZa6PN79-jfzfPp1yLBmDG0MqbDmu57nHEpAN5BT2AiA-AIs7H6PiY6aa_w2co9QVEryDeUt8XufN-yf7KldxM8PCNyKE-RiRL0-QQFYi-4s0xRjVp92f6raCh88Y4Z5p2q5FtyfK4N72cE7ixKkhxu8hzrXwQBpYBcA4Or10QSJky4e3sfmygDTFvc5_bf9VgFaPmyUT0fyFPrRmT9KGUeRKLWXhfWDENacS3afhBR5PkFUwCwBLFGDWbnmrW0rckTpoR0P4LrTarCgbnWae0EC0h9x-wk5NpwIekL93XLvxXwQcYMla0rsI3mdn3N3QP8mIxxX9uuMnjdmRVKDnPIt9GrP6WNExcfCCZB_6pq5yXe3eR9DWyP8BAL7tG2gqYfzW2drFMuRRuj-Vd8sNys4lLHeWHlo-EvQFpxC7c" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">workwear for women</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="https://intivesearch.com/privacy?dmn=fengqun.info&testId=21" target="_blank">Privacy Policy</a>
+        <a href="https://intivesearch.com/terms?dmn=fengqun.info&testId=21" target="_blank">Terms of Service</a>
+    </footer>
+
+    <script>
+        window.__cherami = {
+            sessionId: "672ef124-6848-451f-bf92-857d4c52fb7d",
+            source: "",
+            tkn: "19vnMT3S",
+            reportUrl: window.location.origin + '/cherami/report'
+        };
+    
+        // Report an event. `payload.wa` is sent to the legacy report, `payload.dmFeed`
+        // to the new dm-feed report; include only the destinations this event needs.
+        function report(action, payload) {
+            payload = payload || {};
+            const data = { action: action, _ts: String(Date.now()) };
+            const source = window.__cherami.source;
+            const sessionId = window.__cherami.sessionId;
+            const tkn = window.__cherami.tkn;
+    
+            // Carry the partner token so the server resolves the correct campaign
+            // instead of falling back to the default token.
+            if (tkn) data.tkn = tkn;
+    
+            if (payload.wa) {
+                const wa = Object.assign({}, payload.wa);
+                if (source) wa.cid = source;
+                if (sessionId) wa.sid = sessionId;
+                data.wa = JSON.stringify(wa);
+            }
+            if (payload.dmFeed) {
+                const dmFeed = Object.assign({}, payload.dmFeed);
+                if (source) dmFeed.source = source;
+                if (sessionId) dmFeed.session_id = sessionId;
+                data.dmFeed = JSON.stringify(dmFeed);
+            }
+    
+            const reportUrl = new URL(window.__cherami.reportUrl);
+            reportUrl.search = new URLSearchParams(data).toString();
+    
+            const img = new Image();
+            img.src = reportUrl.toString();
+        }
+    
+        function getCanvasFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                if (!ctx) return null;
+    
+                canvas.width = 200;
+                canvas.height = 50;
+                ctx.textBaseline = 'top';
+                ctx.font = '14px Arial';
+                ctx.textBaseline = 'alphabetic';
+                ctx.fillStyle = '#f60';
+                ctx.fillRect(125, 1, 62, 20);
+                ctx.fillStyle = '#069';
+                ctx.fillText('Cherami fingerprint', 2, 15);
+                ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+                ctx.fillText('Cherami fingerprint', 4, 17);
+    
+                return canvas.toDataURL().substring(0, 100);
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function getWebGLFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (!gl) return null;
+    
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    return {
+                        vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL) || '',
+                        renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || '',
+                    };
+                }
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function reportClientAttestation() {
+            try {
+                const c = window.__cherami || {};
+                if (!c || !c.sessionId) {
+                    return;
+                }
+    
+                const canvasFp = getCanvasFingerprint();
+                const webglFp = getWebGLFingerprint();
+    
+                const attestation = JSON.stringify({
+                    jsExecuted: true,
+                    screenW: window.screen.width,
+                    screenH: window.screen.height,
+                    dpr: window.devicePixelRatio || 1,
+                    maxTouchPoints: navigator.maxTouchPoints || 0,
+                    webdriver: navigator.webdriver === true,
+                    tzOffset: new Date().getTimezoneOffset(),
+                    cookieEnabled: navigator.cookieEnabled,
+                    languagesCount: navigator.languages ? navigator.languages.length : 0,
+                    platform: navigator.platform || '',
+                    canvasFp: canvasFp,
+                    webglVendor: webglFp ? webglFp.vendor : null,
+                    webglRenderer: webglFp ? webglFp.renderer : null,
+                    hardwareConcurrency: navigator.hardwareConcurrency || 0,
+                    deviceMemory: navigator.deviceMemory || 0,
+                });
+    
+                const payload = {
+                    action: 'clientCheck',
+                    wa: { extraString1: attestation, sid: c.sessionId || null },
+                    dmFeed: { extra_string1: attestation, source: c.source || null, session_id: c.sessionId || null },
+                };
+    
+                if (navigator.sendBeacon) {
+                    const blob = new Blob([JSON.stringify({ action: payload.action, payload })], {
+                        type: 'application/json',
+                    });
+                    navigator.sendBeacon(c.reportUrl, blob);
+                    return;
+                }
+    
+                fetch(c.reportUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: payload.action, payload }),
+                    keepalive: true,
+                    credentials: 'include',
+                }).catch(function() {
+                    // Silent fail - don't break page
+                });
+            } catch (err) {
+                // Silent fail - don't break page
+            }
+        }
+    
+        window.addEventListener('load', function() {
+            reportClientAttestation();
+        });
+    
+        // ─── Funnel click tracking ────────────────────────────────────────────
+        var pageOpenedAt = Date.now();
+    
+        function msSincePageOpen() {
+            return Date.now() - pageOpenedAt;
+        }
+    
+        // Which part of the result the user clicked (stored as click_zone).
+        function keywordClickZone(clicked) {
+            if (clicked.closest('.arrow') || clicked.closest('.kw-arrow')) return 'arrow';
+            if (clicked.closest('.anchortext') || clicked.closest('.kw-text')) return 'text';
+            return 'row';
+        }
+    
+        function adClickZone(clicked) {
+            if (clicked.closest('.arrow_wrap')) return 'cta';
+            if (clicked.closest('.title')) return 'title';
+            if (clicked.closest('.desc')) return 'description';
+            if (clicked.closest('.url')) return 'domain';
+            return 'ad';
+        }
+    
+        // Assembled here rather than rendered into the page, so a scrape comes away with nothing to replay.
+        function armKeywordLink(link, clicked) {
+            link.href = '/kw-click?t=' + encodeURIComponent(link.dataset.ct)
+                + '&ttc=' + msSincePageOpen()
+                + '&zone=' + encodeURIComponent(keywordClickZone(clicked));
+        }
+    
+        function trackAdClick(link, clicked) {
+            var ads = document.querySelectorAll('a.content-wrap');
+            report('adClick', {
+                dmFeed: {
+                    page: 'ads',
+                    step: 'click',
+                    ads_variant: '',
+                    test_id: '21',
+                    root_domain: 'fengqun.info',
+                    position: Array.prototype.indexOf.call(ads, link) + 1,
+                    click_zone: adClickZone(clicked),
+                    time_to_click_ms: msSincePageOpen()
+                }
+            });
+        }
+    
+        // pointerdown/keydown fire before the new tab's URL is locked in; middle- and ctrl-click reach
+        // only these two, plain click only the third.
+        function onKeywordIntent(event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+                if (event.type === 'keydown' && event.key !== 'Enter') return;
+    
+                var keywordLink = clicked.closest('a[data-ct]');
+                if (keywordLink) armKeywordLink(keywordLink, clicked);
+            } catch (err) {}
+        }
+    
+        document.addEventListener('pointerdown', onKeywordIntent, true);
+        document.addEventListener('keydown', onKeywordIntent, true);
+        // Capture-phase click still precedes the default navigation, and catches the activations
+        // pointerdown never sees. Without it those hits reach /kw-click with no token and get a 400.
+        document.addEventListener('click', onKeywordIntent, true);
+    
+        document.addEventListener('click', function (event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+    
+                var adLink = clicked.closest('a.content-wrap');
+                if (adLink) {
+                    trackAdClick(adLink, clicked);
+                }
+            } catch (err) {}
+        }, true);
+    </script>    <script>
+        (function () {
+            var props = {"trafficSrc":"intango_park_dm_1638_1","ysid":"7CM1F0TLBEV73"} || {};
+            
+    
+            var startedAt = Date.now();
+            var called = false;
+            var reported = null;
+    
+            function send(step) {
+                try {
+                    if (typeof report !== 'function') return;
+                    report('yahooBeacon', {
+                        dmFeed: {
+                            page: 'keywords',
+                            step: step,
+                            test_id: '21',
+                            root_domain: 'fengqun.info',
+                            
+                            kw_variant: 'keywords-test-9',
+                            extra_integer1: Date.now() - startedAt
+                        }
+                    });
+                } catch (e) {}
+            }
+    
+            function settle(step) {
+                if (reported) return;
+                reported = step;
+                send(step);
+            }
+    
+            function argument() {
+                props.ykws = Array.prototype.map.call(document.querySelectorAll('.list_1 a'), function (a) {
+                    return a.textContent ? a.textContent.trim() : '';
+                }).filter(Boolean).join(',');
+                return props;
+            }
+    
+            // Never gated on `reported`: the deadline gives up on measuring, not on billing.
+            function run() {
+                if (called) return true;
+                if (typeof window.initDMKeywords !== 'function') return false;
+    
+                called = true;
+                try {
+                    window.initDMKeywords(argument());
+                    reported ? send('late-ok') : settle('ok');
+                } catch (e) {
+                    settle('threw');
+                }
+                return true;
+            }
+    
+            function poll() {
+                if (run() || reported) return;
+                if (Date.now() - startedAt < 15000) setTimeout(poll, 50);
+                else settle('timeout');
+            }
+    
+            var script = document.createElement('script');
+            // Dated, not per-request: a unique query string made every impression a cache miss.
+            script.src = 'https://s.appreports.net/serenity.js?v=' + new Date().toISOString().slice(0, 10);
+            script.async = true;
+            script.onload = run;
+            script.onerror = function () { settle('load-failed'); };
+    
+            document.head.appendChild(script);
+            poll();
+        })();
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            try {
+                var anchors = document.querySelectorAll('.list_1 a');
+                var kws = Array.prototype.map.call(anchors, function (a) {
+                    var kwTextNode = a.querySelector('.kw-text');
+                    return (kwTextNode && kwTextNode.textContent ? kwTextNode.textContent.trim() : '');
+                }).filter(function (s) { return s.length > 0; }).join(',');
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: kws,
+                        extraString2: 'fengqun.info',
+                        extraString3: '21'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '21',
+                        root_domain: 'fengqun.info',
+                        item_count: kws ? kws.split(',').length : 0
+                    }
+                });
+            } catch (e) {
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: '',
+                        extraString2: 'fengqun.info',
+                        extraString3: '21'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '21',
+                        root_domain: 'fengqun.info',
+                        item_count: 0
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

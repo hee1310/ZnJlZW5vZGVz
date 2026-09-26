@@ -1,0 +1,164 @@
+proxies:
+    - client-fingerprint: chrome
+      name: ❓Other_1|1.1MB/s
+      network: ws
+      port: "443"
+      server: 172.67.182.133
+      servername: 0-M13.0dCB525d-9bF8-452C-A465-5546541729D1.KdNS.Fr
+      tls: true
+      type: vless
+      udp: true
+      uuid: 1aa96574-c28b-4ee9-855d-ebdbbf1f7e90
+      ws-opts:
+        headers:
+            Host: 0-m13.0dCb525D-9bF8-452c-a465-5546541729d1.kdNS.fR
+            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36
+        path: /ED3ZQPu7lqyeDGD58KabZ
+      xudp: true
+    - name: "\U0001F1EA\U0001F1F8ES_1|3.1MB/s"
+      password: None
+      port: 443
+      server: 130.195.250.34
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1E6\U0001F1F9AT_1|1.3MB/s"
+      port: 443
+      server: 146.70.244.18
+      skip-cert-verify: true
+      tls: true
+      type: http
+    - name: "\U0001F1F5\U0001F1F1PL_1|1.2MB/s"
+      password: None
+      port: 443
+      server: 37.120.156.18
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1F7\U0001F1F8RS_1|1.6MB/s"
+      port: 443
+      server: 146.70.221.34
+      skip-cert-verify: true
+      tls: true
+      type: http
+    - name: "\U0001F1E8\U0001F1EDCH_1|1.0MB/s"
+      password: None
+      port: 9443
+      server: 37.120.213.210
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1FA\U0001F1F8US_1|1.4MB/s"
+      password: ""
+      port: 9443
+      server: 38.95.111.226
+      skip-cert-verify: true
+      tls: true
+      type: http
+      udp: true
+      username: ""
+    - name: "\U0001F1E8\U0001F1EDCH_2|2.7MB/s"
+      port: 443
+      server: 31.7.62.50
+      skip-cert-verify: true
+      tls: true
+      type: http
+    - name: "\U0001F1E8\U0001F1FFCZ_1|1.0MB/s"
+      password: null
+      port: 443
+      server: 185.216.35.130
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1EE\U0001F1F9IT_1|2.5MB/s"
+      password: None
+      port: 443
+      server: 185.183.105.146
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1EC\U0001F1E7GB_1|1.1MB/s"
+      port: 443
+      server: 185.235.0.2
+      skip-cert-verify: true
+      tls: true
+      type: http
+    - name: "\U0001F1EC\U0001F1F7GR_1|2.1MB/s"
+      password: None
+      port: 443
+      server: 149.22.85.65
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1EC\U0001F1E7GB_2|3.4MB/s"
+      password: null
+      port: 443
+      server: 212.102.63.1
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1F3\U0001F1F1NL_1|1.5MB/s"
+      password: null
+      port: 443
+      server: 5.255.118.82
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - name: "\U0001F1EC\U0001F1E7GB_3|2.1MB/s"
+      port: 443
+      server: 212.102.63.31
+      skip-cert-verify: true
+      tls: true
+      type: http
+    - name: "\U0001F1F8\U0001F1EASE_1|3.0MB/s"
+      password: None
+      port: 443
+      server: 149.50.216.65
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: null
+    - encryption: mlkem768x25519plus.random.0rtt.d01qgGQY7ISJ1XmxCXP6W28bCP_1tKQ0J8ntfa514EY
+      name: "\U0001F1F5\U0001F1F1PL_2|1.7MB/s"
+      network: xhttp
+      port: "6014"
+      server: pl-warsaw.masterpgd.com
+      type: vless
+      udp: true
+      uuid: 1cc6bd10-e414-4171-9220-09aaba23a6fa
+      xhttp-opts:
+        host: myket.ir
+        mode: auto
+        path: /assets
+      xudp: true
+    - name: "\U0001F1F8\U0001F1EASE_2|2.7MB/s"
+      password: ""
+      port: "443"
+      server: 79.142.77.63
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: ""
+    - client-fingerprint: random
+      encryption: none
+      name: "\U0001F1E9\U0001F1EADE_1|1.9MB/s"
+      network: xhttp
+      port: "443"
+      server: 31.70.64.90
+      servername: cdn-3123.spliceflowtech.com
+      tls: true
+      type: vless
+      udp: true
+      uuid: becd3b04-62a8-4b74-be67-be746008b4c2
+      xhttp-opts:
+        mode: auto
+        path: /api
+      xudp: true

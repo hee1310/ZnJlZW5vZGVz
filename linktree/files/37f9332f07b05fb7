@@ -1,0 +1,1315 @@
+#!MANAGED-CONFIG https://www.dabai.in/link/9DDTZ2gMPSOGqfk7?clash=1
+
+#---------------------------------------------------#
+## 上次更新于：2026-09-26 03:59:08
+#---------------------------------------------------#
+
+                                                   
+dns:                                                  
+  enable: true                                        
+  ipv6: false                                         
+  default-nameserver:                                  
+    - 94.140.14.14                                        
+  nameserver:                                          
+    - 94.140.15.15                                         
+    - 119.29.29.29                                      
+  fallback:                                            
+    - https://dns.adguard-dns.com/dns-query                        
+    - https://dns.alidns.com/dns-query               
+  fallback-filter:                                     
+    geoip: true                                        
+    geoip-code: CN                                     
+    ipcidr:                                            
+      - 240.0.0.0/4                                    
+      - 0.0.0.0/32                                     
+      - 127.0.0.1/32                                   
+rule-providers:                                                                         
+  reject:                                                                                  
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"         
+    path: ./ruleset/reject.yaml                                                            
+    interval: 86400                                                                        
+                                                                                           
+  icloud:                                                                                  
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"         
+    path: ./ruleset/icloud.yaml                                                            
+    interval: 86400                                                                        
+                                                                                           
+  apple:                                                                                   
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"          
+    path: ./ruleset/apple.yaml                                                             
+    interval: 86400                                                                        
+                                                                                           
+  google:                                                                                  
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"         
+    path: ./ruleset/google.yaml                                                            
+    interval: 86400                                                                        
+                                                                                           
+  proxy:                                                                                   
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"          
+    path: ./ruleset/proxy.yaml                                                             
+    interval: 86400                                                                        
+                                                                                           
+  direct:                                                                                  
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"         
+    path: ./ruleset/direct.yaml                                                            
+    interval: 86400                                                                        
+                                                                                           
+  private:                                                                                 
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"        
+    path: ./ruleset/private.yaml                                                           
+    interval: 86400                                                                        
+                                                                                           
+  gfw:                                                                                     
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"            
+    path: ./ruleset/gfw.yaml                                                               
+    interval: 86400                                                                        
+                                                                                           
+  tld-not-cn:                                                                              
+    type: http                                                                             
+    behavior: domain                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"     
+    path: ./ruleset/tld-not-cn.yaml                                                        
+    interval: 86400                                                                        
+                                                                                           
+  telegramcidr:                                                                            
+    type: http                                                                             
+    behavior: ipcidr                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"   
+    path: ./ruleset/telegramcidr.yaml                                                      
+    interval: 86400                                                                        
+                                                                                           
+  cncidr:                                                                                  
+    type: http                                                                             
+    behavior: ipcidr                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"         
+    path: ./ruleset/cncidr.yaml                                                            
+    interval: 86400                                                                        
+                                                                                           
+  lancidr:                                                                                 
+    type: http                                                                             
+    behavior: ipcidr                                                                       
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"        
+    path: ./ruleset/lancidr.yaml                                                           
+    interval: 86400                                                                        
+                                                                                           
+  applications:                                                                            
+    type: http                                                                             
+    behavior: classical                                                                    
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"   
+    path: ./ruleset/applications.yaml                                                      
+    interval: 86400																		
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: rule
+log-level: silent
+external-controller: '0.0.0.0:9099'
+secret: ''
+proxies:
+  -
+    name: TW1-ws|台湾01|广港专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 16077
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1197
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db14008bafd29076
+    ws-headers:
+      Host: 8bafd29076.tw01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1197.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: 8bafd29076.tw01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1197.124 Safari/537.36' }
+      path: /db14008bafd29076
+  -
+    name: TW2-ws|台湾01|广港专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 11606
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1266
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 1cee87462d.tw01.db-link03.top
+    network: ws
+    ws-path: /db14001cee87462d
+    ws-headers:
+      Host: 1cee87462d.tw01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1266.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: 1cee87462d.tw01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1266.124 Safari/537.36' }
+      path: /db14001cee87462d
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|香港01|网站【dabai.in】【db01.in】
+    type: vless
+    server: s4.db-link.in
+    port: 18750
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1434
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db110027c61df5f7
+    ws-headers:
+      Host: 27c61df5f7.hk02.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1434.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: 27c61df5f7.hk02.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1434.124 Safari/537.36' }
+      path: /db110027c61df5f7
+  -
+    name: TW2-ws|香港01|网站【dabai.in】【db01.in】
+    type: vless
+    server: s5.db-link.in
+    port: 12571
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1027
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: a495d3c8d3.hk02.db-link03.top
+    network: ws
+    ws-path: /db1100a495d3c8d3
+    ws-headers:
+      Host: a495d3c8d3.hk02.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1027.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: a495d3c8d3.hk02.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1027.59 Safari/537.36' }
+      path: /db1100a495d3c8d3
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|新加坡01|广港专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 17425
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1423
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db120019b03544e6
+    ws-headers:
+      Host: 19b03544e6.sg01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1423.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: 19b03544e6.sg01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1423.149 Safari/537.36' }
+      path: /db120019b03544e6
+  -
+    name: TW2-ws|新加坡01|广港专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 14534
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1327
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 3cc0818df2.sg01.db-link03.top
+    network: ws
+    ws-path: /db12003cc0818df2
+    ws-headers:
+      Host: 3cc0818df2.sg01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1327.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: 3cc0818df2.sg01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1327.149 Safari/537.36' }
+      path: /db12003cc0818df2
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|日本01|韩日专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 18750
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1081
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db1300c06ed0d5b1
+    ws-headers:
+      Host: c06ed0d5b1.jp01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1081.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: c06ed0d5b1.jp01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1081.149 Safari/537.36' }
+      path: /db1300c06ed0d5b1
+  -
+    name: TW2-ws|日本01|韩日专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 11606
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1115
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: cc30e75c6d.jp01.db-link03.top
+    network: ws
+    ws-path: /db1300cc30e75c6d
+    ws-headers:
+      Host: cc30e75c6d.jp01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1115.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: cc30e75c6d.jp01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1115.212 Safari/537.36' }
+      path: /db1300cc30e75c6d
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|韩国01|韩日专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 18750
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1201
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db1500b99857bef6
+    ws-headers:
+      Host: b99857bef6.sk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1201.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: b99857bef6.sk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151201 Firefox/87.0' }
+      path: /db1500b99857bef6
+  -
+    name: TW2-ws|韩国01|韩日专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 12571
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1123
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: badbaeed21.sk01.db-link03.top
+    network: ws
+    ws-path: /db1500badbaeed21
+    ws-headers:
+      Host: badbaeed21.sk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1123.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: badbaeed21.sk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1123.59 Safari/537.36' }
+      path: /db1500badbaeed21
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|美国01|韩日专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 16077
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1099
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db1000012fd3b82e
+    ws-headers:
+      Host: 012fd3b82e.us01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1099.149 Safari/537.36'
+    ws-opts:
+      headers: { Host: 012fd3b82e.us01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1099.212 Safari/537.36' }
+      path: /db1000012fd3b82e
+  -
+    name: TW2-ws|美国01|韩日专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 10248
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1312
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 411fb2ebcb.us01.db-link03.top
+    network: ws
+    ws-path: /db1000411fb2ebcb
+    ws-headers:
+      Host: 411fb2ebcb.us01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1312.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: 411fb2ebcb.us01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151312 Firefox/87.0' }
+      path: /db1000411fb2ebcb
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|英国01|广港专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 15772
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1297
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db1900e3df1e8c9c
+    ws-headers:
+      Host: e3df1e8c9c.uk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1297.59 Safari/537.36'
+    ws-opts:
+      headers: { Host: e3df1e8c9c.uk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1297.149 Safari/537.36' }
+      path: /db1900e3df1e8c9c
+  -
+    name: TW2-ws|英国01|广港专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 12571
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1154
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 7ff8685812.uk01.db-link03.top
+    network: ws
+    ws-path: /db19007ff8685812
+    ws-headers:
+      Host: 7ff8685812.uk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151154 Firefox/87.0'
+    ws-opts:
+      headers: { Host: 7ff8685812.uk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1154.212 Safari/537.36' }
+      path: /db19007ff8685812
+    tls: true
+    skip-cert-verify: true
+  -
+    name: WEB限速1-香港|【注册免费领1TB流量】前往-注册|共享
+    type: vless
+    server: s5.db-link.in
+    port: 14826
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1431
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 66a5763395.apple.com
+    network: ws
+    ws-path: /db102466a5763395
+    ws-headers:
+      Host: 66a5763395.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1431.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: 66a5763395.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1431.149 Safari/537.36' }
+      path: /db102466a5763395
+    tls: true
+    skip-cert-verify: true
+  -
+    name: 'WEB限速1-香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享'
+    type: vless
+    server: s5.db-link.in
+    port: 11191
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1347
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 054bf824c2.apple.com
+    network: ws
+    ws-path: /db1024054bf824c2
+    ws-headers:
+      Host: 054bf824c2.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1347.59 Safari/537.36'
+    ws-opts:
+      headers: { Host: 054bf824c2.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1347.124 Safari/537.36' }
+      path: /db1024054bf824c2
+    tls: true
+    skip-cert-verify: true
+  -
+    name: WEB限速1-香港|【dabai.in】前往官网|GPT+流媒体|共享
+    type: vless
+    server: s5.db-link.in
+    port: 13935
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1069
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: d41b718739.apple.com
+    network: ws
+    ws-path: /db1024d41b718739
+    ws-headers:
+      Host: d41b718739.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1069.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: d41b718739.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1069.149 Safari/537.36' }
+      path: /db1024d41b718739
+    tls: true
+    skip-cert-verify: true
+  -
+    name: WEB限速1-香港|【db01.in】前往官网|GPT+流媒体|共享
+    type: vless
+    server: s5.db-link.in
+    port: 13935
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1337
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 35cc0a74ab.apple.com
+    network: ws
+    ws-path: /db102435cc0a74ab
+    ws-headers:
+      Host: 35cc0a74ab.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1337.212 Safari/537.36'
+    ws-opts:
+      headers: { Host: 35cc0a74ab.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1337.59 Safari/537.36' }
+      path: /db102435cc0a74ab
+    tls: true
+    skip-cert-verify: true
+  -
+    name: WEB限速1-香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享
+    type: vless
+    server: s5.db-link.in
+    port: 11191
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1252
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 19a8f93813.apple.com
+    network: ws
+    ws-path: /db102419a8f93813
+    ws-headers:
+      Host: 19a8f93813.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1252.59 Safari/537.36'
+    ws-opts:
+      headers: { Host: 19a8f93813.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1252.124 Safari/537.36' }
+      path: /db102419a8f93813
+    tls: true
+    skip-cert-verify: true
+  -
+    name: WEB限速1-香港|最低35%-aff招募进行中|共享
+    type: vless
+    server: s5.db-link.in
+    port: 10774
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1051
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: f1ce98b629.apple.com
+    network: ws
+    ws-path: /db1024f1ce98b629
+    ws-headers:
+      Host: f1ce98b629.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1051.149 Safari/537.36'
+    ws-opts:
+      headers: { Host: f1ce98b629.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1051.212 Safari/537.36' }
+      path: /db1024f1ce98b629
+    tls: true
+    skip-cert-verify: true
+proxy-groups:
+  -
+    name: 🔰国外流量
+    type: select
+    proxies:
+      - ♻️自动选择
+      - ☁️故障转移
+      - TW1-ws|台湾01|广港专线|GPT+流媒体
+      - TW2-ws|台湾01|广港专线|GPT+流媒体
+      - TW1-ws|香港01|网站【dabai.in】【db01.in】
+      - TW2-ws|香港01|网站【dabai.in】【db01.in】
+      - TW1-ws|新加坡01|广港专线|GPT+流媒体
+      - TW2-ws|新加坡01|广港专线|GPT+流媒体
+      - TW1-ws|日本01|韩日专线|GPT+流媒体
+      - TW2-ws|日本01|韩日专线|GPT+流媒体
+      - TW1-ws|韩国01|韩日专线|GPT+流媒体
+      - TW2-ws|韩国01|韩日专线|GPT+流媒体
+      - TW1-ws|美国01|韩日专线|GPT+流媒体
+      - TW2-ws|美国01|韩日专线|GPT+流媒体
+      - TW1-ws|英国01|广港专线|GPT+流媒体
+      - TW2-ws|英国01|广港专线|GPT+流媒体
+      - WEB限速1-香港|【注册免费领1TB流量】前往-注册|共享
+      - 'WEB限速1-香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享'
+      - WEB限速1-香港|【dabai.in】前往官网|GPT+流媒体|共享
+      - WEB限速1-香港|【db01.in】前往官网|GPT+流媒体|共享
+      - WEB限速1-香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享
+      - WEB限速1-香港|最低35%-aff招募进行中|共享
+  -
+    name: ♻️自动选择
+    type: url-test
+    proxies:
+      - TW1-ws|台湾01|广港专线|GPT+流媒体
+      - TW2-ws|台湾01|广港专线|GPT+流媒体
+      - TW1-ws|香港01|网站【dabai.in】【db01.in】
+      - TW2-ws|香港01|网站【dabai.in】【db01.in】
+      - TW1-ws|新加坡01|广港专线|GPT+流媒体
+      - TW2-ws|新加坡01|广港专线|GPT+流媒体
+      - TW1-ws|日本01|韩日专线|GPT+流媒体
+      - TW2-ws|日本01|韩日专线|GPT+流媒体
+      - TW1-ws|韩国01|韩日专线|GPT+流媒体
+      - TW2-ws|韩国01|韩日专线|GPT+流媒体
+      - TW1-ws|美国01|韩日专线|GPT+流媒体
+      - TW2-ws|美国01|韩日专线|GPT+流媒体
+      - TW1-ws|英国01|广港专线|GPT+流媒体
+      - TW2-ws|英国01|广港专线|GPT+流媒体
+      - WEB限速1-香港|【注册免费领1TB流量】前往-注册|共享
+      - 'WEB限速1-香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享'
+      - WEB限速1-香港|【dabai.in】前往官网|GPT+流媒体|共享
+      - WEB限速1-香港|【db01.in】前往官网|GPT+流媒体|共享
+      - WEB限速1-香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享
+      - WEB限速1-香港|最低35%-aff招募进行中|共享
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 600
+  -
+    name: ☁️故障转移
+    type: fallback
+    proxies:
+      - TW1-ws|台湾01|广港专线|GPT+流媒体
+      - TW2-ws|台湾01|广港专线|GPT+流媒体
+      - TW1-ws|香港01|网站【dabai.in】【db01.in】
+      - TW2-ws|香港01|网站【dabai.in】【db01.in】
+      - TW1-ws|新加坡01|广港专线|GPT+流媒体
+      - TW2-ws|新加坡01|广港专线|GPT+流媒体
+      - TW1-ws|日本01|韩日专线|GPT+流媒体
+      - TW2-ws|日本01|韩日专线|GPT+流媒体
+      - TW1-ws|韩国01|韩日专线|GPT+流媒体
+      - TW2-ws|韩国01|韩日专线|GPT+流媒体
+      - TW1-ws|美国01|韩日专线|GPT+流媒体
+      - TW2-ws|美国01|韩日专线|GPT+流媒体
+      - TW1-ws|英国01|广港专线|GPT+流媒体
+      - TW2-ws|英国01|广港专线|GPT+流媒体
+      - WEB限速1-香港|【注册免费领1TB流量】前往-注册|共享
+      - 'WEB限速1-香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享'
+      - WEB限速1-香港|【dabai.in】前往官网|GPT+流媒体|共享
+      - WEB限速1-香港|【db01.in】前往官网|GPT+流媒体|共享
+      - WEB限速1-香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享
+      - WEB限速1-香港|最低35%-aff招募进行中|共享
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 600
+  -
+    name: ⚓️其他流量
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀不走代理
+  -
+    name: ✈️Telegram
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀不走代理
+  -
+    name: 🎬Youtube
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀不走代理
+  -
+    name: 🎬Netflix
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀不走代理
+  -
+    name: 🎬哔哩哔哩
+    type: select
+    proxies:
+      - 🚀不走代理
+      - 🔰国外流量
+  -
+    name: 🎬国外媒体
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀不走代理
+  -
+    name: 🍎苹果服务
+    type: select
+    proxies:
+      - 🚀不走代理
+      - 🔰国外流量
+  -
+    name: 🚀不走代理
+    type: select
+    proxies:
+      - DIRECT
+
+
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,🔰国外流量
+  - RULE-SET,proxy,🔰国外流量
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,telegramcidr,🔰国外流量
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🔰国外流量
+  
+  
+  - DOMAIN-SUFFIX,ampproject.org,🔰国外流量
+  - DOMAIN-SUFFIX,appspot.com,🔰国外流量
+  - DOMAIN-SUFFIX,blogger.com,🔰国外流量
+  - DOMAIN-SUFFIX,getoutline.org,🔰国外流量
+  - DOMAIN-SUFFIX,gvt0.com,🔰国外流量
+  - DOMAIN-SUFFIX,gvt1.com,🔰国外流量
+  - DOMAIN-SUFFIX,gvt3.com,🔰国外流量
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🔰国外流量
+  - DOMAIN-KEYWORD,google,🔰国外流量
+  - DOMAIN-KEYWORD,blogspot,🔰国外流量
+  - DOMAIN-SUFFIX,onedrive.live.com,🔰国外流量
+  - DOMAIN-SUFFIX,xboxlive.com,🔰国外流量
+  - DOMAIN-SUFFIX,cdninstagram.com,🔰国外流量
+  - DOMAIN-SUFFIX,fb.com,🔰国外流量
+  - DOMAIN-SUFFIX,fb.me,🔰国外流量
+  - DOMAIN-SUFFIX,fbaddins.com,🔰国外流量
+  - DOMAIN-SUFFIX,fbcdn.net,🔰国外流量
+  - DOMAIN-SUFFIX,fbsbx.com,🔰国外流量
+  - DOMAIN-SUFFIX,fbworkmail.com,🔰国外流量
+  - DOMAIN-SUFFIX,instagram.com,🔰国外流量
+  - DOMAIN-SUFFIX,m.me,🔰国外流量
+  - DOMAIN-SUFFIX,messenger.com,🔰国外流量
+  - DOMAIN-SUFFIX,oculus.com,🔰国外流量
+  - DOMAIN-SUFFIX,oculuscdn.com,🔰国外流量
+  - DOMAIN-SUFFIX,rocksdb.org,🔰国外流量
+  - DOMAIN-SUFFIX,whatsapp.com,🔰国外流量
+  - DOMAIN-SUFFIX,whatsapp.net,🔰国外流量
+  - DOMAIN-KEYWORD,facebook,🔰国外流量
+  - IP-CIDR,3.123.36.126/32,🔰国外流量,no-resolve
+  - IP-CIDR,35.157.215.84/32,🔰国外流量,no-resolve
+  - IP-CIDR,35.157.217.255/32,🔰国外流量,no-resolve
+  - IP-CIDR,52.58.209.134/32,🔰国外流量,no-resolve
+  - IP-CIDR,54.93.124.31/32,🔰国外流量,no-resolve
+  - IP-CIDR,54.162.243.80/32,🔰国外流量,no-resolve
+  - IP-CIDR,54.173.34.141/32,🔰国外流量,no-resolve
+  - IP-CIDR,54.235.23.242/32,🔰国外流量,no-resolve
+  - IP-CIDR,169.45.248.118/32,🔰国外流量,no-resolve
+  - DOMAIN-SUFFIX,pscp.tv,🔰国外流量
+  - DOMAIN-SUFFIX,periscope.tv,🔰国外流量
+  - DOMAIN-SUFFIX,t.co,🔰国外流量
+  - DOMAIN-SUFFIX,twimg.co,🔰国外流量
+  - DOMAIN-SUFFIX,twimg.com,🔰国外流量
+  - DOMAIN-SUFFIX,twitpic.com,🔰国外流量
+  - DOMAIN-SUFFIX,vine.co,🔰国外流量
+  - DOMAIN-KEYWORD,twitter,🔰国外流量
+  - DOMAIN-SUFFIX,t.me,🔰国外流量
+  - DOMAIN-SUFFIX,tdesktop.com,🔰国外流量
+  - DOMAIN-SUFFIX,telegra.ph,🔰国外流量
+  - DOMAIN-SUFFIX,telegram.me,🔰国外流量
+  - DOMAIN-SUFFIX,telegram.org,🔰国外流量
+  - IP-CIDR,91.108.4.0/22,🔰国外流量,no-resolve
+  - IP-CIDR,91.108.8.0/22,🔰国外流量,no-resolve
+  - IP-CIDR,91.108.12.0/22,🔰国外流量,no-resolve
+  - IP-CIDR,91.108.16.0/22,🔰国外流量,no-resolve
+  - IP-CIDR,91.108.56.0/22,🔰国外流量,no-resolve
+  - IP-CIDR,149.154.160.0/20,🔰国外流量,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,🔰国外流量,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,🔰国外流量,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,🔰国外流量,no-resolve
+  - DOMAIN-SUFFIX,line.me,🔰国外流量
+  - DOMAIN-SUFFIX,line-apps.com,🔰国外流量
+  - DOMAIN-SUFFIX,line-scdn.net,🔰国外流量
+  - DOMAIN-SUFFIX,naver.jp,🔰国外流量
+  - IP-CIDR,103.2.30.0/23,🔰国外流量,no-resolve
+  - IP-CIDR,125.209.208.0/20,🔰国外流量,no-resolve
+  - IP-CIDR,147.92.128.0/17,🔰国外流量,no-resolve
+  - IP-CIDR,203.104.144.0/21,🔰国外流量,no-resolve
+  - DOMAIN-SUFFIX,4shared.com,🔰国外流量
+  - DOMAIN-SUFFIX,520cc.cc,🔰国外流量
+  - DOMAIN-SUFFIX,881903.com,🔰国外流量
+  - DOMAIN-SUFFIX,9cache.com,🔰国外流量
+  - DOMAIN-SUFFIX,9gag.com,🔰国外流量
+  - DOMAIN-SUFFIX,abc.com,🔰国外流量
+  - DOMAIN-SUFFIX,abc.net.au,🔰国外流量
+  - DOMAIN-SUFFIX,abebooks.com,🔰国外流量
+  - DOMAIN-SUFFIX,amazon.co.jp,🔰国外流量
+  - DOMAIN-SUFFIX,apigee.com,🔰国外流量
+  - DOMAIN-SUFFIX,apk-dl.com,🔰国外流量
+  - DOMAIN-SUFFIX,apkfind.com,🔰国外流量
+  - DOMAIN-SUFFIX,apkmirror.com,🔰国外流量
+  - DOMAIN-SUFFIX,apkmonk.com,🔰国外流量
+  - DOMAIN-SUFFIX,apkpure.com,🔰国外流量
+  - DOMAIN-SUFFIX,aptoide.com,🔰国外流量
+  - DOMAIN-SUFFIX,archive.is,🔰国外流量
+  - DOMAIN-SUFFIX,archive.org,🔰国外流量
+  - DOMAIN-SUFFIX,arte.tv,🔰国外流量
+  - DOMAIN-SUFFIX,artstation.com,🔰国外流量
+  - DOMAIN-SUFFIX,arukas.io,🔰国外流量
+  - DOMAIN-SUFFIX,ask.com,🔰国外流量
+  - DOMAIN-SUFFIX,avg.com,🔰国外流量
+  - DOMAIN-SUFFIX,avgle.com,🔰国外流量
+  - DOMAIN-SUFFIX,badoo.com,🔰国外流量
+  - DOMAIN-SUFFIX,bandwagonhost.com,🔰国外流量
+  - DOMAIN-SUFFIX,bbc.com,🔰国外流量
+  - DOMAIN-SUFFIX,behance.net,🔰国外流量
+  - DOMAIN-SUFFIX,bibox.com,🔰国外流量
+  - DOMAIN-SUFFIX,biggo.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,binance.com,🔰国外流量
+  - DOMAIN-SUFFIX,bitcointalk.org,🔰国外流量
+  - DOMAIN-SUFFIX,bitfinex.com,🔰国外流量
+  - DOMAIN-SUFFIX,bitmex.com,🔰国外流量
+  - DOMAIN-SUFFIX,bit-z.com,🔰国外流量
+  - DOMAIN-SUFFIX,bloglovin.com,🔰国外流量
+  - DOMAIN-SUFFIX,bloomberg.cn,🔰国外流量
+  - DOMAIN-SUFFIX,bloomberg.com,🔰国外流量
+  - DOMAIN-SUFFIX,blubrry.com,🔰国外流量
+  - DOMAIN-SUFFIX,book.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,booklive.jp,🔰国外流量
+  - DOMAIN-SUFFIX,books.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,boslife.net,🔰国外流量
+  - DOMAIN-SUFFIX,box.com,🔰国外流量
+  - DOMAIN-SUFFIX,businessinsider.com,🔰国外流量
+  - DOMAIN-SUFFIX,bwh1.net,🔰国外流量
+  - DOMAIN-SUFFIX,castbox.fm,🔰国外流量
+  - DOMAIN-SUFFIX,cbc.ca,🔰国外流量
+  - DOMAIN-SUFFIX,cdw.com,🔰国外流量
+  - DOMAIN-SUFFIX,change.org,🔰国外流量
+  - DOMAIN-SUFFIX,channelnewsasia.com,🔰国外流量
+  - DOMAIN-SUFFIX,ck101.com,🔰国外流量
+  - DOMAIN-SUFFIX,clarionproject.org,🔰国外流量
+  - DOMAIN-SUFFIX,clyp.it,🔰国外流量
+  - DOMAIN-SUFFIX,cna.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,comparitech.com,🔰国外流量
+  - DOMAIN-SUFFIX,conoha.jp,🔰国外流量
+  - DOMAIN-SUFFIX,crucial.com,🔰国外流量
+  - DOMAIN-SUFFIX,cts.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,cw.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,cyberctm.com,🔰国外流量
+  - DOMAIN-SUFFIX,dailymotion.com,🔰国外流量
+  - DOMAIN-SUFFIX,dailyview.tw,🔰国外流量
+  - DOMAIN-SUFFIX,daum.net,🔰国外流量
+  - DOMAIN-SUFFIX,daumcdn.net,🔰国外流量
+  - DOMAIN-SUFFIX,dcard.tw,🔰国外流量
+  - DOMAIN-SUFFIX,deepdiscount.com,🔰国外流量
+  - DOMAIN-SUFFIX,depositphotos.com,🔰国外流量
+  - DOMAIN-SUFFIX,deviantart.com,🔰国外流量
+  - DOMAIN-SUFFIX,disconnect.me,🔰国外流量
+  - DOMAIN-SUFFIX,discordapp.com,🔰国外流量
+  - DOMAIN-SUFFIX,discordapp.net,🔰国外流量
+  - DOMAIN-SUFFIX,disqus.com,🔰国外流量
+  - DOMAIN-SUFFIX,dlercloud.com,🔰国外流量
+  - DOMAIN-SUFFIX,dns2go.com,🔰国外流量
+  - DOMAIN-SUFFIX,dowjones.com,🔰国外流量
+  - DOMAIN-SUFFIX,dropbox.com,🔰国外流量
+  - DOMAIN-SUFFIX,dropboxusercontent.com,🔰国外流量
+  - DOMAIN-SUFFIX,duckduckgo.com,🔰国外流量
+  - DOMAIN-SUFFIX,dw.com,🔰国外流量
+  - DOMAIN-SUFFIX,dynu.com,🔰国外流量
+  - DOMAIN-SUFFIX,earthcam.com,🔰国外流量
+  - DOMAIN-SUFFIX,ebookservice.tw,🔰国外流量
+  - DOMAIN-SUFFIX,economist.com,🔰国外流量
+  - DOMAIN-SUFFIX,edgecastcdn.net,🔰国外流量
+  - DOMAIN-SUFFIX,edu,🔰国外流量
+  - DOMAIN-SUFFIX,elpais.com,🔰国外流量
+  - DOMAIN-SUFFIX,enanyang.my,🔰国外流量
+  - DOMAIN-SUFFIX,encyclopedia.com,🔰国外流量
+  - DOMAIN-SUFFIX,esoir.be,🔰国外流量
+  - DOMAIN-SUFFIX,etherscan.io,🔰国外流量
+  - DOMAIN-SUFFIX,euronews.com,🔰国外流量
+  - DOMAIN-SUFFIX,evozi.com,🔰国外流量
+  - DOMAIN-SUFFIX,feedly.com,🔰国外流量
+  - DOMAIN-SUFFIX,firech.at,🔰国外流量
+  - DOMAIN-SUFFIX,flickr.com,🔰国外流量
+  - DOMAIN-SUFFIX,flitto.com,🔰国外流量
+  - DOMAIN-SUFFIX,foreignpolicy.com,🔰国外流量
+  - DOMAIN-SUFFIX,freebrowser.org,🔰国外流量
+  - DOMAIN-SUFFIX,freewechat.com,🔰国外流量
+  - DOMAIN-SUFFIX,freeweibo.com,🔰国外流量
+  - DOMAIN-SUFFIX,friday.tw,🔰国外流量
+  - DOMAIN-SUFFIX,ftchinese.com,🔰国外流量
+  - DOMAIN-SUFFIX,ftimg.net,🔰国外流量
+  - DOMAIN-SUFFIX,gate.io,🔰国外流量
+  - DOMAIN-SUFFIX,getlantern.org,🔰国外流量
+  - DOMAIN-SUFFIX,getsync.com,🔰国外流量
+  - DOMAIN-SUFFIX,globalvoices.org,🔰国外流量
+  - DOMAIN-SUFFIX,goo.ne.jp,🔰国外流量
+  - DOMAIN-SUFFIX,goodreads.com,🔰国外流量
+  - DOMAIN-SUFFIX,gov,🔰国外流量
+  - DOMAIN-SUFFIX,gov.tw,🔰国外流量
+  - DOMAIN-SUFFIX,greatfire.org,🔰国外流量
+  - DOMAIN-SUFFIX,gumroad.com,🔰国外流量
+  - DOMAIN-SUFFIX,hbg.com,🔰国外流量
+  - DOMAIN-SUFFIX,heroku.com,🔰国外流量
+  - DOMAIN-SUFFIX,hightail.com,🔰国外流量
+  - DOMAIN-SUFFIX,hk01.com,🔰国外流量
+  - DOMAIN-SUFFIX,hkbf.org,🔰国外流量
+  - DOMAIN-SUFFIX,hkbookcity.com,🔰国外流量
+  - DOMAIN-SUFFIX,hkej.com,🔰国外流量
+  - DOMAIN-SUFFIX,hket.com,🔰国外流量
+  - DOMAIN-SUFFIX,hkgolden.com,🔰国外流量
+  - DOMAIN-SUFFIX,hootsuite.com,🔰国外流量
+  - DOMAIN-SUFFIX,hudson.org,🔰国外流量
+  - DOMAIN-SUFFIX,hyread.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,ibtimes.com,🔰国外流量
+  - DOMAIN-SUFFIX,i-cable.com,🔰国外流量
+  - DOMAIN-SUFFIX,icij.org,🔰国外流量
+  - DOMAIN-SUFFIX,icoco.com,🔰国外流量
+  - DOMAIN-SUFFIX,imgur.com,🔰国外流量
+  - DOMAIN-SUFFIX,initiummall.com,🔰国外流量
+  - DOMAIN-SUFFIX,insecam.org,🔰国外流量
+  - DOMAIN-SUFFIX,ipfs.io,🔰国外流量
+  - DOMAIN-SUFFIX,issuu.com,🔰国外流量
+  - DOMAIN-SUFFIX,istockphoto.com,🔰国外流量
+  - DOMAIN-SUFFIX,japantimes.co.jp,🔰国外流量
+  - DOMAIN-SUFFIX,jiji.com,🔰国外流量
+  - DOMAIN-SUFFIX,jinx.com,🔰国外流量
+  - DOMAIN-SUFFIX,jkforum.net,🔰国外流量
+  - DOMAIN-SUFFIX,joinmastodon.org,🔰国外流量
+  - DOMAIN-SUFFIX,justmysocks.net,🔰国外流量
+  - DOMAIN-SUFFIX,justpaste.it,🔰国外流量
+  - DOMAIN-SUFFIX,kakao.com,🔰国外流量
+  - DOMAIN-SUFFIX,kakaocorp.com,🔰国外流量
+  - DOMAIN-SUFFIX,kik.com,🔰国外流量
+  - DOMAIN-SUFFIX,kobo.com,🔰国外流量
+  - DOMAIN-SUFFIX,kobobooks.com,🔰国外流量
+  - DOMAIN-SUFFIX,kodingen.com,🔰国外流量
+  - DOMAIN-SUFFIX,lemonde.fr,🔰国外流量
+  - DOMAIN-SUFFIX,lepoint.fr,🔰国外流量
+  - DOMAIN-SUFFIX,lihkg.com,🔰国外流量
+  - DOMAIN-SUFFIX,listennotes.com,🔰国外流量
+  - DOMAIN-SUFFIX,livestream.com,🔰国外流量
+  - DOMAIN-SUFFIX,logmein.com,🔰国外流量
+  - DOMAIN-SUFFIX,mail.ru,🔰国外流量
+  - DOMAIN-SUFFIX,mailchimp.com,🔰国外流量
+  - DOMAIN-SUFFIX,marc.info,🔰国外流量
+  - DOMAIN-SUFFIX,matters.news,🔰国外流量
+  - DOMAIN-SUFFIX,maying.co,🔰国外流量
+  - DOMAIN-SUFFIX,medium.com,🔰国外流量
+  - DOMAIN-SUFFIX,mega.nz,🔰国外流量
+  - DOMAIN-SUFFIX,mil,🔰国外流量
+  - DOMAIN-SUFFIX,mingpao.com,🔰国外流量
+  - DOMAIN-SUFFIX,mobile01.com,🔰国外流量
+  - DOMAIN-SUFFIX,myspace.com,🔰国外流量
+  - DOMAIN-SUFFIX,myspacecdn.com,🔰国外流量
+  - DOMAIN-SUFFIX,nanyang.com,🔰国外流量
+  - DOMAIN-SUFFIX,naver.com,🔰国外流量
+  - DOMAIN-SUFFIX,neowin.net,🔰国外流量
+  - DOMAIN-SUFFIX,newstapa.org,🔰国外流量
+  - DOMAIN-SUFFIX,nexitally.com,🔰国外流量
+  - DOMAIN-SUFFIX,nhk.or.jp,🔰国外流量
+  - DOMAIN-SUFFIX,nicovideo.jp,🔰国外流量
+  - DOMAIN-SUFFIX,nii.ac.jp,🔰国外流量
+  - DOMAIN-SUFFIX,nikkei.com,🔰国外流量
+  - DOMAIN-SUFFIX,nofile.io,🔰国外流量
+  - DOMAIN-SUFFIX,now.com,🔰国外流量
+  - DOMAIN-SUFFIX,nrk.no,🔰国外流量
+  - DOMAIN-SUFFIX,nyt.com,🔰国外流量
+  - DOMAIN-SUFFIX,nytchina.com,🔰国外流量
+  - DOMAIN-SUFFIX,nytcn.me,🔰国外流量
+  - DOMAIN-SUFFIX,nytco.com,🔰国外流量
+  - DOMAIN-SUFFIX,nytimes.com,🔰国外流量
+  - DOMAIN-SUFFIX,nytimg.com,🔰国外流量
+  - DOMAIN-SUFFIX,nytlog.com,🔰国外流量
+  - DOMAIN-SUFFIX,nytstyle.com,🔰国外流量
+  - DOMAIN-SUFFIX,ok.ru,🔰国外流量
+  - DOMAIN-SUFFIX,okex.com,🔰国外流量
+  - DOMAIN-SUFFIX,on.cc,🔰国外流量
+  - DOMAIN-SUFFIX,orientaldaily.com.my,🔰国外流量
+  - DOMAIN-SUFFIX,overcast.fm,🔰国外流量
+  - DOMAIN-SUFFIX,paltalk.com,🔰国外流量
+  - DOMAIN-SUFFIX,pao-pao.net,🔰国外流量
+  - DOMAIN-SUFFIX,parsevideo.com,🔰国外流量
+  - DOMAIN-SUFFIX,pbxes.com,🔰国外流量
+  - DOMAIN-SUFFIX,pcdvd.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,pchome.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,pcloud.com,🔰国外流量
+  - DOMAIN-SUFFIX,picacomic.com,🔰国外流量
+  - DOMAIN-SUFFIX,pinimg.com,🔰国外流量
+  - DOMAIN-SUFFIX,pixiv.net,🔰国外流量
+  - DOMAIN-SUFFIX,player.fm,🔰国外流量
+  - DOMAIN-SUFFIX,plurk.com,🔰国外流量
+  - DOMAIN-SUFFIX,po18.tw,🔰国外流量
+  - DOMAIN-SUFFIX,potato.im,🔰国外流量
+  - DOMAIN-SUFFIX,potatso.com,🔰国外流量
+  - DOMAIN-SUFFIX,prism-break.org,🔰国外流量
+  - DOMAIN-SUFFIX,proxifier.com,🔰国外流量
+  - DOMAIN-SUFFIX,pt.im,🔰国外流量
+  - DOMAIN-SUFFIX,pts.org.tw,🔰国外流量
+  - DOMAIN-SUFFIX,pubu.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,pubu.tw,🔰国外流量
+  - DOMAIN-SUFFIX,pureapk.com,🔰国外流量
+  - DOMAIN-SUFFIX,quora.com,🔰国外流量
+  - DOMAIN-SUFFIX,quoracdn.net,🔰国外流量
+  - DOMAIN-SUFFIX,rakuten.co.jp,🔰国外流量
+  - DOMAIN-SUFFIX,readingtimes.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,readmoo.com,🔰国外流量
+  - DOMAIN-SUFFIX,redbubble.com,🔰国外流量
+  - DOMAIN-SUFFIX,reddit.com,🔰国外流量
+  - DOMAIN-SUFFIX,redditmedia.com,🔰国外流量
+  - DOMAIN-SUFFIX,resilio.com,🔰国外流量
+  - DOMAIN-SUFFIX,reuters.com,🔰国外流量
+  - DOMAIN-SUFFIX,reutersmedia.net,🔰国外流量
+  - DOMAIN-SUFFIX,rfi.fr,🔰国外流量
+  - DOMAIN-SUFFIX,rixcloud.com,🔰国外流量
+  - DOMAIN-SUFFIX,roadshow.hk,🔰国外流量
+  - DOMAIN-SUFFIX,scmp.com,🔰国外流量
+  - DOMAIN-SUFFIX,scribd.com,🔰国外流量
+  - DOMAIN-SUFFIX,seatguru.com,🔰国外流量
+  - DOMAIN-SUFFIX,shadowsocks.org,🔰国外流量
+  - DOMAIN-SUFFIX,shopee.tw,🔰国外流量
+  - DOMAIN-SUFFIX,slideshare.net,🔰国外流量
+  - DOMAIN-SUFFIX,softfamous.com,🔰国外流量
+  - DOMAIN-SUFFIX,soundcloud.com,🔰国外流量
+  - DOMAIN-SUFFIX,ssrcloud.org,🔰国外流量
+  - DOMAIN-SUFFIX,startpage.com,🔰国外流量
+  - DOMAIN-SUFFIX,steamcommunity.com,🔰国外流量
+  - DOMAIN-SUFFIX,steemit.com,🔰国外流量
+  - DOMAIN-SUFFIX,steemitwallet.com,🔰国外流量
+  - DOMAIN-SUFFIX,t66y.com,🔰国外流量
+  - DOMAIN-SUFFIX,tapatalk.com,🔰国外流量
+  - DOMAIN-SUFFIX,teco-hk.org,🔰国外流量
+  - DOMAIN-SUFFIX,teco-mo.org,🔰国外流量
+  - DOMAIN-SUFFIX,teddysun.com,🔰国外流量
+  - DOMAIN-SUFFIX,textnow.me,🔰国外流量
+  - DOMAIN-SUFFIX,theguardian.com,🔰国外流量
+  - DOMAIN-SUFFIX,theinitium.com,🔰国外流量
+  - DOMAIN-SUFFIX,thetvdb.com,🔰国外流量
+  - DOMAIN-SUFFIX,tineye.com,🔰国外流量
+  - DOMAIN-SUFFIX,torproject.org,🔰国外流量
+  - DOMAIN-SUFFIX,tumblr.com,🔰国外流量
+  - DOMAIN-SUFFIX,turbobit.net,🔰国外流量
+  - DOMAIN-SUFFIX,tutanota.com,🔰国外流量
+  - DOMAIN-SUFFIX,tvboxnow.com,🔰国外流量
+  - DOMAIN-SUFFIX,udn.com,🔰国外流量
+  - DOMAIN-SUFFIX,unseen.is,🔰国外流量
+  - DOMAIN-SUFFIX,upmedia.mg,🔰国外流量
+  - DOMAIN-SUFFIX,uptodown.com,🔰国外流量
+  - DOMAIN-SUFFIX,urbandictionary.com,🔰国外流量
+  - DOMAIN-SUFFIX,ustream.tv,🔰国外流量
+  - DOMAIN-SUFFIX,uwants.com,🔰国外流量
+  - DOMAIN-SUFFIX,v2ray.com,🔰国外流量
+  - DOMAIN-SUFFIX,viber.com,🔰国外流量
+  - DOMAIN-SUFFIX,videopress.com,🔰国外流量
+  - DOMAIN-SUFFIX,vimeo.com,🔰国外流量
+  - DOMAIN-SUFFIX,voachinese.com,🔰国外流量
+  - DOMAIN-SUFFIX,voanews.com,🔰国外流量
+  - DOMAIN-SUFFIX,voxer.com,🔰国外流量
+  - DOMAIN-SUFFIX,vzw.com,🔰国外流量
+  - DOMAIN-SUFFIX,w3schools.com,🔰国外流量
+  - DOMAIN-SUFFIX,washingtonpost.com,🔰国外流量
+  - DOMAIN-SUFFIX,wattpad.com,🔰国外流量
+  - DOMAIN-SUFFIX,whoer.net,🔰国外流量
+  - DOMAIN-SUFFIX,wikimapia.org,🔰国外流量
+  - DOMAIN-SUFFIX,wikipedia.org,🔰国外流量
+  - DOMAIN-SUFFIX,wikiquote.org,🔰国外流量
+  - DOMAIN-SUFFIX,wikiwand.com,🔰国外流量
+  - DOMAIN-SUFFIX,winudf.com,🔰国外流量
+  - DOMAIN-SUFFIX,wire.com,🔰国外流量
+  - DOMAIN-SUFFIX,wordpress.com,🔰国外流量
+  - DOMAIN-SUFFIX,workflow.is,🔰国外流量
+  - DOMAIN-SUFFIX,worldcat.org,🔰国外流量
+  - DOMAIN-SUFFIX,wsj.com,🔰国外流量
+  - DOMAIN-SUFFIX,wsj.net,🔰国外流量
+  - DOMAIN-SUFFIX,xhamster.com,🔰国外流量
+  - DOMAIN-SUFFIX,xn--90wwvt03e.com,🔰国外流量
+  - DOMAIN-SUFFIX,xn--i2ru8q2qg.com,🔰国外流量
+  - DOMAIN-SUFFIX,xnxx.com,🔰国外流量
+  - DOMAIN-SUFFIX,xvideos.com,🔰国外流量
+  - DOMAIN-SUFFIX,yahoo.com,🔰国外流量
+  - DOMAIN-SUFFIX,yandex.ru,🔰国外流量
+  - DOMAIN-SUFFIX,ycombinator.com,🔰国外流量
+  - DOMAIN-SUFFIX,yesasia.com,🔰国外流量
+  - DOMAIN-SUFFIX,yes-news.com,🔰国外流量
+  - DOMAIN-SUFFIX,yomiuri.co.jp,🔰国外流量
+  - DOMAIN-SUFFIX,you-get.org,🔰国外流量
+  - DOMAIN-SUFFIX,zaobao.com,🔰国外流量
+  - DOMAIN-SUFFIX,zb.com,🔰国外流量
+  - DOMAIN-SUFFIX,zello.com,🔰国外流量
+  - DOMAIN-SUFFIX,zeronet.io,🔰国外流量
+  - DOMAIN-SUFFIX,zoom.us,🔰国外流量
+  - DOMAIN-KEYWORD,github,🔰国外流量
+  - DOMAIN-KEYWORD,jav,🔰国外流量
+  - DOMAIN-KEYWORD,pinterest,🔰国外流量
+  - DOMAIN-KEYWORD,porn,🔰国外流量
+  - DOMAIN-KEYWORD,wikileaks,🔰国外流量
+  - DOMAIN-SUFFIX,apartmentratings.com,🔰国外流量
+  - DOMAIN-SUFFIX,apartments.com,🔰国外流量
+  - DOMAIN-SUFFIX,bankmobilevibe.com,🔰国外流量
+  - DOMAIN-SUFFIX,bing.com,🔰国外流量
+  - DOMAIN-SUFFIX,booktopia.com.au,🔰国外流量
+  - DOMAIN-SUFFIX,cccat.io,🔰国外流量
+  - DOMAIN-SUFFIX,centauro.com.br,🔰国外流量
+  - DOMAIN-SUFFIX,clearsurance.com,🔰国外流量
+  - DOMAIN-SUFFIX,costco.com,🔰国外流量
+  - DOMAIN-SUFFIX,crackle.com,🔰国外流量
+  - DOMAIN-SUFFIX,depositphotos.cn,🔰国外流量
+  - DOMAIN-SUFFIX,dish.com,🔰国外流量
+  - DOMAIN-SUFFIX,dmm.co.jp,🔰国外流量
+  - DOMAIN-SUFFIX,dmm.com,🔰国外流量
+  - DOMAIN-SUFFIX,dnvod.tv,🔰国外流量
+  - DOMAIN-SUFFIX,esurance.com,🔰国外流量
+  - DOMAIN-SUFFIX,extmatrix.com,🔰国外流量
+  - DOMAIN-SUFFIX,fastpic.ru,🔰国外流量
+  - DOMAIN-SUFFIX,flipboard.com,🔰国外流量
+  - DOMAIN-SUFFIX,fnac.be,🔰国外流量
+  - DOMAIN-SUFFIX,fnac.com,🔰国外流量
+  - DOMAIN-SUFFIX,funkyimg.com,🔰国外流量
+  - DOMAIN-SUFFIX,fxnetworks.com,🔰国外流量
+  - DOMAIN-SUFFIX,gettyimages.com,🔰国外流量
+  - DOMAIN-SUFFIX,go.com,🔰国外流量
+  - DOMAIN-SUFFIX,here.com,🔰国外流量
+  - DOMAIN-SUFFIX,jcpenney.com,🔰国外流量
+  - DOMAIN-SUFFIX,jiehua.tv,🔰国外流量
+  - DOMAIN-SUFFIX,mailfence.com,🔰国外流量
+  - DOMAIN-SUFFIX,nationwide.com,🔰国外流量
+  - DOMAIN-SUFFIX,nbc.com,🔰国外流量
+  - DOMAIN-SUFFIX,nexon.com,🔰国外流量
+  - DOMAIN-SUFFIX,nordstrom.com,🔰国外流量
+  - DOMAIN-SUFFIX,nordstromimage.com,🔰国外流量
+  - DOMAIN-SUFFIX,nordstromrack.com,🔰国外流量
+  - DOMAIN-SUFFIX,superpages.com,🔰国外流量
+  - DOMAIN-SUFFIX,target.com,🔰国外流量
+  - DOMAIN-SUFFIX,thinkgeek.com,🔰国外流量
+  - DOMAIN-SUFFIX,tracfone.com,🔰国外流量
+  - DOMAIN-SUFFIX,unity3d.com,🔰国外流量
+  - DOMAIN-SUFFIX,uploader.jp,🔰国外流量
+  - DOMAIN-SUFFIX,vevo.com,🔰国外流量
+  - DOMAIN-SUFFIX,viu.tv,🔰国外流量
+  - DOMAIN-SUFFIX,vk.com,🔰国外流量
+  - DOMAIN-SUFFIX,vsco.co,🔰国外流量
+  - DOMAIN-SUFFIX,xfinity.com,🔰国外流量
+  - DOMAIN-SUFFIX,zattoo.com,🔰国外流量
+  - DOMAIN,testflight.apple.com,🔰国外流量
+  - DOMAIN-SUFFIX,appsto.re,🔰国外流量
+  - DOMAIN,books.itunes.apple.com,🔰国外流量
+  - DOMAIN,hls.itunes.apple.com,🔰国外流量
+  - DOMAIN,apps.apple.com,🔰国外流量
+  - DOMAIN,itunes.apple.com,🔰国外流量
+  - DOMAIN,api-glb-sea.smoot.apple.com,🔰国外流量
+  - DOMAIN,lookup-api.apple.com,🔰国外流量
+  - DOMAIN-SUFFIX,abc.xyz,🔰国外流量
+  - DOMAIN-SUFFIX,android.com,🔰国外流量
+  - DOMAIN-SUFFIX,androidify.com,🔰国外流量
+  - DOMAIN-SUFFIX,dialogflow.com,🔰国外流量
+  - DOMAIN-SUFFIX,autodraw.com,🔰国外流量
+  - DOMAIN-SUFFIX,capitalg.com,🔰国外流量
+  - DOMAIN-SUFFIX,certificate-transparency.org,🔰国外流量
+  - DOMAIN-SUFFIX,chrome.com,🔰国外流量
+  - DOMAIN-SUFFIX,chromeexperiments.com,🔰国外流量
+  - DOMAIN-SUFFIX,chromestatus.com,🔰国外流量
+  - DOMAIN-SUFFIX,chromium.org,🔰国外流量
+  - DOMAIN-SUFFIX,creativelab5.com,🔰国外流量
+  - DOMAIN-SUFFIX,debug.com,🔰国外流量
+  - DOMAIN-SUFFIX,deepmind.com,🔰国外流量
+  - DOMAIN-SUFFIX,firebaseio.com,🔰国外流量
+  - DOMAIN-SUFFIX,getmdl.io,🔰国外流量
+  - DOMAIN-SUFFIX,ggpht.com,🔰国外流量
+  - DOMAIN-SUFFIX,gmail.com,🔰国外流量
+  - DOMAIN-SUFFIX,gmodules.com,🔰国外流量
+  - DOMAIN-SUFFIX,godoc.org,🔰国外流量
+  - DOMAIN-SUFFIX,golang.org,🔰国外流量
+  - DOMAIN-SUFFIX,gstatic.com,🔰国外流量
+  - DOMAIN-SUFFIX,gv.com,🔰国外流量
+  - DOMAIN-SUFFIX,gwtproject.org,🔰国外流量
+  - DOMAIN-SUFFIX,itasoftware.com,🔰国外流量
+  - DOMAIN-SUFFIX,madewithcode.com,🔰国外流量
+  - DOMAIN-SUFFIX,material.io,🔰国外流量
+  - DOMAIN-SUFFIX,polymer-project.org,🔰国外流量
+  - DOMAIN-SUFFIX,admin.recaptcha.net,🔰国外流量
+  - DOMAIN-SUFFIX,recaptcha.net,🔰国外流量
+  - DOMAIN-SUFFIX,shattered.io,🔰国外流量
+  - DOMAIN-SUFFIX,synergyse.com,🔰国外流量
+  - DOMAIN-SUFFIX,tensorflow.org,🔰国外流量
+  - DOMAIN-SUFFIX,tfhub.dev,🔰国外流量
+  - DOMAIN-SUFFIX,tiltbrush.com,🔰国外流量
+  - DOMAIN-SUFFIX,waveprotocol.org,🔰国外流量
+  - DOMAIN-SUFFIX,waymo.com,🔰国外流量
+  - DOMAIN-SUFFIX,webmproject.org,🔰国外流量
+  - DOMAIN-SUFFIX,webrtc.org,🔰国外流量
+  - DOMAIN-SUFFIX,whatbrowser.org,🔰国外流量
+  - DOMAIN-SUFFIX,widevine.com,🔰国外流量
+  - DOMAIN-SUFFIX,x.company,🔰国外流量
+  - DOMAIN-SUFFIX,youtu.be,🔰国外流量
+  - DOMAIN-SUFFIX,yt.be,🔰国外流量
+  - DOMAIN-SUFFIX,ytimg.com,🔰国外流量
+  - DOMAIN-SUFFIX,1drv.com,🔰国外流量
+  - DOMAIN-SUFFIX,1drv.ms,🔰国外流量
+  - DOMAIN-SUFFIX,blob.core.windows.net,🔰国外流量
+  - DOMAIN-SUFFIX,livefilestore.com,🔰国外流量
+  - DOMAIN-SUFFIX,onedrive.com,🔰国外流量
+  - DOMAIN-SUFFIX,storage.live.com,🔰国外流量
+  - DOMAIN-SUFFIX,storage.msn.com,🔰国外流量
+  - DOMAIN,oneclient.sfx.ms,🔰国外流量
+  - DOMAIN-SUFFIX,0rz.tw,🔰国外流量
+  - DOMAIN-SUFFIX,4bluestones.biz,🔰国外流量
+  - DOMAIN-SUFFIX,9bis.net,🔰国外流量
+  - DOMAIN-SUFFIX,allconnected.co,🔰国外流量
+  - DOMAIN-SUFFIX,aol.com,🔰国外流量
+  - DOMAIN-SUFFIX,bcc.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,bit.ly,🔰国外流量
+  - DOMAIN-SUFFIX,bitshare.com,🔰国外流量
+  - DOMAIN-SUFFIX,blog.jp,🔰国外流量
+  - DOMAIN-SUFFIX,blogimg.jp,🔰国外流量
+  - DOMAIN-SUFFIX,blogtd.org,🔰国外流量
+  - DOMAIN-SUFFIX,broadcast.co.nz,🔰国外流量
+  - DOMAIN-SUFFIX,camfrog.com,🔰国外流量
+  - DOMAIN-SUFFIX,cfos.de,🔰国外流量
+  - DOMAIN-SUFFIX,citypopulation.de,🔰国外流量
+  - DOMAIN-SUFFIX,cloudfront.net,🔰国外流量
+  - DOMAIN-SUFFIX,ctitv.com.tw,🔰国外流量
+  - DOMAIN-SUFFIX,cuhk.edu.hk,🔰国外流量
+  - DOMAIN-SUFFIX,cusu.hk,🔰国外流量
+  - DOMAIN-SUFFIX,discord.gg,🔰国外流量
+  - DOMAIN-SUFFIX,discuss.com.hk,🔰国外流量
+  - DOMAIN-SUFFIX,dropboxapi.com,🔰国外流量
+  - DOMAIN-SUFFIX,duolingo.cn,🔰国外流量
+  - DOMAIN-SUFFIX,edditstatic.com,🔰国外流量
+  - DOMAIN-SUFFIX,flickriver.com,🔰国外流量
+  - DOMAIN-SUFFIX,focustaiwan.tw,🔰国外流量
+  - DOMAIN-SUFFIX,free.fr,🔰国外流量
+  - DOMAIN-SUFFIX,gigacircle.com,🔰国外流量
+  - DOMAIN-SUFFIX,hk-pub.com,🔰国外流量
+  - DOMAIN-SUFFIX,hosting.co.uk,🔰国外流量
+  - DOMAIN-SUFFIX,hwcdn.net,🔰国外流量
+  - DOMAIN-SUFFIX,ifixit.com,🔰国外流量
+  - DOMAIN-SUFFIX,iphone4hongkong.com,🔰国外流量
+  - DOMAIN-SUFFIX,iphonetaiwan.org,🔰国外流量
+  - DOMAIN-SUFFIX,iptvbin.com,🔰国外流量
+  - DOMAIN-SUFFIX,linksalpha.com,🔰国外流量
+  - DOMAIN-SUFFIX,manyvids.com,🔰国外流量
+  - DOMAIN-SUFFIX,myactimes.com,🔰国外流量
+  - DOMAIN-SUFFIX,newsblur.com,🔰国外流量
+  - DOMAIN-SUFFIX,now.im,🔰国外流量
+  - DOMAIN-SUFFIX,nowe.com,🔰国外流量
+  - DOMAIN-SUFFIX,redditlist.com,🔰国外流量
+  - DOMAIN-SUFFIX,s3.amazonaws.com,🔰国外流量
+  - DOMAIN-SUFFIX,signal.org,🔰国外流量
+  - DOMAIN-SUFFIX,smartmailcloud.com,🔰国外流量
+  - DOMAIN-SUFFIX,sparknotes.com,🔰国外流量
+  - DOMAIN-SUFFIX,streetvoice.com,🔰国外流量
+  - DOMAIN-SUFFIX,supertop.co,🔰国外流量
+  - DOMAIN-SUFFIX,tv.com,🔰国外流量
+  - DOMAIN-SUFFIX,typepad.com,🔰国外流量
+  - DOMAIN-SUFFIX,udnbkk.com,🔰国外流量
+  - DOMAIN-SUFFIX,urbanairship.com,🔰国外流量
+  - DOMAIN-SUFFIX,whispersystems.org,🔰国外流量
+  - DOMAIN-SUFFIX,wikia.com,🔰国外流量
+  - DOMAIN-SUFFIX,wn.com,🔰国外流量
+  - DOMAIN-SUFFIX,wolframalpha.com,🔰国外流量
+  - DOMAIN-SUFFIX,x-art.com,🔰国外流量
+  - DOMAIN-SUFFIX,yimg.com,🔰国外流量
+  - DOMAIN,api.steampowered.com,🔰国外流量
+  - DOMAIN,store.steampowered.com,🔰国外流量
