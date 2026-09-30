@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Ucat Live</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0e1114;
+            color: #e8eaed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 32px 20px 24px;
+        }
+        .header-overline {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #8ab4f8;
+            margin-bottom: 8px;
+            display: block;
+            opacity: 0.8;
+        }
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.25;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        .list-container {
+            padding: 0 20px;
+            flex: 1;
+        }
+        .list_1 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            counter-reset: result-counter;
+        }
+        .list-item {
+            margin: 0;
+            padding: 0;
+        }
+        .dir-link {
+            display: flex;
+            align-items: center;
+            background-color: #181b21;
+            border: 1px solid #2a2e37;
+            border-radius: 12px;
+            padding: 18px 16px;
+            text-decoration: none;
+            color: inherit;
+            min-height: 76px;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        .dir-link:active {
+            background-color: #20242c;
+            transform: scale(0.98);
+        }
+        .dir-link::before {
+            counter-increment: result-counter;
+            content: "0" counter(result-counter);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5f6368;
+            align-self: flex-start;
+            margin-top: 4px;
+            margin-right: 16px;
+        }
+        .dir-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .kw-text {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.35;
+            color: #e8eaed;
+        }
+        .dir-icon {
+            color: #5f6368;
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dir-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+        .list-item:first-child .dir-link {
+            background-color: #141f2e;
+            border-color: rgba(138, 180, 248, 0.4);
+            padding: 24px 16px;
+            min-height: 94px;
+        }
+        .list-item:first-child .dir-link::before {
+            color: #8ab4f8;
+            opacity: 0.9;
+        }
+        .list-item:first-child .dir-content::before {
+            content: "Top result";
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #8ab4f8;
+            background: rgba(138, 180, 248, 0.15);
+            align-self: flex-start;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .list-item:first-child .kw-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .list-item:first-child .dir-icon {
+            color: #8ab4f8;
+        }
+        .no-results {
+            padding: 24px;
+            text-align: center;
+            color: #9aa0a6;
+            font-size: 16px;
+        }
+        .footer {
+            padding: 48px 20px 32px;
+            text-align: center;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .footer a {
+            color: #5f6368;
+            text-decoration: none;
+        }
+        .footer a:active {
+            color: #9aa0a6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="header">
+            <span class="header-overline">Directory Index</span>
+            <h1 class="header-title">Ucat Live</h1>
+        </header>
+
+        <div class="list-container">
+            <ul class="list_1">
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="Ds7lTXB2raDOzMpvDb25lGbSyK4u6PDr47Z1rPHIx1yVwE8hnII72jfNg1iVkdcZgiBv6l5b5snYEUhg0BrjifGUM8_ZvP2Iua6t80h-futv53Y4al_MvMoDmZpWDbNOGPOllRvhL93Se2m3Ns7r2iezBeG6CGc1L5pZPVpd9x76t5aUUgo3L0iOJ0f2mtvsf84sLHWjidpNLbxvVbo7M3XrInC3OYm6dve2Uy7rg_lBmfwi_aOENGU9MLpbd-t0BzF_bkBsp7YXPh0YqDB_gCBVYQqVhoMssunKm3oyDOuphhGfQ4LIkaEU2Ge0uNXqjhqsR75H5bIL7-A9PgvgS9j_HwqqcApVdEEHrYdxuFScR9yFKHQgh10QVU-TTbqKaHo6G6ha-1yQxmI9u0NB8FIqbJi38m3csRi-OE-ZJa2gGO_i5ykKI_zSC9weQbXxzSrQsCp31kyWn2gCTnx6JY379qB3rbUOCmzeqULtIW-tn_c5I9M0MsGS56gmo1G88eXJBqiS6Jtv4cgf2LTUhtq8Xxtol8hzsaJWNRPVHdwim7KrxXknbevsdyIaRVsh2oY5NaCjXAEKaoPWnqYNaMZF4fg0CRW4A7EdmTihA4OVtibrSquoyGIzayAGROS3AYXb1mlCNv4A7h6LGyYFutMzeFJwtOTAukdqAz7w2vSARw--sC3U0YrGXEtFhlZBgN8DvScBZAQKySJsRuIDnnUBm2_L7_UpKCKf0je1Q6przKiZthqR-ChmVMMgLskIfpUuf6LwSIa380qjI7DptVpvpV73UXc9bN8azmrSqjz7-Ue7TjJzpERVTEbkviROZg26w9QkR7eX-Xdc_5n2kC2ZuTcyBnaXXHzjCYByYzdMDJ1NMWsFT5NQoAmZN0k2k-bQYbf2AoLc1s4F7v4_EkXLCyAyKjwPnFocOjsgWj-AaEED7_3qUDB_xS1cFe4AR65JOBhrTbeheeG0AzBskx1Oa9C2xWijAFVwRWysodryU8NGTaUAbn4EcTj2oU-Ku5rbvSjAnaUioyQFMCL0q0EluWfwj3-_vbtvlt19lA5vImiM7qbqs42ElYBsMLpxRsC15CgmAqON3jesc3J0te_v7GfqVOui81BJRIzoqCuwp0jMoh-KSvdR9lRWA0MOKEGBy7okkn5Nd6XqujYiOnpYXWhhcHbf-qABQE6uzxmtXd5IxDwieOfHdwfxL2M9hjk_lKfgoU5cwhoWV-SzEfRQZVAe6VCiFYS4DIu6M8kzBxNNP7Mkm03iGtdA7EVAt2UYQPoAvhzXtxTFOgzOqq2OZkDIZqclIXds0a9-yFbmDACufIIzmqaOAjKYEBQRRRMWFk590ryLCQpuNTg3zYPqwsZMnp7lVmm2jIDvPFxZiCeNcu8Ti_DSRyQanKn-yC5HxoiNE4Evenr6WiebhEh2oVufWhF_gK5i-dAI_IY6DSUVCIGPZpO3NmNuNugKWWjwkIOSLCAECkRTUVdLEARSb-udN6VgSKrWoZnGXP5_9tKCQw2TAjwbjG2rHn_LXEwwAiffTzmovutPtfhpJecDBtXXq6BpmhghxTi5d3-dHR3Syz3ZDGqf8moSvBddzK0dSOS9vjehhAwYVP30cDxlKvuRMnjmXbItP5pqXrxNcSHZPgDUEfmuzPnPQBiNCcYULY3lu6Fif85efJXyfY-J69gOAKSKMmZLTBEc8sCHFknF0GVem_ctNsqTrxmgv79D9m4" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">science degree online</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="cyz5lr8ciqjzG8EvChmqD2Pbju4x1ndCxiZp5GHzFkhgvQBOFOxkGDK9s-yirINYE4WxXOFFHVYqiSrgB35PYm5plJBTMj1xrlD-BAM66dVPY90VFJOVyQ-08dMEbGCi7S1_g2Ed_jl3xl95sgiUxmvRwQ0cVXMojdqeCOy6P-icmosJoICBwMpp5k_rjCC5jk-YzZ0leaSN0Ys2ZWyt7eDfMRuKdOKuZAfSvuSJMYsMUY_7b7-0BkRFiw0s60_idJcI2Gz_Qpq9ekaTzjizlcIwUCBE9wS_3VVWZFyh38D1tmMrofW1QVgMZlWopj_ktm7yx7zTdwjFl7p8TG6quaXwLf1Nzv55Rvq_Srca--BU7IlsiS41eXvx2QcCDct55VYNza8xDTwZEacWq8yi6U6KZSYHtUNjwYUzBp6BJpCrM3vVOARMpB4vJgsT1om1c0lIym8yvl-WNFfJSsCnhpfOMQKtiFISgAyXaHxAhZGNk4KV5ShDq50WzAXTGtUJDML3rDSA8HqnHT2tETX_UL0kDb--WUOz9mRB3DnwdPCN1ZLqpLM7Z3KSAPUQ9xRLwiOzXOdZ7mQKYXQr5jVrTUtK0kJfBhwXvw-Qd2qOBTu3y_BIwbqc7VwjP1QH3DReec4h9oinf5t_Mp4tMvezAQ2LQJbI2_lFjaSeQh8j4wZLBUaQBS_IR8-s5IQgAt9YsH23JgvLDe2ximbSYnozVGoMZDZY5g_gcKe75VFTzKeDFmwtn5LSvCc5lCmm63urreV3e9catzJAMr-l3tZyERup5USeTmdUs2aQhVH2AXgCKBPY9Ahx-C7t4Lx6zOseU77h7kwRbENlagghO_zGdm9Ot4MsKqKtH5oAx7foH2g0hLQsIFIS2d0xQZg1cjE1yetVpnvRGap7jZSidNpASY-GBFSaQxG4hnkdFEzdWmYVLI2eP9PH-MR9I3swF5LhLYF2thmS_r8c9kjdVntNImBq3_twG5Qj4n6uh5p0h9l35Z2DZTLd94ebK5AhGdmts_pP3H93U2BWGTFILw8tBJFcbk1m4EQa_tSdj8BcLjLEwe1_z_sZplJ8R3hXZUXtjJCxlrk9ciLSGQUPJicndRfH1vQzDDhK_NVQ8EMgodGcjagzl9CeOAbxHbTHTPUW966_tiQq7v_lrs-pzKXxJeDLoBnkXiwIv8tAFcvg_wOdp8sjZEEXw0M_18QK-FizXubtkmaDnKT1awzIuGFQeZ32jCb4S2uw7vO4kCQ6CShn6d2VskXjdfCaBWZmC9JPql5laYFHZtDR1bfQkkm7NEZmy35wrW4sz4EWz--3UdZBQ8Ra7h73Tx-TtV5sWx9pp-HzwHOZ9S7k-Ex5DThLi_7tLo__7Sc_8yK3IndafiJyiN7stiCJE0xBVySRW5O-V9tmxfxTFlASkrCfB3XeQW5D6eVgh9p_JwZMUGMm5UtSrZdAkNv9E11G8CmGbWevzWACbBLkLHbhsmXULlhYfakLuSovxHkj37vrH0B6vaH_qrYqamV2VpQ5RDynjdSL_g2H3_94iozfXLeriO96C0Ke2S_lSLkGfADjPrH97Sj4osU4K1a09QLp17kb6oroc1FUN8VeGhcwNgLdvygDFjN_RKrz_pgiWkIFHMn-23NXHH8KMcy1YL2X4B_DdMQXaRRdNe_L9r9le3B_q43H5AIeTS8ghIK47lcfyByDut7z5Unz93N6Q_twLGwZ0_-OG62Qh2zBRcBxks4fl4KGGQcIQGPleWk" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">anatomy and physiology courses</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="hGoE0-t9ZLAkP7T3YPpMsTJ4DmPaU3ag4qw66DKk5qR8Tqrp6_lU4OF5fWjVw2pl7V9WFUIIJqeHmvtgd7YjMSINqOunLlG7BDm-udVEYtxB3j1F_5YvV9PlhVeJ0VCQTcyxR7GDF112x6P2jZ8XlCgzCQN_TlhcHLLwvwkGoWqN4Jx49EErH7GVPai3OROzrQYGu8ZeovbK3ZZ1zAx_gWUtWzRHQp55E3Rh8Y6uy2WU-3JiGZFuheLGmuFX_4QOdk7QMSXLyS1_KbF2fLDpIPv5VCWx1DCsns3dG_QUQBGGDPy_5WBdh2uhrpU2DRx1Ba9jlp6RkXwMn5y3i7MU8E4oXQRjJ_ck_Dm8_Zc0ZvzbA6OK4i27JLrEcL2vaLDMCQNn-3acHzABjP1hq_UKYsLQ_OPWFx3WAAhIc59DCGQN8bDJdgMigjpYUCFVgKlEDgYJXdJuBeqGTBH8ys3JdMey2rbNy5Z0fdZ4MlYQlNrmxcAduljEJu5-5oYN5sEA0OEHregGfo8n6MiZHgk6o3lItsMXl7dzCGqStxX36xfq4FVPIpOHbom_JjUkRzLftamN9KbCuSIKb9ib5LQWFExFm4qpTYLnZblCyID2yS1TgehWtShaogrlwofsCbAErqb0UUDi9OBLzgYC1TjJX4BHctu3cG-x9pS62GdV0MBUIXNWQpBYaEERYxuqXwVg9qbcB682CzWDemh-7ehEUT4B2lRm8sdY_5W3YUQqxKe5iiyCjK8wdnhUkDa_I2GCz6k0BvQA31Wz57tpNZLJNMfs3U_2kwieHb1Q7ZcM3_CdsKHXxLhWlmyUQaLfRY2CtwpFnecBaFPlCycov_MT9ZyNiym2LnsHssxlOqgGpvH6COd1Erjt5EgIXVSSP6QdygY_d7-mfoLBXmCEWg9X__IFC0awJCKa8eT_r1EyFdKJDmDR2P4ODMFh5zAQ8bamh8k6fxd-NyvZ4ZTsLfr7iiz9Wcz6Fj-0-90ZxhKKwOqJ_dMIT8TyytcqC0OWGIet8FBGwz7yH_KTrFo8pyW8fo5Af8z4whpiuZUW4qPe0N2xdwmldxABuwqTiN8KWyjIeDXy4N8Wt7PnCZy-bgD9J2FdH3WSciLzH-O0h0l1bokp5DJdSzsgcm5GorIdoUzfRsndwOmf0f-HAZi4NVvTxPgqICVLq_M68WGsfhPvq0aBbvtvLzqBx2rULeh99q_QWVinQ4ssTXYF66rWmOltyVDM2qc1R3swF4nR6JHzFpZq4EqZzcOqvU70h2GATbZLSZkF9AGbCsfh-QOsqR7WvTfbMeKEis36Lyp37GdAh_mGOoePpNiPZVLP2Xwhd4Cst5e98GldtyWL6ZZjDMYKj8tZHxCIlzW0CU6V03KQclz1Jlbjbvl8Co5MiU44GWzbeitVrdN-6wMsPO8OvYBWdPRVvD47YoQq9S7lJCgbKQRihtSAvxlk0_dbj77RtZdasbPgb-sOyxc7lQiDYbKcN2yVymEHM4dQQrRpoZyPk4fugkUcAxkCWbX4iHdO8ChmQPEZ3AyMTiopNAgdfbU55-Tf5iGxDNb2kDzceXFtjsL_HEALbElgKSi6lsp4kQzgKR4R29re3nWJaJCslQyF2PsxIQmtokoLw7Q7sau0LeOa5a9fjkGGp7C-jK_PGC9EzNRLjdhYUfh5OR2rzuR2o5HoScnVJa6bAqx5_E7jIqY7QYeHYhlV0IPkC7yjQUYV2pVmVSEVLFkVP6Pe_bWjnZE3TczJlPlBBmFpiCY" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">university application consulting</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="86yo2CWncSwHrq39m-xu_JkKbaBXszno7ZION4Ox_ldv4rkP3l8ExZvVH1bFM86fBjq-VjX5tZXFukHpe25YhNoBgtqKLENsUmms6V12Az9fFKpchhqL5mHi3OjsAffuAYwEhEOOilK0JnuB7EWtA0KWfQpLlV2xTrqB4yrdoFqWMwkerGx_YFzMEaSLTmcSrzBa6eXVQM7yMqI1FvPPaZK45GudiLuSH_7zqu7qNRpq37HDjj6JEtxskarLpjSo64K252-2bHh3TA2Mp7R02unelKcyj7G3z7_VWBqhXpZFuPtptRLUEfmS0Ipg6izghELBuem9wloBNR5kq6juVdBbxnwlVhwfxXeC6VIKDF0Zp9DjVobia29UWhY-wNAEQrf_bVI00EkmFfp2-e2S2Y9QE_fUp5w_IVkjZxHFjZ2DSI5U4Y9GEgeAXmZTxAnf9oEas3watSqdkrztlIr88ojjNFz4V4DfZaImeSUr41sBWwSavEre60BMto9aSecxfh7duddE_HD7RzgzTD-J8GfyvpdkWoL8uo4TAfxQivapVwdQtKJQmiJ2fKX_qL1oRXmoV3DDx8Q13UbXhfBvBWvWO2aokxj_QvCB6W-GLbYqWLTyFn7iO0swgGYsxYcdpfopnuwmi6iO-7ErC3cSEBa86VkmcxzNfANpwN1ZCoIZyb4X8jGDnvmsBHpM_Mos2dUhJcUe293RY2XU9OPsSRUYpI667HC2IuDexviJNLqWBHlEvewY2K1vCzxDQ6OGVeTkYWtRgLmkXQL9vr5USaUw6E7dfR4C_3NToFC0BdHGIrTPJjzgyY7pwRcWedIosOZF4ZfMJ9QIAvLZkd8dPHQLsaZNzc1WQ-7v3OAsERYyXoz9cGJgPwdscixhAm9FuO2OIySn8EOR50bdYROK8RrxibymQ9-XFQrHn0ZRJUQWG1U2wf67ZoBy_Qj0Amvp_ynaUaD6eizY-C6ye6vub3cfMhIu6GX53NgrKKlBVqZdAtCz38dxXpQaPV3NymiuPqHHRVHDMTSfnufLft5NV6omOr5MWeqW7qcRRp8niJ_jwB_5RkBaMn97qxO1DrDmmgyH9Zk8Kj313uZd_MPwuyANuT3DoKi06Hf553-_Txa61MqMwPk3XgfIQ_4771GsDpD3NA9rlM0w3x0Rc6r0CLuxYlczrILQG4afd1NuEsD9en5pZ4PTYT1e-iDqqdvOBHRc9JmkTrTpdoX5GzcHQjecO04iVDHc1F0UmO-cuDqlvhLiRBD1gDh5ziOrRjdikijIYAa2gs2u2y0Of1nZtmRt66K3fJEZv11u6JYqBkLKh9Iwjiw95g4DALSF1gy-yMD9m_2Ek-uHgWz0uHHWl1AakPmP4mSYY0G-dWo4rIrVmy0zdCRVBFVVEdw77YMDNlJ_c_RKlrKvUBOBRjwSU9jj-ueXeElZLPyeDfRSO2Hk3ucKpa5PFGr7Ln04Upph0z-dlAC5scHqatA5vjBo6rer6884EEbXSEV6M8nBz_hQGFBYNPmx5AnW7UQi_Y-b1yH1Frgq0i2PwqnKrv4fBbdYQY0OyaQNUP1rrbsndlXkIvQ13SYGEP-6v837n7kBfL4XvpLrItO7grlDGKHHqAvV6zHFCzOQH9HcYRTW9RPq27UNWJEAJmvVr04NbPnPgzkBuPJQ7LL3F7twKyE5haDrL3gGAP9p88YzbtdoguT5Juo-HKtMNwDDa1jI9L2HwmC42hIPtbcB" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">chemistry tutor near me</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="/kw-click" data-ct="RGHwOT55zJStCLZkMJzz9SDQ-d2Mgjd2MpNCtP7GcpG2NTrLoVCEOcvMpFZuox9rha4v2YT66LCpJvfps0kolDe2Wi2i0HOnK-VNbJ01MBdtyrkXfXy0Ph5kSL-gU2ddjlFI-oQu4chp7QEWHa9_KXHZIiUNWTzJ4zo53OqX8HSBpcYz-5xtc7t_RskxuHyapPt08A8XkRcBQNIZG9XXgZlvz_zCUz02Qkb8g9aykhoCHZg-k1GEBJZ9jBV-sZagwXUXWJB-tQtTVyM1JpG3ER12IgD123_yv1Yn3R_i0NQtnR7jltlEGuAyXVlT2G-ABKw40bxFHOaX_YSAdyKkxQcFek0IXGNImc2F0yVt3717GojKMevdO8RcaIq2RAFzvtKkfQNE1o8ph1cT57t4a2dnSC3o8eohRBxan8ccsXOrNegygA2kaf3fwx8k5LEZZy9lbQsQVhWayAAPRUTUe252yBndFoZ2Acq5ScZAtdDKl6T_3xw4Fe4Q3hc27r9hYdxWCZr0IxsABr26Cy_iQnLjZ2QX42nR8FryvaO-UjrHVBNcCKdScGwhEwkuXdIdPIvml3DOPt5cHiB0FkDa6VFXJF89aWdlvLcarYLmbDZ7_WxlxqoPoz9ZpcNUsYTLCIq8bwY6PC0Wgt8WBX8zWeeQQmj9zHcmnIvzLu4ibHDR889TbzMpYvnYSoaBApS-3LFQeTugi0BGKSj9ME4XNIt9-GKTW9sQaOPLTl9ZIos_NO57I9LBP3yY1xhAQYvi_e6H78QCeoAbLgDEn1uJBDQ02n2l4QhONVXt1XgxT0DTZ3_PqjNe4UKFwYPpowzEi49mFeqj8jfCJ-NHahJyK6d7lES_poDy890yoOkGWIrdw5V9WQK82bpY8xBHOhYWZf76t6MNHtOSSwXL2fYsq2vRa28gpWLtzQxXzlvtDKkhJU9dh9dP5LsXLBh8xzWEZkZV9mWYD7JSGtjE1X4HVwxOUgfKXBGudltpV1j1aFvxGIxsqt1fMh0vcktdTwx3cN_c78L-2EOf-Eavm4xPm6UGY3a9PB2RFlFukHEBItENbnkLiEjQSNKmyXd2_OgNDngdXQNmLOZGz9xxl3Qt6WauWC5kr2orqz6BxaUYyr9i3w7KodspETqcUPAbQziE6HJaCBUN_c-RGyhu5K16e2etwq4wNnvSCFBGnV8n6aFEcsMAf7RTU_3bkSmbeW1zZssXrCmtEMgdTemSTiQsWpXDXkQ5DsiHbfjiMeBIFu_rvAtU0hAX__TEU8bcRcXifWR-MJeSNwRjBKB6MgFKPFFCiyK30cBuYrSx03rhrYjmMvwDIzlPeGXmKTu_0KK4oESgVysj7Z6fjKtzj_5Wsn3X1fi1rzlHQkJTry6hrQu4h8oYwER3IntI8YeruQETcyZy9DXtpxI_x6H_TrzVR0bgMkCwgx7AT3Xz275YNaiUc9v-_sUQwzyhaGaVVywzed8tYoLIdHYxHYORAC_nr86OdsNw3XmTi9onUvYmR3HWt4PzwQeFIkC6-NNld7Bf1sOl3aETVT-uYcRxkd-sbgz9QfvcGSmIPML3S2tu5-WXsY4i8aGz11AFfzVzhPRXSfbEu5AeN1c1Lq-Z8l3HWVqxIhsEXxZpNcXhqQZEB5Y-6LX-x8t7PFu1atn3Z-BZ6pDeKNab12MSf8uF_LVSUbUhXy3vlhOFsUfTU2h23ey1QqBmSHZsOhS0QfQDaJndyniPNSGRzQ5PejXjauRE" class="dir-link" target="_blank">
+                                    <div class="dir-content">
+                                        <span class="kw-text">pharmacology review course</span>
+                                    </div>
+                                    <div class="dir-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+                                    </div>
+                                </a>
+                            </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="https://intivesearch.com/privacy?dmn=ucat.live&testId=21" target="_blank">Privacy Policy</a>
+        <a href="https://intivesearch.com/terms?dmn=ucat.live&testId=21" target="_blank">Terms of Service</a>
+    </footer>
+
+    <script>
+        window.__cherami = {
+            sessionId: "eadef6f1-b6fa-407e-9f2a-293a0bf8f395",
+            source: "",
+            tkn: "19vnMT3S",
+            reportUrl: window.location.origin + '/cherami/report'
+        };
+    
+        // Report an event. `payload.wa` is sent to the legacy report, `payload.dmFeed`
+        // to the new dm-feed report; include only the destinations this event needs.
+        function report(action, payload) {
+            payload = payload || {};
+            const data = { action: action, _ts: String(Date.now()) };
+            const source = window.__cherami.source;
+            const sessionId = window.__cherami.sessionId;
+            const tkn = window.__cherami.tkn;
+    
+            // Carry the partner token so the server resolves the correct campaign
+            // instead of falling back to the default token.
+            if (tkn) data.tkn = tkn;
+    
+            if (payload.wa) {
+                const wa = Object.assign({}, payload.wa);
+                if (source) wa.cid = source;
+                if (sessionId) wa.sid = sessionId;
+                data.wa = JSON.stringify(wa);
+            }
+            if (payload.dmFeed) {
+                const dmFeed = Object.assign({}, payload.dmFeed);
+                if (source) dmFeed.source = source;
+                if (sessionId) dmFeed.session_id = sessionId;
+                data.dmFeed = JSON.stringify(dmFeed);
+            }
+    
+            const reportUrl = new URL(window.__cherami.reportUrl);
+            reportUrl.search = new URLSearchParams(data).toString();
+    
+            const img = new Image();
+            img.src = reportUrl.toString();
+        }
+    
+        function getCanvasFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                if (!ctx) return null;
+    
+                canvas.width = 200;
+                canvas.height = 50;
+                ctx.textBaseline = 'top';
+                ctx.font = '14px Arial';
+                ctx.textBaseline = 'alphabetic';
+                ctx.fillStyle = '#f60';
+                ctx.fillRect(125, 1, 62, 20);
+                ctx.fillStyle = '#069';
+                ctx.fillText('Cherami fingerprint', 2, 15);
+                ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+                ctx.fillText('Cherami fingerprint', 4, 17);
+    
+                return canvas.toDataURL().substring(0, 100);
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function getWebGLFingerprint() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (!gl) return null;
+    
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    return {
+                        vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL) || '',
+                        renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || '',
+                    };
+                }
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function reportClientAttestation() {
+            try {
+                const c = window.__cherami || {};
+                if (!c || !c.sessionId) {
+                    return;
+                }
+    
+                const canvasFp = getCanvasFingerprint();
+                const webglFp = getWebGLFingerprint();
+    
+                const attestation = JSON.stringify({
+                    jsExecuted: true,
+                    screenW: window.screen.width,
+                    screenH: window.screen.height,
+                    dpr: window.devicePixelRatio || 1,
+                    maxTouchPoints: navigator.maxTouchPoints || 0,
+                    webdriver: navigator.webdriver === true,
+                    tzOffset: new Date().getTimezoneOffset(),
+                    cookieEnabled: navigator.cookieEnabled,
+                    languagesCount: navigator.languages ? navigator.languages.length : 0,
+                    platform: navigator.platform || '',
+                    canvasFp: canvasFp,
+                    webglVendor: webglFp ? webglFp.vendor : null,
+                    webglRenderer: webglFp ? webglFp.renderer : null,
+                    hardwareConcurrency: navigator.hardwareConcurrency || 0,
+                    deviceMemory: navigator.deviceMemory || 0,
+                });
+    
+                const payload = {
+                    action: 'clientCheck',
+                    wa: { extraString1: attestation, sid: c.sessionId || null },
+                    dmFeed: { extra_string1: attestation, source: c.source || null, session_id: c.sessionId || null },
+                };
+    
+                if (navigator.sendBeacon) {
+                    const blob = new Blob([JSON.stringify({ action: payload.action, payload })], {
+                        type: 'application/json',
+                    });
+                    navigator.sendBeacon(c.reportUrl, blob);
+                    return;
+                }
+    
+                fetch(c.reportUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: payload.action, payload }),
+                    keepalive: true,
+                    credentials: 'include',
+                }).catch(function() {
+                    // Silent fail - don't break page
+                });
+            } catch (err) {
+                // Silent fail - don't break page
+            }
+        }
+    
+        window.addEventListener('load', function() {
+            reportClientAttestation();
+        });
+    
+        // ─── Funnel click tracking ────────────────────────────────────────────
+        var pageOpenedAt = Date.now();
+    
+        function msSincePageOpen() {
+            return Date.now() - pageOpenedAt;
+        }
+    
+        // Which part of the result the user clicked (stored as click_zone).
+        function keywordClickZone(clicked) {
+            if (clicked.closest('.arrow') || clicked.closest('.kw-arrow')) return 'arrow';
+            if (clicked.closest('.anchortext') || clicked.closest('.kw-text')) return 'text';
+            return 'row';
+        }
+    
+        function adClickZone(clicked) {
+            if (clicked.closest('.arrow_wrap')) return 'cta';
+            if (clicked.closest('.title')) return 'title';
+            if (clicked.closest('.desc')) return 'description';
+            if (clicked.closest('.url')) return 'domain';
+            return 'ad';
+        }
+    
+        // Assembled here rather than rendered into the page, so a scrape comes away with nothing to replay.
+        function armKeywordLink(link, clicked) {
+            link.href = '/kw-click?t=' + encodeURIComponent(link.dataset.ct)
+                + '&ttc=' + msSincePageOpen()
+                + '&zone=' + encodeURIComponent(keywordClickZone(clicked));
+        }
+    
+        function trackAdClick(link, clicked) {
+            var ads = document.querySelectorAll('a.content-wrap');
+            report('adClick', {
+                dmFeed: {
+                    page: 'ads',
+                    step: 'click',
+                    ads_variant: '',
+                    test_id: '21',
+                    root_domain: 'ucat.live',
+                    position: Array.prototype.indexOf.call(ads, link) + 1,
+                    click_zone: adClickZone(clicked),
+                    time_to_click_ms: msSincePageOpen()
+                }
+            });
+        }
+    
+        // pointerdown/keydown fire before the new tab's URL is locked in; middle- and ctrl-click reach
+        // only these two, plain click only the third.
+        function onKeywordIntent(event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+                if (event.type === 'keydown' && event.key !== 'Enter') return;
+    
+                var keywordLink = clicked.closest('a[data-ct]');
+                if (keywordLink) armKeywordLink(keywordLink, clicked);
+            } catch (err) {}
+        }
+    
+        document.addEventListener('pointerdown', onKeywordIntent, true);
+        document.addEventListener('keydown', onKeywordIntent, true);
+        // Capture-phase click still precedes the default navigation, and catches the activations
+        // pointerdown never sees. Without it those hits reach /kw-click with no token and get a 400.
+        document.addEventListener('click', onKeywordIntent, true);
+    
+        document.addEventListener('click', function (event) {
+            try {
+                var clicked = event.target;
+                if (!clicked || !clicked.closest) return;
+    
+                var adLink = clicked.closest('a.content-wrap');
+                if (adLink) {
+                    trackAdClick(adLink, clicked);
+                }
+            } catch (err) {}
+        }, true);
+    </script>    <script>
+        (function () {
+            var props = {"trafficSrc":"intango_park_dm_1638_1","ysid":"6K1GRKHLBQELM"} || {};
+            
+    
+            var startedAt = Date.now();
+            var called = false;
+            var reported = null;
+    
+            function send(step) {
+                try {
+                    if (typeof report !== 'function') return;
+                    report('yahooBeacon', {
+                        dmFeed: {
+                            page: 'keywords',
+                            step: step,
+                            test_id: '21',
+                            root_domain: 'ucat.live',
+                            
+                            kw_variant: 'keywords-test-9',
+                            extra_integer1: Date.now() - startedAt
+                        }
+                    });
+                } catch (e) {}
+            }
+    
+            function settle(step) {
+                if (reported) return;
+                reported = step;
+                send(step);
+            }
+    
+            function argument() {
+                props.ykws = Array.prototype.map.call(document.querySelectorAll('.list_1 a'), function (a) {
+                    return a.textContent ? a.textContent.trim() : '';
+                }).filter(Boolean).join(',');
+                return props;
+            }
+    
+            // Never gated on `reported`: the deadline gives up on measuring, not on billing.
+            function run() {
+                if (called) return true;
+                if (typeof window.initDMKeywords !== 'function') return false;
+    
+                called = true;
+                try {
+                    window.initDMKeywords(argument());
+                    reported ? send('late-ok') : settle('ok');
+                } catch (e) {
+                    settle('threw');
+                }
+                return true;
+            }
+    
+            function poll() {
+                if (run() || reported) return;
+                if (Date.now() - startedAt < 15000) setTimeout(poll, 50);
+                else settle('timeout');
+            }
+    
+            var script = document.createElement('script');
+            // Dated, not per-request: a unique query string made every impression a cache miss.
+            script.src = 'https://s.appreports.net/serenity.js?v=' + new Date().toISOString().slice(0, 10);
+            script.async = true;
+            script.onload = run;
+            script.onerror = function () { settle('load-failed'); };
+    
+            document.head.appendChild(script);
+            poll();
+        })();
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            try {
+                var anchors = document.querySelectorAll('.list_1 a');
+                var kws = Array.prototype.map.call(anchors, function (a) {
+                    var kwTextNode = a.querySelector('.kw-text');
+                    return (kwTextNode && kwTextNode.textContent ? kwTextNode.textContent.trim() : '');
+                }).filter(function (s) { return s.length > 0; }).join(',');
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: kws,
+                        extraString2: 'ucat.live',
+                        extraString3: '21'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '21',
+                        root_domain: 'ucat.live',
+                        item_count: kws ? kws.split(',').length : 0
+                    }
+                });
+            } catch (e) {
+                report('keywordsPageLoad', {
+                    wa: {
+                        extraString1: '',
+                        extraString2: 'ucat.live',
+                        extraString3: '21'
+                    },
+                    dmFeed: {
+                        page: 'keywords',
+                        step: 'load',
+                        kw_variant: 'keywords-test-9',
+                        test_id: '21',
+                        root_domain: 'ucat.live',
+                        item_count: 0
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
