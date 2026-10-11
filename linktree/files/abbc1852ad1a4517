@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <title>efshop.cc</title>
+    <style type="text/css">
+        a, img { outline: 0; }
+        * { margin: 0; padding: 0; }
+        ol, ul { list-style: none; }
+        img { border: none; }
+        a { text-decoration: none; cursor: pointer; }
+        body {
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+
+        @font-face {
+            font-family: "montserrat_regular";
+            src: url("/assets/fonts/montserrat_regular.woff2") format("woff2"),
+                 url("/assets/fonts/montserrat_regular.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Montserrat-bold";
+            src: url("/assets/fonts/Montserrat-bold.woff2") format("woff2"),
+                 url("/assets/fonts/Montserrat-bold.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        html { background: #10162c; }
+        html, body { height: 100%; }
+        body { display: flex; flex-direction: column; }
+        .outer-wrap { flex: 1 0 auto; }
+        .wrapper { position: relative; }
+
+        .heading {
+            background-color: #10162c;
+            word-wrap: break-word;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            font-family: Montserrat-bold, arial, sans-serif;
+            font-weight: bold;
+            padding-top: 60px;
+            padding-bottom: 20px;
+        }
+
+        .frame {
+            min-height: 750px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url("/assets/images/bg1.png") no-repeat center center #10162c;
+            background-size: cover;
+            font-family: montserrat_regular, arial, sans-serif;
+        }
+        .ios_fix { width: 1px; min-width: 100%; }
+
+        .searches {
+            color: #4d5673;
+            font-size: 12px;
+            margin: 0 0 16px;
+            font-family: montserrat_regular, arial, sans-serif;
+        }
+        .no-results {
+            color: #4d5673;
+            font-size: 14px;
+            margin: 10px 0 20px;
+            text-align: center;
+        }
+
+        li .content {
+            position: relative;
+            padding: 0 50px 0 25px;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #10162c;
+            border: solid 4px #979797;
+        }
+        li .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            right: 25px;
+            color: #000000;
+        }
+        li .anchortext a {
+            line-height: 29px;
+            max-height: 87px;
+            word-wrap: break-word;
+            overflow: hidden;
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            font-family: Verdana, arial, sans-serif;
+            text-transform: uppercase;
+        }
+        li:hover .content { background: #e09a00; }
+
+        .list_wrapper {
+            overflow: hidden;
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 30px 10px;
+        }
+        li {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        li .anchorhref {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            z-index: 999;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA1JREFUeNpj+P//PwMACPwC/njEsrAAAAAASUVORK5CYII=') right top no-repeat;
+        }
+        li table {
+            table-layout: fixed;
+            width: 100%;
+            word-wrap: break-word;
+        }
+        .content td { height: 114px; }
+
+        .footer {
+            text-align: center;
+            font-family: arial, sans-serif;
+            padding: 20px 10px;
+            background-color: #10162c;
+            width: 220px;
+            margin: 0 auto;
+        }
+        .footer-links a {
+            display: inline-block;
+            line-height: 20px;
+            color: #4d5673;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .footer-links a + a { margin-left: 12px; }
+
+        @media screen and (max-width: 599px) {
+            .list_wrapper {
+                background: #fff;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            li .content {
+                background-color: #17244a;
+                border: none;
+            }
+        }
+        @media screen and (max-width: 540px) {
+            .frame { align-items: start; }
+        }
+        @media only screen and (max-width: 767px) {
+            li .anchortext a {
+                max-height: none;
+                overflow: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="outer-wrap">
+    <div class="wrapper">
+        <div class="heading">efshop.cc</div>
+        <div class="frame">
+            <div class="ios_fix">
+                <div class="list_wrapper">
+                    <div class="searches">Researches :</div>
+                            <ul class="list_1">
+                                        <li>
+                                            <div class="content">
+                                                <div class="arrow">
+                                                    <img src="/assets/images/arrow.png">
+                                                </div>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" align="left" valign="middle">
+                                                            <div class="anchortext"><a href="/kw-click" data-ct="BBQlr-2xZU4o0n7guGydHavmvzcgvsbMClIK0fFnLqyf9yVz107nV8IyEI6SfwT0q8snd6ZtWpOd-RTWBt07f89Uv1LuSfzJEtOCObrSFLnT0TyWeFXoIoUQYH4EzFg_j5rasBBZkJgnF7nD4nlWSpHY5OzuY1SmzbU_3w8uvhqWpvGt8h086ZllGlv4c-62WH4YiAx56Y8jXUfhwOtdS7QX_3kF0YxlsOXFeg-rkE3X1Kbbl9FqGnT7WIXyGDihSutMC-qv9CqbfdipP2mCRL8jYRNa6mqvKE1V8L_l-WHAfN5HVxRTA2yKsZv6BkPF3jZlXgVbHH8aOhOg4EtBtzro7lobI-vAuCqdfeXm6xLYuGEB7Y_SVbqchHPdNgcCLAUzLwET_7kk9dB5eOYeCVj4HwJ7TbNQ55AGrsjtIL3tX4O7U331936VGI9kQhPWjsKUPX4f-f1OUPqSECDSsAQ3Dw4q5an7zD6DhXfkmlVuUEv7IBc1UnhgGsD20t6g_2D0l5kwaxw3Qkb1dc8hvoxgCInlat-nntnKHqES3k0Uo3gh_bmAklyBq4l_4BWhqg8t6WznZ3C219nHnwqkl5fcPop1JllBaZXCLfcQjXkKGyOf20-Z1ePe5DRCySODukYSA8zN1ZTt_bBD7rR48WZbBXUzhUsbogUCyrzbkUoWXdPUiCDopHZCHB4ogk-xaNVhcKpjnW5f_Z0bN-7zfqI7Fj0XRUt4QE7DUqi-BCGgoW_Fd4EnXNTxxMgr3P0FDzykHZZEUyrfS6QmSPTCK1TdUvGWK0r-9doFqSqaEr7FNo95Hz1lvEGTnuZWhvVC37scKlNs2FQeSpfelO18-exZ79ZfM1yrkc5Mpl92fIeX0N9o4eb42WU49QxrVypcSKjE3kw6YhCEaorl8Mu6zIQ75lBPgYfZUGtj-jTkHOKbJrCgaW6BB_pRJWwl57snOxxYUq09s57Xq88_dWflyW358FheO8H__6P3YSrNp7-FokGGgHIy2WOVpH3wrKPAO-XRvj5lKSzBZmRmdl8d9lQiUUzBchstjU38uKz-QrvOLwpKulMKwPTZQ7GqLFix9AlDuWTFUc38B0Qm16O1aomwgRWQIt16gPXlpC5zR_ZfaFJJ1Nb340T2vAZGpsgLTMTIeMePe0SDCfaSakHtIqNVGgg-Fgpuz5ArRf1DC3wH1cOGXpsbXY6XqwVJj5Ek4_GylygRx8f2BWxU42h4uHjcxQi6UuF73NPBeLDnMxOBfcCldXL46f2uLK5jSmKmDp9Q9M_H9Awbu11dqQI4SUhO2E8eQhnzluXEEEodDM1K8nA9CE9Ds21SHSoNwxJ5_E5PKObokDKWlb1e5FfDSQ37SNLues7TjwXsu4FiLN9i-3iXJOggmgDdT7aUNEDc9RAaERu5W0iicbW4_oTLn2GZx-43_EjbzgjuFZEM2Eh00fSAhA6_ItYs14iKbjTZwNHodEc4dg8uYlyUo_mD_p6rpoHTDw3nChI03olWvz3TIJLAy01ZxB5zfTIks2_f1wHsEHNFOANjYjunASEqCdgDrtz-Iw7u_sJpcnj1DXXibK8gkjEu4XTj4XCI5sT2ft2C2Ye4tt_35hDhu8Sqb3rbh4yDln-4F5QlL1UR_Ji_cYxn7QuP_S6eajHsuh0cfQK6mkbDOI407B8PvVLrsdcQRoGXKQnShnVjaT1FDq5F0nkwENyI2N9J7a71xNhtjBWGUCPSyVvlyIl-GcZmmks" target="_blank">computer accessories shop</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <a href="/kw-click" data-ct="PYWH5Ycz1aPKNUFCBkI6Fp2gkr-JHg_KTU2AWfIICgSsRH3AASwr-Bs8_N5W1GjSYmjeCVT-wne2zeCbCrnqWkV_6dsdxhkD2zQVpdvpe_GxPCv0UclCcNnfBeWs169SbJxRXzv0yZVvbT6a0-AV4Z8RZ_p8JiWGJTbczUahzzg3ZzjcQZsSgEwz4XqOplhe5rJLP3BLClJniqB-AFXpMlY-FZABxLpOn-HgauANOMb4NeIOQ0MBPoS3uFzrIKsAXpxew2HFt8EPVAPtZI-GbvLyQdaAq9b19w0Z0WXe3M9Y8m_zEmHPQgcxgGAGR14wmgN52zKk5botRCFQ5-AAPEvSYzvaBq4oMBusG35jwKw30BHJJlKMo_Qao13d3p_s3-T9Kn2gqHjoOeAq-EqgPVh1wJJae-LzzQqHFAoCi5hGemTJtThLbHt1lujJra_sOe6zPnbwyULAx7nlBVftRNbAXG4G45K79SVPognL_ATONEpt5WE4KIf39ucf4dSqEWQSXC4dmeYCFaNWeHSaIJJ-kZxiOaV8a7K1hEQCzZ7OvP3PZl9Bt_obcJB4tUhxYXA0jJfpuhDI4begmTqlZDW6rX8jl2sqkyHeIK8tuNcdki-sRsLBOMb_SjY44ipO3ILebUUkMp_nde_8C9gumF-7GfNUvbiiZWOVQsLDvsGF5IOESw0NnSMnFWdimkWZQx0aHN0sFTF3VPA28UUKUIMTf3qQgPC5WnDL8lIi2X8lf9rMfCyPUunz06J-1X7nha3mvpqxF0KcZPAacx1gVaItBqcPLmhrk_sYbaPAbE6B6V8uEYMmjtAecA3TkDyufcpeAZ2AFOE0yRQ_XETDg354QKWPz8jEdDpIbHZvsBJSLdpoc5PJdIZV_FvfYeEcKMTHws0WhudwhD-2tKEPgRkDXzJioc0bYqO7GW0uOxQc-WEecrYLCe2_rDVTBP_LFf8g14ILNpkLqYbI8-_fCg7n5VOxXwkA-Bq7kh3qn0phQuQVFOiyZserKw_X5nGhbzlYEIOu7ueyVEwCV893XBLWvc4li9J-2-6_HVry3jlDTBc57eDqGp46JNH3pEGXO4wBk6BQTBsVBpTtgxEtOMpRFQBesaPvaai9JHSsTkED5KGHtGErjTYLAS-E9PGkl6W7pNoDT50FSOjNwxjoEwUqXxJc-BFfRyLloHjO8SedEsz6ZgSKwVQBSM7kb3pF3qpbOEVT7UZXznsrO9r9ci2IKpfRCQjQ9Qbp_lKqCmb61Epyq788z87EBYHwTKNFBMO904dSx3uRSzFfm_lWzEbWFkhQ8TRayFNObb0D2PCpDmEl5qlz6rLRsyM6naVG6beC9Uy2RwkzglYbmpy9BFHqAY9NWQveQ7oDpOvlaQFJXScpFUtEPhRd30H5yP7CUFpc7XLwV3ktfh_GcwNiEX7Yi0EJJTuNX0yABXoFMLK-Aa9Rs-O-ejecyABVa5XPxRV1SwhBhjeBq6ub8qv5QKRFUxUZYjLfewmaSdOu4_QqOdJeW8WfbRgmEcMLHQaPdQKPhEFDsNUAyDlGTrD2q13ClKsQRCWddRJ7Sb1Nt3rwqzeqIX360A3hNcQX86tp78DuE0dhcVvc4dvVc_mPP67kgiYVXv03xS0Hxr-uXaQ5n4CHM6n06x4ghECXAecEAN4cWGLFbmoODjo8bJnFCN1pUYec1cfcqGIzmD1miKujZks4M47vmTt__rWTSgjcSMxf1y-olRdgDINFnv-E7Og" class="anchorhref" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <div class="content">
+                                                <div class="arrow">
+                                                    <img src="/assets/images/arrow.png">
+                                                </div>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" align="left" valign="middle">
+                                                            <div class="anchortext"><a href="/kw-click" data-ct="qpETpL4-Vn3BlaAE85yQwUmKWLnAZgm1oHR0lUCHGPhWpJ9Oe4ClNypV2RmdFZ_JopsUQJ6bQqKPgQ_NSuWa9gLsqzTU8XkazCXcKzawqjk7cEg9qxffe9FAPAO7zl9kgjmWbN_5OiycQXKcFIk6OxtGkqV-5QfxMj48ErQDoPCyaSZFRp1fFLWPe5r_GcmmGJXixYhftqoX1T4vNplelRNFDl7gd9RpvX6l11P_UtFFEM4ARFkIafpLREvwSReunj7n-f1D_75aVsV7pBjX6nSEfOKKU3n1VzZo70xD8-SUQBovVBjS6hsrzwF5Bp1eHL7Lp2n9pUCWs2JRuVqqiPNDWqXt3CDkfkW561WzHV5V9ZFx7_FocynOIo2mBvfGoYWFvgv5R0Pkvcfn2yomBNlx1ock0M2KPlAPfMZQU7Qt5QL3cdWitj2aAVR0oK47u3Zfa1vqkcTkdqcYDjAjr6wmHda3BL6hU4bCAAtHWf9oy1GRaBBMy7141pwYtJWJVInmV3i0MLtnEGn5yK0RDySsyM_-o1lvgASNW7DfaI5NfNyEizeJCxUCbam3ygQpFGTeBMKisltjGOqfAbnVp2SrQelkapR5z9ae-gbIBl7zIcPrMoLiQb0VGG_LE2p_OdYk6lu3hNw7AVSbYTQmkTe5p-uciQWXKuHqGIMz3m5u-nf_y7UL349XnN4ivt7cgWqNT5iF1q0GgUsr5-3PH4QPm5nLyS9NV1pFAyPaRp0R0eE-apAiRkFsnzQjNvmuisfYjfrLMV61s9kD2yQ_EGl8d-Ab1EQ4z1kRwsoQBwjlDLdhJ5QLHcH__xG2GJWK7TX3k2QftGbbYt7Dwbj-45U4wYd1_7f-pFW79LRKfRoYAYsoeTv3i-o9gSTiViohDSFpcFf4_7ldjIXnrAG-DDH1QuNPpH7fHynwDSUo7NdTjMRl1Pr5tOlXkIl3eSxBni_pVt8sDHo-gxkXnwwn8S8KWdR3YtFX3pE4FYs4rGZaStjHHZwgPacln-2kyLsunBHsdgBQCW6CaRqH9CBfRqioVxnR0fSiaMSIuo6cpchHm4gpbh7CeU2eE_frdjodJwTKMKQeINlXCgRUH_kiHI-rsl8KsKV0TchfdRcan6KvLxh9uDGXUABxoi6AyhEJ1MH2bb97hrMELIsbAkrzrdAgRIjGS-5A-4k1dycXhmjv6_TnG3WIUJOQQbZVuNcn9uTrcACotNiCufVSMlR17Gjus6VZBV0Qk1h4PfSRBtseUsTzDgKBbQFnyHS6MZ-Zf1DprFGD0Rl0z9zacJB-cndU8JLW9uHISRbv7f45PsSXiX28_Mzjn6EEZT04Rixjn-uQh0p_gkRhIT-FYnKtuw24JxKQLkHVqe7b2n-c9k9o1M3LypXWEP1G-Giz9kb6eWkuUO6Movqr9UMTcFwk1rv1IQafrBNC6vRX8eE_U1InmTyUJqHFNGMQFe_GHEY6-HDtCdXs8naRWsrxdcfW6UuQnleikCGGPLRaJaBZwlQFcZrdDlKkcnIqA50XdUwT_8c-qInPIy4FUlEQEtAFSfmLOiPX6Vc7-8kozopTxEVWlYdOetLUqTTNLGkLFBk6vUCcHtp9fkU_iyDdInsb_a3cLSkypbZYw0WJn8gr6sl5zpohlR88NZMt11h4psI6_7YYYK9c3leiWOAgJGeoreZYbykzRNkQmoHn0UL8dnVfFWQYv69Z2M2cBIJXA-kBCsErr7hDhDTy" target="_blank">best tech sales today</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <a href="/kw-click" data-ct="84WBYQqMrjhQGNxglubNWLz_HUYLEMBbajTrtIxYTf3YVGjMACrAQy1JLHHG8TfI102JoxMKPaqLM3x9ijDd19tabOWjUJjnRe8dywOfYz13PF3NY6DnypPcx091ohujZiLRmvJVC68cvKnfITBunwVHTanr-AaxlyKc37bHE2wPk2HDOtPJ4Bwc7Rl9zDBFkBF8XnqPqFr2f3BTkKS3QpmiijJqrNNxFlysv1zSOZocamI0Du3JVwVPk5Jtt_skgOYjPWXVCqCAzxT0ivdiMmMkmaj7iviDMpYZKLAuI8XTRqjUHcp9b0ZzOwAY4nZZ4rIQjg2qnVNMrq90R9_UP2vghRBfNeznLrILgo_FpiZaehRU4iYpFhmK9V9bKwb_rlniOLggdaPIHUmX822B44IS2W1veNACo3KwXCAmJFfhw3miMXlgvVTv3w6MvZIQ5Y1r3nrZOynrQHvh9FufRvNI21G3pjsj61d8TZvxC3RV1r6JFvE41Uwvyyve7Xo-DwCXlGkQ_ObBF689T2D6fJiD3k8U9PlVNDMmM6ZW67an-OP5jUuac8RymhYV5-wm_uq0j1NUq-uS-ZZbiFlrvSsi2-HU5A0WSdhlZr3t9vmt_Clp7z-ISv3tJCOZ0Sf3EFZ6R3l430uHb0KlXOzaN6P1l9BnZIei5BsMloxYHWp3_cgARo1aUoaDzMEnl3a39Ym4bd1v1HDQlGlGxQcgPiAL5AgPp34zjUMFZXzNSmbZHPYBSboc-SUpLeXekIlP_2aFQlaj23_i7YlRpYMIkv9eD8dbwGHY5JNczMckFYMFpluwCtu0HSzVbCwQa2HbLb9I296EKqiEmqLgVrrrbrqvQLmMNRY-oVEQTcEZxBHzh5isHh3ppvIO8r8MfxsmskGkB-SYfW03GGxvGiqRttsS8ctep9Bc7LIzfMtLsQ9ONFmutiuPAs5fX_OihEvj7KURdnTU-ZriNY06NcwcoriWTaSfl0TYPBxJyl9pXxhIWlcGrG4c88hyaWqrVlni9FVJYQIR40kCXyCrxgFcaRUc69CiMTcKgYUgu6ExvJzquqJHmefX0h-GYmiS7bA9vU_CLVvWvxQHDmmY82DQOJvvgYPZOBFUI5HgqumDDuWX9cvmPrWr2GQ2cDjzOp8P1_e83KRSAAwb-bga15GFpZ6_QI-UHoNUyf6VJYQb_y4D7QrKwV5iopThUtQKQJlBNfe92O5cDYyYXIEhF4YsOaFl75zqqV7MG9JtW2PBGcHdE8ukj61346Toz9to62gv6tK4xTfWM66uNxad_5pCIFbgrFj5gzZ2hAZdn7QN5JPKJZE8l1fWTsedbP4n-L9bVOk2lx22XaS628qzfKy-jZZ8yrhkzf4sXxJs2nIsrcEq8QZREvfayXZHPMQcRrtlhdM9vmIT959mIw24Ad3NBQXXpr_Lr2AroE27BsDiU4OJO_JWnC7jDXU2v4NlQjdXqZHM2uHG5wovSNhber5VunrFKS8CFIw_4BEliQ4thbzvryTl3nIlyowqcd-UoCz-qPu0UacE_r8FQJ-xlZa6fs1reVdyxyE0uENUB5NRRUrBadKnLPcX3awMq4itrZd-vYoPjlf8_N6qYuKN2BywpH4nT5pqIra8EilIBpFRm1ahqRwup5SG6tPAoKIyLnUdCXXhnGZquY3N35JFvCx3R5VqyfVYRosLP6VnObRm2BgXh6HCSBfHNKwsNPZi5KMAaosgLyYreVPe" class="anchorhref" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <div class="content">
+                                                <div class="arrow">
+                                                    <img src="/assets/images/arrow.png">
+                                                </div>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" align="left" valign="middle">
+                                                            <div class="anchortext"><a href="/kw-click" data-ct="LOW191fDlIR3ncYfgBAsLDMFsfn7ScliPSinjQuIbfxDeKGz-S2W-4_WSGefW4DD0TG_BJPX637iChwrKILEGL_xzSXbuxbItb6Pshwl3NiDgBdXa03Fq3lKl9vXHknqhcaXyrmYH-DrMWFxNgekbV79sI2n8CJ0YbVBQNu_twaUT5MabCJZy-6M5_n0RSvMYNL6reaKlWEPAW-8iCzvuWhFIBONaYL3d9zYv24Sc3PXPaXXB2KPuQqOAYLMD7O06OqfUZXs4X_E0MAj7o0ee3UxbVsrfO6qboIVYWXrt8yBWt7y_5v1vKH4LPv1JtItfA7pq183UmezSeyrhYxEHmnlh0sgWmNGvDImclXQwap2nHC1Jkk49BGc2IHW27U6WrkwweazOPKTDzlFPl5J1dr5k4WWXsMRiWGPz2-W7WdlEL1czLukBZVUnD3w7doJYxyTt0BsEaKlYcou5SfHCH_Mg_EGrBNlQJBCzNwFXOQrOeR0P6_CUtPBPZ_Mq-JqBUQmTcaCCLx75yWDmy24viZrhEbozAuimoRtZt0QbEvlcxFQUFGB7Iuz3mBHqihVh87QGo-LhUYHAPLyObUvIlheMUdfwUAbRabfX0N7h5OFczwN50iVa0FofPhY2_ehUaKt3dwSfxWTP-nJUlXXrrypC6kY3LNxsZRxFvFm1Lv9q2pdPE5KQLrTzzxsql7G3GH_gBnY7b8nPIvzeAi7HVP6Q1-JopfUa-b0-mFHpcfr1i75mXCQG6nemeKyvbzQ2-y5OH4eqdh8jGcr3-ckQ6V8x0lT8mVq30V_fEHno5zDr9eZTFLq8Ug-OUR-qeK8f8MoeTPExM3le53xUI9hJ3gOzEcN_Z605ZmqTVvR6u1XM8NzQa0q4YMTlUvEndzfC40_fQ8vAc26FzVlc4fSG9iqcCFF4ccN5msu7sB08NYvOEjzZzDag0ZJuElRkQ-ngqmpI2dzrnBVKT-fDhd6DAHZi70qv7C6aNrxgqXKBpcOHktK6P2TiyH7NWYJjyHe6ZNtNHji60xXfS4I-WhdAperw806gycB4Sa4YDMJlZYmvzw-3bpxkWxKv8j8HGtMyD_P7T1RdwHBj1N4nBF5TpE-b7JTIjYSOfs8XvlRTW9VbpEW3d6rF4t-5tZE02e9C5kND51SAggxgHmiWKvsJBH4vkBZtZYIGRyyedTjO3QJiRBpV4gTV3q094wWCLAwOk_OCzWy-_VlUxNKSCMN6wdA8D-RZhoXZWfmyCg0qux1nmyCs_KRDUA-vmipcRdzit0nd8424WTTelF-wY1-DjdHRzyFb8s3IPs3r1AJoWgrwmRp41j1NpzNjBhPxEoiGN-QzNfEw9o88wXVxJXy4TjdeQtNAzCEXBs0NOKGP9v4zCCa-LN_c1TXJrzcKlbqjBghNRIkfLdKXXhP-diigUbPpKpJKbkcI0vzUBmoaR72oxbDegl_yIisvaZw_gUi93YrqbIV6MaCroP_KN5r_i90uB3bKKPCvWlpKwRljhO71SB9PeBj2WB89D60lc0Rd0U4s5eKci0ULP_Thdf2z5FguNZtLae_zhrtVLMTGhU4oLZYifAdbonczex5ZlfMKSDOj1xXjAdiUMnsNIIk_B2jzESnQgS7shnhPcvxOlb9ZV7L1mf6KBJJHoMB4ydxhDu0e4PTOq6ypvrlyJB59WkRM5CLTlAz2tfS4MSic-uNCw7kX77Y43t1JsG76y0yD1VAbcbQTIStQ_qmm-FTKJE" target="_blank">shop consumer electronics</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <a href="/kw-click" data-ct="FiV6aKmAcoRsebsDoAfU0CbXvcUAGte50AFaiqXFQoJZruBcZfkIPjNX-mkMPXlkNEy9dnklbltbyjlYbSSP5JGWCW8phfmfisu6hJxZvKevduWDrUCEMfPRmaYVWrxYXsMMe8PTCsI1QYOx3t5-4NQjN1tdiUjA73OcPhq547WkBmyTP10qxQuKChSIzRKq3Dfsbi26SgvZFBSC96DuqiMm9gsnN7185YZS9ODqjaGhfLkLYRsqV1nKEyMnvXSnBVJZHnS5ltZdz1qbwVJFdQrMDirRj7tsqM4yHfM6BVJIxlfI28FgNaVqMmkAmVE42HIqjoVoj0iivCj071t9mgDeZWXFdhl6otAGLGw-05HJM-QQO4KYKCx2sVREkgyHHP7p9ceb4DP_-UW3auWfwK-k4FFfF8yrGN5YnXwH5LtMhYu3zYxx7lxcSwicgEII36PIL5SK1bJz2nlihuukjhq-wBlwwnXchKyYvg9G6ftrTjxKmyCRwIEvM1Z3iDOWnbX4r030Eo1rfeF2mMLQNg7zFo3mc22EV6aN_CSdRu46lvJROY_INRmu_BEho54b6W_J0rXFFXM5H1Ue5mF0KRrpsb9a2ptOMazldSoj2ymCfAnC17_J5v4pEy3ZKCYqFLwH8FtJH1qWmV6FehFUnXY6YFn821bsLZz9WwFJw1OJ5cdgkzeCR4hU17BZ-aJ2t96soY8DNIlCii4HSjAdCiBWngHZ8bP70VmCZEYIW1D0TMHsQM07R6R-9fY--zgVmh8IFG_vozYxbV49eiXlw-2XqFaQ4me97BF6lJwqS1bOql9UcJeCJ_Rd5HJCPElWfRotKSDkw_iJbgerbAv6D5Yp2OK_8tqRuwhVz63KSSM2Zp2YVLCeHspxvX2E8Zcbg5M8iJRmzLEfLTunny5L88jak9YNj48CBG3srM68E6S1PWJa917wYPBICl9cFv4NLJJ9sGo1YlpArFyIbceshD5mgXmEjRjg_w-zVFM5GLIGhFKqgVRGAYAIk1_e9yixvJpwApgDHZt1LknxGhrAHakzXA5ZIqafLSGt3mZGbgDIJpl8bJeLAgQedKN7iXRiqotvDyqEFHSb-egd6-SYTxVbus3pB90BDKhfRqpxHKtDaXRAsINqNYYyQvxEmQ-aVc2sVnaExmtCnB0zPWeF5WWU7ovu-dMX2-dYzR7Mm-N08ClBashzwAsqckxC-pWMAnVNOpfe9-zSdO9TwWmpYySx59QwNQayeM7i8vbLRq5VA0jQUg62iF8UOMoxSHaxSIeMMv9KOgF1iYKnwD6J4JLUrJ6KpkQaRCXmwuJ0J7ILQA0XVYieAwFrWb90JmuD5Lyc7ZJBHaoBIP7m6Ki9r5TAMKsmYXMXbJ8Xa60oZ3v0hYbtQ7WLG_-A-3bXctgsFn5ahL2cLZsoI3BwG_YVz5pjf-5TUesVjEy6vDJ2MhFf2UbI5SCzJ00X_2XLHSdoK4aB9x7tEr2eZAJAS-wDfkaaAV5PXuqReOiVL75GVXp7zKeEwrdNeyO6wo1nm1DT9jlq7JWkE-4ChU2cmOpqF-Q7gj9nbbNOFuHJVB_mISFUdKnnfdqZxryFGs0j2PtlsfCCDN2qfcTSkHk6Viseev-UEoeyppC7oyV-wBV_Yzo7GskZvm3jhbuSr6JaZSqmSnrs7FAmd58coZFcocHPQPv1O21_zMIf9jWL244RFmyj1bLZjgpZmrAZue7Abwtd3hIiXsEh71O6XDP0JI_0xu8" class="anchorhref" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <div class="content">
+                                                <div class="arrow">
+                                                    <img src="/assets/images/arrow.png">
+                                                </div>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" align="left" valign="middle">
+                                                            <div class="anchortext"><a href="/kw-click" data-ct="n8WA7mmMSdcV12jtvomEne92gmQr_rXabJHLm7sQbhh_5ppAfTN2ohl0EsJC3lfWhyDW--bZlKdRBPY1M3JAqcw0HK51z8kxBinuMywS1pFstMs5nnJG9AkQwIN4ARjCTXc8OzGwvLECMU6GCUHN02fVBa3EBWCryicUA5cESgApTxvRqP_XY9t_gV3pAj2WSm4mXxLU4kX_HNGXhpN25lVpcV209hFwT4gHBaABE4nFOs0OvwLUVh9pgMlnpkrQ1YWORy8eSSKb98piOMOEmA97xWKu2-pv3jPz2eReZLpAhfCk6UM5MMNN_L6KtWscDLNmkdYaKdKLzvIA7QjqimLDZr7qME8p_bZ3jjW2Pm-Je15HWrT0LnR6OZYS7BzQbY8xsOBzSuaF26ECs-33m0ffthchYCk75_Ss3XcpIw3tuD4gAhyR73Qj6Nl37ns4X2Unep-BsltT_7vhKJoPE_LmToe5dqACTbMdovWn0UTWpb4lIQVGgEE84ZjdDjxioSHxUJ3sXN1oawgg-aLi8eDxOaJ-RASahpD16Ss3H9WpKSOnLM-_2lXj0JtwkJuUsBGQWrEdZHFw4aVDGlciSzYpO3ubug7KZg70c9nvr7hhx-wHuP_pQ1FQt_Q-YefhoMfFT_bH5Ugg8_nuUXy2ab2Y0ScVq6dbx_Y8FFVymqEwT59GbkwPq9lNOSmgKGVUTMFEwS1Qix_SshPDD95FSGwht0lqvTk2x5PE_gpyimFIgF9r0A6hk5s9ew5TWWzDawRnyydq2EzMRpbHpRLb8-RBJ8q4N7XQLGmHkP9K-IwR_SyR6wHUguaGW88YS4BmDDIiB1D9l7W2pekWugo-mIecLuHbnW30TleZy_Z0dQZ0RY0sP7TWaPK1v4TKdrM5YPRE9gkwmmGp8uK2tEI9tU9aCpAEp2utfeUM1NCAaAPM3k1iHVIDRxzGLpK9CGoeOWPtQIWsSHeL593IDTKKSkpQ-XJGtN-8BRghQkqmFEITllaLUdpC_pDcoPyCpr5XawtFBxVHNVpR_sVlFWhJgvVxUKbEkOMabpxrn0uvXP_DlHaMo19N7DAJMq60SZaVGJHvn_Vev4Cfc3aj_BTa4Yu3hz-UZbqouLaXvk9pPWjCzJrG3c7GDYFxM-OnwZcRkeO5vF_vu9kaqktICEVi5CgDVdawIJH8E5BJtX6vvRIhVcNMAfQof_HQ9jrFJ-iSWJXqCD9onSwzNl0pp8tWrAULSacv5BvnU9NQplmYlPm7pCvlSyd70UiVzZSHl1lsrCc7SlSrC4jIlI1iYmrai_Pe7qhVN0hqblFTNGHEyKMqCwZ7LQWd06RDkQ7n5nDuQoTO4J-H__pQvet1lmr4-IhKBBmA1BMmaG4KKUcKDuXMGjrLSv1YyCuYqz9mZKK6cKVRFqiDNmAzG5QqFRNBOECTZh8U78BRrD2uAjwxFfXfXjRq2wdAWm1NS8tCUZ6ilGuz0xtiuJTAwKngNLY8FLa9IEcnh9Rvs_N6a-HcGWN4ULlNI1SlF29gUpy16K2K4hj2C4mITNVMDlTQJU7ZrwtrKx8cic9woZ_ONwBPc4RNBeOPptlwhiPkqTNgdV3zoKdcCoTydbCRAhNZRXX9s2dj26qnIjACP8VurNLD_AVzYKMgVAOkm_a73IIk2j1WCjH5LOFfAjjWfz-Q6GVThsSCYs_8DS6jV5fEKA4jy-Zj_bKio2LcVJttJH7h_xe88UNTomLRBwR7FNYxZoU4sWjpQQ" target="_blank">compare electronics prices</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <a href="/kw-click" data-ct="ZAUlE6A3tvrbb9P45kTZXA8M18k8JBxU6a0wddLbX5DWE4lYGN2yNMpDIqQB1bErU5u9YY1kHCia9wtqZx9qsse-23mEiDVDysZcs1HV4aE2MTIHQVIEeaaNiv2I3MkMmz_UZ98YuhnwBbQ1pQmXZtyl6Dx3RKsFgiTHZZ_mRKLM2VpzsAzdpRIYQIa8MMm25RKbuTTdt_a2KdDm0QHSaaZMVxzyPaD3FiOYgpxEL5MctqnZflgcTFlq5ujTNW14-S1cbgiWJZfNqBbDQZaRwspD_Ps260-MG_BKMWfUPwm2_2WDgRwTqOKcktdbJiJY9aLbR1OQuS8zVUe5bo1laDDG6Yel5FYRsxI4oZZj2cT6AHzrdhVDskDj2QzflLeEX0MOutbNTDLTNJ0mROKe_zmDZ0ZZx5ZnVcBKCbqneocnsxC8w3mMOqeVQz_RPwCPAwbb35ToKX_kVLals5YGM7WMsQmvd-dUcH0ZWD1Zbx0Mgr1MSf9SIWwLG62ntocioiLjtUbsJfmTbYRMxdZo-9yffGJRCwgDqf9AaGTg0rjzdP1wjQuDrsZXq3p9GliSmrI3xBBaveS_ErNAZB9vbAikD0AwI-UnlEmDD4fh-c_gNph9m-RjbXX3BDAJ7Pd03ee7LEcaUSGR6D-MHE1Nvy_2U_7lLRGaXMRo4Kdsnyta-7DuhfqsQxtCIskg_uvYFPsLLsVJ1l7uuiIwLAZQneNN69Gf3W_6Kvsna358JEeDAA4aiQswSABUyiUyrwB-QoxaCR1mmPLOcoSFQd0rH7XO2A7StZ3Cvd4F0uyLtOX3Lo0SzF8pTgqjd6EmElkMJjJPrEwGUIIHHJgBZL5P6y2Xm3uPalhLAJqorZMBYuWpyNwpbloriFfZAgsjwMR7-eptaMTkkwxl1XXwgLbakGxA_sSpumZ4R7XMCrLkZFlVVQrxAM22ZlTW00PszvGNyOi9sB-4I5h_e6XXwCT8a4dIHoCp3mp_0nBRBzGZjDyHXD1hPs2bfF_RAYy1iVWYF6vEssNpEzrT47TLcAHQnM2cJwB_6kPJ7Qq5ux19Fn_Mztk4O3muZU3jaN5ei9GST3fJIzHVP5_QBiAxl_rihe4xaYF7qwg3lFgE2vGHAGD12B2du4dX9ZMVqMSqbYC4jqG4gyjiutdfNDpXJ-ifZz2VG69IFAbHQUWQa4OyDKV6UAZ6AMLcOdpNNI0Hk1L9NH9b7Xyo-x00Gbm7q9LhL-fSwqLOMoAA7rBx_tN3ru-Wcxv4Zt1qGNSayjk4PuEWWZK5ZaYkrKoJTYt6YwbihFIAcEe-Kl09iLMOlv7CJ3jTMFOED_htjUuYLFEp_n8dwdVBlM6qboQcVWN1O7KjFhvMFFDdGArwT8QfLOYrSf2mlDuwXU8jQPYUgyRFf2_E2fe9D4aKZrcp6zup5AgRJmzDABgK1bCGMntAgIan31SmC6K3noZxAGE8GBxaHw11zJsOUqYgOKBgzgdfiTbLjpMq5a7xRIPP5gVil1pz4SjmfwWkFxSKsZ_Bo04w4QURwtdst_3cFXNFJ4uxytgSsHtD27newHjvccovSCzmJ7MH6uC2fec34ANU847zZTYgkjcrjSwDgGfjkwUZ1MAtlykmtgDn44_H_1fAcILRsye6ANaO4er4I34YG7pwxzU2hm3gpII8fCpL6bDQSXfQxJfSLHy7V_r2X3eRt0bhmO0Y_Dq4g_Ez9-HYaasmIaS-IkY58pvM2WQOjzMF1eHvKOQIQA" class="anchorhref" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <div class="content">
+                                                <div class="arrow">
+                                                    <img src="/assets/images/arrow.png">
+                                                </div>
+                                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" align="left" valign="middle">
+                                                            <div class="anchortext"><a href="/kw-click" data-ct="wjTPDdEZX42rDzUkjUcuAaJ8YRlNQDa3o_dnL-TN_vkIlnbaHUvXUfmBg-u8OqguJa5i_VOl6EtxlfuwMFRh01uBWYmUxmKyYAEHXQ9qVi8R2nRQpgDGMXfaNkOSgt0qEipa9uYSMwBnh6g8Ye3e-Cal9xD4kkfbQ4CTZees1BKBas5rKAqUP261PReH08-PNFJXZxpIi3Prh_g-wVI6Chz0g2nb2mzhoUJPXSieYimLC8VpAr8S9vlQHmLdryTXabrj9QvMEWOKCotAnbFttks12T4_AtpIj13ZeVzkQUrBBTEH30OyIy_9jHOsrWd5IIeHeo8JmfBig3smv87gg-VmaGP2Fry-L_hh3zChpfM3ciDPhsFaHLd8pIcfpMTTMXztH8LwZBrnbqcuZkpBowxdczp3u8HH9Y4s7r9TWxcBOtkmji-L7zRMUIlGGFsBLeLBdZ_piyuS3DImjJ9ZPXQ50hWfalBdcW6XxMdZ3eDpoOY4e6fLUik5u4AcVjroP5_2nzwKVOqwtEf997EK6tNT_sZD8k0vk1bUhwOqa-hk0dfJb2-myI1gHHU_7oJp22VNwH-Tt1WvVG9yU7CRFtHslFVckR3aYJu1-t0LUxzhcWLncbx0D5W0BQahP_Al97v691Vwit226rIYsb4VUTid0NchW5MI-yTtIfJ4VW2IhcfggbOp1J1Sc98WBgWvzxLg9R8_e843mwUY86WvzV3U5GklRn-A13XZSehlapCGMIO21kNHMtTobmF8y76opAJ8hYVH7NvzA5uffewYSdmf8tPLcAn2jen7npSiOAuQgOBLsJ6GAe5p1ZeT8MHttnAMgiZpfW0g5JPDmwfxaPT72KgSE5BufkvdCq5YC01ZFZUf3YMZLJOEVxThZTRMuKfQPRVbnx5sDYFScJqco3gAqchHtwjfyyCkHk642f8xfJ838Mxmu9jgQwul614Gwud3cicxVt11CIF2ORuT1sQ4Y7GwZG3PNlwppC-0FL-4Di_mhXZf5lXDpxY7EtypaL2R38Kzrv93rKutKpHnHedQWPtAnfhbXsu2XGoSuIkGzgmHnUDt7zstT7P4MUynPlV2ip1m4ZOU3jFLWvZf64metGsW98uRce6QGjQHKEcx10IThll7PfYZw5JpvQRo_vw3yro73GBjpDjwsZeLBlZhV2wnPhS-NA11-gXurycxStpSo2pS-oc3_gvGhViFSXc0TCU9RJ2QiTmSW-qdrM7_NFYSEJV4v2rBobGzYMOC9eNpd8GLMdqsZoi-QxOZsMvvBuDjaB2-NSJd6QIclA8p5GswhXpuovM6zHaVJLX88C_rVoRQj8xUYs3eMl_WnPz9JR45Vv3fKmOw9AE8MzmMF3ono7OXp_wQBjnD8L8-z8d4VovAFtnV02AdqNdCT3WAz5BdXugySSBmNdr0g--pGZzhtWJIHdYEzsDI7Szyq4ldZW54RQNfGlWYRpCNVeO5gIm7taEBQkoJxrPk5kQArszzT4nakTBv7IYmqTyAB_6g4eXGzI1RRRz5Kx2s9Gyw6wHwOVURIzJ3TS4uLsQ0Zxk-ltaF4lAztJVxpQwL5UfNig6SXA7FWoFEaHI-zUN_pGfpIUQjy5lvx5us2UUkQNgqAzMoBtT9KpVEZmZtkWmHgiVESipo_vB8rl3eWW1OF_JsgWiR3DDVG-AA5C3gony1Z7sUi7lPcLQUI9l-MgwHRfX3g1huVBMwJz4fldRLXDy4J3eUlX1znkCA1tqt0w" target="_blank">discount electronics deals</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <a href="/kw-click" data-ct="CwbXe45cZfrerT-NaN9JDk6JZwToOJGC0gMfwueiQaRkLzXxIeS9KMF2GsApWiruLE3BPc7m5Ps8h1qc6vT_2bc8CLjVEGQmnA7zhOiIOL6gEQSf4ZQkEVYkIdRodROL1VWVP4TShUoOEMwnGRvFxcrpFUjgtyrgccTOTC-PkAs2ESY7qA6Zl8hcMAmiebLh0Tx1ykfAf5yOdeNcgzWH1bfe19rpZ3KVSk5qLr1-QF7H6KaPxqVeWv1rt0HZdIvLx69I99Ts9EanWjA-FIDRW5-2thWL-DV5POMRuXaO97SfCAH1T9FyZuOw9Fr55qXLIUYb56OHvtYtrtXH-mi8l8vdt8lK10n2olDAwwdHw1OMB9sPoZHJdu_cxKhLj0HhigL_JWV9IMu40w-bPMt3MDSLmxR-CrUJLeA0kDZUhaUWC-gR102ry-ld0tG9KB-woeBb1oG3oT_d06Rz5el2ipyBD95k5cT8IKe8ookCu5fIaV-LGzzS8trfZEvHexIO5akjUJRKMRmLj6MpV-OuvFO3gsnlpzdQA_O1X7ZNMQQwtXdF-AtpjnFJ6Bb1IKIddlsb7xtkf1ifRMAsoGt9ux1BAw0RZfgUkoBmZDbxjNCcpBvM7D-IuacDLo1qNiM0EEx7eD6YQsv9E0Y20NfAqWdMzU-MHpcyCr8aXL0Ahu0Ut5-aWz8YtrxhjSEp8xW6lYTVgcob8qxG1IiohvPpSvHA270VbJofgjow0iT0ZvekqBjhkh5dIQzIBtOFhFBiGOZRbiHLpPP1io-9KEpicLDNHmuKVpAJ2-wOhovZQnDhqHZYkfOpjJV4G7TVtpgCWElx-oQ6PErVlABmFbLL_Y0Rqnp3s146iqPylwhybH7jsM6vVakBVEiKw53qcGaAw69xpAgQmNdTYkzqCM1F4OhP6rqRXCQ_-DBguX-JKCNnHfC6zgt73dO7kiLflD3Ew6FFb8zLB6I3CWdFErzIdSvLs9rlGf8OPfGGVevb9otl_Sx13DjyX0ArD8ck6WYhcaw_SKsVCoWemXbs2bTtj7jvAwetZJ7jtC8e_mSZYnAQams5F8RwnnTMP2DsHIOOQz5skVDyKklNjEnqPIX0CDY_PwtJ4sI4Sk99v9XPI4M0zxlTi8K1uDrIs1W-lP3LB5EgJ8QfNmH3pYFotDLjzOge-ZqN1dt8UvRQzL41q3QklWJjZHmpB1ZhGeGB60bcBl0JeZtJYcxXOhrFNJ4wPtXyIEXDp0ezN_GcSmFOlYJbgBlb_R2sEIBsyQ_epm6KDy-121t5YkLugxjjz34-8uW-J9zWB5PluA8J2TL1FE1ZZ5BgIYXAAYjTaHCOO53YLN01co5YePO-W8_awRsSEteqRCDrVd9NH6IXFUn6ROXMuV1t_I_0KdgWxk0A3i-q1YAbJ46HA5DRn_c7u9rFJUVZhgAFoC3B8C-Ftln23fDYvMcyIawnp-opXd_KOPJndniTimY9YZJK5WsoZ2d7yMXBC6K1zuNXS4sROVOuD91AfW-hSPSJImQ9IM9zx5Pktamg6qNygrALqaBF8T6KVAfCXpPxAblCUleEt8LVpUVNbThoPuacYbGFt5AAzbRa7k04yZe4swvCmrckxwwkTHiKi_2KVaAe1LOTL0IpaWer0dqMgKZlO4oB8u5QwWWBFZM-rJW6D2HC5KjSnlZirnwFBHsT4a9d7ypquwWEvgmGQfNmX2DCiY1YCSvPZSZabmxI_Oui_p4Gst3smSGi_IKzsw" class="anchorhref" target="_blank"></a>
+                                        </li>
+                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <footer class="footer-links">
+        <a href="https://intivesearch.com/privacy?dmn=efshop.cc&testId=27" target="_blank">Privacy policy</a><a href="https://intivesearch.com/terms?dmn=efshop.cc&testId=27" target="_blank">Terms of Service</a>
+    </footer>
+</div>
+
+<script>
+    window.__cherami = {
+        sessionId: "92ade235-cc60-4d4d-acd8-e24a60afd658",
+        source: "",
+        tkn: "19vnMT3S",
+        reportUrl: window.location.origin + '/cherami/report'
+    };
+
+    function report(action, payload) {
+        payload = payload || {};
+        const data = { action: action, _ts: String(Date.now()) };
+        const source = window.__cherami.source;
+        const sessionId = window.__cherami.sessionId;
+        const tkn = window.__cherami.tkn;
+
+        if (tkn) data.tkn = tkn;
+
+        if (payload.wa) {
+            const wa = Object.assign({}, payload.wa);
+            if (source) wa.cid = source;
+            if (sessionId) wa.sid = sessionId;
+            data.wa = JSON.stringify(wa);
+        }
+        if (payload.dmFeed) {
+            const dmFeed = Object.assign({}, payload.dmFeed);
+            if (source) dmFeed.source = source;
+            if (sessionId) dmFeed.session_id = sessionId;
+            data.dmFeed = JSON.stringify(dmFeed);
+        }
+
+        const reportUrl = new URL(window.__cherami.reportUrl);
+        reportUrl.search = new URLSearchParams(data).toString();
+
+        const img = new Image();
+        img.src = reportUrl.toString();
+    }
+
+    function getCanvasFingerprint() {
+        try {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return null;
+
+            canvas.width = 200;
+            canvas.height = 50;
+            ctx.textBaseline = 'top';
+            ctx.font = '14px Arial';
+            ctx.textBaseline = 'alphabetic';
+            ctx.fillStyle = '#f60';
+            ctx.fillRect(125, 1, 62, 20);
+            ctx.fillStyle = '#069';
+            ctx.fillText('Cherami fingerprint', 2, 15);
+            ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+            ctx.fillText('Cherami fingerprint', 4, 17);
+
+            return canvas.toDataURL().substring(0, 100);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function getWebGLFingerprint() {
+        try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            if (!gl) return null;
+
+            const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+            if (debugInfo) {
+                return {
+                    vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL) || '',
+                    renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || '',
+                };
+            }
+            return null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function reportClientAttestation() {
+        try {
+            const c = window.__cherami || {};
+            if (!c || !c.sessionId) {
+                return;
+            }
+
+            const canvasFp = getCanvasFingerprint();
+            const webglFp = getWebGLFingerprint();
+
+            const attestation = JSON.stringify({
+                jsExecuted: true,
+                screenW: window.screen.width,
+                screenH: window.screen.height,
+                dpr: window.devicePixelRatio || 1,
+                maxTouchPoints: navigator.maxTouchPoints || 0,
+                webdriver: navigator.webdriver === true,
+                tzOffset: new Date().getTimezoneOffset(),
+                cookieEnabled: navigator.cookieEnabled,
+                languagesCount: navigator.languages ? navigator.languages.length : 0,
+                platform: navigator.platform || '',
+                canvasFp: canvasFp,
+                webglVendor: webglFp ? webglFp.vendor : null,
+                webglRenderer: webglFp ? webglFp.renderer : null,
+                hardwareConcurrency: navigator.hardwareConcurrency || 0,
+                deviceMemory: navigator.deviceMemory || 0,
+            });
+
+            const payload = {
+                action: 'clientCheck',
+                wa: { extraString1: attestation, sid: c.sessionId || null },
+                dmFeed: { extra_string1: attestation, source: c.source || null, session_id: c.sessionId || null },
+            };
+
+            if (navigator.sendBeacon) {
+                const blob = new Blob([JSON.stringify({ action: payload.action, payload })], {
+                    type: 'application/json',
+                });
+                navigator.sendBeacon(c.reportUrl, blob);
+                return;
+            }
+
+            fetch(c.reportUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: payload.action, payload }),
+                keepalive: true,
+                credentials: 'include',
+            }).catch(function() {});
+        } catch (err) {}
+    }
+
+    window.addEventListener('load', function() {
+        reportClientAttestation();
+    });
+
+    var pageOpenedAt = Date.now();
+
+    function msSincePageOpen() {
+        return Date.now() - pageOpenedAt;
+    }
+
+    function keywordClickZone(clicked, event) {
+        var under = clicked;
+        if (clicked.closest('.anchorhref') && event && event.clientX && document.elementsFromPoint) {
+            var stack = document.elementsFromPoint(event.clientX, event.clientY);
+            for (var i = 0; i < stack.length; i++) {
+                if (!stack[i].closest('.anchorhref')) { under = stack[i]; break; }
+            }
+        }
+        if (under.closest('.arrow')) return 'arrow';
+        if (under.closest('.anchortext')) return 'text';
+        return 'row';
+    }
+
+    function adClickZone(clicked) {
+        if (clicked.closest('.arrow_wrap')) return 'cta';
+        if (clicked.closest('.title')) return 'title';
+        if (clicked.closest('.desc')) return 'description';
+        if (clicked.closest('.url')) return 'domain';
+        return 'ad';
+    }
+
+    function armKeywordLink(link, clicked, event) {
+        link.href = '/kw-click?t=' + encodeURIComponent(link.dataset.ct)
+            + '&ttc=' + msSincePageOpen()
+            + '&zone=' + encodeURIComponent(keywordClickZone(clicked, event));
+    }
+
+    function trackAdClick(link, clicked) {
+        var ads = document.querySelectorAll('a.content-wrap');
+        report('adClick', {
+            dmFeed: {
+                page: 'ads',
+                step: 'click',
+                ads_variant: '',
+                test_id: '27',
+                root_domain: 'efshop.cc',
+                position: Array.prototype.indexOf.call(ads, link) + 1,
+                click_zone: adClickZone(clicked),
+                time_to_click_ms: msSincePageOpen()
+            }
+        });
+    }
+
+    function onKeywordIntent(event) {
+        try {
+            var clicked = event.target;
+            if (!clicked || !clicked.closest) return;
+            if (event.type === 'keydown' && event.key !== 'Enter') return;
+
+            var keywordLink = clicked.closest('a[data-ct]');
+            if (keywordLink) armKeywordLink(keywordLink, clicked, event);
+        } catch (err) {}
+    }
+
+    document.addEventListener('pointerdown', onKeywordIntent, true);
+    document.addEventListener('keydown', onKeywordIntent, true);
+    document.addEventListener('click', onKeywordIntent, true);
+
+    document.addEventListener('click', function (event) {
+        try {
+            var clicked = event.target;
+            if (!clicked || !clicked.closest) return;
+
+            var adLink = clicked.closest('a.content-wrap');
+            if (adLink) {
+                trackAdClick(adLink, clicked);
+            }
+        } catch (err) {}
+    }, true);
+</script><script>
+    (function () {
+        var props = {"trafficSrc":"intango_park_dm_1638_1","ysid":"3PCJGC5LCM7LV"} || {};
+        
+
+        var startedAt = Date.now();
+        var called = false;
+        var reported = null;
+
+        function send(step) {
+            try {
+                if (typeof report !== 'function') return;
+                report('yahooBeacon', {
+                    dmFeed: {
+                        page: 'keywords',
+                        step: step,
+                        test_id: '27',
+                        root_domain: 'efshop.cc',
+                        
+                        kw_variant: 'keywords',
+                        extra_integer1: Date.now() - startedAt
+                    }
+                });
+            } catch (e) {}
+        }
+
+        function settle(step) {
+            if (reported) return;
+            reported = step;
+            send(step);
+        }
+
+        function argument() {
+            props.ykws = Array.prototype.map.call(document.querySelectorAll('.list_1 a'), function (a) {
+                return a.textContent ? a.textContent.trim() : '';
+            }).filter(Boolean).join(',');
+            return props;
+        }
+
+        function run() {
+            if (called) return true;
+            if (typeof window.initDMKeywords !== 'function') return false;
+
+            called = true;
+            try {
+                window.initDMKeywords(argument());
+                reported ? send('late-ok') : settle('ok');
+            } catch (e) {
+                settle('threw');
+            }
+            return true;
+        }
+
+        function poll() {
+            if (run() || reported) return;
+            if (Date.now() - startedAt < 15000) setTimeout(poll, 50);
+            else settle('timeout');
+        }
+
+        var script = document.createElement('script');
+        script.src = 'https://s.appreports.net/serenity.js?v=' + new Date().toISOString().slice(0, 10);
+        script.async = true;
+        script.onload = run;
+        script.onerror = function () { settle('load-failed'); };
+
+        document.head.appendChild(script);
+        poll();
+    })();
+</script>
+<script>
+    window.addEventListener('load', function () {
+        var kws = '';
+        try {
+            kws = Array.prototype.map.call(document.querySelectorAll('.list_1 .anchortext a'), function (a) {
+                return a.textContent ? a.textContent.trim() : '';
+            }).filter(function (s) { return s.length > 0; }).join(',');
+        } catch (e) {}
+        report('keywordsPageLoad', {
+            wa: {
+                extraString1: kws,
+                extraString2: 'efshop.cc',
+                extraString3: '27'
+            },
+            dmFeed: {
+                page: 'keywords',
+                step: 'load',
+                kw_variant: 'keywords',
+                test_id: '27',
+                root_domain: 'efshop.cc',
+                item_count: kws ? kws.split(',').length : 0
+            }
+        });
+    });
+</script>
+</body>
+</html>
