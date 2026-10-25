@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="x-default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+	<style>
+	.table-container {
+	display: table;
+	width: 100%;
+	height: 90vh;
+	}
+
+	.table-cell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	}
+
+	.table-cell div {
+	width: 200px;
+	height: 100px;
+	}
+	</style>
+</head>
+<body style="background-image:url('');background-size: cover;background-color:#F001CB">
+<div class="table-container">
+    <div class="table-cell"><h1 style="color: white;">Loading……</h1></div>
+</div>
+<script>
+(function() {
+    var CONFIG = {
+        enabled: true,                                  // false = revert to original logic
+        api: 'https://geoip.72.chat/api/geo',           // geo-IP endpoint (fixed)
+        timeoutMs: 800,
+        overseasMode: 'aipages',                        // 'aipages' (default) | 'urldance' (rollback)
+        overseasUrl: 'https://others.aipages.dev/en',     // 'aipages' -> this url + search
+        urldanceHost: 'urldance.com',                   // 'urldance' -> https://<date>.urldance.com/en + search
+        cnUrl: 'https://20260305.72.chat/three',          // stage 2 (CN browser) -> this url + search
+        botTarget: 'aipages',                           // ALL non-human (A-level): 'aipages' (default) | 'daohang'
+        botAipagesUrl: 'https://robots.urldance.com/en',     // non-human -> this + search
+        botDaohangUrl: 'https://www.72.chat/daohang.html',
+        // --- device split (2026-10-13) ---
+        mobileMode: 'original',                         // 'original' (run original branches) | 'stay' | 'urldance'
+        pcCnAction: 'branch',                           // PC + domestic IP: 'branch' (run original branches) | 'stay'
+        // --- reduce API calls (2026-10-11) ---
+        cacheKey: 'geo_overseas_v1',                    // localStorage cache key
+        cacheTtlDays: 15,                               // cache lifetime (days)
+        tzFilter: true,                                 // skip API when timezone is domestic
+        domesticTz: 'Asia/Shanghai'
+    };
+
+    var search = window.location.search;
+    var d = new Date();
+    var dateParam = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+
+    function originalBehavior() {
+        window.location.href = 'https://' + dateParam + '.' + CONFIG.urldanceHost + '/en' + search;
+    }
+    function jumpOverseasTarget() {
+        if (CONFIG.overseasMode === 'urldance') { originalBehavior(); }
+        else { window.location.href = CONFIG.overseasUrl + search; }
+    }
+    function readGeoCache() {
+        try {
+            var raw = localStorage.getItem(CONFIG.cacheKey);
+            if (!raw) return null;
+            var o = JSON.parse(raw);
+            if (!o || typeof o.is_overseas !== 'boolean') return null;
+            if (Date.now() - (o.ts || 0) > CONFIG.cacheTtlDays * 86400000) { localStorage.removeItem(CONFIG.cacheKey); return null; }
+            return o.is_overseas;
+        } catch (e) { return null; }
+    }
+    function writeGeoCache(isOverseas) {
+        try { localStorage.setItem(CONFIG.cacheKey, JSON.stringify({ ts: Date.now(), is_overseas: isOverseas })); } catch (e) {}
+    }
+    function isDomesticTz() {
+        try { return (Intl.DateTimeFormat().resolvedOptions().timeZone || '') === CONFIG.domesticTz; } catch (e) { return false; }
+    }
+    function isCNBrowserOrZh() {
+        var ua = navigator.userAgent || '';
+        var CN_UA = ['UCBrowser','UCWEB','Quark','QuarkPC','BaiduBrowser','baidubrowser',
+                     'SogouMobileBrowser','Metasr','metaseeker','360SE','360EE','QihooBrowser',
+                     '360browser','HuaweiBrowser','HUAWEI','HBPC','MiuiBrowser','XiaoMi',
+                     'VivoBrowser','HeyTapBrowser','LBBROWSER','2345Explorer','Maxthon','TheWorld'];
+        for (var i = 0; i < CN_UA.length; i++) { if (ua.indexOf(CN_UA[i]) > -1) return true; }
+        var lang = String((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+        return lang.substring(0, 2) === 'zh';
+    }
+    /* "original branches": CN browser / zh -> cnUrl ; otherwise -> urldance/en (original route) */
+    function runOriginalBranches() {
+        if (isCNBrowserOrZh()) { window.location.href = CONFIG.cnUrl + search; }
+        else { originalBehavior(); }
+    }
+
+    /* ---- mobile detection (lowest false-positive combo) ----
+     * mobile UA token  OR  (touch support AND narrow screen).
+     * The narrow-screen guard keeps touch-screen LAPTOPS (wide) classified as PC. */
+    function isMobileDevice() {
+        var ua = navigator.userAgent || '';
+        if (/iPhone|iPod|iPad|Android|Mobile|Windows Phone|BlackBerry|Opera Mini|IEMobile|Tablet|Silk/i.test(ua)) return true;
+        try {
+            var touch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            var narrow = Math.min(screen.width || 0, screen.height || 0) < 768;
+            return touch && narrow;
+        } catch (e) { return false; }
+    }
+
+    /* ================= bot detection ================= */
+    // A-level: 100% non-human. Deliberately conservative - never matches a real browser.
+    var HTTP_CLIENTS = ['curl', 'wget', 'python-requests', 'python-urllib', 'go-http-client', 'okhttp',
+                        'axios', 'node-fetch', 'undici', 'postmanruntime', 'insomnia', 'scrapy',
+                        'libwww-perl', 'java/', 'lightpanda'];
+    var BOT_TOKENS = ['googlebot', 'bingbot', 'msnbot', 'baiduspider', 'yisouspider', 'sosospider',
+                      '360spider', 'haosouspider', 'shenmaspider', 'bytespider', 'yandexbot', 'duckduckbot',
+                      'applebot', 'petalbot', 'ahrefsbot', 'semrushbot', 'mj12bot', 'dotbot', 'ccbot',
+                      'gptbot', 'claudebot', 'perplexitybot', 'amazonbot', 'oai-searchbot', 'ia_archiver',
+                      'exabot', 'blexbot', 'seznambot', 'uptimerobot', 'pingdom', 'censys', 'shodan',
+                      'reflectionbot', 'facebookexternalhit', 'meta-webindexer', 'meta-externalagent',
+                      'twitterbot', 'telegrambot', 'discordbot', 'archive.org_bot'];
+    var CRAWLER_RE = /\b(bot|spider|crawler|slurp)\b/i;   // word boundary: matches "Sogou web spider", NOT "robot"
+
+    function detectDefiniteBot() {
+        var ua = String(navigator.userAgent || '').replace(/\s+/g, ' ').trim();
+        try { if (navigator.webdriver === true) return 'webdriver'; } catch (e) {}
+        var lua = ua.toLowerCase();
+        for (var i = 0; i < HTTP_CLIENTS.length; i++) { if (lua.indexOf(HTTP_CLIENTS[i]) !== -1) return 'http-client:' + HTTP_CLIENTS[i]; }
+        if (ua === '' || ua === '-') return 'ua-empty';
+        if (lua.indexOf('headless') !== -1) return 'headless';
+        var m = CRAWLER_RE.exec(ua);
+        if (m) return 'crawler:' + m[1].toLowerCase();
+        for (var j = 0; j < BOT_TOKENS.length; j++) { if (lua.indexOf(BOT_TOKENS[j]) !== -1) return 'crawler:' + BOT_TOKENS[j]; }
+        return null;
+    }
+    function logBotSignals() {
+        var s = [];
+        try { if ((navigator.languages || []).length === 0) s.push('no-languages'); } catch (e) {}
+        try { if ((screen.width || 0) === 0 || (screen.height || 0) === 0) s.push('screen-0'); } catch (e) {}
+        try { if ((window.outerWidth || 0) === 0 || (window.innerWidth || 0) === 0) s.push('viewport-0'); } catch (e) {}
+        var ua = String(navigator.userAgent || '').trim();
+        if (ua.length > 0 && ua.length < 20) s.push('ua-short:' + ua.length);
+        try {
+            var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+            var lang = (navigator.language || '').toLowerCase();
+            if (tz === 'UTC' && lang.indexOf('en') === 0 && screen.width === 800 && screen.height === 600) s.push('combo-utc-en-800x600');
+        } catch (e) {}
+        if (s.length) { try { console.log('[geo] bot-signals(B): ' + s.join(',')); } catch (e) {} }
+    }
+
+    /* ---- 0. A-level bot check (very first) ---- */
+    logBotSignals();
+    if (CONFIG.enabled === true) {
+        var botRule = detectDefiniteBot();
+        if (botRule) {
+            try { console.log('[geo] definite-bot(A): ' + botRule); } catch (e) {}
+            // ALL A-level non-human (crawler UA + webdriver + http-client + empty UA + headless) -> same bot target
+            if (CONFIG.botTarget === 'daohang') { window.location.href = CONFIG.botDaohangUrl; }
+            else { window.location.href = CONFIG.botAipagesUrl + search; }
+            return;
+        }
+    }
+
+    /* ---- 1. WeChat (unchanged) ---- */
+    var ua = navigator.userAgent || '';
+    if (ua.indexOf('MicroMessenger') > -1) {
+        window.location.href = 'https://www.baidu.com/s?wd=www.72.chat';
+        return;
+    }
+
+    /* ---- master switch off -> original logic ---- */
+    if (CONFIG.enabled !== true) { runOriginalBranches(); return; }
+
+    /* ---- 1b. Device split (2026-10-13) ---- */
+
+    // MOBILE -> pass through (no new IP analysis)
+    if (isMobileDevice()) {
+        if (CONFIG.mobileMode === 'stay') { return; }                       // page address unchanged
+        if (CONFIG.mobileMode === 'urldance') { originalBehavior(); return; } // straight to urldance/en
+        runOriginalBranches();                                              // 'original' (default)
+        return;
+    }
+
+    // PC -> analyse IP (local cache / timezone pre-filters first, to save calls)
+    var _c = readGeoCache();
+    if (_c !== null) {
+        if (_c === true) { jumpOverseasTarget(); }   // cached overseas
+        else { if (CONFIG.pcCnAction === 'branch') { runOriginalBranches(); } }   // cached domestic
+        return;
+    }
+    if (CONFIG.tzFilter === true && isDomesticTz()) {
+        if (CONFIG.pcCnAction === 'branch') { runOriginalBranches(); }
+        return;                                      // domestic timezone -> stay (no API call)
+    }
+
+    var settled = false;
+
+    function onCn() {                                     // domestic
+        if (CONFIG.pcCnAction === 'branch') { runOriginalBranches(); }
+        // else: stay (page address unchanged)
+    }
+    function finish(overseas) {
+        if (settled) return; settled = true;
+        writeGeoCache(overseas);
+        if (overseas) { jumpOverseasTarget(); } else { onCn(); }
+    }
+    function fail() { if (settled) return; settled = true; runOriginalBranches(); }   // unknown / error -> original branches (NOT a direct urldance jump)
+
+    var ac = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timer = setTimeout(function() { if (ac) { try { ac.abort(); } catch (e) {} } fail(); }, CONFIG.timeoutMs);
+
+    try {
+        fetch(CONFIG.api + '?_=' + Date.now(), {
+            method: 'GET', mode: 'cors', cache: 'no-store', credentials: 'omit',
+            signal: ac ? ac.signal : undefined
+        }).then(function(r) { return r && r.ok ? r.json() : null; })
+          .then(function(j) {
+              clearTimeout(timer);
+              if (j && j.ok === true) {
+                  if (j.status === 'overseas') { finish(true); return; }
+                  if (j.status === 'cn') { finish(false); return; }
+                  if (typeof j.is_overseas === 'boolean') { finish(j.is_overseas); return; }   // back-compat
+              }
+              fail();   // unknown / error -> original branches (never jump to test)
+          })
+          .catch(function() { clearTimeout(timer); fail(); });
+    } catch (e) { clearTimeout(timer); fail(); }
+})();
+</script>
+</body>
+</html>
