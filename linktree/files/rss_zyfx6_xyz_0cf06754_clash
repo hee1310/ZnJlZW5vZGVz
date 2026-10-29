@@ -1,0 +1,62 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - 223.5.5.5
+    - 1.1.1.1
+
+proxies:
+  - name: "订阅已失效，请重新获取"
+    type: anytls
+    server: baidu.com
+    port: 80
+    password: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
+    client-fingerprint: chrome
+    sni: free.nl1.laodavip.com
+    udp: true
+
+  - name: "加入频道 @txwl666"
+    type: anytls
+    server: 360.com
+    port: 80
+    password: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
+    client-fingerprint: chrome
+    sni: free.nl1.laodavip.com
+    udp: true
+
+  - name: "加入群聊 @txwl233"
+    type: anytls
+    server: 4399.com
+    port: 80
+    password: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
+    client-fingerprint: chrome
+    sni: free.nl1.laodavip.com
+    udp: true
+
+  - name: "VPN节点机器人 @xmsubbot"
+    type: anytls
+    server: 4399.com
+    port: 80
+    password: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
+    client-fingerprint: chrome
+    sni: free.nl1.laodavip.com
+    udp: true
+
+proxy-groups:
+  - name: "节点选择"
+    type: select
+    proxies:
+      - "订阅已失效，请重新获取"
+      - "加入频道 @txwl666"
+      - "加入群聊 @txwl233"
+      - "VPN节点机器人 @xmsubbot"
+
+rules:
+  - MATCH,节点选择

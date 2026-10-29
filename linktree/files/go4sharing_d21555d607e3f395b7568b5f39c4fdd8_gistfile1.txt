@@ -1,0 +1,2992 @@
+mode: Global
+proxies:
+  - name: 中国 - 香港 - 1
+    server: 119.147.193.155
+    port: '7000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 327
+  - name: 中国 - 香港 - 2
+    server: 8.210.106.1
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 439
+  - name: 中国 - 香港 - 3
+    server: 8.217.154.146
+    port: '2026'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1254
+  - name: 中国 - 香港 - 4
+    server: 45.197.149.150
+    port: '33333'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1098
+  - name: 中国 - 香港 - 5
+    server: 103.6.235.48
+    port: '20174'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2441
+  - name: 以色列 - 佩塔提克瓦 - 1
+    server: 80.178.58.56
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2425
+  - name: 俄罗斯 - 多莫傑多沃 - 1
+    server: 65.109.214.6
+    port: '2053'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1794
+  - name: 俄罗斯 - 多莫傑多沃 - 2
+    server: 37.27.216.110
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1688
+  - name: 俄罗斯 - 多莫傑多沃 - 3
+    server: 65.109.207.207
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1742
+  - name: 加拿大 - 多伦多 - 1
+    server: 5.255.122.223
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1594
+  - name: 加拿大 - 多伦多 - 2
+    server: 139.180.193.88
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1913
+  - name: 加拿大 - 多伦多 - 3
+    server: 151.241.5.124
+    port: '7000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1459
+  - name: 加拿大 - 多伦多 - 4
+    server: 31.214.157.113
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1835
+  - name: 加拿大 - 多伦多 - 5
+    server: 45.154.98.52
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2096
+  - name: 加拿大 - 多伦多 - 6
+    server: 195.58.50.114
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1904
+  - name: 加拿大 - 多伦多 - 7
+    server: speedtest.net.za
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1861
+  - name: 加拿大 - 多伦多 - 8
+    server: 107.174.93.186
+    port: '2025'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2848
+  - name: 德国 - 德赖艾希 - 1
+    server: 94.141.123.232
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2165
+  - name: 德国 - 德赖艾希 - 10
+    server: 91.107.243.237
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1610
+  - name: 德国 - 德赖艾希 - 100
+    server: 194.26.192.125
+    port: '1002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1180
+  - name: 德国 - 德赖艾希 - 101
+    server: 2.59.134.116
+    port: '2013'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1355
+  - name: 德国 - 德赖艾希 - 102
+    server: 194.26.192.251
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1648
+  - name: 德国 - 德赖艾希 - 103
+    server: 45.154.98.120
+    port: '2013'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1378
+  - name: 德国 - 德赖艾希 - 104
+    server: 194.26.192.217
+    port: '8003'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1293
+  - name: 德国 - 德赖艾希 - 105
+    server: 142.132.178.99
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2545
+  - name: 德国 - 德赖艾希 - 106
+    server: 45.154.98.133
+    port: '1002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1226
+  - name: 德国 - 德赖艾希 - 107
+    server: 45.154.98.230
+    port: '5007'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1676
+  - name: 德国 - 德赖艾希 - 108
+    server: 45.154.98.127
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2398
+  - name: 德国 - 德赖艾希 - 109
+    server: 45.154.98.230
+    port: '5003'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2337
+  - name: 德国 - 德赖艾希 - 11
+    server: 88.99.60.34
+    port: '2053'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1334
+  - name: 德国 - 德赖艾希 - 110
+    server: 194.26.192.125
+    port: '2013'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1485
+  - name: 德国 - 德赖艾希 - 111
+    server: 185.94.29.212
+    port: '2017'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1739
+  - name: 德国 - 德赖艾希 - 112
+    server: 5.75.220.207
+    port: '7991'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1898
+  - name: 德国 - 德赖艾希 - 113
+    server: 91.107.245.83
+    port: '3085'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2236
+  - name: 德国 - 德赖艾希 - 114
+    server: 209.38.115.143
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1906
+  - name: 德国 - 德赖艾希 - 115
+    server: 152.53.12.112
+    port: '12001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2434
+  - name: 德国 - 德赖艾希 - 116
+    server: 152.53.13.241
+    port: '2001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2651
+  - name: 德国 - 德赖艾希 - 117
+    server: 62.60.239.218
+    port: '3085'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1556
+  - name: 德国 - 德赖艾希 - 118
+    server: 45.157.233.203
+    port: '8204'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1147
+  - name: 德国 - 德赖艾希 - 119
+    server: 45.154.98.133
+    port: '5005'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1764
+  - name: 德国 - 德赖艾希 - 12
+    server: 168.119.230.13
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1833
+  - name: 德国 - 德赖艾希 - 120
+    server: 45.154.98.133
+    port: '14001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2359
+  - name: 德国 - 德赖艾希 - 121
+    server: 194.26.192.125
+    port: '1033'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1746
+  - name: 德国 - 德赖艾希 - 122
+    server: 194.26.192.251
+    port: '2025'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2456
+  - name: 德国 - 德赖艾希 - 123
+    server: 89.168.110.240
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2107
+  - name: 德国 - 德赖艾希 - 124
+    server: 152.53.225.203
+    port: '1020'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2772
+  - name: 德国 - 德赖艾希 - 125
+    server: 194.26.192.251
+    port: '1013'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2545
+  - name: 德国 - 德赖艾希 - 126
+    server: 45.154.98.120
+    port: '5007'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2532
+  - name: 德国 - 德赖艾希 - 127
+    server: 2.59.135.223
+    port: '1029'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1525
+  - name: 德国 - 德赖艾希 - 128
+    server: 45.154.98.133
+    port: '1033'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1988
+  - name: 德国 - 德赖艾希 - 129
+    server: 45.154.98.230
+    port: '2003'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2410
+  - name: 德国 - 德赖艾希 - 13
+    server: 2.59.134.207
+    port: '8008'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1835
+  - name: 德国 - 德赖艾希 - 130
+    server: 194.26.192.251
+    port: '1008'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1339
+  - name: 德国 - 德赖艾希 - 131
+    server: 176.96.138.17
+    port: '8205'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2159
+  - name: 德国 - 德赖艾希 - 132
+    server: 152.53.15.208
+    port: '4006'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2633
+  - name: 德国 - 德赖艾希 - 133
+    server: 152.53.12.23
+    port: '5005'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1260
+  - name: 德国 - 德赖艾希 - 134
+    server: 194.26.192.251
+    port: '5008'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2377
+  - name: 德国 - 德赖艾希 - 135
+    server: 194.26.192.125
+    port: '2007'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2722
+  - name: 德国 - 德赖艾希 - 14
+    server: 91.107.171.181
+    port: '8008'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2328
+  - name: 德国 - 德赖艾希 - 15
+    server: 195.201.252.144
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1586
+  - name: 德国 - 德赖艾希 - 16
+    server: 195.201.251.241
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1900
+  - name: 德国 - 德赖艾希 - 17
+    server: 91.107.249.210
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1595
+  - name: 德国 - 德赖艾希 - 18
+    server: 150.230.146.170
+    port: '2053'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2548
+  - name: 德国 - 德赖艾希 - 19
+    server: 91.99.235.21
+    port: '2233'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2826
+  - name: 德国 - 德赖艾希 - 2
+    server: 163.5.187.149
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1359
+  - name: 德国 - 德赖艾希 - 20
+    server: 91.98.119.52
+    port: '2233'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2185
+  - name: 德国 - 德赖艾希 - 21
+    server: 202.61.200.220
+    port: '8088'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1872
+  - name: 德国 - 德赖艾希 - 22
+    server: 45.145.43.48
+    port: '2096'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2117
+  - name: 德国 - 德赖艾希 - 23
+    server: 91.107.243.237
+    port: '2086'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1372
+  - name: 德国 - 德赖艾希 - 24
+    server: 77.90.43.66
+    port: '2087'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1317
+  - name: 德国 - 德赖艾希 - 25
+    server: 80.240.30.117
+    port: '2086'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2040
+  - name: 德国 - 德赖艾希 - 26
+    server: 202.61.200.220
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1759
+  - name: 德国 - 德赖艾希 - 27
+    server: 91.107.128.71
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1869
+  - name: 德国 - 德赖艾希 - 28
+    server: 91.107.168.135
+    port: '2095'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2661
+  - name: 德国 - 德赖艾希 - 29
+    server: 46.226.165.34
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2008
+  - name: 德国 - 德赖艾希 - 3
+    server: 188.245.165.71
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1703
+  - name: 德国 - 德赖艾希 - 30
+    server: 49.13.53.126
+    port: '2222'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2081
+  - name: 德国 - 德赖艾希 - 31
+    server: 91.107.158.0
+    port: '2222'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1408
+  - name: 德国 - 德赖艾希 - 32
+    server: 38.244.166.207
+    port: '8000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1492
+  - name: 德国 - 德赖艾希 - 33
+    server: 167.235.65.225
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2362
+  - name: 德国 - 德赖艾希 - 34
+    server: 49.13.154.236
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2671
+  - name: 德国 - 德赖艾希 - 35
+    server: 62.133.60.66
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2399
+  - name: 德国 - 德赖艾希 - 36
+    server: 176.96.138.203
+    port: '8000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1325
+  - name: 德国 - 德赖艾希 - 37
+    server: 91.92.42.65
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1918
+  - name: 德国 - 德赖艾希 - 38
+    server: 5.75.204.208
+    port: '8000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2635
+  - name: 德国 - 德赖艾希 - 39
+    server: 3.67.8.221
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2442
+  - name: 德国 - 德赖艾希 - 4
+    server: 193.23.216.248
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1260
+  - name: 德国 - 德赖艾希 - 40
+    server: 5.75.214.255
+    port: '2095'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2271
+  - name: 德国 - 德赖艾希 - 41
+    server: 45.154.98.100
+    port: '2002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2538
+  - name: 德国 - 德赖艾希 - 42
+    server: 91.99.155.167
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2667
+  - name: 德国 - 德赖艾希 - 43
+    server: 45.80.209.25
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1281
+  - name: 德国 - 德赖艾希 - 44
+    server: 49.13.220.86
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1596
+  - name: 德国 - 德赖艾希 - 45
+    server: 62.60.230.30
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1699
+  - name: 德国 - 德赖艾希 - 46
+    server: 193.188.21.102
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1818
+  - name: 德国 - 德赖艾希 - 47
+    server: 213.176.114.86
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1860
+  - name: 德国 - 德赖艾希 - 48
+    server: 78.47.146.151
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1834
+  - name: 德国 - 德赖艾希 - 49
+    server: 82.115.19.143
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2164
+  - name: 德国 - 德赖艾希 - 5
+    server: 45.154.98.127
+    port: '2002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2335
+  - name: 德国 - 德赖艾希 - 50
+    server: 45.133.74.6
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2134
+  - name: 德国 - 德赖艾希 - 51
+    server: 85.10.198.99
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2391
+  - name: 德国 - 德赖艾希 - 52
+    server: 152.53.118.199
+    port: '2012'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1278
+  - name: 德国 - 德赖艾希 - 53
+    server: 116.202.4.195
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1241
+  - name: 德国 - 德赖艾希 - 54
+    server: 89.58.34.230
+    port: '2012'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1456
+  - name: 德国 - 德赖艾希 - 55
+    server: 91.107.140.10
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1389
+  - name: 德国 - 德赖艾希 - 56
+    server: 91.107.139.23
+    port: '2000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1387
+  - name: 德国 - 德赖艾希 - 57
+    server: 94.130.72.184
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1368
+  - name: 德国 - 德赖艾希 - 58
+    server: 85.234.94.186
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2108
+  - name: 德国 - 德赖艾希 - 59
+    server: 51.89.10.8
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1435
+  - name: 德国 - 德赖艾希 - 6
+    server: 45.154.98.100
+    port: '3001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1355
+  - name: 德国 - 德赖艾希 - 60
+    server: 37.120.187.246
+    port: '2001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1860
+  - name: 德国 - 德赖艾希 - 61
+    server: 38.244.166.207
+    port: '14000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1493
+  - name: 德国 - 德赖艾希 - 62
+    server: 89.58.14.243
+    port: '1002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2933
+  - name: 德国 - 德赖艾希 - 63
+    server: 45.145.42.170
+    port: '8005'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2711
+  - name: 德国 - 德赖艾希 - 64
+    server: 2.58.56.170
+    port: '5008'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2365
+  - name: 德国 - 德赖艾希 - 65
+    server: 194.26.192.217
+    port: '8004'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2062
+  - name: 德国 - 德赖艾希 - 66
+    server: 45.154.98.230
+    port: '5008'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2046
+  - name: 德国 - 德赖艾希 - 67
+    server: 45.154.98.133
+    port: '2001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1304
+  - name: 德国 - 德赖艾希 - 68
+    server: 194.26.192.251
+    port: '4001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2724
+  - name: 德国 - 德赖艾希 - 69
+    server: 194.26.192.251
+    port: '5006'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1872
+  - name: 德国 - 德赖艾希 - 7
+    server: 89.58.26.175
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1365
+  - name: 德国 - 德赖艾希 - 70
+    server: 194.26.192.125
+    port: '3001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1446
+  - name: 德国 - 德赖艾希 - 71
+    server: 194.26.192.251
+    port: '3001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2283
+  - name: 德国 - 德赖艾希 - 72
+    server: 45.147.49.88
+    port: '12321'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1058
+  - name: 德国 - 德赖艾希 - 73
+    server: 194.26.192.251
+    port: '5007'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1832
+  - name: 德国 - 德赖艾希 - 74
+    server: 193.31.28.79
+    port: '20001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2915
+  - name: 德国 - 德赖艾希 - 75
+    server: 212.52.1.202
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1857
+  - name: 德国 - 德赖艾希 - 76
+    server: 194.26.192.251
+    port: '2012'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1540
+  - name: 德国 - 德赖艾希 - 77
+    server: 194.26.192.217
+    port: '8001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1408
+  - name: 德国 - 德赖艾希 - 78
+    server: 2.58.56.170
+    port: '5003'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2652
+  - name: 德国 - 德赖艾希 - 79
+    server: 45.94.31.56
+    port: '10322'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1665
+  - name: 德国 - 德赖艾希 - 8
+    server: 91.107.151.39
+    port: '2053'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2313
+  - name: 德国 - 德赖艾希 - 80
+    server: 2.59.135.223
+    port: '1028'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1645
+  - name: 德国 - 德赖艾希 - 81
+    server: 194.26.192.125
+    port: '3002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1176
+  - name: 德国 - 德赖艾希 - 82
+    server: 2.58.56.170
+    port: '1002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1188
+  - name: 德国 - 德赖艾希 - 83
+    server: 91.107.255.199
+    port: '8086'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2472
+  - name: 德国 - 德赖艾希 - 84
+    server: 37.120.187.246
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2146
+  - name: 德国 - 德赖艾希 - 85
+    server: 188.245.207.54
+    port: '44444'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1595
+  - name: 德国 - 德赖艾希 - 86
+    server: 37.120.187.246
+    port: '3001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2812
+  - name: 德国 - 德赖艾希 - 87
+    server: 2.58.56.170
+    port: '1032'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2044
+  - name: 德国 - 德赖艾希 - 88
+    server: 91.107.203.137
+    port: '990'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1698
+  - name: 德国 - 德赖艾希 - 89
+    server: 194.26.192.125
+    port: '2012'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2808
+  - name: 德国 - 德赖艾希 - 9
+    server: 91.107.243.237
+    port: '2053'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1213
+  - name: 德国 - 德赖艾希 - 90
+    server: 45.154.98.127
+    port: '3002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2915
+  - name: 德国 - 德赖艾希 - 91
+    server: 45.154.98.100
+    port: '3002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1701
+  - name: 德国 - 德赖艾希 - 92
+    server: 194.26.192.251
+    port: '2026'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2439
+  - name: 德国 - 德赖艾希 - 93
+    server: 89.58.14.243
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2386
+  - name: 德国 - 德赖艾希 - 94
+    server: 152.53.12.23
+    port: '5007'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1679
+  - name: 德国 - 德赖艾希 - 95
+    server: 45.154.98.120
+    port: '1002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2358
+  - name: 德国 - 德赖艾希 - 96
+    server: 45.131.66.29
+    port: '20001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1484
+  - name: 德国 - 德赖艾希 - 97
+    server: 185.94.29.156
+    port: '14001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1916
+  - name: 德国 - 德赖艾希 - 98
+    server: 45.154.98.100
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2247
+  - name: 德国 - 德赖艾希 - 99
+    server: 128.140.64.14
+    port: '990'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1392
+  - name: 意大利 - Gallarate - 1
+    server: 87.120.237.36
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1585
+  - name: 斯洛伐克 - 布拉迪斯拉发 - 1
+    server: 5.252.23.190
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2256
+  - name: 新加坡 - 新加坡 - 1
+    server: 47.236.144.53
+    port: '10000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2074
+  - name: 新加坡 - 新加坡 - 2
+    server: 45.91.134.225
+    port: '5060'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2683
+  - name: 新加坡 - 新加坡 - 3
+    server: 52.230.95.97
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 716
+  - name: 新加坡 - 新加坡 - 4
+    server: 38.180.249.123
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2205
+  - name: 新加坡 - 新加坡 - 5
+    server: 212.80.215.251
+    port: '10409'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2001
+  - name: 日本 - 成田市 - 1
+    server: 141.147.185.15
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2987
+  - name: 日本 - 成田市 - 2
+    server: 153.121.45.101
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2909
+  - name: 日本 - 成田市 - 3
+    server: 47.79.88.131
+    port: '1030'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1968
+  - name: 法国 - 伊斯特爾 - 1
+    server: 185.253.116.133
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1792
+  - name: 波兰 - 普魯斯科夫 - 1
+    server: 195.123.211.204
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1746
+  - name: 爱沙尼亚 - 塔林 - 1
+    server: 146.19.143.185
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2744
+  - name: 瑞典 - Steninge - 1
+    server: 65.109.182.158
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2224
+  - name: 瑞典 - Steninge - 10
+    server: 185.96.163.220
+    port: '442'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1562
+  - name: 瑞典 - Steninge - 11
+    server: 46.62.232.242
+    port: '1500'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1874
+  - name: 瑞典 - Steninge - 12
+    server: 65.109.192.55
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1759
+  - name: 瑞典 - Steninge - 13
+    server: 2.56.127.6
+    port: '2095'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2555
+  - name: 瑞典 - Steninge - 14
+    server: 46.62.148.243
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2933
+  - name: 瑞典 - Steninge - 15
+    server: 65.109.188.83
+    port: '8086'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2895
+  - name: 瑞典 - Steninge - 16
+    server: 185.125.218.111
+    port: '10278'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2281
+  - name: 瑞典 - Steninge - 17
+    server: 65.21.63.226
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2158
+  - name: 瑞典 - Steninge - 2
+    server: 65.109.214.6
+    port: '2087'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2364
+  - name: 瑞典 - Steninge - 3
+    server: 65.109.214.6
+    port: '2096'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1648
+  - name: 瑞典 - Steninge - 4
+    server: 65.109.214.6
+    port: '2086'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1766
+  - name: 瑞典 - Steninge - 5
+    server: 65.109.199.131
+    port: '2095'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2607
+  - name: 瑞典 - Steninge - 6
+    server: 13.53.207.157
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1511
+  - name: 瑞典 - Steninge - 7
+    server: 65.109.190.248
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2094
+  - name: 瑞典 - Steninge - 8
+    server: 65.109.211.159
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1541
+  - name: 瑞典 - Steninge - 9
+    server: 46.62.139.251
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1886
+  - name: 美国 - Flower Mound - 6
+    server: 76.164.199.140
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2117
+  - name: 美国 - Flower Mound - 7
+    server: 152.228.205.117
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2546
+  - name: 美国 - Flower Mound - 8
+    server: 144.202.66.169
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1952
+  - name: 美国 - Nassau Village-Ratliff - 9
+    server: 64.44.177.238
+    port: '10010'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2767
+  - name: 美国 - Reston - 1
+    server: 50.3.90.2
+    port: '10000'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1584
+  - name: 美国 - Reston - 10
+    server: 47.89.151.227
+    port: '18100'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1364
+  - name: 美国 - Reston - 12
+    server: 50.3.90.7
+    port: '10005'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2721
+  - name: 美国 - Reston - 13
+    server: 50.3.90.8
+    port: '10006'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1857
+  - name: 美国 - Reston - 15
+    server: 50.3.90.21
+    port: '10019'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2606
+  - name: 美国 - South Fulton - 4
+    server: 77.110.119.241
+    port: '9090'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1689
+  - name: 美国 - 惠顿 - 3
+    server: 23.94.111.50
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2860
+  - name: 美国 - 紐約 - 11
+    server: 5.180.24.187
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1464
+  - name: 美国 - 聖荷西 - 14
+    server: 107.174.253.233
+    port: '20080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1855
+  - name: 美国 - 肯特 - 2
+    server: 107.173.244.115
+    port: '8081'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1194
+  - name: 美国 - 肯特 - 5
+    server: 35.212.248.207
+    port: '54321'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1365
+  - name: 英国 - 塞爾 - 3
+    server: 81.0.218.193
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1904
+  - name: 英国 - 豪恩斯洛 - 1
+    server: 51.89.226.133
+    port: '2053'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1880
+  - name: 英国 - 豪恩斯洛 - 2
+    server: 23.81.34.186
+    port: '2083'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2525
+  - name: 荷兰 - 阿姆斯特丹 - 1
+    server: 185.186.244.41
+    port: '80'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1371
+  - name: 荷兰 - 阿姆斯特丹 - 10
+    server: 64.235.33.58
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2624
+  - name: 荷兰 - 阿姆斯特丹 - 11
+    server: 141.11.37.136
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1837
+  - name: 荷兰 - 阿姆斯特丹 - 12
+    server: 4.210.166.177
+    port: '442'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2114
+  - name: 荷兰 - 阿姆斯特丹 - 13
+    server: 89.39.70.116
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1230
+  - name: 荷兰 - 阿姆斯特丹 - 14
+    server: 91.211.249.58
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1691
+  - name: 荷兰 - 阿姆斯特丹 - 15
+    server: 95.164.62.196
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2777
+  - name: 荷兰 - 阿姆斯特丹 - 16
+    server: 185.186.244.184
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1346
+  - name: 荷兰 - 阿姆斯特丹 - 17
+    server: 185.186.244.191
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1971
+  - name: 荷兰 - 阿姆斯特丹 - 18
+    server: 185.186.244.93
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1263
+  - name: 荷兰 - 阿姆斯特丹 - 19
+    server: 141.11.182.13
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2817
+  - name: 荷兰 - 阿姆斯特丹 - 2
+    server: 87.121.221.87
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2827
+  - name: 荷兰 - 阿姆斯特丹 - 20
+    server: 147.45.174.205
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2532
+  - name: 荷兰 - 阿姆斯特丹 - 21
+    server: 5.255.104.192
+    port: '2020'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2394
+  - name: 荷兰 - 阿姆斯特丹 - 22
+    server: 45.154.98.54
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1530
+  - name: 荷兰 - 阿姆斯特丹 - 23
+    server: 146.190.236.144
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1733
+  - name: 荷兰 - 阿姆斯特丹 - 24
+    server: 193.123.37.121
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1392
+  - name: 荷兰 - 阿姆斯特丹 - 25
+    server: 79.133.126.83
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2239
+  - name: 荷兰 - 阿姆斯特丹 - 26
+    server: 199.247.24.14
+    port: '2040'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2382
+  - name: 荷兰 - 阿姆斯特丹 - 3
+    server: 185.246.152.65
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2382
+  - name: 荷兰 - 阿姆斯特丹 - 4
+    server: 2.58.56.31
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1529
+  - name: 荷兰 - 阿姆斯特丹 - 5
+    server: 88.119.168.221
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2269
+  - name: 荷兰 - 阿姆斯特丹 - 6
+    server: 185.186.244.219
+    port: '81'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1242
+  - name: 荷兰 - 阿姆斯特丹 - 7
+    server: 45.142.164.17
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2062
+  - name: 荷兰 - 阿姆斯特丹 - 8
+    server: 45.154.98.100
+    port: '8443'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2070
+  - name: 荷兰 - 阿姆斯特丹 - 9
+    server: 89.34.230.4
+    port: '2061'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2511
+  - name: 阿拉伯联合酋长国 - 迪拜 - 1
+    server: 20.21.112.160
+    port: '8002'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2811
+  - name: 阿拉伯联合酋长国 - 迪拜 - 2
+    server: 141.145.151.219
+    port: 443
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 2227
+  - name: 韩国 - Yeongdong-gun - 1
+    server: 175.123.171.174
+    port: '30005'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 776
+  - name: 韩国 - Yeongdong-gun - 2
+    server: 43.155.186.100
+    port: '446'
+    type: trojan
+    password: trojan
+    sni: tianjiu.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: tianjiu.pages.dev
+    delay: 1301

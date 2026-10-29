@@ -1,0 +1,138 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  nameserver:
+  - 119.29.29.29
+  - 223.5.5.5
+  fallback:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 1.1.1.1
+  - tls://1.0.0.1:853
+  - tls://dns.google:853
+proxies:
+- name: A
+  server: hk2.mutoujs.top
+  port: 20000
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: QqvCBoJpDEflbOYm
+- name: B
+  server: hk2.mutoujs.top
+  port: 20000
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: QqvCBoJpDEflbOYm
+- name: C
+  server: speedhk1.jiasujd.top
+  port: 24955
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: Ey8WkRLz34SadllK
+- name: D
+  server: speedhk1.jiasujd.top
+  port: 24955
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: Ey8WkRLz34SadllK
+- name: E
+  server: speedhk1.jiasujd.top
+  port: 24140
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: 4fGB35PQ2BODBA08
+- name: F
+  server: speedhkt1.jiasujd.top
+  port: 24960
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: TrpFAMHMJYi7Tbt0
+- name: G
+  server: speedhkt1.jiasujd.top
+  port: 24160
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: 9PpXFrMtphwxHFee
+- name: H
+  server: dsaugspeed-dh.jiasujd.top
+  port: 20011
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: IbQQe9VBf3vnq46v
+- name: I
+  server: dsaugspeed-dh.jiasujd.top
+  port: 20111
+  type: hysteria2
+  password: 2be51282-389c-472f-9cbd-844dedf885d6
+  auth: 2be51282-389c-472f-9cbd-844dedf885d6
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: 7VLRnZkPl9S6hv8P
+- name: J
+  server: 78a6a0b1-t75z40-ta5i1s-1j61y.hk2.hyhuawei.com
+  port: 443
+  type: hysteria2
+  password: f13f964e-f06c-11ec-a858-f23c91cfbbc9
+  auth: f13f964e-f06c-11ec-a858-f23c91cfbbc9
+  sni: 78a6a0b1-t75z40-ta5i1s-1j61y.hk2.hyhuawei.com
+  skip-cert-verify: false
+- name: K
+  server: cf.877774.xyz
+  port: 443
+  type: vless
+  uuid: c9912c7f-e3f5-465d-8e10-4d528484fed3
+  tls: true
+  tfo: false
+  skip-cert-verify: false
+  servername: yf.xhya.nyc.mn
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: yf.xhya.nyc.mn
+proxy-groups:
+- name: 手动切换
+  type: select
+  proxies:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+rules:
+- MATCH,手动切换

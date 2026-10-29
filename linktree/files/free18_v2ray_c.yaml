@@ -1,0 +1,1902 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - localhost
+    - +.localhost
+    - +.lan
+    - +.local
+    - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+      - https://223.5.5.5/dns-query#DIRECT
+      - https://doh.pub/dns-query#DIRECT
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+proxies:
+  - type: vless
+    name: 每天更新，请加电报群防止失联
+    server: 51.161.204.242
+    port: 443
+    uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    sni: www.cloudflare.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
+      short-id: d15c17cef9b2e456
+  - type: trojan
+    name: 电报群：t.me/vvkj11
+    server: 193.239.160.134
+    port: 443
+    password: humanity
+    udp: true
+    tls: true
+    servername: www.calmlunch.com
+    sni: www.calmlunch.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /assignment
+  - type: vless
+    name: 日期：10-29
+    server: 177.7.51.29
+    port: 8443
+    uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    sni: www.apple.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
+      short-id: 14fbf992
+  - type: vless
+    name: 免费VPN：tt.vg/FJOE2Mm
+    server: 177.7.51.29
+    port: 8443
+    uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    sni: www.apple.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
+      short-id: 14fbf992
+  - type: vless
+    name: 🇨🇦_加拿大
+    server: ca001.zestapp778.com
+    port: 32355
+    uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+    udp: true
+    tls: true
+    servername: ca001.zestapp778.com
+    sni: ca001.zestapp778.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - type: vless
+    name: 🇨🇾_塞浦路斯
+    server: 5.253.28.240
+    port: 40443
+    uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: deepl.com
+    sni: deepl.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+      short-id: 88b6
+  - type: vless
+    name: 🇨🇾_塞浦路斯 (2)
+    server: dorado.yokkastars.com
+    port: 40443
+    uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: deepl.com
+    sni: deepl.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+      short-id: 68a8
+  - type: vless
+    name: 🇨🇾_塞浦路斯 (3)
+    server: hydra.yokkastars.com
+    port: 40443
+    uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: deepl.com
+    sni: deepl.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+      short-id: 88b6
+  - type: vless
+    name: 🇨🇾_塞浦路斯 (4)
+    server: hydra.yokkastars.com
+    port: 40443
+    uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: deepl.com
+    sni: deepl.com
+    skip-cert-verify: false
+    client-fingerprint: qq
+    reality-opts:
+      public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+      short-id: 88b6
+  - type: vless
+    name: 🇩🇪_德国
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cdn.tbank.ru
+    sni: cdn.tbank.ru
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+      short-id: e0215064d8d1fd7c
+  - type: vless
+    name: 🇩🇪_德国 (2)
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cdn.tbank.ru
+    sni: cdn.tbank.ru
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+      short-id: e0215064d8d1fd7c
+  - type: vless
+    name: 🇩🇪_德国 (3)
+    server: ge-s-1.pythonmakemigreat.wiki
+    port: 443
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ge-s-1.pythonmakemigreat.wiki
+    sni: ge-s-1.pythonmakemigreat.wiki
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
+      short-id: 2c9a2790ad5900b2
+  - type: vless
+    name: 🇩🇪_德国 (4)
+    server: ge-s-1.pythonmakemigreat.wiki
+    port: 443
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ge-s-1.pythonmakemigreat.wiki
+    sni: ge-s-1.pythonmakemigreat.wiki
+    skip-cert-verify: false
+    client-fingerprint: safari
+    reality-opts:
+      public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
+      short-id: 2c9a2790ad5900b2
+  - type: vless
+    name: 🇩🇪_德国 (5)
+    server: 169.40.42.104
+    port: 443
+    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: yahoo.com
+    sni: yahoo.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+      short-id: c39cc7310a
+  - type: vless
+    name: 🇩🇪_德国 (6)
+    server: 5.75.195.83
+    port: 56879
+    uuid: 7b0f8733-03cc-472b-9c50-ed159b48ef59
+    udp: true
+    tls: true
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  - type: vless
+    name: 🇩🇪_德国 (7)
+    server: 178.105.133.160
+    port: 4443
+    uuid: fb0818b3-4031-4843-b5f7-1d75177a1758
+    udp: true
+    tls: true
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  - type: vless
+    name: 🇩🇪_德国 (8)
+    server: 91.107.188.129
+    port: 2083
+    uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+    udp: true
+    tls: true
+    servername: site.check-looks.space
+    sni: site.check-looks.space
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /
+  - type: vless
+    name: 🇪🇪_爱沙尼亚
+    server: ee.h1cloud.net
+    port: 25895
+    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+    udp: true
+    tls: true
+    servername: www.samsung.com
+    sni: www.samsung.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+      short-id: a73f0410d728c823
+  - type: vless
+    name: 🇪🇪_爱沙尼亚 (2)
+    server: ee.h1cloud.net
+    port: 25895
+    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+    udp: true
+    tls: true
+    servername: www.samsung.com
+    sni: www.samsung.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+      short-id: a73f0410d728c823
+  - type: vless
+    name: 🇬🇧_英国
+    server: 128.203.252.97
+    port: 443
+    uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
+    udp: true
+    tls: true
+    servername: cf-1rm.pages.dev
+    sni: cf-1rm.pages.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: cf-1rm.pages.dev
+  - type: vless
+    name: 🇮🇷_伊朗
+    server: req.apptrendv.com
+    port: 2083
+    uuid: 7cc18adc-1ef0-42c9-8e7b-722d7622c7dd
+    udp: true
+    tls: true
+    servername: email.apptrendv.com
+    sni: email.apptrendv.com
+    skip-cert-verify: false
+    alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+  - type: vless
+    name: 🇯🇵_日本
+    server: 203.137.165.164
+    port: 57554
+    uuid: 0985e268-5c1c-4141-9d96-139f8046c47c
+    udp: true
+    tls: true
+    servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+    sni: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  - type: vless
+    name: 🇰🇿_哈萨克斯坦
+    server: 46.8.43.125
+    port: 443
+    uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+    udp: true
+    tls: true
+    servername: kz-central.v8x2b.lol
+    sni: kz-central.v8x2b.lol
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
+  - type: vless
+    name: 🇰🇿_哈萨克斯坦 (2)
+    server: 46.8.43.125
+    port: 443
+    uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+    udp: true
+    tls: true
+    servername: kz-central.v8x2b.lol
+    sni: kz-central.v8x2b.lol
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
+  - type: vless
+    name: 🇱🇻_拉脱维亚
+    server: 195.123.213.28
+    port: 443
+    uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    sni: www.cloudflare.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
+      short-id: 5c256336e3b673fa
+  - type: vless
+    name: 🇳🇱_荷兰
+    server: 31.77.13.22
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: rusbid.de
+    sni: rusbid.de
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+  - type: vless
+    name: 🇳🇱_荷兰 (2)
+    server: 79.137.197.212
+    port: 2105
+    uuid: 663c0d65-f2bc-43f3-b329-1a4e2b781d44
+    udp: true
+    tls: true
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  - type: vless
+    name: 🇳🇱_荷兰 (3)
+    server: cz-prg.dontblockmepls.com
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: rusbid.de
+    sni: rusbid.de
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+  - type: vless
+    name: 🇳🇱_荷兰 (4)
+    server: nl-central.v8x2b.lol
+    port: 443
+    uuid: 846cedee-2a52-0002-a0b9-11850ead6a8b
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: nl-central.v8x2b.lol
+    sni: nl-central.v8x2b.lol
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: q3UXFUE5yYxNE4ugLUnYdpc9WRtR-sjsDTrKsiqzDHE
+  - type: vless
+    name: 🇳🇱_荷兰 (5)
+    server: 79.182.39.35
+    port: 25548
+    uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    sni: www.cloudflare.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: lceynvFy326oU4ew9OPR7079m-L5ZcFELgCl0sqxU2M
+      short-id: bceb5b2197b76818
+  - type: vless
+    name: 🇳🇱_荷兰 (6)
+    server: 79.182.39.232
+    port: 25895
+    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+    udp: true
+    tls: true
+    servername: www.samsung.com
+    sni: www.samsung.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+      short-id: a73f0410d728c823
+  - type: vless
+    name: 🇳🇱_荷兰 (7)
+    server: 79.182.39.57
+    port: 443
+    uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+    udp: true
+    tls: true
+    servername: f36f5ft.us4.h1clayd.click
+    sni: f36f5ft.us4.h1clayd.click
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0
+      short-id: 8d50d3a4df71468c
+  - type: vless
+    name: 🇳🇱_荷兰 (8)
+    server: 5.180.181.113
+    port: 443
+    uuid: b1da2601-ff93-46d6-af87-04af3f541fde
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: sun1-19.userapi.com
+    sni: sun1-19.userapi.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wY_MYPJUx849su3BlowuxnwnUaj25iLfRw2LooQfPAY
+  - type: vless
+    name: 🇳🇱_荷兰 (9)
+    server: 2.27.118.10
+    port: 443
+    uuid: d9fe2431-8351-41eb-b956-75d96dec5d4a
+    udp: true
+    tls: true
+    servername: ph-nl-s3784.cybercat.network
+    sni: ph-nl-s3784.cybercat.network
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc
+      short-id: ecf1d9f7caa6ba67
+  - type: vless
+    name: 🇳🇱_荷兰 (10)
+    server: 188.164.248.110
+    port: 443
+    uuid: 13134515-adc7-404b-8d2a-f9ad99e8dcbd
+    udp: true
+    tls: true
+    servername: imanvipreserved.pages.dev
+    sni: imanvipreserved.pages.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: imanvipreserved.pages.dev
+  - type: vless
+    name: 🇷🇺_俄罗斯
+    server: tau1.freerunet.online
+    port: 443
+    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: tau1.freerunet.online
+    sni: tau1.freerunet.online
+    skip-cert-verify: false
+    client-fingerprint: safari
+    reality-opts:
+      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+      short-id: 4a7b1c8d
+  - type: vless
+    name: 🇷🇺_俄罗斯 (2)
+    server: z1q3pv4g78.rucdncomp.pro
+    port: 443
+    uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
+    udp: true
+    tls: true
+    servername: z1q3pv4g78.rucdncomp.pro
+    sni: z1q3pv4g78.rucdncomp.pro
+    skip-cert-verify: false
+    alpn:
+      - http/1.1
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /useraction/events/b892639b7195/
+      headers:
+        Host: z1q3pv4g78.rucdncomp.pro
+  - type: vless
+    name: 🇷🇺_俄罗斯 (3)
+    server: tau1.freerunet.online
+    port: 443
+    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: tau1.freerunet.online
+    sni: tau1.freerunet.online
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+      short-id: 4a7b1c8d
+  - type: vless
+    name: 🇷🇺_俄罗斯 (4)
+    server: tau1.freerunet.online
+    port: 443
+    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: tau1.freerunet.online
+    sni: tau1.freerunet.online
+    skip-cert-verify: false
+    client-fingerprint: qq
+    reality-opts:
+      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+      short-id: 4a7b1c8d
+  - type: vless
+    name: 🇷🇺_俄罗斯 (5)
+    server: tau1.freerunet.online
+    port: 443
+    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: tau1.freerunet.online
+    sni: tau1.freerunet.online
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+      short-id: 4a7b1c8d
+  - type: vless
+    name: 🇷🇺_俄罗斯 (6)
+    server: tau1.freerunet.online
+    port: 443
+    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: tau1.freerunet.online
+    sni: tau1.freerunet.online
+    skip-cert-verify: false
+    client-fingerprint: ios
+    reality-opts:
+      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+      short-id: 4a7b1c8d
+  - type: vless
+    name: 🇷🇺_俄罗斯 (7)
+    server: 193.160.141.81
+    port: 8443
+    uuid: ee82f319-ab92-425d-8e04-28a29f33f670
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    sni: apple.com
+    skip-cert-verify: false
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  - type: vless
+    name: 🇷🇺_俄罗斯 (8)
+    server: 185.148.104.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    udp: true
+    tls: false
+    servername: 185.148.104.30
+    sni: 185.148.104.30
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime51.workers.dev
+  - type: vless
+    name: 🇷🇺_俄罗斯 (9)
+    server: 217.19.122.156
+    port: 443
+    uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
+    udp: true
+    tls: true
+    servername: z1q3pv4g78.rucdncomp.pro
+    sni: z1q3pv4g78.rucdncomp.pro
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /useraction/events/b892639b7195/
+  - type: vless
+    name: 🇷🇺_俄罗斯 (10)
+    server: 194.87.143.165
+    port: 8443
+    uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
+    udp: true
+    tls: true
+    servername: wsru1.wba-pn.ru
+    sni: wsru1.wba-pn.ru
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /
+  - type: vless
+    name: 🇸🇬_新加坡
+    server: sg2-8sb.6121999.dpdns.org
+    port: 19825
+    uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: sg2-8sb.6121999.dpdns.org
+    sni: sg2-8sb.6121999.dpdns.org
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+      short-id: 6ba85179e30d4fc2
+  - type: vless
+    name: 🇸🇬_新加坡 (2)
+    server: 43.174.195.1
+    port: 443
+    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+    udp: true
+    tls: true
+    servername: kv.074167.xyz
+    sni: kv.074167.xyz
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: kv.074167.xyz
+  - type: vless
+    name: 🇸🇬_新加坡 (3)
+    server: 175.41.179.37
+    port: 51262
+    uuid: 6c6ea474-0cf5-4a3d-bc81-aa2eeb6516d6
+    udp: true
+    tls: true
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  - type: vless
+    name: 🇸🇬_新加坡 (4)
+    server: 43.174.195.1
+    port: 443
+    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+    udp: true
+    tls: true
+    servername: kv.074167.xyz
+    sni: kv.074167.xyz
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: kv.074167.xyz
+  - type: vmess
+    name: 🇸🇬_新加坡 (5)
+    server: 170.187.229.90
+    port: 80
+    uuid: 9bda13eb-66bb-4ff5-b01c-aa7c2d291412
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    servername: shoutingtoutiao3.10010.com
+    sni: shoutingtoutiao3.10010.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /images
+      headers:
+        Host: shoutingtoutiao3.10010.com
+  - type: vless
+    name: 🇺🇦_乌克兰
+    server: 92.113.107.120
+    port: 443
+    uuid: dbda40e2-25b5-416c-8d35-56d07e8dcdbc
+    udp: true
+    tls: true
+    servername: indigostar.click
+    sni: indigostar.click
+    skip-cert-verify: false
+    client-fingerprint: qq
+    network: ws
+    ws-opts:
+      path: /ws
+  - type: trojan
+    name: 🇺🇸_美国
+    server: 216.152.156.65
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+    sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+    skip-cert-verify: false
+  - type: vless
+    name: 🇺🇸_美国 (2)
+    server: 195.211.98.43
+    port: 443
+    uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    sni: www.cloudflare.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+      short-id: 9c56fddf237e8eaf
+  - type: trojan
+    name: 🇺🇸_美国 (3)
+    server: 66.163.112.142
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: cdn.unlockyourfuturefindyourperfectcareer.com
+    sni: cdn.unlockyourfuturefindyourperfectcareer.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (4)
+    server: 66.163.112.242
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: resources.unlockyourfuturefindyourperfectcareer.com
+    sni: resources.unlockyourfuturefindyourperfectcareer.com
+    skip-cert-verify: false
+  - type: vless
+    name: 🇺🇸_美国 (5)
+    server: 51.81.203.63
+    port: 443
+    uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.icloud.com
+    sni: www.icloud.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+      short-id: 4477382ff6d3d41c
+  - type: trojan
+    name: 🇺🇸_美国 (6)
+    server: 66.163.112.76
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: api.unlockyourfuturefindyourperfectcareer.com
+    sni: api.unlockyourfuturefindyourperfectcareer.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (7)
+    server: 216.152.155.23
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: courses.nextjobopportunityandclaimyouridealrole.com
+    sni: courses.nextjobopportunityandclaimyouridealrole.com
+    skip-cert-verify: false
+  - type: vmess
+    name: 🇺🇸_美国 (8)
+    server: 169.197.142.22
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (9)
+    server: 216.152.155.59
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: api.nextjobopportunityandclaimyouridealrole.com
+    sni: api.nextjobopportunityandclaimyouridealrole.com
+    skip-cert-verify: false
+  - type: vless
+    name: 🇺🇸_美国 (10)
+    server: 154.40.55.185
+    port: 443
+    uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.oracle.com
+    sni: www.oracle.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
+      short-id: 7f
+  - type: vless
+    name: 🇺🇸_美国 (11)
+    server: 15.204.97.198
+    port: 23576
+    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: fuck.rkn
+    sni: fuck.rkn
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+      short-id: "01"
+  - type: trojan
+    name: 🇺🇸_美国 (12)
+    server: blog.findlocaljobnetworkandbuildcommunityconnections.com
+    port: 443
+    password: dba20dcb635e430fa4d3bfc303a149d2
+    udp: true
+    tls: true
+    servername: blog.findlocaljobnetworkandbuildcommunityconnections.com
+    sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
+    skip-cert-verify: false
+  - type: vless
+    name: 🇺🇸_美国 (13)
+    server: 15.204.97.216
+    port: 23576
+    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: fuck.rkn
+    sni: fuck.rkn
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+      short-id: "01"
+  - type: vless
+    name: 🇺🇸_美国 (14)
+    server: 47.251.25.74
+    port: 443
+    uuid: 18805ff3-b420-45de-af18-93be14024ae8
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amazon.com
+    sni: www.amazon.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
+  - type: trojan
+    name: 🇺🇸_美国 (15)
+    server: 66.163.122.113
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: api.searchnationwidecareerchangehelperandguidancetoday.com
+    sni: api.searchnationwidecareerchangehelperandguidancetoday.com
+    skip-cert-verify: false
+  - type: vless
+    name: 🇺🇸_美国 (16)
+    server: us007.zestapp778.com
+    port: 18580
+    uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+    udp: true
+    tls: true
+    servername: us007.zestapp778.com
+    sni: us007.zestapp778.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - type: vless
+    name: 🇺🇸_美国 (17)
+    server: 63.141.128.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime42.workers.dev
+  - type: trojan
+    name: 🇺🇸_美国 (18)
+    server: 165.215.250.14
+    port: 443
+    password: humanity
+    udp: true
+    tls: true
+    servername: www.calmlunch.com
+    sni: www.calmlunch.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.calmlunch.com
+  - type: vless
+    name: 🇺🇸_美国 (19)
+    server: 155.46.167.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime50.workers.dev
+  - type: vless
+    name: 🇺🇸_美国 (20)
+    server: 80.93.202.40
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    udp: true
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime02.workers.dev
+  - type: vless
+    name: 🇺🇸_美国 (21)
+    server: 156.229.163.237
+    port: 10238
+    uuid: f97f81df-edac-47b6-badb-316125e61bfb
+    udp: true
+    tls: true
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  - type: trojan
+    name: 🇺🇸_美国 (22)
+    server: 165.215.250.14
+    port: 443
+    password: humanity
+    udp: true
+    tls: true
+    servername: www.calmlunch.com
+    sni: www.calmlunch.com
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /assignment
+  - type: trojan
+    name: 🇺🇸_美国 (23)
+    server: resources.findlocaljobnetworkandbuildcommunityconnections.com
+    port: 443
+    password: f0eb8c92ce8946aaba856569cff1a16b
+    udp: true
+    tls: true
+    servername: resources.findlocaljobnetworkandbuildcommunityconnections.com
+    sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (24)
+    server: 165.215.250.14
+    port: 443
+    password: humanity
+    udp: true
+    tls: true
+    servername: www.calmlunch.com
+    sni: www.calmlunch.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /assignment
+  - type: vmess
+    name: 🇺🇸_美国 (25)
+    server: 129.146.77.248
+    port: 39495
+    uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    servername: 129.146.77.248
+    sni: 129.146.77.248
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /cctv13.m3u8
+      headers:
+        Host: 129.146.77.248
+  - type: vless
+    name: 🇺🇸_美国 (26)
+    server: 51.81.203.63
+    port: 443
+    uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.icloud.com
+    sni: www.icloud.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+      short-id: 4477382ff6d3d41c
+  - type: vmess
+    name: 🇺🇸_美国 (27)
+    server: 38.91.107.49
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    cipher: auto
+    alterId: 0
+    udp: true
+    tls: false
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (28)
+    server: 216.152.156.42
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+    sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (29)
+    server: 216.152.156.49
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+    sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (30)
+    server: 216.152.155.176
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: blog.nextjobopportunityandclaimyouridealrole.com
+    sni: blog.nextjobopportunityandclaimyouridealrole.com
+    skip-cert-verify: false
+  - type: trojan
+    name: 🇺🇸_美国 (31)
+    server: 216.152.155.158
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    udp: true
+    tls: true
+    servername: resources.nextjobopportunityandclaimyouridealrole.com
+    sni: resources.nextjobopportunityandclaimyouridealrole.com
+    skip-cert-verify: false
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 每天更新，请加电报群防止失联
+      - 电报群：t.me/vvkj11
+      - 日期：10-29
+      - 免费VPN：tt.vg/FJOE2Mm
+      - 🇨🇦_加拿大
+      - 🇨🇾_塞浦路斯
+      - 🇨🇾_塞浦路斯 (2)
+      - 🇨🇾_塞浦路斯 (3)
+      - 🇨🇾_塞浦路斯 (4)
+      - 🇩🇪_德国
+      - 🇩🇪_德国 (2)
+      - 🇩🇪_德国 (3)
+      - 🇩🇪_德国 (4)
+      - 🇩🇪_德国 (5)
+      - 🇩🇪_德国 (6)
+      - 🇩🇪_德国 (7)
+      - 🇩🇪_德国 (8)
+      - 🇪🇪_爱沙尼亚
+      - 🇪🇪_爱沙尼亚 (2)
+      - 🇬🇧_英国
+      - 🇮🇷_伊朗
+      - 🇯🇵_日本
+      - 🇰🇿_哈萨克斯坦
+      - 🇰🇿_哈萨克斯坦 (2)
+      - 🇱🇻_拉脱维亚
+      - 🇳🇱_荷兰
+      - 🇳🇱_荷兰 (2)
+      - 🇳🇱_荷兰 (3)
+      - 🇳🇱_荷兰 (4)
+      - 🇳🇱_荷兰 (5)
+      - 🇳🇱_荷兰 (6)
+      - 🇳🇱_荷兰 (7)
+      - 🇳🇱_荷兰 (8)
+      - 🇳🇱_荷兰 (9)
+      - 🇳🇱_荷兰 (10)
+      - 🇷🇺_俄罗斯
+      - 🇷🇺_俄罗斯 (2)
+      - 🇷🇺_俄罗斯 (3)
+      - 🇷🇺_俄罗斯 (4)
+      - 🇷🇺_俄罗斯 (5)
+      - 🇷🇺_俄罗斯 (6)
+      - 🇷🇺_俄罗斯 (7)
+      - 🇷🇺_俄罗斯 (8)
+      - 🇷🇺_俄罗斯 (9)
+      - 🇷🇺_俄罗斯 (10)
+      - 🇸🇬_新加坡
+      - 🇸🇬_新加坡 (2)
+      - 🇸🇬_新加坡 (3)
+      - 🇸🇬_新加坡 (4)
+      - 🇸🇬_新加坡 (5)
+      - 🇺🇦_乌克兰
+      - 🇺🇸_美国
+      - 🇺🇸_美国 (2)
+      - 🇺🇸_美国 (3)
+      - 🇺🇸_美国 (4)
+      - 🇺🇸_美国 (5)
+      - 🇺🇸_美国 (6)
+      - 🇺🇸_美国 (7)
+      - 🇺🇸_美国 (8)
+      - 🇺🇸_美国 (9)
+      - 🇺🇸_美国 (10)
+      - 🇺🇸_美国 (11)
+      - 🇺🇸_美国 (12)
+      - 🇺🇸_美国 (13)
+      - 🇺🇸_美国 (14)
+      - 🇺🇸_美国 (15)
+      - 🇺🇸_美国 (16)
+      - 🇺🇸_美国 (17)
+      - 🇺🇸_美国 (18)
+      - 🇺🇸_美国 (19)
+      - 🇺🇸_美国 (20)
+      - 🇺🇸_美国 (21)
+      - 🇺🇸_美国 (22)
+      - 🇺🇸_美国 (23)
+      - 🇺🇸_美国 (24)
+      - 🇺🇸_美国 (25)
+      - 🇺🇸_美国 (26)
+      - 🇺🇸_美国 (27)
+      - 🇺🇸_美国 (28)
+      - 🇺🇸_美国 (29)
+      - 🇺🇸_美国 (30)
+      - 🇺🇸_美国 (31)
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼

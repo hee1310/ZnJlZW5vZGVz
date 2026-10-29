@@ -1,0 +1,1 @@
+未获取到到节点，错误代码：HTTPConnectionPool(host='naidounode.cczzuu.top', port=80): Max retries exceeded with url: /node/20260923-clash.yaml (Caused by NameResolutionError("HTTPConnection(host='naidounode.cczzuu.top', port=80): Failed to resolve 'naidounode.cczzuu.top' ([Errno -2] Name or service not known)"))

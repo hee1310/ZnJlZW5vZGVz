@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>سازنده اشتراک پروکسی</title>
+    <meta name="description" content="Advanced proxy subscription generator - Pahlavi Edition.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        /* MARKDOWN PROSE STYLES */
+        .prose h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: inherit;
+        }
+
+        .prose h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: inherit;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .prose h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .prose ul {
+            list-style: disc;
+            padding-right: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose ol {
+            list-style: decimal;
+            padding-right: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose pre {
+            direction: ltr;
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            rounded: 0.75rem;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            border-radius: 0.75rem;
+        }
+
+        .prose code {
+            font-family: monospace;
+            background: rgba(128, 128, 128, 0.2);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.9em;
+        }
+
+        .prose pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        .prose blockquote {
+            border-right: 4px solid #239e4f;
+            padding-right: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            opacity: 0.8;
+            background: rgba(35, 158, 79, 0.05);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .prose img {
+            max-width: 100%;
+            border-radius: 0.75rem;
+            margin: 1rem auto;
+            display: block;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .prose a {
+            color: #239e4f;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                    },
+                    colors: {
+                        'imperial-green': {
+                            50: '#f1f8f3', 100: '#dcf2e4', 200: '#b5e6c4', 300: '#7bd69b', 400: '#3cbf6f', 500: '#239e4f',
+                            600: '#0f7a3a', 700: '#0a602e', 800: '#094c26', 900: '#083f20', 950: '#03210d',
+                        },
+                        'royal-gold': {
+                            50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d', 400: '#fbbf24', 500: '#d97706',
+                            600: '#b45309', 700: '#92400e', 800: '#78350f', 900: '#451a03',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'slide-up': 'slideUp 0.4s ease-out forwards'
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+                        slideUp: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* BASE & FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 1. AURORA BACKGROUND ANIMATION */
+        .aurora-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(-45deg, #f1f8f3, #e8f5e9, #fffbeb, #fefce8);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+        }
+
+        .dark .aurora-bg {
+            background: linear-gradient(-45deg, #020617, #052e16, #14532d, #0f172a);
+        }
+
+        @keyframes aurora {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 2. GLASSMORPHISM & HOLOGRAPHIC CARDS */
+        .royal-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark .royal-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .royal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.1);
+            border-color: rgba(35, 158, 79, 0.3);
+        }
+
+        /* 3. NEON GLOW TEXT */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(35, 158, 79, 0.5);
+        }
+
+        .dark .text-glow {
+            text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+        }
+
+        /* 4. CUSTOM SCROLLBAR */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+
+        /* 5. ANIMATIONS */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .pulse-ring::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        /* 6. TAB NAVIGATION */
+        .tab-btn {
+            position: relative;
+            transition: all 0.3s;
+            opacity: 0.6;
+        }
+
+        .tab-btn:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            opacity: 1;
+            color: #239e4f;
+        }
+
+        .dark .tab-btn.active {
+            color: #4ade80;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 3px;
+            background: currentColor;
+            border-radius: 10px;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        /* FIND THIS IN YOUR CSS AND UPDATE IT */
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            transform: none;
+            /* CHANGED from translateY(0) to none */
+        }
+
+        /* Add this new style for the mobile drawer animation */
+        .drawer-open {
+            transform: translateY(0) !important;
+        }
+
+        .drawer-closed {
+            transform: translateY(110%) !important;
+        }
+
+        /* SMART MOBILE NAVIGATION STYLES */
+        @media (max-width: 768px) {
+
+            /* Container: Spread items evenly */
+            .mobile-nav-container {
+                justify-content: space-between;
+            }
+
+            /* Button: Center content, reduce padding */
+            .tab-btn {
+                justify-content: center;
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+                flex: 1;
+                /* Distribute space evenly */
+            }
+
+            /* Text Label: Hidden by default with smooth transition */
+            .tab-btn span {
+                max-width: 0;
+                opacity: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: all 0.3s ease-in-out;
+                font-size: 0.8rem;
+            }
+
+            /* Text Label: Show when Active */
+            .tab-btn.active span {
+                max-width: 80px;
+                /* Allow expansion */
+                opacity: 1;
+                margin-right: 6px;
+                /* Create gap between icon and text */
+            }
+
+            /* Remove the default Tailwind gap on mobile to prevent empty space */
+            .tab-btn {
+                gap: 0 !important;
+            }
+        }
+
+        /* LOADER */
+        .loader {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            border: 3px solid;
+            border-color: #239e4f #239e4f transparent transparent;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        .loader::after,
+        .loader::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid;
+            border-color: transparent transparent #d97706 #d97706;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            animation: rotationBack 0.5s linear infinite;
+            transform-origin: center center;
+        }
+
+        .loader::before {
+            width: 32px;
+            height: 32px;
+            border-color: #239e4f #239e4f transparent transparent;
+            animation: rotation 1.5s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotationBack {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        /* MOBILE READER STYLES */
+        @media (max-width: 1024px) {
+            #tutorial-reader {
+                /* Full Screen Fixed Overlay */
+                position: fixed !important;
+                inset: 0 !important;
+                z-index: 9999 !important;
+                /* Above everything including nav */
+                border-radius: 0 !important;
+                border: none !important;
+
+                /* Solid Background for Readability */
+                background-color: #ffffff !important;
+
+                /* Animation properties */
+                transform: translateY(100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                display: flex !important;
+                /* Always display, just hide via transform */
+                flex-direction: column;
+            }
+
+            .dark #tutorial-reader {
+                background-color: #0f172a !important;
+                /* Slate 900 for Dark Mode */
+            }
+
+            #tutorial-reader.active {
+                transform: translateY(0);
+                /* Slide Up */
+            }
+
+            /* Typography Improvements for Mobile */
+            .prose {
+                font-size: 1.05rem !important;
+                /* Slightly larger text */
+                line-height: 1.9 !important;
+                /* More breathing room */
+                padding-bottom: 80px;
+                /* Space at bottom for scrolling */
+            }
+
+            .prose img {
+                margin: 1.5rem auto !important;
+                border-radius: 0.5rem !important;
+            }
+        }
+
+        /* ADD TO YOUR EXISTING STYLE TAG */
+
+        /* Mobile Bottom Sheet Backdrop */
+        #preview-panel.active #mobile-backdrop {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        /* Ensure horizontal scrolling is smooth on mobile */
+        .snap-x {
+            scroll-snap-type: x mandatory;
+        }
+
+        .client-btn {
+            scroll-snap-align: start;
+        }
+
+        /* Adjustments for very small screens */
+        @media (max-height: 700px) {
+            #result-content .aspect-square {
+                max-height: 150px !important;
+            }
+        }
+
+        /* PREVENT ZOOM ON INPUTS */
+        input,
+        select,
+        textarea {
+            font-size: 16px !important;
+            /* Prevents iOS zoom on focus */
+            touch-action: manipulation;
+            /* Improves touch response */
+        }
+
+        /* Fix specific inputs visually while keeping 16px logic */
+        #builder-search,
+        #client-search-input {
+            font-size: 16px !important;
+            transform: scale(0.85);
+            /* Visually shrink it back down if needed */
+            transform-origin: right center;
+            width: 115% !important;
+            /* Compensate for scale */
+        }
+
+        /* IMPROVED UX: Better focus states */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(35, 158, 79, 0.3);
+        }
+
+        /* IMPROVED UX: Smooth page transitions */
+        .tab-content {
+            animation: none !important;
+        }
+        .tab-content.active {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+
+        /* IMPROVED UX: Better button press feedback */
+        button:active {
+            transform: scale(0.97);
+        }
+
+        /* IMPROVED UX: Loading skeleton shimmer */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .skeleton {
+            background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        /* IMPROVED UX: Better scrollbar for touch devices */
+        @media (hover: none) {
+            .custom-scrollbar::-webkit-scrollbar { width: 2px; }
+        }
+    </style>
+</head>
+
+<body
+    class="text-slate-800 dark:text-slate-200 min-h-screen flex flex-col selection:bg-imperial-green-500 selection:text-white pb-20 overflow-x-hidden">
+    <!-- The Living Background -->
+    <div class="aurora-bg"></div>
+    <div
+        class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay pointer-events-none fixed">
+    </div>
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-imperial-green-500/5 rounded-full blur-[120px]">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-royal-gold-500/5 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <div class="container max-w-5xl mx-auto px-4 py-6 flex-grow flex flex-col h-full">
+
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8 animate-fade-in">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-imperial-green-800 to-imperial-green-600 rounded-lg flex items-center justify-center shadow-md border border-royal-gold-400/20">
+                    <svg class="w-6 h-6 text-royal-gold-400 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2L14.5 9H22L16 14L18.5 21L12 16.5L5.5 21L8 14L2 9H9.5L12 2Z" opacity="0.2" />
+                        <path d="M6 21V11L12 7L18 11V21H14V14H10V21H6Z" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 7L12 4L16 7" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-tight text-imperial-green-900 dark:text-royal-gold-100">سرویس
+                        <span
+                            class="text-gold-shimmer bg-clip-text text-transparent bg-gradient-to-l from-amber-600 to-yellow-500">پی‌اس‌جی</span>
+                    </h1>
+                    <div class="flex items-center gap-2 mt-0.5">
+                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">نسخه آریامهر</span>
+                    </div>
+                </div>
+            </div>
+            <button id="theme-toggle"
+                class="p-2 rounded-lg bg-white dark:bg-imperial-green-950 border border-slate-200 dark:border-imperial-green-700 hover:border-royal-gold-500 transition-colors shadow-sm">
+                <i id="theme-icon" data-lucide="moon"
+                    class="w-5 h-5 text-imperial-green-800 dark:text-royal-gold-400"></i>
+            </button>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav
+            class="royal-card rounded-2xl p-2 mb-8 sticky top-4 z-40 shadow-lg border border-white/40 dark:border-white/10">
+            <div class="flex w-full md:w-auto mobile-nav-container overflow-hidden">
+
+                <button onclick="switchTab('home')" id="tab-home"
+                    class="tab-btn active flex items-center md:gap-2 px-3 md:px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-imperial-green-900 transition-colors">
+                    <i data-lucide="home" class="w-5 h-5 md:w-4 md:h-4"></i>
+                    <span>خانه</span>
+                </button>
+
+                <button onclick="switchTab('builder')" id="tab-builder"
+                    class="tab-btn flex items-center md:gap-2 px-3 md:px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-imperial-green-900 transition-colors">
+                    <i data-lucide="hammer" class="w-5 h-5 md:w-4 md:h-4"></i>
+                    <span>سازنده</span>
+                </button>
+
+                <button onclick="switchTab('mtproto')" id="tab-mtproto"
+                    class="tab-btn flex items-center md:gap-2 px-3 md:px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-imperial-green-900 transition-colors">
+                    <i data-lucide="send" class="w-5 h-5 md:w-4 md:h-4"></i>
+                    <span>تلگرام</span>
+                </button>
+
+                <button onclick="switchTab('metrics')" id="tab-metrics"
+                    class="tab-btn flex items-center md:gap-2 px-3 md:px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-imperial-green-900 transition-colors">
+                    <i data-lucide="bar-chart-2" class="w-5 h-5 md:w-4 md:h-4"></i>
+                    <span>آمار</span>
+                </button>
+
+                <button onclick="switchTab('settings')" id="tab-settings"
+                    class="tab-btn flex items-center md:gap-2 px-3 md:px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-imperial-green-900 transition-colors">
+                    <i data-lucide="settings" class="w-5 h-5 md:w-4 md:h-4"></i>
+                    <span>تنظیمات</span>
+                </button>
+
+                <button onclick="switchTab('tutorials')" id="tab-tutorials"
+                    class="tab-btn flex items-center md:gap-2 px-3 md:px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-imperial-green-900 transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 md:w-4 md:h-4"></i>
+                    <span>آموزش</span>
+                </button>
+
+
+
+            </div>
+        </nav>
+
+        <!-- Content Area -->
+        <main class="flex-grow relative">
+
+            <!-- TAB 1: HOME (UPDATED) -->
+            <div id="content-home" class="tab-content active">
+                <div class="max-w-6xl mx-auto space-y-8 lg:space-y-12 animate-slide-up pt-4 lg:pt-8 pb-20">
+
+                    <!-- HERO SECTION -->
+                    <div class="relative min-h-[400px] flex flex-col lg:flex-row items-center justify-between gap-10">
+
+                        <!-- Text Content -->
+                        <div class="relative z-10 text-center lg:text-right max-w-2xl w-full">
+
+                            <!-- Badge (Updated style) -->
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-400 text-[10px] font-bold tracking-wider mb-6 shadow-sm animate-float mx-auto lg:mx-0">
+                                <span class="relative flex h-2 w-2">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                </span>
+                                <span>نسخه جدید v3.0</span>
+                            </div>
+
+                            <h1
+                                class="text-5xl lg:text-7xl font-black mb-6 tracking-tight leading-tight drop-shadow-sm">
+                                <span class="text-slate-800 dark:text-white">دنیای بدون</span><br>
+                                <span
+                                    class="bg-gradient-to-l from-amber-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent text-glow">محدودیت</span>
+                            </h1>
+
+                            <p
+                                class="text-base lg:text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed font-medium max-w-xl mx-auto lg:mx-0">
+                                دسترسی آزاد به اینترنت با ابزارهای قدرتمند PSG.
+                                ساخت اشتراک‌های V2Ray، مدیریت کانفیگ‌ها و اکنون
+                                <span class="text-blue-500 font-bold">پروکسی‌های تلگرام</span>
+                                در یک مکان.
+                            </p>
+
+                            <!-- Action Buttons (Stacked on mobile, Row on Desktop) -->
+                            <div
+                                class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:w-auto">
+                                <button onclick="switchTab('builder')"
+                                    class="relative group px-8 py-3.5 bg-gradient-to-r from-imperial-green-600 to-emerald-600 rounded-xl text-white font-bold shadow-lg shadow-emerald-500/30 overflow-hidden transition-all active:scale-95 hover:shadow-emerald-500/50">
+                                    <div
+                                        class="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 ease-out -skew-x-12 origin-left">
+                                    </div>
+                                    <span class="relative flex items-center justify-center gap-2">
+                                        <i data-lucide="zap" class="w-5 h-5"></i> ساخت اشتراک
+                                    </span>
+                                </button>
+
+                                <button onclick="switchTab('mtproto')"
+                                    class="px-8 py-3.5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-slate-700 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-white/10 transition-all active:scale-95 flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-5 h-5 text-blue-500"></i>
+                                    پروکسی تلگرام
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3D Visual (Optimized for Mobile) -->
+                        <div class="relative w-full lg:w-1/2 flex justify-center perspective-1000 mt-8 lg:mt-0">
+                            <!-- Back Glow -->
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-emerald-500/20 dark:bg-emerald-500/10 rounded-full blur-[80px] animate-pulse">
+                            </div>
+
+                            <!-- Main Floating Card -->
+                            <div
+                                class="relative w-72 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border border-white/50 dark:border-white/10 rounded-3xl p-6 shadow-2xl animate-float dir-ltr">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-[10px] font-bold text-slate-500 uppercase">Status</div>
+                                            <div class="text-sm font-black text-slate-800 dark:text-white">Protected
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981] animate-pulse">
+                                    </div>
+                                </div>
+
+                                <!-- Fake Activity Graph -->
+                                <div class="flex items-end gap-1 h-16 mb-6 px-1">
+                                    <div class="w-1/6 bg-emerald-500/20 rounded-t h-[40%]"></div>
+                                    <div class="w-1/6 bg-emerald-500/40 rounded-t h-[70%]"></div>
+                                    <div class="w-1/6 bg-emerald-500/60 rounded-t h-[50%]"></div>
+                                    <div class="w-1/6 bg-emerald-500/80 rounded-t h-[85%]"></div>
+                                    <div class="w-1/6 bg-emerald-500 rounded-t h-[60%]"></div>
+                                    <div class="w-1/6 bg-emerald-500/90 rounded-t h-[95%]"></div>
+                                </div>
+
+                                <div
+                                    class="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] text-slate-400 uppercase font-bold">Protocol</span>
+                                        <span class="text-xs font-bold text-slate-700 dark:text-white">VLESS +
+                                            XTLS</span>
+                                    </div>
+                                    <div class="flex flex-col text-right">
+                                        <span class="text-[10px] text-slate-400 uppercase font-bold">Ping</span>
+                                        <span class="text-xs font-bold text-emerald-500">45ms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FEATURE CARDS (Updated Grid) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+
+                        <!-- Card 1: V2Ray -->
+                        <div onclick="switchTab('builder')"
+                            class="group p-5 lg:p-6 rounded-3xl bg-white/60 dark:bg-white/5 border border-white/60 dark:border-white/5 backdrop-blur-lg hover:bg-white/80 dark:hover:bg-white/10 transition-all hover:-translate-y-1 duration-300 cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-imperial-green-400 to-emerald-600 flex items-center justify-center text-white mb-4 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                                <i data-lucide="hammer" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-2">سازنده اشتراک</h3>
+                            <p class="text-xs lg:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                دسترسی به هزاران کانفیگ V2Ray از منابع معتبر با قابلیت شخصی‌سازی.
+                            </p>
+                        </div>
+
+                        <!-- Card 2: MTProto (NEW) -->
+                        <div onclick="switchTab('mtproto')"
+                            class="group p-5 lg:p-6 rounded-3xl bg-white/60 dark:bg-white/5 border border-white/60 dark:border-white/5 backdrop-blur-lg hover:bg-white/80 dark:hover:bg-white/10 transition-all hover:-translate-y-1 duration-300 cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center text-white mb-4 shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+                                <i data-lucide="send" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-2">پروکسی تلگرام</h3>
+                            <p class="text-xs lg:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                لیست زنده و هوشمند پروکسی‌های MTProto با قابلیت تست پینگ.
+                            </p>
+                        </div>
+
+                        <!-- Card 3: Metrics -->
+                        <div onclick="switchTab('metrics')"
+                            class="group p-5 lg:p-6 rounded-3xl bg-white/60 dark:bg-white/5 border border-white/60 dark:border-white/5 backdrop-blur-lg hover:bg-white/80 dark:hover:bg-white/10 transition-all hover:-translate-y-1 duration-300 cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white mb-4 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
+                                <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-2">وضعیت شبکه</h3>
+                            <p class="text-xs lg:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                نمایش آمار دقیق پروتکل‌ها و حجم دیتای موجود در مخزن.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: INTERACTIVE BUILDER -->
+            <div id="content-builder" class="tab-content">
+
+                <!-- Loader -->
+                <div id="loadingOverlay"
+                    class="absolute inset-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 rounded-3xl">
+                    <span class="loader"></span>
+                    <h3 id="loadingText" class="mt-6 text-lg font-bold text-slate-800 dark:text-white animate-pulse">در
+                        حال اتصال به مخزن...</h3>
+                </div>
+
+                <!-- MAIN GRID LAYOUT -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 h-full lg:h-[650px] animate-slide-up pb-24 lg:pb-0">
+
+                    <!-- LEFT PANEL: CONTROLS (Full Width on Mobile) -->
+                    <div class="lg:col-span-8 flex flex-col gap-3 min-h-0 h-full">
+
+                        <!-- Step 1: Category -->
+                        <div class="royal-card p-3 rounded-2xl flex-shrink-0">
+                            <div class="flex items-center gap-2 mb-2 px-1">
+                                <div class="w-5 h-5 rounded-full bg-imperial-green-500 text-white text-[10px] font-bold flex items-center justify-center">۱</div>
+                                <h3 class="text-xs font-black text-slate-400 uppercase tracking-wider">انتخاب سرویس</h3>
+                            </div>
+                            <div id="category-selector" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                <!-- JS Injected -->
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Client/Channel Selection -->
+                        <div id="client-section"
+                            class="royal-card p-3 rounded-2xl flex-shrink-0 hidden opacity-0 transition-all duration-500">
+                            <div class="flex justify-between items-center mb-2 px-1">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded-full bg-imperial-green-500 text-white text-[10px] font-bold flex items-center justify-center">۲</div>
+                                    <h3 class="text-xs font-black text-slate-400 uppercase tracking-wider">انتخاب فرمت</h3>
+                                </div>
+
+                                <div id="client-search-container" class="hidden relative w-1/2">
+                                    <input type="text" id="client-search-input" placeholder="جستجو..."
+                                        class="w-full bg-slate-100 dark:bg-white/5 border-none rounded-lg py-1 px-3 text-[10px] font-bold text-right focus:ring-2 focus:ring-emerald-500 transition-all outline-none h-7">
+                                    <i data-lucide="search" class="absolute left-2 top-1.5 w-3 h-3 text-slate-400"></i>
+                                </div>
+                            </div>
+
+                            <div id="client-grid"
+                                class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 max-h-[140px] overflow-y-auto custom-scrollbar">
+                                <!-- JS Injected -->
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Files (Grid Layout) -->
+                        <div id="file-section"
+                            class="royal-card p-3 rounded-2xl flex-grow flex flex-col min-h-0 hidden opacity-0 transition-all duration-500 overflow-hidden">
+                            <div class="flex justify-between items-center mb-2 flex-shrink-0">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded-full bg-imperial-green-500 text-white text-[10px] font-bold flex items-center justify-center">۳</div>
+                                    <h3 class="text-xs font-black text-slate-400 uppercase tracking-wider">انتخاب فایل</h3>
+                                </div>
+                                <div class="relative w-1/2">
+                                    <input type="text" id="builder-search" placeholder="جستجو..."
+                                        class="w-full bg-slate-100 dark:bg-white/5 border-none rounded-lg py-1 px-2.5 text-[11px] font-bold text-right focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
+                                    <i data-lucide="search" class="absolute left-2 top-1.5 w-3 h-3 text-slate-400"></i>
+                                </div>
+                            </div>
+                            <div id="file-list"
+                                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 overflow-y-auto custom-scrollbar flex-grow h-full max-h-[400px] lg:max-h-none">
+                                <!-- JS Injected -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT PANEL: PREVIEW (DESKTOP ONLY) -->
+                    <div class="hidden lg:block lg:col-span-4 h-full">
+                        <div class="h-full royal-card rounded-3xl p-1 relative overflow-hidden group flex flex-col">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-amber-500/10 dark:from-emerald-500/20 dark:to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                            </div>
+                            <div
+                                class="relative z-10 flex-grow bg-white/50 dark:bg-black/40 backdrop-blur-xl rounded-[20px] p-6 flex flex-col overflow-hidden">
+                                <div class="text-center mb-6 flex-shrink-0">
+                                    <div
+                                        class="w-14 h-14 mx-auto bg-gradient-to-tr from-slate-200 to-white dark:from-slate-800 dark:to-slate-700 rounded-2xl flex items-center justify-center shadow-inner mb-3">
+                                        <i data-lucide="qr-code" class="w-6 h-6 text-slate-400"></i>
+                                    </div>
+                                    <h3 class="font-bold text-slate-800 dark:text-white text-sm">پیش‌نمایش زنده</h3>
+                                </div>
+
+                                <!-- Desktop Result Container -->
+                                <div id="desktop-preview-container" class="flex-grow flex flex-col">
+                                    <div id="desktop-empty"
+                                        class="flex-grow flex items-center justify-center opacity-30">
+                                        <i data-lucide="arrow-right"
+                                            class="w-10 h-10 text-slate-400 animate-bounce"></i>
+                                    </div>
+                                    <div id="desktop-result" class="hidden flex-col h-full animate-fade-in">
+                                        <div
+                                            class="flex-grow flex items-center justify-center bg-white p-2 rounded-xl shadow-lg mb-4 w-full aspect-square max-h-[200px]">
+                                            <div id="qrcode-desktop"
+                                                class="w-full h-full flex justify-center items-center"></div>
+                                        </div>
+                                        <div class="bg-slate-100 dark:bg-white/10 p-3 rounded-xl mb-4 relative">
+                                            <input type="text" id="url-desktop" readonly
+                                                class="w-full bg-transparent border-none text-[10px] font-mono text-slate-600 dark:text-slate-300 p-0 text-right truncate dir-ltr">
+                                            <button onclick="copyToClip(document.getElementById('url-desktop').value)"
+                                                class="absolute top-2 left-2"><i data-lucide="copy"
+                                                    class="w-3 h-3 text-slate-400 hover:text-emerald-500"></i></button>
+                                        </div>
+                                        <a href="#" id="btn-open-desktop" target="_blank"
+                                            class="w-full py-2.5 bg-emerald-500 text-white rounded-xl font-bold text-xs text-center shadow-lg shadow-emerald-500/30">اتصال</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- TAB 3: NETWORK INTELLIGENCE (Stats) -->
+            <div id="content-metrics" class="tab-content">
+                <div class="max-w-6xl mx-auto space-y-6 animate-slide-up">
+
+                    <!-- 1. KPI Cards (Heads-up Display) -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Total Real Configs -->
+                        <div
+                            class="royal-card p-5 rounded-2xl border border-slate-200 dark:border-imperial-green-800 relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">کل کانفیگ‌ها
+                                    </p>
+                                    <h3 class="text-2xl font-black text-slate-800 dark:text-white mt-1"
+                                        id="kpi-total-configs">0</h3>
+                                </div>
+                                <div
+                                    class="p-2 bg-imperial-green-100 dark:bg-imperial-green-900/40 rounded-lg text-imperial-green-600">
+                                    <i data-lucide="database" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-1 rounded-full overflow-hidden">
+                                <div class="h-full bg-imperial-green-500 w-full animate-pulse"></div>
+                            </div>
+                        </div>
+
+                        <!-- Repository Size -->
+                        <div
+                            class="royal-card p-5 rounded-2xl border border-slate-200 dark:border-imperial-green-800 relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">حجم کل مخزن</p>
+                                    <h3 class="text-2xl font-black text-slate-800 dark:text-white mt-1"
+                                        id="kpi-repo-size">0 MB</h3>
+                                </div>
+                                <div class="p-2 bg-blue-100 dark:bg-blue-900/40 rounded-lg text-blue-600">
+                                    <i data-lucide="hard-drive" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-slate-400">حجم دیتای پردازش شده</p>
+                        </div>
+
+                        <!-- Total Subscription Files -->
+                        <div
+                            class="royal-card p-5 rounded-2xl border border-slate-200 dark:border-imperial-green-800 relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">تعداد اشتراک‌ها
+                                    </p>
+                                    <h3 class="text-2xl font-black text-slate-800 dark:text-white mt-1"
+                                        id="kpi-total-files">0</h3>
+                                </div>
+                                <div class="p-2 bg-purple-100 dark:bg-purple-900/40 rounded-lg text-purple-600">
+                                    <i data-lucide="file-code" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-slate-400">فایل‌های مجزا</p>
+                        </div>
+
+                        <!-- Top Protocol -->
+                        <div
+                            class="royal-card p-5 rounded-2xl border border-slate-200 dark:border-imperial-green-800 relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">پروتکل غالب</p>
+                                    <h3 class="text-2xl font-black text-slate-800 dark:text-white mt-1"
+                                        id="kpi-top-proto">-</h3>
+                                </div>
+                                <div class="p-2 bg-amber-100 dark:bg-amber-900/40 rounded-lg text-amber-600">
+                                    <i data-lucide="zap" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-slate-400">بیشترین سهم بازار</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Charts Section -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Protocol Donut Chart -->
+                        <div
+                            class="royal-card rounded-3xl p-6 border border-slate-200 dark:border-imperial-green-800 flex flex-col items-center">
+                            <h3
+                                class="w-full font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2 pb-4 border-b border-slate-100 dark:border-imperial-green-800">
+                                <i data-lucide="pie-chart" class="w-4 h-4 text-imperial-green-600"></i> توزیع پروتکل
+                            </h3>
+                            <div class="relative w-48 h-48 mb-6">
+                                <div id="protocol-donut" class="w-full h-full rounded-full"
+                                    style="background: conic-gradient(#e2e8f0 0% 100%);"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div
+                                        class="w-32 h-32 bg-white dark:bg-imperial-green-950 rounded-full flex flex-col items-center justify-center shadow-sm">
+                                        <span class="text-[10px] text-slate-400">دقت بالا</span>
+                                        <span class="text-xl font-black text-slate-800 dark:text-white">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="protocol-legend" class="grid grid-cols-2 gap-x-8 gap-y-2 w-full px-4">
+                                <!-- Legend Items -->
+                            </div>
+                        </div>
+
+                        <!-- Category & Global Stats -->
+                        <div
+                            class="lg:col-span-2 royal-card rounded-3xl p-6 border border-slate-200 dark:border-imperial-green-800">
+                            <h3
+                                class="font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2 pb-4 border-b border-slate-100 dark:border-imperial-green-800">
+                                <i data-lucide="bar-chart-2" class="w-4 h-4 text-blue-600"></i> آمار دسته‌بندی‌ها
+                            </h3>
+                            <div id="category-bars" class="space-y-6">
+                                <!-- Bars Injected Here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. SUBSCRIPTION EXPLORER (New Feature) -->
+                    <div
+                        class="royal-card rounded-3xl p-0 border border-slate-200 dark:border-imperial-green-800 overflow-hidden flex flex-col h-[600px]">
+                        <!-- Toolbar -->
+                        <div
+                            class="p-4 border-b border-slate-200 dark:border-imperial-green-800 bg-slate-50 dark:bg-imperial-green-900/30 flex flex-col sm:flex-row gap-4 justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <div
+                                    class="p-2 bg-white dark:bg-imperial-green-900 rounded-lg text-imperial-green-600 border border-slate-200 dark:border-imperial-green-800">
+                                    <i data-lucide="search-code" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 dark:text-white">کاوشگر اشتراک‌ها</h3>
+                                    <p class="text-[10px] text-slate-500">مشاهده وضعیت تک‌تک فایل‌ها</p>
+                                </div>
+                            </div>
+                            <div class="relative w-full sm:w-64">
+                                <input type="text" id="explorer-search" placeholder="جستجو در فایل‌ها..."
+                                    class="w-full pl-4 pr-10 py-2 bg-white dark:bg-imperial-green-950 border border-slate-200 dark:border-imperial-green-700 rounded-xl text-sm outline-none focus:ring-2 focus:ring-imperial-green-500 transition-all text-right">
+                                <i data-lucide="search" class="absolute left-3 top-2.5 w-4 h-4 text-slate-400"></i>
+                            </div>
+                        </div>
+
+                        <!-- Table Header -->
+                        <div
+                            class="grid grid-cols-12 gap-2 p-3 bg-slate-100 dark:bg-imperial-green-900/50 text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-200 dark:border-imperial-green-800 text-center">
+                            <div class="col-span-1">#</div>
+                            <div class="col-span-4 text-right pr-4">نام فایل / کشور</div>
+                            <div class="col-span-2">دسته‌بندی</div>
+                            <div class="col-span-2">حجم</div>
+                            <div class="col-span-2">تخمین کانفیگ</div>
+                            <div class="col-span-1"></div>
+                        </div>
+
+                        <!-- Table Body (Scrollable) -->
+                        <div id="explorer-list"
+                            class="overflow-y-auto custom-scrollbar flex-grow bg-white dark:bg-imperial-green-950/20">
+                            <!-- Items Injected Here -->
+                        </div>
+
+                        <!-- Footer -->
+                        <div
+                            class="p-2 border-t border-slate-200 dark:border-imperial-green-800 bg-slate-50 dark:bg-imperial-green-900/30 text-center">
+                            <p class="text-[10px] text-slate-400" id="explorer-footer-count">نمایش 0 فایل</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 4: CONTROL CENTER (SETTINGS) -->
+            <div id="content-settings" class="tab-content">
+                <div class="max-w-4xl mx-auto animate-slide-up space-y-6">
+
+                    <!-- Header -->
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-black text-slate-800 dark:text-white">مرکز کنترل</h2>
+                        <p class="text-xs text-slate-500 mt-1">شخصی‌سازی تجربه کاربری و مدیریت داده‌ها</p>
+                    </div>
+
+                    <!-- BENTO GRID LAYOUT -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- 1. VISUAL THEME SELECTOR -->
+                        <div
+                            class="royal-card p-6 rounded-3xl border border-slate-200 dark:border-imperial-green-800 md:col-span-2">
+                            <h3
+                                class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                                <i data-lucide="palette" class="w-4 h-4"></i> ظاهر برنامه
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Light Mode Card -->
+                                <button onclick="setThemeMode(false)" id="theme-btn-light"
+                                    class="group relative overflow-hidden rounded-2xl border-2 transition-all duration-300 h-32 flex flex-col items-center justify-center gap-3">
+                                    <div
+                                        class="absolute inset-0 bg-slate-100 group-hover:bg-slate-200 transition-colors z-0">
+                                    </div>
+                                    <div
+                                        class="relative z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-amber-500">
+                                        <i data-lucide="sun" class="w-6 h-6"></i>
+                                    </div>
+                                    <span class="relative z-10 text-sm font-bold text-slate-700">روز (روشن)</span>
+                                    <!-- Active Check -->
+                                    <div
+                                        class="absolute top-3 right-3 text-emerald-500 opacity-0 check-icon transition-opacity">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 fill-current"></i>
+                                    </div>
+                                </button>
+
+                                <!-- Dark Mode Card -->
+                                <button onclick="setThemeMode(true)" id="theme-btn-dark"
+                                    class="group relative overflow-hidden rounded-2xl border-2 transition-all duration-300 h-32 flex flex-col items-center justify-center gap-3">
+                                    <div
+                                        class="absolute inset-0 bg-slate-900 group-hover:bg-slate-800 transition-colors z-0">
+                                    </div>
+                                    <div
+                                        class="relative z-10 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shadow-sm text-blue-400 backdrop-blur-sm">
+                                        <i data-lucide="moon" class="w-6 h-6"></i>
+                                    </div>
+                                    <span class="relative z-10 text-sm font-bold text-white">شب (تاریک)</span>
+                                    <!-- Active Check -->
+                                    <div
+                                        class="absolute top-3 right-3 text-emerald-500 opacity-0 check-icon transition-opacity">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 fill-current"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. DATA & STORAGE -->
+                        <div
+                            class="royal-card p-6 rounded-3xl border border-slate-200 dark:border-imperial-green-800 flex flex-col justify-between">
+                            <div>
+                                <h3
+                                    class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                                    <i data-lucide="database" class="w-4 h-4"></i> مدیریت حافظه
+                                </h3>
+                                <div class="flex justify-between items-end mb-2">
+                                    <span class="text-xs text-slate-500">فضای اشغال شده (Cache)</span>
+                                    <span id="storage-usage-text"
+                                        class="text-lg font-black text-slate-800 dark:text-white">0 KB</span>
+                                </div>
+                                <!-- Visual Bar -->
+                                <div
+                                    class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-6">
+                                    <div id="storage-bar"
+                                        class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 w-0 transition-all duration-1000">
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="clearCache()"
+                                class="w-full py-3 rounded-xl border border-red-200 dark:border-red-900/30 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 font-bold text-xs hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                پاکسازی کامل کش
+                            </button>
+                        </div>
+
+                        <!-- 3. PREFERENCES (New Feature) -->
+                        <div class="royal-card p-6 rounded-3xl border border-slate-200 dark:border-imperial-green-800">
+                            <h3
+                                class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                                <i data-lucide="sliders" class="w-4 h-4"></i> اولویت‌ها
+                            </h3>
+
+                            <div class="space-y-4">
+                                <!-- Default Client -->
+                                <!-- UPDATE THIS SECTION IN TAB 4 (SETTINGS) -->
+                                <div
+                                    class="flex items-center justify-between p-3 bg-slate-50 dark:bg-white/5 rounded-xl">
+                                    <div class="flex items-center gap-3">
+                                        <div class="p-2 bg-white dark:bg-white/10 rounded-lg text-slate-500">
+                                            <i data-lucide="smartphone" class="w-4 h-4"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold text-slate-700 dark:text-slate-200">کلاینت
+                                                پیش‌فرض</p>
+                                            <p class="text-[9px] text-slate-400">انتخاب خودکار در سازنده</p>
+                                        </div>
+                                    </div>
+                                    <select id="pref-default-client"
+                                        onchange="savePreference('defaultClient', this.value)"
+                                        class="bg-transparent text-xs font-bold text-emerald-600 dark:text-emerald-400 outline-none cursor-pointer text-left dir-ltr">
+                                        <option value="">انتخاب نشده</option>
+                                        <option value="xray">Xray</option>
+                                        <option value="singbox">Singbox</option>
+                                        <option value="nekobox">Nekobox</option>
+                                        <option value="clash">Clash</option>
+                                        <option value="meta">Clash.Meta</option>
+                                        <option value="surfboard">Surfboard</option>
+                                    </select>
+                                </div>
+
+                                <!-- Default Tab -->
+                                <div
+                                    class="flex items-center justify-between p-3 bg-slate-50 dark:bg-white/5 rounded-xl">
+                                    <div class="flex items-center gap-3">
+                                        <div class="p-2 bg-white dark:bg-white/10 rounded-lg text-slate-500">
+                                            <i data-lucide="layout" class="w-4 h-4"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold text-slate-700 dark:text-slate-200">صفحه شروع
+                                            </p>
+                                            <p class="text-[9px] text-slate-400">تب پیش‌فرض هنگام ورود</p>
+                                        </div>
+                                    </div>
+                                    <select id="pref-start-tab" onchange="savePreference('startTab', this.value)"
+                                        class="bg-transparent text-xs font-bold text-emerald-600 dark:text-emerald-400 outline-none cursor-pointer text-left dir-ltr">
+                                        <option value="home">Home</option>
+                                        <option value="builder">Builder</option>
+                                        <option value="metrics">Stats</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. SYSTEM INFO (Geeky Stats) -->
+                        <div
+                            class="royal-card p-6 rounded-3xl border border-slate-200 dark:border-imperial-green-800 md:col-span-2 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 opacity-50">
+                            </div>
+                            <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-16 h-16 bg-white dark:bg-white/10 rounded-2xl flex items-center justify-center shadow-lg backdrop-blur-md">
+                                        <i data-lucide="cpu" class="w-8 h-8 text-slate-700 dark:text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-black text-lg text-slate-800 dark:text-white">PSG Core <span
+                                                class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 ml-2">v3.0.0</span>
+                                        </h3>
+                                        <div class="flex gap-4 mt-2 text-[10px] text-slate-500 font-mono">
+                                            <span id="sys-res">Res: --</span>
+                                            <span id="sys-mem">Memory: --</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/itsyebekhe/PSG" target="_blank"
+                                        class="px-5 py-2.5 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-700 transition-colors flex items-center gap-2">
+                                        <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                                    </a>
+                                    <a href="https://github.com/itsyebekhe/PSG/issues" target="_blank"
+                                        class="px-5 py-2.5 bg-white dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-white rounded-xl text-xs font-bold hover:bg-slate-50 transition-colors">
+                                        Report Bug
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 5: TUTORIALS (FIXED STRUCTURE) -->
+            <div id="content-tutorials" class="tab-content">
+                <div class="max-w-5xl mx-auto animate-slide-up h-[calc(100vh-180px)] flex gap-6 relative">
+
+                    <!-- LEFT: POST LIST (Full width on mobile) -->
+                    <div id="tutorial-list-container"
+                        class="w-full lg:w-1/3 flex flex-col gap-4 overflow-y-auto custom-scrollbar pl-1 pb-20">
+                        <!-- Loading State -->
+                        <div id="blog-loader" class="text-center py-10">
+                            <span class="loader mx-auto"></span>
+                            <p class="mt-4 text-xs text-slate-500">در حال بارگذاری مقالات...</p>
+                        </div>
+                        <!-- Injected Cards -->
+                        <div id="blog-grid" class="space-y-4 hidden"></div>
+                    </div>
+
+                    <!-- RIGHT: DESKTOP READER (Hidden on Mobile) -->
+                    <div id="desktop-tutorial-reader"
+                        class="hidden lg:flex lg:w-2/3 royal-card rounded-3xl p-8 overflow-hidden relative border border-slate-200 dark:border-imperial-green-800 bg-white/90 dark:bg-black/60 backdrop-blur-xl flex-col h-full">
+
+                        <!-- Empty State -->
+                        <div id="desktop-reader-empty"
+                            class="h-full flex flex-col items-center justify-center text-center opacity-50">
+                            <div
+                                class="w-20 h-20 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center mb-4">
+                                <i data-lucide="book-open" class="w-8 h-8 text-slate-400"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-500">یک آموزش را انتخاب کنید</h3>
+                        </div>
+
+                        <!-- Content -->
+                        <div id="desktop-reader-content"
+                            class="hidden flex-col h-full overflow-y-auto custom-scrollbar pr-2">
+                            <div
+                                class="flex items-center gap-3 mb-6 border-b border-slate-100 dark:border-white/5 pb-4">
+                                <span id="dt-reader-time"
+                                    class="text-[11px] font-bold text-white bg-emerald-500 px-2 py-1 rounded-md"></span>
+                                <span class="text-[11px] text-slate-400">آخرین بروزرسانی: امروز</span>
+                            </div>
+                            <h1 id="dt-reader-title"
+                                class="text-3xl font-black text-slate-800 dark:text-white mb-8 leading-tight"></h1>
+                            <div id="dt-reader-body" class="prose prose-slate dark:prose-invert max-w-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 6: MTPROTO NEXUS (PSG THEMED) -->
+            <div id="content-mtproto" class="tab-content">
+                <div class="max-w-6xl mx-auto animate-slide-up pb-20">
+
+                    <!-- Header Section -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-4 gap-3 dir-rtl">
+
+                        <!-- Title & Badge (Aligned Right) -->
+                        <div class="text-right w-full md:w-auto order-1 md:order-1">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-400 text-[10px] font-bold tracking-wider mb-1 shadow-sm">
+                                <span class="relative flex h-2 w-2">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                </span>
+                                آنلاین
+                            </div>
+                            <h2 class="text-xl md:text-2xl font-black text-slate-800 dark:text-white leading-tight">
+                                پروکسی‌های <span class="text-blue-500">تلگرام</span>
+                            </h2>
+                        </div>
+
+                        <!-- Stats Card -->
+                        <div
+                            class="royal-card p-1.5 rounded-xl flex items-center gap-2 px-3 bg-white/60 dark:bg-black/20 w-full md:w-auto justify-between md:justify-start order-2 md:order-2">
+
+                            <!-- Refresh Button -->
+                            <button onclick="initMTProto()"
+                                class="w-8 h-8 rounded-lg bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-500/30 transition-all active:scale-95">
+                                <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+                            </button>
+
+                            <!-- Stats Data -->
+                            <div class="flex items-center gap-3">
+                                <div class="text-center">
+                                    <div class="text-[8px] text-slate-400 font-bold uppercase">فعال</div>
+                                    <div class="text-sm font-black text-emerald-500" id="mt-count-online">0</div>
+                                </div>
+                                <div class="w-px h-6 bg-slate-200 dark:bg-white/10"></div>
+                                <div class="text-center">
+                                    <div class="text-[8px] text-slate-400 font-bold uppercase">کل</div>
+                                    <div class="text-sm font-black text-slate-700 dark:text-white" id="mt-count-total">0</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Toolbar -->
+                    <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                        <div class="relative flex-grow">
+                            <input type="text" id="mtproto-search" placeholder="جستجو در سرورها..."
+                                class="w-full pl-4 pr-10 py-2 bg-white dark:bg-white/5 border border-slate-200 dark:border-imperial-green-800 rounded-xl text-xs font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 text-right">
+                            <i data-lucide="search" class="absolute right-3 top-2.5 w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <button id="mtproto-export-btn"
+                            class="flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-white/5 border border-slate-200 dark:border-imperial-green-800 rounded-xl text-slate-600 dark:text-slate-300 font-bold text-xs hover:bg-slate-50 dark:hover:bg-white/10 transition-all">
+                            <i data-lucide="download" class="w-4 h-4 text-blue-500"></i>
+                            <span>دانلود لیست</span>
+                        </button>
+                    </div>
+
+                    <!-- Grid Cards -->
+                    <div id="mtproto-grid"
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 min-h-[200px]">
+                        <!-- Loader (Will be removed after fetch) -->
+                        <div class="col-span-full flex flex-col items-center justify-center py-12 opacity-50">
+                            <span class="loader mb-4"></span>
+                            <span class="text-xs text-slate-400 font-bold">در حال دریافت لیست پروکسی...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </div>
+
+    </main>
+
+    <footer class="mt-auto py-8 text-center text-slate-500 dark:text-slate-500 text-xs">
+        <p class="mb-1 flex items-center justify-center gap-2">
+            <span>طراحی شده با الهام از فرهنگ پهلوی</span>
+            <i data-lucide="feather" class="w-3 h-3"></i>
+        </p>
+        <div class="flex items-center justify-center gap-1 opacity-60">
+            <span>قدرت گرفته از</span>
+            <a href="https://github.com/itsyebekhe/PSG"
+                class="text-imperial-green-600 dark:text-royal-gold-500 hover:underline font-bold">PSG</a>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Toast -->
+    <div id="toastContainer"
+        class="fixed bottom-20 left-1/2 transform -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 z-[10000] flex flex-col gap-2 pointer-events-none w-full sm:w-auto px-4 sm:px-0 max-h-[40vh] overflow-hidden">
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-24 right-4 z-40 w-10 h-10 rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-imperial-green-600 dark:hover:text-imperial-green-400 transition-all opacity-0 pointer-events-none hover:scale-110">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        // --- 1. CONSTANTS & CONFIGURATION ---
+        const REPO_OWNER = "itsyebekhe";
+        const REPO_NAME = "PSG";
+        const REPO_BRANCH = "main";
+        const BASE_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REPO_BRANCH}`;
+        const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/git/trees/${REPO_BRANCH}?recursive=1`;
+        const GLOBAL_CONFIG_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/refs/heads/${REPO_BRANCH}/config.txt`;
+
+        const catIcons = { "Standard": "box", "Lite": "feather", "Channels": "send", "Locations": "globe" };
+        const clientIcons = { "xray": "activity", "clash": "zap", "singbox": "box-select", "base64": "code", "meta": "cpu", "surfboard": "smartphone", "nekobox": "cat" };
+
+        // --- NAMING MAPPING ---
+        const clientDisplayNames = {
+            "clash": "Clash",
+            "meta": "Clash.Meta",
+            "nekobox": "Nekobox",
+            "singbox": "Singbox",
+            "surfboard": "Surfboard",
+            "xray": "Xray",
+            "base64": "Xray",
+            "normal": null
+        };
+
+        // --- CATEGORY DESCRIPTIONS ---
+        const catDescriptions = {
+            "Standard": "اشتراک کامل با تمام پروتکل‌ها",
+            "Lite": "نسخه سبک با حجم کمتر",
+            "Channels": "اشتراک بر اساس کانال تلگرام",
+            "Locations": "اشتراک بر اساس کشور و موقعیت"
+        };
+
+        // --- FILE NAME MAPPER (matches main.py output) ---
+        const fileNameMap = {
+            "mix": "ترکیبی (MIX)",
+            "openai": "هوش مصنوعی (OpenAI/Claude)",
+            "list": "لیست کانال",
+            "vless_domain": "VLESS + دامنه",
+            "vless_ipv4": "VLESS + IPv4",
+            "vless_ipv6": "VLESS + IPv6",
+            "vless": "VLESS (همه)",
+            "vmess_domain": "VMess + دامنه",
+            "vmess_ipv4": "VMess + IPv4",
+            "vmess_ipv6": "VMess + IPv6",
+            "vmess": "VMess (همه)",
+            "trojan_domain": "Trojan + دامنه",
+            "trojan_ipv4": "Trojan + IPv4",
+            "trojan_ipv6": "Trojan + IPv6",
+            "trojan": "Trojan (همه)",
+            "ss_domain": "Shadowsocks + دامنه",
+            "ss_ipv4": "Shadowsocks + IPv4",
+            "ss_ipv6": "Shadowsocks + IPv6",
+            "ss": "Shadowsocks (همه)",
+            "reality_domain": "Reality + دامنه",
+            "reality_ipv4": "Reality + IPv4",
+            "reality_ipv6": "Reality + IPv6",
+            "reality": "Reality (همه)",
+            "xhttp_domain": "XHTTP + دامنه",
+            "xhttp_ipv4": "XHTTP + IPv4",
+            "xhttp_ipv6": "XHTTP + IPv6",
+            "xhttp": "XHTTP (همه)",
+            "tuic_domain": "TUIC + دامنه",
+            "tuic_ipv4": "TUIC + IPv4",
+            "tuic_ipv6": "TUIC + IPv6",
+            "tuic": "TUIC (همه)",
+            "hy2_domain": "Hysteria2 + دامنه",
+            "hy2_ipv4": "Hysteria2 + IPv4",
+            "hy2_ipv6": "Hysteria2 + IPv6",
+            "hy2": "Hysteria2 (همه)"
+        };
+
+        function getFriendlyFileName(rawName) {
+            if (fileNameMap[rawName]) return fileNameMap[rawName];
+            // Clean up underscores for unmapped names
+            return rawName.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        }
+        // --- 2. STATE MANAGEMENT ---
+        let structuredData = {};
+        let metricsData = { totalConfigs: 0, protocolCounts: {}, totalFiles: 0, totalSize: 0, allFiles: [], categoryCounts: { "Standard": 0, "Lite": 0, "Channels": 0, "Locations": 0 } };
+        let builderState = { selectedCat: null, selectedClient: null, selectedFile: null };
+
+        // --- 3. UI REFERENCES (Safe Access) ---
+        const getEl = (id) => document.getElementById(id);
+
+        const ui = {
+            tabs: document.querySelectorAll('.tab-btn'),
+            contents: document.querySelectorAll('.tab-content'),
+            loaders: {
+                overlay: getEl('loadingOverlay'),
+                text: getEl('loadingText') // This caused your error before
+            },
+            cacheDisplay: getEl('cache-size-display'),
+            // Metrics
+            kpiConfigs: getEl('kpi-total-configs'), kpiRepoSize: getEl('kpi-repo-size'),
+            kpiFiles: getEl('kpi-total-files'), kpiProto: getEl('kpi-top-proto'),
+            protoDonut: getEl('protocol-donut'), protoLegend: getEl('protocol-legend'),
+            catBars: getEl('category-bars'), explorerList: getEl('explorer-list'),
+            explorerSearch: getEl('explorer-search'), explorerCount: getEl('explorer-footer-count'),
+            // Builder
+            catSelector: getEl('category-selector'), clientSection: getEl('client-section'),
+            clientGrid: getEl('client-grid'), fileSection: getEl('file-section'),
+            fileList: getEl('file-list'), fileSearch: getEl('builder-search'),
+            fileCount: getEl('file-count-badge'), emptyState: getEl('empty-state'),
+            resultContent: getEl('result-content'), previewBadge: getEl('preview-badge'),
+            qrBox: getEl('qrcode'), urlInput: getEl('subscriptionUrl'), openBtn: getEl('openLinkBtn')
+        };
+
+        // --- 4. INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', async () => {
+            if (window.lucide) lucide.createIcons();
+            initTheme();
+            initSettings();
+            updateCacheSize();
+            initTutorials();
+
+            // Keyboard navigation for tabs
+            document.addEventListener('keydown', (e) => {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                const tabs = ['home', 'builder', 'mtproto', 'metrics', 'settings', 'tutorials'];
+                const currentIndex = tabs.findIndex(t => getEl(`content-${t}`)?.classList.contains('active'));
+                if (e.key === 'ArrowRight' && currentIndex < tabs.length - 1) {
+                    e.preventDefault();
+                    switchTab(tabs[currentIndex + 1]);
+                } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    e.preventDefault();
+                    switchTab(tabs[currentIndex - 1]);
+                } else if (e.key === 'Escape') {
+                    // Close mobile drawer/tutorial if open
+                    if (typeof closeMobileDrawer === 'function') closeMobileDrawer();
+                    if (typeof closeMobileTutorial === 'function') closeMobileTutorial();
+                }
+            });
+
+            // Search bar keyboard shortcut (Ctrl/Cmd + K)
+            document.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    switchTab('builder');
+                    setTimeout(() => {
+                        const searchInput = getEl('builder-search');
+                        if (searchInput) searchInput.focus();
+                    }, 300);
+                }
+            });
+
+            // Client search filtering
+            const clientSearchInput = document.getElementById('client-search-input');
+            if (clientSearchInput) {
+                clientSearchInput.addEventListener('input', (e) => {
+                    renderClientGrid(builderState.selectedCat, e.target.value);
+                });
+            }
+
+            if (ui.explorerSearch) ui.explorerSearch.addEventListener('input', (e) => renderExplorerTable(e.target.value));
+            if (ui.fileSearch) ui.fileSearch.addEventListener('input', (e) => {
+                if (builderState.selectedCat && builderState.selectedClient) renderFileList(builderState.selectedCat, builderState.selectedClient, e.target.value);
+            });
+
+            await fetchRepositoryData();
+        });
+
+        // --- 5. DATA FETCHING ---
+        async function fetchRepositoryData() {
+            try {
+                // FAIL-SAFE: Check if loader text element exists
+                if (ui.loaders.text) ui.loaders.text.textContent = "در حال اتصال به مخزن...";
+
+                const [treeResponse, configResponse] = await Promise.all([
+                    fetch(API_URL),
+                    fetch(GLOBAL_CONFIG_URL)
+                ]);
+
+                if (!treeResponse.ok) throw new Error("GitHub API Error");
+
+                if (ui.loaders.text) ui.loaders.text.textContent = "در حال پردازش داده‌ها...";
+
+                const treeData = await treeResponse.json();
+                let configText = "";
+                if (configResponse.ok) configText = await configResponse.text();
+
+                localStorage.setItem('psg_tree_cache', JSON.stringify(treeData.tree));
+                updateCacheSize();
+
+                processStats(configText);
+                processTree(treeData.tree);
+                initBuilderCategories();
+
+                if (ui.loaders.overlay) {
+                    setTimeout(() => {
+                        ui.loaders.overlay.classList.add('opacity-0', 'pointer-events-none');
+                        setTimeout(() => { ui.loaders.overlay.style.display = 'none'; }, 500);
+                    }, 500);
+                }
+
+            } catch (error) {
+                if (ui.loaders.text) {
+                    ui.loaders.text.innerHTML = `
+                        <span class="text-red-500 mb-2">خطا در دریافت اطلاعات</span>
+                        <button onclick="location.reload()" class="mt-3 px-4 py-2 bg-emerald-500 text-white rounded-lg text-xs font-bold hover:bg-emerald-600 transition-colors">تلاش مجدد</button>
+                    `;
+                }
+                console.error(error);
+            }
+        }
+
+        // --- PROCESSORS ---
+        function processStats(text) {
+            if (!text) return;
+            if (!text.includes('://') && !text.includes(' ')) { try { text = atob(text); } catch (e) { } }
+            const lines = text.split('\n').filter(l => l.trim().length > 10);
+            metricsData.totalConfigs = lines.length;
+            const protocols = { 'xray': 0, 'singbox': 0, 'clash': 0 };
+            lines.forEach(line => {
+                if (line.match(/^(vmess|vless|trojan|ss):/)) protocols['xray']++;
+                else if (line.match(/^(hysteria|tuic|warp):/)) protocols['singbox']++;
+            });
+            metricsData.protocolCounts = protocols;
+        }
+
+        function estimateConfigCount(size, type) {
+            if (!size) return 0;
+            const avg = type.includes('base64') ? 300 : type.includes('clash') ? 400 : 250;
+            return Math.max(1, Math.floor(size / avg));
+        }
+
+        function processTree(tree) {
+            structuredData = { "Standard": {}, "Lite": {}, "Channels": {}, "Locations": {} };
+            metricsData.totalFiles = 0; metricsData.totalSize = 0; metricsData.allFiles = [];
+
+            tree.forEach(item => {
+                if (item.type !== "blob") return;
+                let path = item.path, category = null, cleanPath = "";
+
+                if (path.startsWith("subscriptions/channels/")) { category = "Channels"; cleanPath = path.replace("subscriptions/channels/", ""); }
+                else if (path.startsWith("subscriptions/locations/")) { category = "Locations"; cleanPath = path.replace("subscriptions/locations/", ""); }
+                else if (path.startsWith("lite/subscriptions/")) { category = "Lite"; cleanPath = path.replace("lite/subscriptions/", ""); }
+                else if (path.startsWith("subscriptions/")) { category = "Standard"; cleanPath = path.replace("subscriptions/", ""); }
+                else return;
+
+                const ext = cleanPath.split('.').pop();
+                if (["md", "php", "py", "html", "yml"].includes(ext)) return;
+
+                // Skip normal/ files (raw base64 only, not useful in UI)
+                if (cleanPath.includes("/normal/")) return;
+
+                const parts = cleanPath.split("/");
+                const clientKey = parts[0];
+                const fileName = parts[parts.length - 1];
+                const simpleName = fileName.replace(/\.[^/.]+$/, "");
+
+                metricsData.totalFiles++;
+                metricsData.totalSize += item.size;
+                metricsData.categoryCounts[category]++;
+
+                const estConfigs = estimateConfigCount(item.size, clientKey);
+
+                metricsData.allFiles.push({ name: simpleName, category: category, client: clientKey, size: item.size, estConfigs: estConfigs, url: `${BASE_URL}/${path}` });
+
+                if (category === "Locations" && parts.length === 2) {
+                    addToStructure(category, clientKey, parts[1], path);
+                } else if (parts.length >= 2) {
+                    if (parts[0] === "xray" && parts[1] === "base64" && parts.length >= 3) {
+                        addToStructure(category, "xray", parts.slice(2).join("/"), path);
+                    } else {
+                        addToStructure(category, parts[0], parts.slice(1).join("/"), path);
+                    }
+                }
+            });
+        }
+
+        function addToStructure(cat, type, name, path) {
+            if (!structuredData[cat][type]) structuredData[cat][type] = {};
+            structuredData[cat][type][name.replace(/\.[^/.]+$/, "")] = `${BASE_URL}/${path}`;
+        }
+
+        // --- 6. STATS PAGE RENDERING ---
+        function renderMetricsDashboard() {
+            if (!metricsData || metricsData.totalFiles === 0 || !ui.kpiConfigs) return;
+
+            animateValue(ui.kpiConfigs, 0, metricsData.totalConfigs, 1000);
+            animateValue(ui.kpiRepoSize, 0, metricsData.totalSize, 1000, true);
+            animateValue(ui.kpiFiles, 0, metricsData.totalFiles, 1000);
+
+            let topProto = '-'; let maxVal = 0;
+            for (let p in metricsData.protocolCounts) { if (metricsData.protocolCounts[p] > maxVal) { maxVal = metricsData.protocolCounts[p]; topProto = p; } }
+            if (ui.kpiProto) ui.kpiProto.textContent = topProto.toUpperCase();
+
+            // Donut
+            if (ui.protoLegend) {
+                const pCounts = metricsData.protocolCounts;
+                const totalP = metricsData.totalConfigs || 1;
+                let grad = []; let cur = 0;
+                const colors = [{ hex: '#3cbf6f', tw: 'bg-imperial-green-500' }, { hex: '#d97706', tw: 'bg-royal-gold-500' }, { hex: '#3b82f6', tw: 'bg-blue-500' }];
+
+                ui.protoLegend.innerHTML = '';
+                Object.keys(pCounts).forEach((key, i) => {
+                    const val = pCounts[key];
+                    if (val === 0) return;
+                    const pct = val / totalP;
+                    const deg = pct * 360;
+                    const col = colors[i % colors.length];
+                    grad.push(`${col.hex} ${cur}deg ${cur + deg}deg`);
+                    cur += deg;
+                    ui.protoLegend.innerHTML += `<div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full ${col.tw}"></span><div class="flex flex-col"><span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300">${key}</span><span class="text-[10px] text-slate-500">${(pct * 100).toFixed(1)}%</span></div></div>`;
+                });
+                if (ui.protoDonut) ui.protoDonut.style.background = `conic-gradient(${grad.join(', ')})`;
+            }
+
+            // Bars
+            if (ui.catBars) {
+                ui.catBars.innerHTML = '';
+                const catMax = Math.max(...Object.values(metricsData.categoryCounts));
+                Object.entries(metricsData.categoryCounts).forEach(([cat, count]) => {
+                    const pct = (count / catMax) * 100;
+                    ui.catBars.innerHTML += `<div><div class="flex justify-between mb-1"><span class="text-xs font-bold text-slate-700 dark:text-slate-300">${cat}</span><span class="text-[10px] text-slate-500">${count} فایل</span></div><div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-imperial-green-500 rounded-full" style="width: ${pct}%"></div></div></div>`;
+                });
+            }
+            renderExplorerTable();
+        }
+
+        function renderExplorerTable(query = "") {
+            if (!ui.explorerList) return;
+            const list = ui.explorerList;
+            list.innerHTML = '';
+
+            const q = query.toLowerCase();
+            const filtered = metricsData.allFiles.filter(f => f.name.toLowerCase().includes(q) || f.category.toLowerCase().includes(q));
+
+            if (ui.explorerCount) ui.explorerCount.textContent = `نمایش ${filtered.length} از ${metricsData.allFiles.length} فایل`;
+
+            if (filtered.length === 0) { list.innerHTML = `<div class="p-8 text-center text-slate-400 text-xs">موردی یافت نشد</div>`; return; }
+
+            filtered.slice(0, 50).forEach((file, i) => {
+                const row = document.createElement('div');
+                row.className = "grid grid-cols-12 gap-2 p-3 border-b border-slate-50 dark:border-imperial-green-900/50 hover:bg-slate-50 dark:hover:bg-imperial-green-900/20 items-center text-xs transition-colors";
+                const flag = (file.category === 'Locations' && file.name.length <= 3) ? getFlagImage(file.name) : '';
+                const sizeKB = (file.size / 1024).toFixed(1);
+
+                row.innerHTML = `<div class="col-span-1 text-center font-mono text-slate-400">${i + 1}</div><div class="col-span-4 text-right pr-4 font-bold text-slate-700 dark:text-slate-300 truncate flex items-center gap-1">${flag} ${file.name}</div><div class="col-span-2 text-center text-slate-500"><span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-imperial-green-900 text-[10px]">${file.category}</span></div><div class="col-span-2 text-center font-mono text-slate-500">${sizeKB} KB</div><div class="col-span-2 text-center font-mono text-imperial-green-600 dark:text-imperial-green-400 font-bold">~${file.estConfigs}</div><div class="col-span-1 text-center"><button onclick="copyToClip('${file.url}')" class="p-1.5 rounded hover:bg-slate-200 dark:hover:bg-imperial-green-800 text-slate-400 hover:text-imperial-green-600 transition-colors"><i data-lucide="copy" class="w-3 h-3"></i></button></div>`;
+                list.appendChild(row);
+            });
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // --- 7. INNOVATIVE BUILDER LOGIC ---
+        function initBuilderCategories() {
+            if (!ui.catSelector) return;
+            ui.catSelector.innerHTML = '';
+            Object.keys(structuredData).sort().forEach(cat => {
+                if (Object.keys(structuredData[cat]).length === 0) return;
+                const fileCount = Object.values(structuredData[cat]).reduce((sum, clients) => sum + Object.keys(clients).length, 0);
+                const desc = catDescriptions[cat] || '';
+                const btn = document.createElement('button');
+                btn.className = `cat-btn relative overflow-hidden p-3 rounded-xl border border-slate-200 dark:border-imperial-green-800 bg-white dark:bg-imperial-green-900/40 hover:border-imperial-green-500 transition-all duration-200 flex flex-col items-center justify-center gap-2 group`;
+                btn.innerHTML = `
+                    <div class="p-2.5 rounded-full bg-slate-50 dark:bg-imperial-green-900 group-hover:bg-imperial-green-100 dark:group-hover:bg-imperial-green-800 transition-colors text-slate-500 dark:text-slate-400 group-hover:text-imperial-green-600">
+                        <i data-lucide="${catIcons[cat] || 'folder'}" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs font-bold text-slate-700 dark:text-slate-300 group-hover:text-imperial-green-600">${cat}</span>
+                    <span class="text-[9px] text-slate-400 dark:text-slate-500 text-center leading-tight truncate w-full">${desc}</span>
+                    <span class="text-[8px] font-mono text-imperial-green-500 dark:text-imperial-green-400">${fileCount} فایل</span>
+                `;
+                btn.onclick = () => selectCategory(cat, btn);
+                ui.catSelector.appendChild(btn);
+            });
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function selectCategory(cat, btnElement) {
+            builderState.selectedCat = cat;
+            builderState.selectedClient = null;
+            builderState.selectedFile = null;
+
+            // UI Updates
+            document.querySelectorAll('.cat-btn').forEach(b => {
+                b.classList.remove('ring-2', 'ring-imperial-green-500', 'bg-imperial-green-50', 'dark:bg-imperial-green-900');
+                b.classList.add('bg-white', 'dark:bg-imperial-green-900/40');
+            });
+            if (btnElement) {
+                btnElement.classList.remove('bg-white', 'dark:bg-imperial-green-900/40');
+                btnElement.classList.add('ring-2', 'ring-imperial-green-500', 'bg-imperial-green-50', 'dark:bg-imperial-green-900');
+            }
+
+            ui.clientSection.classList.remove('hidden');
+            setTimeout(() => ui.clientSection.classList.remove('opacity-0'), 50);
+            ui.fileSection.classList.add('hidden', 'opacity-0');
+            if (typeof resetPreview === 'function') resetPreview();
+
+            // Search Logic
+            const searchContainer = document.getElementById('client-search-container');
+            const searchInput = document.getElementById('client-search-input');
+            if (searchContainer && searchInput) {
+                searchContainer.classList.remove('hidden');
+                searchInput.value = '';
+            }
+
+            renderClientGrid(cat);
+
+            // --- AUTO-SELECT LOGIC WITH ALIASES ---
+            const defaultPref = localStorage.getItem('pref_defaultClient');
+            if (defaultPref) {
+                // Define aliases: if Pref is Key, look for Values in the repo
+                const aliases = {
+                    'xray': ['xray', 'base64'], // This fixes your issue: "xray" preference matches "base64" data
+                    'meta': ['meta', 'clash.meta'],
+                    'clash': ['clash'],
+                    'singbox': ['singbox'],
+                    'nekobox': ['nekobox'],
+                    'surfboard': ['surfboard']
+                };
+
+                const targets = aliases[defaultPref] || [defaultPref];
+                let foundKey = null;
+
+                // Check which target exists in the current category
+                for (const target of targets) {
+                    if (structuredData[cat] && structuredData[cat][target]) {
+                        foundKey = target;
+                        break;
+                    }
+                }
+
+                if (foundKey) {
+                    setTimeout(() => {
+                        // Find the button with the matching data-client attribute
+                        const targetBtn = ui.clientGrid.querySelector(`button[data-client="${foundKey}"]`);
+                        if (targetBtn) {
+                            targetBtn.click();
+                            showToast(`انتخاب خودکار: ${clientDisplayNames[foundKey] || foundKey}`);
+                        }
+                    }, 50);
+                }
+            }
+        }
+
+        function renderClientGrid(cat, filterText = "") {
+            const grid = ui.clientGrid;
+            grid.innerHTML = '';
+
+            let clients = Object.keys(structuredData[cat] || {}).sort();
+
+            if (filterText) {
+                clients = clients.filter(c => c.toLowerCase().includes(filterText.toLowerCase()));
+            }
+
+            clients = clients.filter(client => {
+                const mapCheck = clientDisplayNames[client.toLowerCase()];
+                return mapCheck !== null;
+            });
+
+            if (clients.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center text-slate-400 text-[10px] py-4">موردی یافت نشد</div>`;
+                return;
+            }
+
+            clients.forEach(client => {
+                const fileCount = Object.keys(structuredData[cat][client]).length;
+                const btn = document.createElement('button');
+                const lowerKey = client.toLowerCase();
+
+                let displayName = cat === 'Channels' ? client : (clientDisplayNames[lowerKey] || client.charAt(0).toUpperCase() + client.slice(1));
+
+                const iconName = clientIcons[client] || (cat === 'Channels' ? 'at-sign' : (client.length === 2 ? 'flag' : 'settings'));
+
+                btn.className = `client-btn flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-xl border border-slate-200 dark:border-imperial-green-800 bg-white dark:bg-imperial-green-900/40 hover:bg-slate-50 dark:hover:bg-imperial-green-800/60 hover:border-royal-gold-400 transition-all text-center group min-h-[70px]`;
+                btn.setAttribute('data-client', client);
+
+                btn.innerHTML = `
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-imperial-green-900 flex items-center justify-center text-slate-500 group-hover:text-royal-gold-500 group-hover:bg-royal-gold-50 dark:group-hover:bg-royal-gold-900/20 transition-colors flex-shrink-0">
+                        <i data-lucide="${iconName}" class="w-4 h-4"></i>
+                    </div>
+                    <div class="text-[10px] font-bold text-slate-700 dark:text-slate-200 truncate dir-ltr text-center w-full">${displayName}</div>
+                    <div class="text-[8px] text-slate-400">${fileCount} اشتراک</div>
+                `;
+                btn.onclick = () => selectClient(client, btn);
+                grid.appendChild(btn);
+            });
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function selectClient(client, btnElement) {
+            builderState.selectedClient = client;
+            document.querySelectorAll('.client-btn').forEach(b => b.classList.remove('border-royal-gold-500', 'bg-royal-gold-50', 'dark:bg-royal-gold-900/20'));
+            btnElement.classList.add('border-royal-gold-500', 'bg-royal-gold-50', 'dark:bg-royal-gold-900/20');
+            ui.fileSection.classList.remove('hidden'); setTimeout(() => ui.fileSection.classList.remove('opacity-0'), 50);
+            renderFileList(builderState.selectedCat, client);
+        }
+
+        function renderFileList(cat, client, filter = "") {
+            ui.fileList.innerHTML = '';
+            const files = Object.keys(structuredData[cat][client]).sort();
+            const filtered = files.filter(f => f.toLowerCase().includes(filter.toLowerCase()));
+
+            if (filtered.length === 0) {
+                ui.fileList.innerHTML = `<div class="col-span-full text-center py-8 text-slate-400"><i data-lucide="search-x" class="w-8 h-8 mx-auto mb-2 opacity-50"></i><p class="text-xs">موردی یافت نشد</p></div>`;
+                if (window.lucide) lucide.createIcons();
+                return;
+            }
+
+            filtered.forEach(file => {
+                const friendlyName = getFriendlyFileName(file);
+                const flag = (cat === 'Locations' && file.length <= 3) ? getFlagImage(file) : '';
+                const protoMatch = file.match(/(vless|vmess|trojan|ss|reality|xhttp|tuic|hy2)/i);
+                const protoTag = protoMatch ? protoMatch[1].toUpperCase() : '';
+
+                const btn = document.createElement('button');
+                btn.className = `file-btn flex flex-col items-center justify-center gap-1.5 p-3 rounded-xl border border-slate-200 dark:border-imperial-green-800 bg-white dark:bg-imperial-green-900/40 hover:bg-imperial-green-50 dark:hover:bg-imperial-green-800/60 hover:border-imperial-green-400 transition-all text-center group min-h-[80px]`;
+                btn.innerHTML = `
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-imperial-green-900 flex items-center justify-center flex-shrink-0 group-hover:bg-imperial-green-100 dark:group-hover:bg-imperial-green-800 transition-colors">
+                        ${flag || `<i data-lucide="file-text" class="w-4 h-4 text-slate-400 group-hover:text-imperial-green-500"></i>`}
+                    </div>
+                    <div class="text-[11px] font-bold text-slate-700 dark:text-slate-200 group-hover:text-imperial-green-600 transition-colors leading-tight">${friendlyName}</div>
+                    ${protoTag ? `<span class="text-[8px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">${protoTag}</span>` : ''}
+                `;
+                btn.onclick = () => selectFile(file, btn);
+                ui.fileList.appendChild(btn);
+            });
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // --- UPDATE THESE JS FUNCTIONS ---
+
+        // 1. Modified selectFile to trigger mobile preview
+        function selectFile(file, btnElement) {
+            builderState.selectedFile = file;
+
+            // Highlight Button
+            document.querySelectorAll('.file-btn').forEach(b => b.classList.remove('bg-imperial-green-50', 'dark:bg-imperial-green-900/80', 'border-imperial-green-200', 'dark:border-imperial-green-800'));
+            btnElement.classList.add('bg-imperial-green-50', 'dark:bg-imperial-green-900/80', 'border-imperial-green-200', 'dark:border-imperial-green-800');
+
+            // Get Data
+            const url = structuredData[builderState.selectedCat][builderState.selectedClient][file];
+
+            // Update Desktop Preview
+            updateDesktopPreview(url);
+
+            // Update & Open Mobile Drawer (Only if on mobile)
+            if (window.innerWidth < 1024) {
+                openMobileDrawer(url);
+            }
+        }
+
+        function updateDesktopPreview(url) {
+            const empty = document.getElementById('desktop-empty');
+            const result = document.getElementById('desktop-result');
+            const input = document.getElementById('url-desktop');
+            const btn = document.getElementById('btn-open-desktop');
+            const qrBox = document.getElementById('qrcode-desktop');
+
+            if (empty) empty.classList.add('hidden');
+            if (result) result.classList.remove('hidden');
+            if (result) result.classList.add('flex');
+
+            if (input) input.value = url;
+            if (btn) btn.href = url;
+
+            if (qrBox) {
+                qrBox.innerHTML = '';
+                new QRCode(qrBox, { text: url, width: 160, height: 160, colorDark: "#1e293b", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.L });
+            }
+        }
+
+        function openMobileDrawer(url) {
+            const drawer = document.getElementById('mobile-drawer');
+            const drawerContent = drawer.querySelector('div.bg-white'); // The white card
+            const input = document.getElementById('url-mobile');
+            const btn = document.getElementById('btn-open-mobile');
+            const qrBox = document.getElementById('qrcode-mobile');
+
+            // 1. Populate Data
+            input.value = url;
+            btn.href = url;
+            qrBox.innerHTML = '';
+            new QRCode(qrBox, { text: url, width: 180, height: 180, colorDark: "#1e293b", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.L });
+
+            // 2. Show Drawer Container
+            drawer.classList.remove('hidden');
+            drawer.classList.add('flex');
+
+            // 3. Animate Slide Up (Small delay to allow display:flex to apply)
+            setTimeout(() => {
+                drawerContent.classList.remove('drawer-closed');
+                drawerContent.classList.add('drawer-open');
+                drawer.querySelector('div.absolute').classList.remove('opacity-0'); // Fade in backdrop
+            }, 10);
+
+            // 4. Lock Scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.closeMobileDrawer = () => {
+            const drawer = document.getElementById('mobile-drawer');
+            const drawerContent = drawer.querySelector('div.bg-white');
+
+            // 1. Animate Slide Down
+            drawerContent.classList.remove('drawer-open');
+            drawerContent.classList.add('drawer-closed');
+            drawer.querySelector('div.absolute').classList.add('opacity-0'); // Fade out backdrop
+
+            // 2. Hide after animation
+            setTimeout(() => {
+                drawer.classList.add('hidden');
+                drawer.classList.remove('flex');
+                document.body.style.overflow = ''; // Unlock Scroll
+            }, 300);
+        };
+
+        window.shareLinkMobile = async () => {
+            const url = document.getElementById('url-mobile').value;
+            if (navigator.share) await navigator.share({ title: 'PSG Subscription', url: url });
+            else showToast("مرورگر پشتیبانی نمی‌کند");
+        };
+
+        // 4. Update resetPreview to be simpler
+        function resetPreview() {
+            const resultContent = document.getElementById('result-content');
+            // On desktop we hide content, on mobile the whole sheet is hidden anyway
+            if (window.innerWidth >= 1024 && resultContent) {
+                resultContent.classList.add('hidden');
+                document.getElementById('empty-state').classList.remove('hidden');
+            }
+        }
+
+        // --- SETTINGS & PREFERENCES LOGIC ---
+
+        // 1. Preferences Manager
+        function loadPreferences() {
+            const defaultClient = localStorage.getItem('pref_defaultClient');
+            const startTab = localStorage.getItem('pref_startTab');
+
+            if (document.getElementById('pref-default-client')) {
+                if (defaultClient) document.getElementById('pref-default-client').value = defaultClient;
+            }
+            if (document.getElementById('pref-start-tab')) {
+                if (startTab) document.getElementById('pref-start-tab').value = startTab;
+            }
+
+            // Auto-switch tab on load if set (Only runs once on init)
+            if (startTab && !window.hasSwitchedTab) {
+                switchTab(startTab);
+                window.hasSwitchedTab = true;
+            }
+        }
+
+        window.savePreference = (key, value) => {
+            localStorage.setItem(`pref_${key}`, value);
+            showToast('تنظیمات ذخیره شد');
+        };
+
+        // 2. Visual Theme Switcher
+        window.setThemeMode = (isDark) => {
+            const html = document.documentElement;
+            if (isDark) {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+            updateThemeUI(isDark);
+            if (window.lucide) lucide.createIcons();
+            if (typeof drawMap === 'function' && document.getElementById('metricsMap')) drawMap();
+        };
+
+        function updateThemeUI(isDark) {
+            const btnLight = document.getElementById('theme-btn-light');
+            const btnDark = document.getElementById('theme-btn-dark');
+            const toggleIcon = document.getElementById('theme-icon'); // Header icon
+
+            if (!btnLight || !btnDark) return;
+
+            if (isDark) {
+                // Update Cards
+                btnDark.classList.add('border-emerald-500', 'bg-slate-800');
+                btnDark.classList.remove('border-transparent');
+                btnDark.querySelector('.check-icon').classList.remove('opacity-0');
+
+                btnLight.classList.remove('border-emerald-500');
+                btnLight.classList.add('border-transparent');
+                btnLight.querySelector('.check-icon').classList.add('opacity-0');
+
+                // Update Header Icon
+                if (toggleIcon) toggleIcon.setAttribute('data-lucide', 'sun');
+            } else {
+                // Update Cards
+                btnLight.classList.add('border-emerald-500', 'bg-slate-50');
+                btnLight.classList.remove('border-transparent');
+                btnLight.querySelector('.check-icon').classList.remove('opacity-0');
+
+                btnDark.classList.remove('border-emerald-500');
+                btnDark.classList.add('border-transparent');
+                btnDark.querySelector('.check-icon').classList.add('opacity-0');
+
+                // Update Header Icon
+                if (toggleIcon) toggleIcon.setAttribute('data-lucide', 'moon');
+            }
+        }
+
+        // 3. System Info & Storage
+        function renderSystemInfo() {
+            if (document.getElementById('sys-res')) {
+                document.getElementById('sys-res').textContent = `Res: ${window.screen.width}x${window.screen.height}`;
+            }
+            if (document.getElementById('sys-mem') && navigator.deviceMemory) {
+                document.getElementById('sys-mem').textContent = `RAM: ~${navigator.deviceMemory}GB`;
+            }
+        }
+
+        // Override existing updateCacheSize to work with the visual bar
+        function updateCacheSize() {
+            const cachedData = localStorage.getItem('psg_tree_cache');
+            const sizeBytes = cachedData ? new Blob([cachedData]).size : 0;
+            const sizeKB = (sizeBytes / 1024).toFixed(2);
+
+            // Text Update
+            const display = document.getElementById('cache-size-display'); // Legacy header
+            if (display) display.textContent = `${sizeKB} KB`;
+
+            const settingsDisplay = document.getElementById('storage-usage-text');
+            if (settingsDisplay) settingsDisplay.textContent = `${sizeKB} KB`;
+
+            // Bar Update (Assume 5MB max for LocalStorage as 100%)
+            const maxStorage = 5 * 1024 * 1024;
+            const percentage = Math.min((sizeBytes / maxStorage) * 100, 100);
+
+            const bar = document.getElementById('storage-bar');
+            if (bar) bar.style.width = `${percentage}%`;
+        }
+
+        // --- TUTORIALS SYSTEM ---
+
+        // FIX: Define the URL string instead of a hanging Promise
+        const BLOG_URL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/blog.md';
+
+        const tutorialsUI = {
+            listContainer: document.getElementById('blog-grid'),
+            loader: document.getElementById('blog-loader'),
+            reader: document.getElementById('tutorial-reader'),
+            readerContent: document.getElementById('reader-content'),
+            readerEmpty: document.getElementById('reader-empty'),
+            // Reader Elements
+            title: document.getElementById('reader-title'),
+            body: document.getElementById('reader-body'),
+            time: document.getElementById('reader-time')
+        };
+
+        let blogPosts = [];
+
+        // 1. Fetch & Parse (FIXED FUNCTION)
+        async function initTutorials() {
+            try {
+                // 1. Perform the fetch
+                const response = await fetch(BLOG_URL);
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch blog data");
+                }
+
+                // 2. Await the text conversion (this converts the Promise to a String)
+                const text = await response.text();
+
+                // 3. Process the string
+                setTimeout(() => {
+                    // Now 'text' is a genuine string, so .split() will work
+                    const posts = parseMarkdownFile(text);
+                    renderBlogList(posts);
+                }, 800);
+
+            } catch (error) {
+                console.error("Tutorials Error:", error);
+                if (tutorialsUI.loader) {
+                    tutorialsUI.loader.innerHTML = '<p class="text-xs text-red-500 mt-4">خطا در بارگذاری آموزش‌ها</p>';
+                }
+            }
+        }
+
+        function parseMarkdownFile(text) {
+            // Safety check: Ensure text is a string before splitting
+            if (typeof text !== 'string') {
+                console.error("Expected string but got:", typeof text);
+                return [];
+            }
+
+            // Split by '---'
+            const rawPosts = text.split('---').map(p => p.trim()).filter(p => p.length > 0);
+
+            return rawPosts.map((raw, index) => {
+                // Extract Title (First # Header)
+                const titleMatch = raw.match(/^#\s+(.+)$/m);
+                const title = titleMatch ? titleMatch[1] : `آموزش شماره ${index + 1}`;
+
+                // Remove title from body for rendering
+                const body = raw.replace(/^#\s+.+$/m, '').trim();
+
+                // Extract Preview (First paragraph)
+                const previewMatch = body.match(/^(?!#)(.+)$/m);
+                const preview = previewMatch ? previewMatch[1].substring(0, 80) + '...' : 'توضیحات بیشتر...';
+
+                // Calc Reading Time (approx 200 words per min)
+                const words = body.split(' ').length;
+                const readTime = Math.ceil(words / 100) + ' دقیقه مطالعه';
+
+                return { id: index, title, preview, body, readTime };
+            });
+        }
+
+        // 2. Render List
+        function renderBlogList(posts) {
+            blogPosts = posts;
+            tutorialsUI.loader.classList.add('hidden');
+            tutorialsUI.listContainer.classList.remove('hidden');
+            tutorialsUI.listContainer.innerHTML = '';
+
+            posts.forEach(post => {
+                const card = document.createElement('div');
+                card.className = `royal-card p-4 rounded-2xl border border-slate-200 dark:border-imperial-green-800 cursor-pointer hover:bg-white dark:hover:bg-imperial-green-900/40 transition-all group`;
+                card.onclick = () => openTutorial(post);
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-900/30 px-2 py-0.5 rounded-md">${post.readTime}</span>
+                        <i data-lucide="chevron-left" class="w-4 h-4 text-slate-300 group-hover:text-emerald-500 transition-colors"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 dark:text-white mb-2 text-sm">${post.title}</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">${post.preview}</p>
+                `;
+                tutorialsUI.listContainer.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        // --- UPDATE THESE JS FUNCTIONS ---
+
+        function openTutorial(post) {
+            const isMobile = window.innerWidth < 1024;
+            const bodyContent = marked.parse(post.body);
+
+            if (isMobile) {
+                // --- MOBILE LOGIC ---
+                const modal = document.getElementById('mobile-tutorial-modal');
+
+                // Populate Mobile Elements
+                document.getElementById('mob-reader-header').textContent = post.title;
+                document.getElementById('mob-reader-title').textContent = post.title;
+                document.getElementById('mob-reader-time').textContent = post.readTime;
+                document.getElementById('mob-reader-body').innerHTML = bodyContent;
+
+                // Show Modal
+                modal.classList.remove('hidden');
+                // Small delay to allow transition
+                requestAnimationFrame(() => {
+                    modal.classList.remove('translate-y-full');
+                });
+                document.body.style.overflow = 'hidden'; // Lock background scroll
+
+            } else {
+                // --- DESKTOP LOGIC ---
+                const empty = document.getElementById('desktop-reader-empty');
+                const content = document.getElementById('desktop-reader-content');
+
+                // Populate Desktop Elements
+                document.getElementById('dt-reader-title').textContent = post.title;
+                document.getElementById('dt-reader-time').textContent = post.readTime;
+                document.getElementById('dt-reader-body').innerHTML = bodyContent;
+
+                // Switch Views
+                empty.classList.add('hidden');
+                content.classList.remove('hidden');
+                content.classList.add('flex');
+                content.scrollTop = 0;
+            }
+        }
+
+        window.closeMobileTutorial = () => {
+            const modal = document.getElementById('mobile-tutorial-modal');
+
+            // Slide Down
+            modal.classList.add('translate-y-full');
+
+            // Hide after animation finishes (300ms matches CSS duration)
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Unlock background scroll
+            }, 300);
+        };
+
+        // --- UPDATED INIT ---
+        function initSettings() {
+            loadPreferences();
+            renderSystemInfo();
+        }
+
+        // --- UTILS ---
+        window.switchTab = (tabName) => {
+            ui.tabs.forEach(btn => btn.classList.toggle('active', btn.id === `tab-${tabName}`));
+            ui.contents.forEach(content => content.classList.toggle('active', content.id === `content-${tabName}`));
+            if (tabName === 'metrics') setTimeout(() => renderMetricsDashboard(), 100);
+            // Scroll to top on tab switch
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        window.copyLink = () => { ui.urlInput.select(); navigator.clipboard.writeText(ui.urlInput.value); showToast("کپی شد"); };
+        window.copyToClip = (text) => { navigator.clipboard.writeText(text); showToast("کپی شد ✔"); };
+        window.shareLink = async () => { if (navigator.share) await navigator.share({ title: 'PSG', url: ui.urlInput.value }); else showToast("عدم پشتیبانی"); };
+
+        function getFlagImage(countryCode) {
+            if (!countryCode || countryCode.length !== 2) return '';
+            return `<img src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" class="w-5 h-auto rounded-sm shadow-sm inline-block ml-1" alt="${countryCode}" loading="lazy">`;
+        }
+        function animateValue(obj, start, end, duration, isSize = false) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const val = Math.floor(progress * (end - start) + start);
+                obj.textContent = isSize ? (val / 1024 / 1024).toFixed(2) + ' MB' : new Intl.NumberFormat().format(val);
+                if (progress < 1) window.requestAnimationFrame(step);
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Improved Toast System
+        let toastQueue = [];
+        function showToast(msg) {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+
+            while (toastQueue.length >= 3) {
+                const old = toastQueue.shift();
+                if (old && old.parentNode) old.remove();
+            }
+
+            const toast = document.createElement('div');
+            toast.className = "bg-slate-800 text-white dark:bg-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-300 pointer-events-auto min-w-[280px] justify-center sm:justify-start opacity-0 translate-y-4 scale-95 cursor-pointer";
+            toast.innerHTML = `<i data-lucide="check-circle-2" class="w-5 h-5 text-imperial-green-500 dark:text-imperial-green-600 flex-shrink-0"></i><span class="text-sm font-bold">${msg}</span>`;
+            toast.onclick = () => { toast.classList.add('opacity-0', 'translate-y-4', 'scale-95'); setTimeout(() => { toast.remove(); toastQueue = toastQueue.filter(t => t !== toast); }, 300); };
+            container.appendChild(toast);
+            toastQueue.push(toast);
+            if (window.lucide) lucide.createIcons();
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    toast.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                    toast.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+                });
+            });
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4', 'scale-95');
+                setTimeout(() => { toast.remove(); toastQueue = toastQueue.filter(t => t !== toast); }, 300);
+            }, 3000);
+        }
+
+        // Back to Top Button
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (!btn) return;
+            if (window.scrollY > 300) {
+                btn.classList.remove('opacity-0', 'pointer-events-none');
+                btn.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                btn.classList.add('opacity-0', 'pointer-events-none');
+                btn.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        }, { passive: true });
+        function initTheme() {
+            const html = document.documentElement;
+            const themeBtn = document.getElementById('theme-toggle');
+            const isDark = localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            html.classList.toggle('dark', isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeUI(isDark);
+            if (window.lucide) lucide.createIcons();
+
+            if (themeBtn) themeBtn.addEventListener('click', () => {
+                const nowDark = !html.classList.contains('dark');
+                html.classList.toggle('dark', nowDark);
+                localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+                updateThemeUI(nowDark);
+                if (window.lucide) lucide.createIcons();
+            });
+        }
+        function updateCacheSize() {
+            const cachedData = localStorage.getItem('psg_tree_cache');
+            if (ui.cacheDisplay) ui.cacheDisplay.textContent = cachedData ? `${(new Blob([cachedData]).size / 1024).toFixed(2)} KB` : '0 KB';
+        }
+        window.clearCache = () => { if (confirm('پاکسازی کش؟')) { localStorage.clear(); location.reload(); } }
+        // --- MTPROTO LOGIC (DYNAMIC FETCH) ---
+        const MTPROTO_API = "https://raw.githubusercontent.com/itsyebekhe/MTProtoNexus/refs/heads/gh-pages/extracted_proxies.json";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMTProto();
+        });
+
+        async function initMTProto() {
+            const grid = document.getElementById('mtproto-grid');
+            const countOnline = document.getElementById('mt-count-online');
+            const countTotal = document.getElementById('mt-count-total');
+
+            if (!grid) return;
+
+            // 1. Show Loader
+            grid.innerHTML = `
+        <div class="col-span-full flex flex-col items-center justify-center py-12 opacity-50">
+            <span class="loader mb-4"></span>
+            <span class="text-xs text-slate-400 font-bold">در حال بروزرسانی لیست...</span>
+        </div>
+    `;
+
+            try {
+                // 2. Fetch Data
+                const response = await fetch(MTPROTO_API);
+                if (!response.ok) throw new Error("Network Error");
+                const proxies = await response.json();
+
+                // 3. Update Stats
+                const onlineProxies = proxies.filter(p => p.status === 'Online');
+                if (countOnline) animateValue(countOnline, 0, onlineProxies.length, 1000);
+                if (countTotal) animateValue(countTotal, 0, proxies.length, 1000);
+
+                // 4. Render Cards
+                grid.innerHTML = ''; // Clear loader
+
+                if (proxies.length === 0) {
+                    grid.innerHTML = `<div class="col-span-full text-center text-slate-400 py-10">هیچ پروکسی یافت نشد</div>`;
+                    return;
+                }
+
+                proxies.forEach(proxy => {
+                    const isOnline = proxy.status === 'Online';
+
+                    // Determine Styles based on status
+                    const cardOpacity = isOnline ? 'opacity-100' : 'opacity-60 grayscale hover:grayscale-0';
+                    const statusColor = isOnline ? 'text-emerald-500' : 'text-red-500';
+                    const statusBg = isOnline ? 'bg-emerald-400' : 'bg-red-500';
+                    const latencyText = isOnline ? `${proxy.latency}ms` : 'OFFLINE';
+
+                    // Badge Colors based on Type
+                    let badgeClass = "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-blue-100 dark:border-blue-800";
+                    if (proxy.type === 'Secured') badgeClass = "bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 border-amber-100 dark:border-amber-800";
+                    if (proxy.type === 'TLS') badgeClass = "bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-purple-800";
+
+                    // Connect Button State
+                    const btnState = isOnline
+                        ? `href="${proxy.tg_url}" class="col-span-2 flex items-center justify-center gap-1 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-bold text-xs shadow-md shadow-blue-500/20 transition-all"`
+                        : `disabled class="col-span-2 flex items-center justify-center gap-1 py-2 bg-slate-200 dark:bg-slate-800 text-slate-400 rounded-lg font-bold text-xs cursor-not-allowed"`;
+
+                    const btnIcon = isOnline ? 'send' : 'wifi-off';
+                    const btnText = isOnline ? 'اتصال' : 'قطع';
+
+                    const card = document.createElement('div');
+                    card.className = `mt-card royal-card p-3 rounded-xl group relative overflow-hidden transition-all hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-700 ${cardOpacity}`;
+
+                    // Add Data Attributes for Search/Export
+                    card.dataset.server = proxy.server;
+                    card.dataset.port = proxy.port;
+                    card.dataset.url = proxy.tg_url;
+                    if (isOnline) card.classList.add('is-online');
+
+                    card.innerHTML = `
+                <div class="flex justify-between items-start mb-2">
+                    <span class="px-1.5 py-0.5 rounded text-[8px] font-black border ${badgeClass}">${proxy.type}</span>
+                    <div class="flex items-center gap-1 dir-ltr">
+                        <span class="relative flex h-1.5 w-1.5">
+                            ${isOnline ? `<span class="animate-ping absolute inline-flex h-full w-full rounded-full ${statusBg} opacity-75"></span>` : ''}
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 ${statusBg}"></span>
+                        </span>
+                        <span class="text-[9px] font-mono font-bold ${statusColor}">${latencyText}</span>
+                    </div>
+                </div>
+
+                <div class="mb-2 text-left dir-ltr">
+                    <div class="font-mono text-xs font-black text-slate-700 dark:text-slate-200 tracking-tight truncate" title="${proxy.server}">${proxy.server}</div>
+                    <div class="text-[9px] text-slate-400 font-mono">: ${proxy.port}</div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-1.5">
+                    <a ${btnState}>
+                        <span class="text-[10px]">${btnText}</span> <i data-lucide="${btnIcon}" class="w-3 h-3"></i>
+                    </a>
+                    <button class="mt-copy-btn flex items-center justify-center bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-500 rounded-lg transition-colors">
+                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    </button>
+                    <button class="mt-qr-btn flex items-center justify-center bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-500 rounded-lg transition-colors">
+                        <i data-lucide="qr-code" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            `;
+                    grid.appendChild(card);
+                });
+
+                // Re-initialize icons for new elements
+                if (window.lucide) lucide.createIcons();
+                setupMTEvents(); // Attach event listeners
+
+            } catch (error) {
+                console.error(error);
+                grid.innerHTML = `
+            <div class="col-span-full flex flex-col items-center justify-center py-10 text-red-500">
+                <i data-lucide="alert-triangle" class="w-8 h-8 mb-2"></i>
+                <span class="text-xs font-bold">خطا در دریافت اطلاعات</span>
+                <button onclick="initMTProto()" class="mt-4 px-4 py-2 bg-red-100 dark:bg-red-900/20 rounded-lg text-xs">تلاش مجدد</button>
+            </div>
+        `;
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+
+        function setupMTEvents() {
+            // 1. Search Logic
+            const mtSearch = document.getElementById('mtproto-search');
+            if (mtSearch) {
+                // Remove old listener to avoid duplicates if re-run
+                const newSearch = mtSearch.cloneNode(true);
+                mtSearch.parentNode.replaceChild(newSearch, mtSearch);
+
+                newSearch.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    const cards = document.querySelectorAll('.mt-card');
+                    cards.forEach(card => {
+                        const server = card.dataset.server.toLowerCase();
+                        const port = String(card.dataset.port);
+                        if (server.includes(term) || port.includes(term)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // 2. Export Button
+            const mtExport = document.getElementById('mtproto-export-btn');
+            if (mtExport) {
+                const newExport = mtExport.cloneNode(true);
+                mtExport.parentNode.replaceChild(newExport, mtExport);
+
+                newExport.addEventListener('click', () => {
+                    const activeCards = document.querySelectorAll('.mt-card.is-online');
+                    let text = "";
+                    activeCards.forEach(c => text += c.dataset.url + "\n");
+
+                    if (text) {
+                        navigator.clipboard.writeText(text);
+                        showToast(`${activeCards.length} پروکسی کپی شد`);
+                    } else {
+                        showToast("پروکسی آنلاینی یافت نشد");
+                    }
+                });
+            }
+
+            // 3. Delegation for Grid Clicks (Copy/QR)
+            const mtGrid = document.getElementById('mtproto-grid');
+            if (mtGrid) {
+                // No need to clone grid, delegation handles dynamic elements fine
+                mtGrid.onclick = (e) => {
+                    const btnCopy = e.target.closest('.mt-copy-btn');
+                    const btnQr = e.target.closest('.mt-qr-btn');
+                    const card = e.target.closest('.mt-card');
+
+                    if (!card) return;
+                    const url = card.dataset.url;
+
+                    if (btnCopy) {
+                        navigator.clipboard.writeText(url);
+                        showToast("کپی شد");
+                    }
+                    else if (btnQr) {
+                        if (window.innerWidth < 1024 && typeof openMobileDrawer === 'function') {
+                            openMobileDrawer(url);
+                        } else if (typeof updateDesktopPreview === 'function') {
+                            // Update desktop preview panel if visible
+                            updateDesktopPreview(url);
+                            // If desktop preview is on another tab, we might want to alert
+                            showToast("QR کد تولید شد");
+                        }
+                    }
+                };
+            }
+        }
+    </script>
+    <!-- MOBILE TUTORIAL READER (FULL SCREEN MODAL) -->
+    <div id="mobile-tutorial-modal"
+        class="fixed inset-0 z-[9999] hidden lg:hidden bg-white dark:bg-slate-900 flex-col overflow-hidden transition-transform duration-300 translate-y-full">
+
+        <!-- Sticky Header -->
+        <div
+            class="flex items-center gap-3 p-4 bg-white/95 dark:bg-slate-900/95 border-b border-slate-200 dark:border-white/5 backdrop-blur-md shadow-sm flex-shrink-0">
+            <button onclick="closeMobileTutorial()"
+                class="p-2 -ml-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300">
+                <i data-lucide="arrow-right" class="w-6 h-6"></i>
+            </button>
+            <div class="flex-grow min-w-0">
+                <h3 id="mob-reader-header" class="font-bold text-slate-800 dark:text-white truncate text-sm">عنوان آموزش
+                </h3>
+            </div>
+            <button onclick="shareLink()"
+                class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-slate-300">
+                <i data-lucide="share-2" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="flex-grow overflow-y-auto p-5 pb-20 custom-scrollbar">
+            <div class="flex items-center gap-3 mb-4">
+                <span id="mob-reader-time"
+                    class="text-[10px] font-bold text-white bg-emerald-500 px-2 py-1 rounded-md shadow-sm"></span>
+            </div>
+            <h1 id="mob-reader-title" class="text-2xl font-black text-slate-800 dark:text-white mb-6 leading-tight">
+            </h1>
+            <div id="mob-reader-body" class="prose prose-sm prose-slate dark:prose-invert max-w-none"></div>
+        </div>
+    </div>
+    <!-- MOBILE BOTTOM SHEET (Place this right before </body>) -->
+    <!-- This is completely outside the tabs to fix z-index/position issues -->
+    <div id="mobile-drawer" class="fixed inset-0 z-[9999] hidden flex-col justify-end lg:hidden">
+        <!-- Backdrop -->
+        <div onclick="closeMobileDrawer()"
+            class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0 animate-fade-in"></div>
+
+        <!-- Drawer Content -->
+        <div
+            class="bg-white dark:bg-slate-900 w-full rounded-t-[2rem] p-5 relative z-10 shadow-2xl drawer-closed transition-transform duration-300 ease-out border-t border-white/10">
+            <div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-6"></div>
+
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-slate-800 dark:text-white">نتیجه ساخت اشتراک</h3>
+                <button onclick="closeMobileDrawer()" class="p-2 bg-slate-100 dark:bg-white/10 rounded-full"><i
+                        data-lucide="x" class="w-4 h-4"></i></button>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <!-- QR -->
+                <div
+                    class="flex justify-center bg-white p-2 rounded-xl shadow-sm border border-slate-100 w-48 h-48 mx-auto">
+                    <div id="qrcode-mobile" class="w-full h-full flex justify-center items-center"></div>
+                </div>
+
+                <!-- URL -->
+                <div
+                    class="bg-slate-50 dark:bg-black/20 p-3 rounded-xl flex items-center justify-between border border-slate-100 dark:border-white/5">
+                    <input type="text" id="url-mobile" readonly
+                        class="bg-transparent border-none text-xs font-mono text-slate-600 dark:text-slate-300 w-full truncate text-left dir-ltr">
+                    <button onclick="copyToClip(document.getElementById('url-mobile').value)"
+                        class="mr-2 text-emerald-500"><i data-lucide="copy" class="w-4 h-4"></i></button>
+                </div>
+
+                <!-- Buttons -->
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="#" id="btn-open-mobile" target="_blank"
+                        class="flex items-center justify-center gap-2 py-3 bg-emerald-500 text-white rounded-xl font-bold text-sm shadow-lg shadow-emerald-500/30">
+                        اتصال <i data-lucide="zap" class="w-4 h-4"></i>
+                    </a>
+                    <button onclick="shareLinkMobile()"
+                        class="flex items-center justify-center gap-2 py-3 bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-white rounded-xl font-bold text-sm">
+                        اشتراک <i data-lucide="share-2" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

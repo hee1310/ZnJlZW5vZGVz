@@ -1,0 +1,163 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: false
+profile:
+    store-selected: true
+    tracing: false
+    store-fake-ip: false
+unified-delay: true
+hosts:
+    dnslog.cn: 47.244.138.18
+    
+dns:
+    enable: true
+    ipv6: false
+    listen: '0.0.0.0:1053'
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    default-nameserver: [223.5.5.5]
+    nameserver: ['https://doh.pub/dns-query']
+    fake-ip-filter: ['*.lan', localhost.ptlogin2.qq.com, dns.msftncsi.com, '*.srv.nintendo.net', '*.stun.playstation.net', 'xbox.*.microsoft.com', '*.xboxlive.com']
+    fallback: [1.1.1.1, 8.8.8.8]
+    fallback-filter: { geoip: true, geoip-code: CN, ipcidr: [240.0.0.0/4] }
+proxies:
+    - {name: 美国备用1加频道获取更多订阅@jdxll, server: 120.232.89.13, port: 11511, type: ss, cipher: aes-256-gcm, password: 77a12a3d-6df0-48c8-a189-b071fcda1456}
+    - {name: 美国备用2使用前更一次订阅, server: 183.2.150.226, port: 11511, type: ss, cipher: aes-256-gcm, password: 77a12a3d-6df0-48c8-a189-b071fcda1456}
+    - {name: 美国备用3https://jdxll.t.me, server: 111.29.57.104, port: 11511, type: ss, cipher: aes-256-gcm, password: 77a12a3d-6df0-48c8-a189-b071fcda1456}
+    - { name: '🇭🇰 Hong Kong丨01', type: ss, server: hk001.dogsvip.site, port: '16001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨02', type: ss, server: hk002.dogsvip.site, port: '16002', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨03', type: ss, server: hk003.dogsvip.site, port: '16003', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨04', type: ss, server: hk004.dogsvip.site, port: '16004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨05', type: ss, server: hk005.dogsvip.site, port: '16005', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨06', type: ss, server: hk006.dogsvip.site, port: '16006', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨07', type: ss, server: hk007.dogsvip.site, port: '16007', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨08', type: ss, server: hk008.dogsvip.site, port: '16008', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨09', type: ss, server: hk009.dogsvip.site, port: '16009', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨10', type: ss, server: hk010.dogsvip.site, port: '16010', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨11', type: ss, server: hk011.dogsvip.site, port: '16011', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨12', type: ss, server: hk012.dogsvip.site, port: '16012', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨13', type: ss, server: hk013.dogsvip.site, port: '16013', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨14', type: ss, server: hk014.dogsvip.site, port: '16014', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇭🇰 Hong Kong丨15', type: ss, server: hk015.dogsvip.site, port: '16015', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨01', type: ss, server: tw001.dogsvip.site, port: '17001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨02', type: ss, server: tw002.dogsvip.site, port: '17002', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨03', type: ss, server: tw003.dogsvip.site, port: '17003', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨04', type: ss, server: tw004.dogsvip.site, port: '17004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨05', type: ss, server: tw005.dogsvip.site, port: '17005', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨06', type: ss, server: tw006.dogsvip.site, port: '17006', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨07', type: ss, server: tw007.dogsvip.site, port: '17007', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨08', type: ss, server: tw008.dogsvip.site, port: '17008', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨09', type: ss, server: tw009.dogsvip.site, port: '17009', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇳 Taiwan丨10', type: ss, server: tw009.dogsvip.site, port: '17010', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨01', type: ss, server: sg001.dogsvip.site, port: '18001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨02', type: ss, server: sg002.dogsvip.site, port: '18002', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨03', type: ss, server: sg003.dogsvip.site, port: '18003', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨04', type: ss, server: sg004.dogsvip.site, port: '18004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨05', type: ss, server: sg005.dogsvip.site, port: '18005', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨06', type: ss, server: sg006.dogsvip.site, port: '18006', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨07', type: ss, server: sg007.dogsvip.site, port: '18007', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨08', type: ss, server: sg008.dogsvip.site, port: '18008', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨09', type: ss, server: sg009.dogsvip.site, port: '18009', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇸🇬 Singapore丨10', type: ss, server: sg010.dogsvip.site, port: '18010', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨01', type: ss, server: jp001.dogsvip.site, port: '19001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨02', type: ss, server: jp002.dogsvip.site, port: '19002', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨03', type: ss, server: jp003.dogsvip.site, port: '19004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨04', type: ss, server: jp004.dogsvip.site, port: '19004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨05', type: ss, server: jp005.dogsvip.site, port: '19004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨06', type: ss, server: jp006.dogsvip.site, port: '19006', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨07', type: ss, server: jp007.dogsvip.site, port: '19007', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨08', type: ss, server: jp008.dogsvip.site, port: '19008', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨09', type: ss, server: jp009.dogsvip.site, port: '19009', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇯🇵 Japan丨10', type: ss, server: jp010.dogsvip.site, port: '19010', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨01', type: ss, server: us001.dogsvip.site, port: '20001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨02', type: ss, server: us002.dogsvip.site, port: '20002', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨03', type: ss, server: us003.dogsvip.site, port: '20003', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨04', type: ss, server: us004.dogsvip.site, port: '20004', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨05', type: ss, server: us005.dogsvip.site, port: '20005', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨06', type: ss, server: us006.dogsvip.site, port: '20006', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨07', type: ss, server: us007.dogsvip.site, port: '20007', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨08', type: ss, server: us008.dogsvip.site, port: '20008', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨09', type: ss, server: us009.dogsvip.site, port: '20009', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇺🇸 United States丨10', type: ss, server: us010.dogsvip.site, port: '20010', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇰🇷 South Korea丨01', type: ss, server: kr001.dogsvip.site, port: '21001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇨🇦 Canada丨01', type: ss, server: ca001.dogsvip.site, port: '22002', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇬🇧 Great Britain丨01', type: ss, server: uk001.dogsvip.site, port: '23001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇹🇷 Turkey丨01', type: ss, server: tr001.dogsvip.site, port: '24001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇮🇳 India丨01', type: ss, server: in001.dogsvip.site, port: '25001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇳🇱 Netherlands丨01', type: ss, server: nl001.dogsvip.site, port: '26001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇫🇷 France | 01', type: ss, server: fr001.dogsvip.site, port: '27001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇩🇪 Germany | 01', type: ss, server: de001.dogsvip.site, port: '28001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇻🇳 Vietnam | 01', type: ss, server: vn001.dogsvip.site, port: '29001', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇲🇾 Malaysia丨01', type: ss, server: myr01.dogsvip.site, port: '29010', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇹🇭 Thailand丨01', type: ss, server: tha01.dogsvip.site, port: '29015', cipher: aes-256-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+    - { name: '🇵🇭 Philippines丨01', type: ss, server: ph01.dogsvip.site, port: '29020', cipher: aes-128-gcm, password: 3030b609-f36f-4fd1-a4ef-a6e653780536, udp: true }
+proxy-groups:
+    - { name: TG@jdxll, type: select, proxies: [Auto, '美国备用1加频道获取更多订阅@jdxll', '美国备用2使用前更一次订阅', '美国备用3https://jdxll.t.me', '🇭🇰 Hong Kong丨01', '🇭🇰 Hong Kong丨02', '🇭🇰 Hong Kong丨03', '🇭🇰 Hong Kong丨04', '🇭🇰 Hong Kong丨05', '🇭🇰 Hong Kong丨06', '🇭🇰 Hong Kong丨07', '🇭🇰 Hong Kong丨08', '🇭🇰 Hong Kong丨09', '🇭🇰 Hong Kong丨10', '🇭🇰 Hong Kong丨11', '🇭🇰 Hong Kong丨12', '🇭🇰 Hong Kong丨13', '🇭🇰 Hong Kong丨14', '🇭🇰 Hong Kong丨15', '🇨🇳 Taiwan丨01', '🇨🇳 Taiwan丨02', '🇨🇳 Taiwan丨03', '🇨🇳 Taiwan丨04', '🇨🇳 Taiwan丨05', '🇨🇳 Taiwan丨06', '🇨🇳 Taiwan丨07', '🇨🇳 Taiwan丨08', '🇨🇳 Taiwan丨09', '🇨🇳 Taiwan丨10', '🇸🇬 Singapore丨01', '🇸🇬 Singapore丨02', '🇸🇬 Singapore丨03', '🇸🇬 Singapore丨04', '🇸🇬 Singapore丨05', '🇸🇬 Singapore丨06', '🇸🇬 Singapore丨07', '🇸🇬 Singapore丨08', '🇸🇬 Singapore丨09', '🇸🇬 Singapore丨10', '🇯🇵 Japan丨01', '🇯🇵 Japan丨02', '🇯🇵 Japan丨03', '🇯🇵 Japan丨04', '🇯🇵 Japan丨05', '🇯🇵 Japan丨06', '🇯🇵 Japan丨07', '🇯🇵 Japan丨08', '🇯🇵 Japan丨09', '🇯🇵 Japan丨10', '🇺🇸 United States丨01', '🇺🇸 United States丨02', '🇺🇸 United States丨03', '🇺🇸 United States丨04', '🇺🇸 United States丨05', '🇺🇸 United States丨06', '🇺🇸 United States丨07', '🇺🇸 United States丨08', '🇺🇸 United States丨09', '🇺🇸 United States丨10', '🇰🇷 South Korea丨01', '🇨🇦 Canada丨01', '🇬🇧 Great Britain丨01', '🇹🇷 Turkey丨01', '🇮🇳 India丨01', '🇳🇱 Netherlands丨01', '🇫🇷 France | 01', '🇩🇪 Germany | 01', '🇻🇳 Vietnam | 01', '🇲🇾 Malaysia丨01', '🇹🇭 Thailand丨01', '🇵🇭 Philippines丨01'] }
+    - { name: Auto, type: fallback, proxies: ['🇭🇰 Hong Kong', '🇨🇳 Taiwan', '🇯🇵 Japan', '🇰🇷 Korea', '🇸🇬 Singapore', '🇺🇸 United States', '🇨🇦 Canada', '🇬🇧 Great Britain', '🇹🇷 Turkey', '🇳🇱 Netherlands', '🇫🇷 France', '🇩🇪 Germany', '🇻🇳 Vietnam', '🇲🇾 Malaysia', '🇹🇭 Thailand', '🇮🇳 India', '🇵🇭 Philippines'], url: 'http://cp.cloudflare.com/generate_204', interval: 300 }
+    - { name: '🇭🇰 Hong Kong', type: select, proxies: ['🇭🇰 Hong Kong丨01', '🇭🇰 Hong Kong丨02', '🇭🇰 Hong Kong丨03', '🇭🇰 Hong Kong丨04', '🇭🇰 Hong Kong丨05', '🇭🇰 Hong Kong丨06', '🇭🇰 Hong Kong丨07', '🇭🇰 Hong Kong丨08', '🇭🇰 Hong Kong丨09', '🇭🇰 Hong Kong丨10', '🇭🇰 Hong Kong丨11', '🇭🇰 Hong Kong丨12', '🇭🇰 Hong Kong丨13', '🇭🇰 Hong Kong丨14', '🇭🇰 Hong Kong丨15'] }
+    - { name: '🇨🇳 Taiwan', type: select, proxies: ['🇨🇳 Taiwan丨01', '🇨🇳 Taiwan丨02', '🇨🇳 Taiwan丨03', '🇨🇳 Taiwan丨04', '🇨🇳 Taiwan丨05', '🇨🇳 Taiwan丨06', '🇨🇳 Taiwan丨07', '🇨🇳 Taiwan丨08', '🇨🇳 Taiwan丨09', '🇨🇳 Taiwan丨10'] }
+    - { name: '🇯🇵 Japan', type: select, proxies: ['🇯🇵 Japan丨01', '🇯🇵 Japan丨02', '🇯🇵 Japan丨03', '🇯🇵 Japan丨04', '🇯🇵 Japan丨05', '🇯🇵 Japan丨06', '🇯🇵 Japan丨07', '🇯🇵 Japan丨08', '🇯🇵 Japan丨09', '🇯🇵 Japan丨10'] }
+    - { name: '🇰🇷 Korea', type: select, proxies: ['🇰🇷 South Korea丨01'] }
+    - { name: '🇸🇬 Singapore', type: select, proxies: ['🇸🇬 Singapore丨01', '🇸🇬 Singapore丨02', '🇸🇬 Singapore丨03', '🇸🇬 Singapore丨04', '🇸🇬 Singapore丨05', '🇸🇬 Singapore丨06', '🇸🇬 Singapore丨07', '🇸🇬 Singapore丨08', '🇸🇬 Singapore丨09', '🇸🇬 Singapore丨10'] }
+    - { name: '🇨🇦 Canada', type: select, proxies: ['🇨🇦 Canada丨01'] }
+    - { name: '🇺🇸 United States', type: select, proxies: ['🇺🇸 United States丨01', '🇺🇸 United States丨02', '🇺🇸 United States丨03', '🇺🇸 United States丨04', '🇺🇸 United States丨05', '🇺🇸 United States丨06', '🇺🇸 United States丨07', '🇺🇸 United States丨08', '🇺🇸 United States丨09', '🇺🇸 United States丨10'] }
+    - { name: '🇬🇧 Great Britain', type: select, proxies: ['🇬🇧 Great Britain丨01'] }
+    - { name: '🇹🇷 Turkey', type: select, proxies: ['🇹🇷 Turkey丨01'] }
+    - { name: '🇳🇱 Netherlands', type: select, proxies: ['🇳🇱 Netherlands丨01'] }
+    - { name: '🇫🇷 France', type: select, proxies: ['🇫🇷 France | 01'] }
+    - { name: '🇩🇪 Germany', type: select, proxies: ['🇩🇪 Germany | 01'] }
+    - { name: '🇻🇳 Vietnam', type: select, proxies: ['🇻🇳 Vietnam | 01'] }
+    - { name: '🇲🇾 Malaysia', type: select, proxies: ['🇲🇾 Malaysia丨01'] }
+    - { name: '🇹🇭 Thailand', type: select, proxies: ['🇹🇭 Thailand丨01'] }
+    - { name: '🇮🇳 India', type: select, proxies: ['🇮🇳 India丨01'] }
+    - { name: '🇵🇭 Philippines', type: select, proxies: ['🇵🇭 Philippines丨01'] }
+rule-providers:
+    YouTube: { type: http, behavior: classical, url: 'https://api-gz.hosbbq.com/nus74f89st1/Y.yml', interval: 86400, path: ./ruleset/YouTube.yml }
+    SteamCN: { type: http, behavior: classical, url: 'https://api-gz.hosbbq.com/nus74f89st1/SC.yml', interval: 86400, path: ./ruleset/SteamCN.yml }
+    Bahamut: { type: http, behavior: classical, url: 'https://api-gz.hosbbq.com/nus74f89st1/Ba.yml', interval: 86400, path: ./ruleset/Bahamut.yml }
+    DMM: { type: http, behavior: classical, url: 'https://api-gz.hosbbq.com/nus74f89st1/DM.yml', interval: 86400, path: ./ruleset/DMM.yml }
+    ChinaMax: { type: http, behavior: classical, url: 'https://api-gz.hosbbq.com/nus74f89st1/C.yml', interval: 86400, path: ./ruleset/ChinaMax.yml }
+rules:
+    - 'DOMAIN,dog.TG@jdxll.com,TG@jdxll'
+    
+    - 'DOMAIN,ic.adobe.io,REJECT'
+    - 'DOMAIN,dyzt55url8.adobe.io,REJECT'
+    - 'DOMAIN,gw8gfjbs05.adobe.io,REJECT'
+    - 'DOMAIN,0mo5a70cqa.adobe.io,REJECT'
+    - 'DOMAIN,ij0gdyrfka.adobe.io,REJECT'
+    - 'DOMAIN,dxyeyf6ecy.adobe.io,REJECT'
+    - 'DOMAIN,1hzopx6nz7.adobe.io,REJECT'
+    - 'DOMAIN,ph0f2h2csf.adobe.io,REJECT'
+    - 'DOMAIN,23ynjitwt5.adobe.io,REJECT'
+    - 'DOMAIN,crs.cr.adobe.com,REJECT'
+    - 'DOMAIN,www.photoshop.com,REJECT'
+    - 'DOMAIN,cc-cdn.adobe.com,REJECT'
+    - 'DOMAIN,photos.adobe.io,REJECT'
+    - 'DOMAIN,cc-api-data.adobe.io,REJECT'
+    - 'DOMAIN,lcs-cops.adobe.io,REJECT'
+    - 'DOMAIN,cai-splunk-proxy.adobe.io,REJECT'
+    - 'DOMAIN-KEYWORD,sjtu.edu.cn,DIRECT'
+    - 'DOMAIN-KEYWORD,linkedin,TG@jdxll'
+    - 'RULE-SET,SteamCN,DIRECT'
+    - 'RULE-SET,Bahamut,🇨🇳 Taiwan'
+    - 'RULE-SET,DMM,🇯🇵 Japan'
+    - 'RULE-SET,ChinaMax,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR,203.0.113.0/24,DIRECT'
+    - 'IP-CIDR,192.0.2.0/24,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'GEOIP,CN,DIRECT'
+    - 'GEOIP,LAN,DIRECT'
+    - 'MATCH,TG@jdxll'
