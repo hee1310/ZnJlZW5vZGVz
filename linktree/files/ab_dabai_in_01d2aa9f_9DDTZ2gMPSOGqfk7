@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG https://www.dabai.in/link/9DDTZ2gMPSOGqfk7?clash=1
 
 #---------------------------------------------------#
-## 上次更新于：2026-10-30 05:15:44
+## 上次更新于：2026-11-01 01:41:19
 #---------------------------------------------------#
 
                                                    
@@ -128,9 +128,9 @@ proxies:
     name: TW1-ws|台湾01|广港专线|GPT+流媒体
     type: vless
     server: s4.db-link.in
-    port: 17614
+    port: 15655
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1405
+    fragment: 1499
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -140,20 +140,20 @@ proxies:
       - h3
       - http/1.1
     network: ws
-    ws-path: /db1400aee60a9f94
+    ws-path: /db140068bd0b867e
     ws-headers:
-      Host: aee60a9f94.tw01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1405.124 Safari/537.36'
+      Host: 68bd0b867e.tw01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151499 Firefox/87.0'
     ws-opts:
-      headers: { Host: aee60a9f94.tw01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1405.149 Safari/537.36' }
-      path: /db1400aee60a9f94
+      headers: { Host: 68bd0b867e.tw01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151499 Firefox/87.0' }
+      path: /db140068bd0b867e
   -
     name: TW2-ws|台湾01|广港专线|GPT+流媒体
     type: vless
     server: s5.db-link.in
-    port: 12323
+    port: 14468
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1437
+    fragment: 1297
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -162,24 +162,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: e6a79d90c6.tw01.db-link03.top
+    servername: 89456a6e26.tw01.db-link03.top
     network: ws
-    ws-path: /db1400e6a79d90c6
+    ws-path: /db140089456a6e26
     ws-headers:
-      Host: e6a79d90c6.tw01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151437 Firefox/87.0'
+      Host: 89456a6e26.tw01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1297.59 Safari/537.36'
     ws-opts:
-      headers: { Host: e6a79d90c6.tw01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1437.124 Safari/537.36' }
-      path: /db1400e6a79d90c6
+      headers: { Host: 89456a6e26.tw01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1297.124 Safari/537.36' }
+      path: /db140089456a6e26
     tls: true
     skip-cert-verify: true
   -
     name: TW1-ws|香港01|网站【dabai.in】【db01.in】
     type: vless
     server: s4.db-link.in
-    port: 16877
+    port: 15655
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1386
+    fragment: 1450
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -189,18 +189,165 @@ proxies:
       - h3
       - http/1.1
     network: ws
-    ws-path: /db1100ec985f706a
+    ws-path: /db1100160d843f90
     ws-headers:
-      Host: ec985f706a.hk02.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1386.149 Safari/537.36'
+      Host: 160d843f90.hk02.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1450.124 Safari/537.36'
     ws-opts:
-      headers: { Host: ec985f706a.hk02.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1386.212 Safari/537.36' }
-      path: /db1100ec985f706a
+      headers: { Host: 160d843f90.hk02.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1450.149 Safari/537.36' }
+      path: /db1100160d843f90
   -
     name: TW2-ws|香港01|网站【dabai.in】【db01.in】
     type: vless
     server: s5.db-link.in
-    port: 10614
+    port: 13101
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1416
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: f1078946f1.hk02.db-link03.top
+    network: ws
+    ws-path: /db1100f1078946f1
+    ws-headers:
+      Host: f1078946f1.hk02.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151416 Firefox/87.0'
+    ws-opts:
+      headers: { Host: f1078946f1.hk02.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1416.59 Safari/537.36' }
+      path: /db1100f1078946f1
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|新加坡01|广港专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 18362
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1479
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db120044fdcc8870
+    ws-headers:
+      Host: 44fdcc8870.sg01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1479.59 Safari/537.36'
+    ws-opts:
+      headers: { Host: 44fdcc8870.sg01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1479.149 Safari/537.36' }
+      path: /db120044fdcc8870
+  -
+    name: TW2-ws|新加坡01|广港专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 12780
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1331
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: d06f9d5517.sg01.db-link03.top
+    network: ws
+    ws-path: /db1200d06f9d5517
+    ws-headers:
+      Host: d06f9d5517.sg01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1331.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: d06f9d5517.sg01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1331.149 Safari/537.36' }
+      path: /db1200d06f9d5517
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|日本01|韩日专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 17980
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1088
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db1300464c13eff1
+    ws-headers:
+      Host: 464c13eff1.jp01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1088.59 Safari/537.36'
+    ws-opts:
+      headers: { Host: 464c13eff1.jp01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1088.212 Safari/537.36' }
+      path: /db1300464c13eff1
+  -
+    name: TW2-ws|日本01|韩日专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 13101
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1188
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    servername: 214f681a68.jp01.db-link03.top
+    network: ws
+    ws-path: /db1300214f681a68
+    ws-headers:
+      Host: 214f681a68.jp01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1188.59 Safari/537.36'
+    ws-opts:
+      headers: { Host: 214f681a68.jp01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1188.59 Safari/537.36' }
+      path: /db1300214f681a68
+    tls: true
+    skip-cert-verify: true
+  -
+    name: TW1-ws|韩国01|韩日专线|GPT+流媒体
+    type: vless
+    server: s4.db-link.in
+    port: 17980
+    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
+    fragment: 1303
+    client-fingerprint: chrome
+    packet-encoding: xudp
+    udp: true
+    http3: true
+    alpn:
+      - h2
+      - h3
+      - http/1.1
+    network: ws
+    ws-path: /db15005af567ef78
+    ws-headers:
+      Host: 5af567ef78.sk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1303.124 Safari/537.36'
+    ws-opts:
+      headers: { Host: 5af567ef78.sk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151303 Firefox/87.0' }
+      path: /db15005af567ef78
+  -
+    name: TW2-ws|韩国01|韩日专线|GPT+流媒体
+    type: vless
+    server: s5.db-link.in
+    port: 12780
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
     fragment: 1241
     client-fingerprint: chrome
@@ -211,171 +358,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: de7364a0ab.hk02.db-link03.top
+    servername: b688f84d0f.sk01.db-link03.top
     network: ws
-    ws-path: /db1100de7364a0ab
+    ws-path: /db1500b688f84d0f
     ws-headers:
-      Host: de7364a0ab.hk02.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151241 Firefox/87.0'
+      Host: b688f84d0f.sk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1241.59 Safari/537.36'
     ws-opts:
-      headers: { Host: de7364a0ab.hk02.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1241.59 Safari/537.36' }
-      path: /db1100de7364a0ab
-    tls: true
-    skip-cert-verify: true
-  -
-    name: TW1-ws|新加坡01|广港专线|GPT+流媒体
-    type: vless
-    server: s4.db-link.in
-    port: 15474
-    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1395
-    client-fingerprint: chrome
-    packet-encoding: xudp
-    udp: true
-    http3: true
-    alpn:
-      - h2
-      - h3
-      - http/1.1
-    network: ws
-    ws-path: /db1200c99c92fda6
-    ws-headers:
-      Host: c99c92fda6.sg01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1395.212 Safari/537.36'
-    ws-opts:
-      headers: { Host: c99c92fda6.sg01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1395.59 Safari/537.36' }
-      path: /db1200c99c92fda6
-  -
-    name: TW2-ws|新加坡01|广港专线|GPT+流媒体
-    type: vless
-    server: s5.db-link.in
-    port: 10614
-    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1414
-    client-fingerprint: chrome
-    packet-encoding: xudp
-    udp: true
-    http3: true
-    alpn:
-      - h2
-      - h3
-      - http/1.1
-    servername: 29a735b29f.sg01.db-link03.top
-    network: ws
-    ws-path: /db120029a735b29f
-    ws-headers:
-      Host: 29a735b29f.sg01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1414.149 Safari/537.36'
-    ws-opts:
-      headers: { Host: 29a735b29f.sg01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1414.212 Safari/537.36' }
-      path: /db120029a735b29f
-    tls: true
-    skip-cert-verify: true
-  -
-    name: TW1-ws|日本01|韩日专线|GPT+流媒体
-    type: vless
-    server: s4.db-link.in
-    port: 16877
-    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1299
-    client-fingerprint: chrome
-    packet-encoding: xudp
-    udp: true
-    http3: true
-    alpn:
-      - h2
-      - h3
-      - http/1.1
-    network: ws
-    ws-path: /db130075f9a01c70
-    ws-headers:
-      Host: 75f9a01c70.jp01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1299.149 Safari/537.36'
-    ws-opts:
-      headers: { Host: 75f9a01c70.jp01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1299.59 Safari/537.36' }
-      path: /db130075f9a01c70
-  -
-    name: TW2-ws|日本01|韩日专线|GPT+流媒体
-    type: vless
-    server: s5.db-link.in
-    port: 13160
-    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1276
-    client-fingerprint: chrome
-    packet-encoding: xudp
-    udp: true
-    http3: true
-    alpn:
-      - h2
-      - h3
-      - http/1.1
-    servername: 0a7ef35ac5.jp01.db-link03.top
-    network: ws
-    ws-path: /db13000a7ef35ac5
-    ws-headers:
-      Host: 0a7ef35ac5.jp01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1276.149 Safari/537.36'
-    ws-opts:
-      headers: { Host: 0a7ef35ac5.jp01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1276.149 Safari/537.36' }
-      path: /db13000a7ef35ac5
-    tls: true
-    skip-cert-verify: true
-  -
-    name: TW1-ws|韩国01|韩日专线|GPT+流媒体
-    type: vless
-    server: s4.db-link.in
-    port: 15474
-    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1157
-    client-fingerprint: chrome
-    packet-encoding: xudp
-    udp: true
-    http3: true
-    alpn:
-      - h2
-      - h3
-      - http/1.1
-    network: ws
-    ws-path: /db1500d2b1eef756
-    ws-headers:
-      Host: d2b1eef756.sk01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1157.212 Safari/537.36'
-    ws-opts:
-      headers: { Host: d2b1eef756.sk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1157.149 Safari/537.36' }
-      path: /db1500d2b1eef756
-  -
-    name: TW2-ws|韩国01|韩日专线|GPT+流媒体
-    type: vless
-    server: s5.db-link.in
-    port: 11075
-    uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1059
-    client-fingerprint: chrome
-    packet-encoding: xudp
-    udp: true
-    http3: true
-    alpn:
-      - h2
-      - h3
-      - http/1.1
-    servername: 4d777e07a4.sk01.db-link03.top
-    network: ws
-    ws-path: /db15004d777e07a4
-    ws-headers:
-      Host: 4d777e07a4.sk01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1059.149 Safari/537.36'
-    ws-opts:
-      headers: { Host: 4d777e07a4.sk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1059.212 Safari/537.36' }
-      path: /db15004d777e07a4
+      headers: { Host: b688f84d0f.sk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1241.59 Safari/537.36' }
+      path: /db1500b688f84d0f
     tls: true
     skip-cert-verify: true
   -
     name: TW1-ws|美国01|韩日专线|GPT+流媒体
     type: vless
     server: s4.db-link.in
-    port: 15474
+    port: 15655
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1349
+    fragment: 1121
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -385,20 +385,20 @@ proxies:
       - h3
       - http/1.1
     network: ws
-    ws-path: /db1000f037778034
+    ws-path: /db100033b86bb18d
     ws-headers:
-      Host: f037778034.us01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151349 Firefox/87.0'
+      Host: 33b86bb18d.us01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1121.59 Safari/537.36'
     ws-opts:
-      headers: { Host: f037778034.us01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1349.149 Safari/537.36' }
-      path: /db1000f037778034
+      headers: { Host: 33b86bb18d.us01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1121.149 Safari/537.36' }
+      path: /db100033b86bb18d
   -
     name: TW2-ws|美国01|韩日专线|GPT+流媒体
     type: vless
     server: s5.db-link.in
-    port: 14566
+    port: 14468
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1330
+    fragment: 1039
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -407,24 +407,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 736f26685b.us01.db-link03.top
+    servername: d1c7a75240.us01.db-link03.top
     network: ws
-    ws-path: /db1000736f26685b
+    ws-path: /db1000d1c7a75240
     ws-headers:
-      Host: 736f26685b.us01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1330.59 Safari/537.36'
+      Host: d1c7a75240.us01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1039.59 Safari/537.36'
     ws-opts:
-      headers: { Host: 736f26685b.us01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1330.149 Safari/537.36' }
-      path: /db1000736f26685b
+      headers: { Host: d1c7a75240.us01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1039.149 Safari/537.36' }
+      path: /db1000d1c7a75240
     tls: true
     skip-cert-verify: true
   -
     name: TW1-ws|英国01|广港专线|GPT+流媒体
     type: vless
     server: s4.db-link.in
-    port: 18040
+    port: 16058
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1096
+    fragment: 1100
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -434,20 +434,20 @@ proxies:
       - h3
       - http/1.1
     network: ws
-    ws-path: /db1900451b3bf8f1
+    ws-path: /db1900d2a4b824a7
     ws-headers:
-      Host: 451b3bf8f1.uk01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1096.212 Safari/537.36'
+      Host: d2a4b824a7.uk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1100.212 Safari/537.36'
     ws-opts:
-      headers: { Host: 451b3bf8f1.uk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151096 Firefox/87.0' }
-      path: /db1900451b3bf8f1
+      headers: { Host: d2a4b824a7.uk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1100.59 Safari/537.36' }
+      path: /db1900d2a4b824a7
   -
     name: TW2-ws|英国01|广港专线|GPT+流媒体
     type: vless
     server: s5.db-link.in
-    port: 11075
+    port: 10318
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1122
+    fragment: 1416
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -456,24 +456,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 726980488e.uk01.db-link03.top
+    servername: 974d2ff427.uk01.db-link03.top
     network: ws
-    ws-path: /db1900726980488e
+    ws-path: /db1900974d2ff427
     ws-headers:
-      Host: 726980488e.uk01.db-link03.top
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151122 Firefox/87.0'
+      Host: 974d2ff427.uk01.db-link03.top
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1416.59 Safari/537.36'
     ws-opts:
-      headers: { Host: 726980488e.uk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1122.149 Safari/537.36' }
-      path: /db1900726980488e
+      headers: { Host: 974d2ff427.uk01.db-link03.top, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1416.149 Safari/537.36' }
+      path: /db1900974d2ff427
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【注册免费领1TB流量】前往-注册|共享
     type: vless
     server: s5.db-link.in
-    port: 13203
+    port: 14445
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1065
+    fragment: 1453
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -482,24 +482,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: e9536272be.apple.com
+    servername: ec936304df.apple.com
     network: ws
-    ws-path: /db1024e9536272be
+    ws-path: /db1024ec936304df
     ws-headers:
-      Host: e9536272be.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1065.149 Safari/537.36'
+      Host: ec936304df.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1453.124 Safari/537.36'
     ws-opts:
-      headers: { Host: e9536272be.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1065.124 Safari/537.36' }
-      path: /db1024e9536272be
+      headers: { Host: ec936304df.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1453.149 Safari/537.36' }
+      path: /db1024ec936304df
     tls: true
     skip-cert-verify: true
   -
     name: 'WEB限速1-香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享'
     type: vless
     server: s5.db-link.in
-    port: 11354
+    port: 11482
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1216
+    fragment: 1145
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -508,24 +508,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: cdf80e8e68.apple.com
+    servername: 17b7838fc9.apple.com
     network: ws
-    ws-path: /db1024cdf80e8e68
+    ws-path: /db102417b7838fc9
     ws-headers:
-      Host: cdf80e8e68.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151216 Firefox/87.0'
+      Host: 17b7838fc9.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1145.212 Safari/537.36'
     ws-opts:
-      headers: { Host: cdf80e8e68.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1216.59 Safari/537.36' }
-      path: /db1024cdf80e8e68
+      headers: { Host: 17b7838fc9.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1145.59 Safari/537.36' }
+      path: /db102417b7838fc9
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【dabai.in】前往官网|GPT+流媒体|共享
     type: vless
     server: s5.db-link.in
-    port: 13203
+    port: 11482
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1267
+    fragment: 1345
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -534,24 +534,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 63da098fa6.apple.com
+    servername: 93be1f6489.apple.com
     network: ws
-    ws-path: /db102463da098fa6
+    ws-path: /db102493be1f6489
     ws-headers:
-      Host: 63da098fa6.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151267 Firefox/87.0'
+      Host: 93be1f6489.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151345 Firefox/87.0'
     ws-opts:
-      headers: { Host: 63da098fa6.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1267.149 Safari/537.36' }
-      path: /db102463da098fa6
+      headers: { Host: 93be1f6489.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1345.149 Safari/537.36' }
+      path: /db102493be1f6489
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【db01.in】前往官网|GPT+流媒体|共享
     type: vless
     server: s5.db-link.in
-    port: 14391
+    port: 11482
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1403
+    fragment: 1042
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -560,24 +560,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 5e8b0dea7b.apple.com
+    servername: 28b84eb09b.apple.com
     network: ws
-    ws-path: /db10245e8b0dea7b
+    ws-path: /db102428b84eb09b
     ws-headers:
-      Host: 5e8b0dea7b.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1403.59 Safari/537.36'
+      Host: 28b84eb09b.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1042.124 Safari/537.36'
     ws-opts:
-      headers: { Host: 5e8b0dea7b.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1403.59 Safari/537.36' }
-      path: /db10245e8b0dea7b
+      headers: { Host: 28b84eb09b.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1042.212 Safari/537.36' }
+      path: /db102428b84eb09b
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享
     type: vless
     server: s5.db-link.in
-    port: 10421
+    port: 10727
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1125
+    fragment: 1296
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -586,24 +586,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 7959194ac1.apple.com
+    servername: 1eba53e6c6.apple.com
     network: ws
-    ws-path: /db10247959194ac1
+    ws-path: /db10241eba53e6c6
     ws-headers:
-      Host: 7959194ac1.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1125.59 Safari/537.36'
+      Host: 1eba53e6c6.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1296.124 Safari/537.36'
     ws-opts:
-      headers: { Host: 7959194ac1.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151125 Firefox/87.0' }
-      path: /db10247959194ac1
+      headers: { Host: 1eba53e6c6.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151296 Firefox/87.0' }
+      path: /db10241eba53e6c6
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|最低35%-aff招募进行中|共享
     type: vless
     server: s5.db-link.in
-    port: 10421
+    port: 11482
     uuid: 93560928-97c9-3a88-9e67-bc41d8d2bedd
-    fragment: 1054
+    fragment: 1400
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -612,15 +612,15 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 48e8e62b9c.apple.com
+    servername: 68e12fe95d.apple.com
     network: ws
-    ws-path: /db102448e8e62b9c
+    ws-path: /db102468e12fe95d
     ws-headers:
-      Host: 48e8e62b9c.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1054.124 Safari/537.36'
+      Host: 68e12fe95d.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1400.124 Safari/537.36'
     ws-opts:
-      headers: { Host: 48e8e62b9c.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151054 Firefox/87.0' }
-      path: /db102448e8e62b9c
+      headers: { Host: 68e12fe95d.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1400.149 Safari/537.36' }
+      path: /db102468e12fe95d
     tls: true
     skip-cert-verify: true
 proxy-groups:

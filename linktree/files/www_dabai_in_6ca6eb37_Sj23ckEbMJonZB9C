@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG https://www.dabai.in/link/Sj23ckEbMJonZB9C?clash=1
 
 #---------------------------------------------------#
-## 上次更新于：2026-10-30 05:21:42
+## 上次更新于：2026-11-01 01:47:14
 #---------------------------------------------------#
 
                                                    
@@ -128,9 +128,9 @@ proxies:
     name: WEB限速1-香港|【注册免费领1TB流量】前往-注册|共享
     type: vless
     server: s5.db-link.in
-    port: 10907
+    port: 14415
     uuid: 86d0c412-8f7f-3aa8-b43d-a8a9fad5c192
-    fragment: 1424
+    fragment: 1471
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -139,24 +139,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 235930a1c8.apple.com
+    servername: 293a401f08.apple.com
     network: ws
-    ws-path: /db1024235930a1c8
+    ws-path: /db1024293a401f08
     ws-headers:
-      Host: 235930a1c8.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1424.212 Safari/537.36'
+      Host: 293a401f08.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1471.212 Safari/537.36'
     ws-opts:
-      headers: { Host: 235930a1c8.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1424.59 Safari/537.36' }
-      path: /db1024235930a1c8
+      headers: { Host: 293a401f08.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1471.124 Safari/537.36' }
+      path: /db1024293a401f08
     tls: true
     skip-cert-verify: true
   -
     name: 'WEB限速1-香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享'
     type: vless
     server: s5.db-link.in
-    port: 14002
+    port: 10269
     uuid: 86d0c412-8f7f-3aa8-b43d-a8a9fad5c192
-    fragment: 1074
+    fragment: 1401
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -165,24 +165,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: aaa3f52d79.apple.com
+    servername: efac613d94.apple.com
     network: ws
-    ws-path: /db1024aaa3f52d79
+    ws-path: /db1024efac613d94
     ws-headers:
-      Host: aaa3f52d79.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151074 Firefox/87.0'
+      Host: efac613d94.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1401.149 Safari/537.36'
     ws-opts:
-      headers: { Host: aaa3f52d79.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1074.212 Safari/537.36' }
-      path: /db1024aaa3f52d79
+      headers: { Host: efac613d94.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1401.59 Safari/537.36' }
+      path: /db1024efac613d94
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【dabai.in】前往官网|GPT+流媒体|共享
     type: vless
     server: s5.db-link.in
-    port: 10907
+    port: 13243
     uuid: 86d0c412-8f7f-3aa8-b43d-a8a9fad5c192
-    fragment: 1104
+    fragment: 1463
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -191,24 +191,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: 9005483f7c.apple.com
+    servername: 4bb1367c14.apple.com
     network: ws
-    ws-path: /db10249005483f7c
+    ws-path: /db10244bb1367c14
     ws-headers:
-      Host: 9005483f7c.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1104.212 Safari/537.36'
+      Host: 4bb1367c14.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1463.124 Safari/537.36'
     ws-opts:
-      headers: { Host: 9005483f7c.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1104.212 Safari/537.36' }
-      path: /db10249005483f7c
+      headers: { Host: 4bb1367c14.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1463.212 Safari/537.36' }
+      path: /db10244bb1367c14
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【db01.in】前往官网|GPT+流媒体|共享
     type: vless
     server: s5.db-link.in
-    port: 10907
+    port: 14415
     uuid: 86d0c412-8f7f-3aa8-b43d-a8a9fad5c192
-    fragment: 1464
+    fragment: 1367
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -217,24 +217,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: d2195a1704.apple.com
+    servername: c93d86d31b.apple.com
     network: ws
-    ws-path: /db1024d2195a1704
+    ws-path: /db1024c93d86d31b
     ws-headers:
-      Host: d2195a1704.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.1464.59 Safari/537.36'
+      Host: c93d86d31b.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1367.149 Safari/537.36'
     ws-opts:
-      headers: { Host: d2195a1704.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1464.212 Safari/537.36' }
-      path: /db1024d2195a1704
+      headers: { Host: c93d86d31b.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1367.212 Safari/537.36' }
+      path: /db1024c93d86d31b
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享
     type: vless
     server: s5.db-link.in
-    port: 12120
+    port: 14415
     uuid: 86d0c412-8f7f-3aa8-b43d-a8a9fad5c192
-    fragment: 1161
+    fragment: 1275
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -243,24 +243,24 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: edf9a79bbb.apple.com
+    servername: 2a9dd80564.apple.com
     network: ws
-    ws-path: /db1024edf9a79bbb
+    ws-path: /db10242a9dd80564
     ws-headers:
-      Host: edf9a79bbb.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1161.212 Safari/537.36'
+      Host: 2a9dd80564.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1275.149 Safari/537.36'
     ws-opts:
-      headers: { Host: edf9a79bbb.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1161.124 Safari/537.36' }
-      path: /db1024edf9a79bbb
+      headers: { Host: 2a9dd80564.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151275 Firefox/87.0' }
+      path: /db10242a9dd80564
     tls: true
     skip-cert-verify: true
   -
     name: WEB限速1-香港|最低35%-aff招募进行中|共享
     type: vless
     server: s5.db-link.in
-    port: 14002
+    port: 10269
     uuid: 86d0c412-8f7f-3aa8-b43d-a8a9fad5c192
-    fragment: 1351
+    fragment: 1200
     client-fingerprint: chrome
     packet-encoding: xudp
     udp: true
@@ -269,15 +269,15 @@ proxies:
       - h2
       - h3
       - http/1.1
-    servername: c23fccc154.apple.com
+    servername: badf4648de.apple.com
     network: ws
-    ws-path: /db1024c23fccc154
+    ws-path: /db1024badf4648de
     ws-headers:
-      Host: c23fccc154.apple.com
-      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/75.0.1351.149 Safari/537.36'
+      Host: badf4648de.apple.com
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.1200.124 Safari/537.36'
     ws-opts:
-      headers: { Host: c23fccc154.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.1351.212 Safari/537.36' }
-      path: /db1024c23fccc154
+      headers: { Host: badf4648de.apple.com, User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20151200 Firefox/87.0' }
+      path: /db1024badf4648de
     tls: true
     skip-cert-verify: true
 proxy-groups:

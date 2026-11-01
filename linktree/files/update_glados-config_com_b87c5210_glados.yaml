@@ -1,7 +1,7 @@
 # GLaDOS
 # GLobal Local and Destination Operating System
 # Clash Config File for Mozilla/5.0 (compatible; GitHubActions/1.0)-453205-0--1
-# Generated at Thu Oct 29 2026 21:21:22 GMT+0000 (Coordinated Universal Time) by Aperture Science
+# Generated at Sun Nov 01 2026 05:46:47 GMT+0000 (Coordinated Universal Time) by Aperture Science
 # ░██████╗░██╗░░░░░░█████╗░██████╗░░█████╗░░██████╗
 # ██╔════╝░██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔════╝
 # ██║░░██╗░██║░░░░░███████║██║░░██║██║░░██║╚█████╗░
@@ -65,7 +65,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ee:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ge:25488
   - name: Fast-B1-2
     type: ss
     server: 502d36f.r9.glados-config.com
@@ -76,7 +76,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.is:25488
   - name: Fast-B1-3
     type: ss
     server: 502d36f.r7.glados-config.com
@@ -87,7 +87,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.net:25488
   - name: Fast-B1-4
     type: ss
     server: 502d36f.r7.glados-config.com
@@ -98,7 +98,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.io:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.net:25488
   - name: Fast-B1-5
     type: ss
     server: 502d36f.r6.glados-config.com
@@ -109,7 +109,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.jp:25488
   - name: Fast-B1-6
     type: ss
     server: 502d36f.r6.glados-config.com
@@ -120,7 +120,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.es:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.fastly.net:25488
   - name: Fast-B1-7
     type: ss
     server: 502d36f.r8.glados-config.com
@@ -131,7 +131,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.fastly.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
   - name: Fast-B1-8
     type: ss
     server: 502d36f.r8.glados-config.com
@@ -142,7 +142,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.dk:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.jp:25488
   - name: Balancer-B1-1
     type: ss
     server: 502d36f.b9.glados-config.com
@@ -153,7 +153,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.be:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ee:25488
   - name: Balancer-B1-2
     type: ss
     server: 502d36f.b9.glados-config.com
@@ -164,7 +164,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.fi:25488
   - name: Balancer-B1-3
     type: ss
     server: 502d36f.b7.glados-config.com
@@ -175,7 +175,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.jp:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.jp:25488
   - name: Balancer-B1-4
     type: ss
     server: 502d36f.b7.glados-config.com
@@ -186,7 +186,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.es:25488
   - name: Balancer-B1-5
     type: ss
     server: 502d36f.b6.glados-config.com
@@ -197,7 +197,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.md:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.com:25488
   - name: Balancer-B1-6
     type: ss
     server: 502d36f.b6.glados-config.com
@@ -208,7 +208,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cz:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.jp:25488
   - name: Balancer-B1-7
     type: ss
     server: 502d36f.b8.glados-config.com
@@ -219,7 +219,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ee:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.epicgames.com:25488
   - name: Balancer-B1-8
     type: ss
     server: 502d36f.b8.glados-config.com
@@ -230,7 +230,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.is:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
   - name: US-X1-1
     type: ss
     server: 502d36f.u9.glados-config.com
@@ -241,7 +241,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ee:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ch:25488
   - name: US-X1-2
     type: ss
     server: 502d36f.u9.glados-config.com
@@ -252,7 +252,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cl:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.fi:25488
   - name: US-X1-3
     type: ss
     server: 502d36f.u7.glados-config.com
@@ -263,7 +263,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lu:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.fastly.net:25488
   - name: US-X1-4
     type: ss
     server: 502d36f.u7.glados-config.com
@@ -274,7 +274,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cz:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.be:25488
   - name: US-X1-5
     type: ss
     server: 502d36f.u6.glados-config.com
@@ -285,7 +285,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.it:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.com:25488
   - name: US-X1-6
     type: ss
     server: 502d36f.u6.glados-config.com
@@ -307,7 +307,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.fastly.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
   - name: US-X1-8
     type: ss
     server: 502d36f.u8.glados-config.com
@@ -318,7 +318,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.jp:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.epicgames.com:25488
   - name: TW-X1-1
     type: ss
     server: 502d36f.t9.glados-config.com
@@ -329,7 +329,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.io:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cl:25488
   - name: TW-X1-2
     type: ss
     server: 502d36f.t9.glados-config.com
@@ -340,7 +340,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.md:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.xboxlive.com:25488
   - name: TW-X1-3
     type: ss
     server: 502d36f.t7.glados-config.com
@@ -351,7 +351,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.jp:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.net:25488
   - name: TW-X1-4
     type: ss
     server: 502d36f.t7.glados-config.com
@@ -373,7 +373,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.xboxlive.com:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.dk:25488
   - name: TW-X1-6
     type: ss
     server: 502d36f.t6.glados-config.com
@@ -384,7 +384,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.jp:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.net:25488
   - name: TW-X1-7
     type: ss
     server: 502d36f.t8.glados-config.com
@@ -395,7 +395,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.de:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.mozilla.net:25488
   - name: TW-X1-8
     type: ss
     server: 502d36f.t8.glados-config.com
@@ -417,7 +417,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.xboxlive.com:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
   - name: JP-X1-2
     type: ss
     server: 502d36f.j9.glados-config.com
@@ -439,7 +439,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.it:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ee:25488
   - name: JP-X1-4
     type: ss
     server: 502d36f.j7.glados-config.com
@@ -450,7 +450,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.mozilla.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cz:25488
   - name: JP-X1-5
     type: ss
     server: 502d36f.j6.glados-config.com
@@ -461,7 +461,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.it:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.epicgames.com:25488
   - name: JP-X1-6
     type: ss
     server: 502d36f.j6.glados-config.com
@@ -472,7 +472,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.be:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.epicgames.com:25488
   - name: JP-X1-7
     type: ss
     server: 502d36f.j8.glados-config.com
@@ -483,7 +483,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.com:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.md:25488
   - name: JP-X1-8
     type: ss
     server: 502d36f.j8.glados-config.com
@@ -505,7 +505,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cz:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nvidia.com:25488
   - name: US-Fixed-02
     type: ss
     server: 502d36f.q2.glados-config.com
@@ -516,7 +516,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.com:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.de:25488
   - name: US-Fixed-03
     type: ss
     server: 502d36f.q3.glados-config.com
@@ -527,7 +527,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.it:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.jp:25488
   - name: TW-Fixed-01
     type: ss
     server: 502d36f.m1.glados-config.com
@@ -538,7 +538,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nvidia.com:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.blizzard.com:25488
   - name: TW-Fixed-02
     type: ss
     server: 502d36f.m2.glados-config.com
@@ -549,7 +549,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.cz:25488
   - name: TW-Fixed-03
     type: ss
     server: 502d36f.m3.glados-config.com
@@ -560,7 +560,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.net:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.lt:25488
   - name: JP-Fixed-01
     type: ss
     server: 502d36f.e1.glados-config.com
@@ -571,7 +571,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nvidia.com:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.dk:25488
   - name: JP-Fixed-02
     type: ss
     server: 502d36f.e2.glados-config.com
@@ -582,7 +582,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.be:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.ee:25488
   - name: JP-Fixed-03
     type: ss
     server: 502d36f.e3.glados-config.com
@@ -593,7 +593,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.microsoft.is:25488
+      host: 502d36f.ftoml7w5rg7qqunqlajp4kn242.nintendo.be:25488
 
 proxy-groups:
   - name: Default Proxy
@@ -674,6 +674,9 @@ proxy-groups:
       - Balancer-B1-6
       - Balancer-B1-7
       - Balancer-B1-8
+      - US-Balancer
+      - TW-Balancer
+      - JP-Balancer
       - US-X1-1
       - US-X1-2
       - US-X1-3
@@ -724,10 +727,6 @@ proxy-groups:
       - JP-Fixed-01
       - JP-Fixed-02
       - JP-Fixed-03
-      - US-Balancer
-      - TW-Balancer
-      - JP-Balancer
-      - Auto
   - name: Claude
     type: "select"
     proxies:
@@ -743,10 +742,6 @@ proxy-groups:
       - JP-Fixed-01
       - JP-Fixed-02
       - JP-Fixed-03
-      - US-Balancer
-      - TW-Balancer
-      - JP-Balancer
-      - Auto
   - name: SpaceX
     type: "select"
     proxies:
@@ -754,10 +749,6 @@ proxy-groups:
       - US Fixed IP
       - TW Fixed IP
       - JP Fixed IP
-      - US-Balancer
-      - TW-Balancer
-      - JP-Balancer
-      - Auto
       - US-Fixed-01
       - US-Fixed-02
       - US-Fixed-03

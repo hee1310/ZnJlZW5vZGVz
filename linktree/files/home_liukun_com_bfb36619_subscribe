@@ -1,7 +1,7 @@
 #---------------------------------------------------#
-## 更新：2026-10-29 21:17:26
+## 更新：2026-11-01 05:43:07
 ## Generator: Antigravity Aggregator (Verified)
-## 有效节点：23 / 总计：23
+## 有效节点：39 / 总计：39
 ## 提示：仅包含测试成功的低延迟节点
 #---------------------------------------------------#
 port: 7890
@@ -13,9 +13,9 @@ log-level: silent
 external-controller: 0.0.0.0:9090
 secret: ''
 proxies:
-  - name: 美国+CloudFlare节点_208
+  - name: '🇺🇸 美国 | USA #4_1'
     type: vless
-    server: 104.18.35.15
+    server: 172.64.146.66
     port: 443
     tfo: true
     skip-cert-verify: true
@@ -43,21 +43,6 @@ proxies:
       headers:
         Host: ccc.010304.xyz
     forumSource: sg_server
-  - name: 🇺🇸 美国 | USA_86
-    type: vless
-    server: 104.18.37.247
-    port: 443
-    tfo: true
-    skip-cert-verify: true
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    tls: true
-    servername: ccc.010304.xyz
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-    forumSource: sg_server
   - name: 🇸🇬[www.v2nodes.com] vless-SG_2
     type: vless
     server: 172.64.158.170
@@ -73,66 +58,6 @@ proxies:
       headers:
         Host: ccc.010304.xyz
     forumSource: sg_server
-  - name: '🇺🇸 美国 | USA #4_1'
-    type: vless
-    server: 172.64.146.66
-    port: 443
-    tfo: true
-    skip-cert-verify: true
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    tls: true
-    servername: ccc.010304.xyz
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: ccc.010304.xyz
-    forumSource: sg_server
-  - name: 🇹🇼 🇨🇳 台湾 | TWN
-    type: vless
-    server: 59.125.69.23
-    port: 443
-    uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    servername: ty986gfazs.cainiaohub.xyz
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: ty986gfazs.cainiaohub.xyz
-    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
-    tfo: true
-  - name: 🇭🇰 香港 | HKG
-    type: vless
-    server: 38.76.180.144
-    port: 1443
-    uuid: d98b67d4-024a-4bba-91e2-e6ebece6df11
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    servername: 38.76.180.144
-    ws-opts:
-      path: /vless-ws
-      headers:
-        Host: 38.76.180.144
-    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
-    tfo: true
-  - name: 🇹🇼 🇨🇳 台湾 | TWN_1
-    type: vless
-    server: 60.248.219.53
-    port: 443
-    uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    servername: ty986gfazs.cainiaohub.xyz
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: ty986gfazs.cainiaohub.xyz
-    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
-    tfo: true
   - name: 🇺🇸 美国 | USA_59
     type: vless
     server: 172.66.0.162
@@ -148,20 +73,35 @@ proxies:
       headers:
         Host: ccc.010304.xyz
     forumSource: sg_server
-  - name: 🇫🇷 机场推荐:dafei.de 法国 12
+  - name: 🇹🇼 🇨🇳 台湾 | TWN
     type: vless
-    server: 9.247.23.209
+    server: 60.248.219.53
     port: 443
-    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
     tls: true
     skip-cert-verify: true
-    network: tcp
-    servername: mother-earth.fyi
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    client-fingerprint: chrome
-    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇹🇼 🇨🇳 台湾 | TWN_1
+    type: vless
+    server: 59.125.69.23
+    port: 443
+    uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
     tfo: true
   - name: '🇺🇸 美国 | USA #2'
     type: vless
@@ -178,16 +118,37 @@ proxies:
       headers:
         Host: ccc.010304.xyz
     forumSource: sg_server
-  - name: 🇲🇾[www.v2nodes.com] trojan-MY-...
-    type: trojan
-    server: 47.250.84.25
+  - name: 巴西 042
+    type: vless
+    network: ws
+    server: 200.165.231.209
     port: 443
-    password: 5931134d1cde66bf83a54acdfebe7ab2
+    uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+    servername: wstg.datasynctrue.online
+    skip-cert-verify: false
     tls: true
-    skip-cert-verify: true
-    network: tcp
-    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    udp: true
     tfo: true
+    ws-opts:
+      headers:
+        Host: wstg.datasynctrue.online
+      path: /api/connect
+    _sourceUrl: https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+  - name: 🇺🇸 美国 | USA_86
+    type: vless
+    server: 104.18.37.247
+    port: 443
+    tfo: true
+    skip-cert-verify: true
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    tls: true
+    servername: ccc.010304.xyz
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+    forumSource: sg_server
   - name: '🇩🇪 德国 | DEU #1'
     type: vless
     server: 172.67.76.40
@@ -203,65 +164,21 @@ proxies:
       headers:
         Host: ccc.010304.xyz
     forumSource: sg_server
-  - name: 🇫🇷 机场推荐:dafei.de 法国 02
+  - name: 美国+CloudFlare节点_208
     type: vless
-    server: edge.bookmai.com
+    server: 104.18.35.15
     port: 443
-    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    tls: true
-    skip-cert-verify: true
-    network: tcp
-    servername: mother-earth.fyi
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    client-fingerprint: chrome
-    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
     tfo: true
-  - name: 🇭🇰 香港 | HKG_1
-    type: vless
-    server: 103.180.20.108
-    port: 8443
-    uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-    tls: true
     skip-cert-verify: true
+    uuid: d342d11e-d224-4463-b982-532309285094
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: ty986gfazs.cainiaohub.xyz
-    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
-    tfo: true
-  - name: '🏳[www.v2nodes.com] trojan- #6'
-    type: trojan
-    server: 171.22.119.74
-    port: 8446
-    password: Pass-Client-1
     tls: true
-    skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-video-call
-    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
-    tfo: true
-  - name: 巴西 002
-    type: vless
-    network: ws
-    server: 200.165.231.209
-    port: 443
-    uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
-    servername: wstg.datasynctrue.online
-    skip-cert-verify: false
-    tls: true
-    udp: true
-    tfo: true
-    client-fingerprint: chrome
+    servername: ccc.010304.xyz
     ws-opts:
+      path: /fp=chrome
       headers:
-        Host: wstg.datasynctrue.online
-      path: /api/connect
-    _sourceUrl: https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+        Host: ccc.010304.xyz
+    forumSource: sg_server
   - name: 美国 156
     type: vmess
     network: ws
@@ -278,23 +195,34 @@ proxies:
       path: /hls/cctv5phd.m3u8
     _sourceUrl: https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
     tfo: true
-  - name: 美国 353
+  - name: 🇺🇸_US_美国
     type: vmess
-    network: ws
     server: guanwang.awsno.com
     port: 443
     uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-    skip-cert-verify: true
-    tls: true
     alterId: 0
     cipher: auto
+    network: ws
+    tls: true
+    skip-cert-verify: true
     ws-opts:
+      path: /hls/cctv5phd.m3u8
       headers:
         Host: guanwang.awsno.com
-      path: /hls/cctv5phd.m3u8
-    _sourceUrl: https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+    servername: guanwang.awsno.com
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
     tfo: true
-  - name: 北京市+惟译天创信息技术有限公司
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vless
+    server: us22.sofast.live
+    port: 58011
+    uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
     type: vless
     server: jp.sofast.live
     port: 52683
@@ -302,7 +230,143 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇯🇵_JP_日本
+    type: ss
+    server: 154.36.158.197
+    port: 8388
+    cipher: aes-256-gcm
+    password: BeaUf9c0AEWH40Pu
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+    skip-cert-verify: true
+  - name: 🇮🇹_IT_意大利
+    type: ss
+    server: 202.50.253.45
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+    skip-cert-verify: true
+  - name: 新西兰+V2CROSS.COM
+    type: ss
+    server: 202.50.253.54
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     _sourceUrl: https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+    tfo: true
+    skip-cert-verify: true
+  - name: 🇮🇹 意大利 | ITA
+    type: ss
+    server: 202.50.253.63
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+    skip-cert-verify: true
+  - name: 🇺🇸 美国 | USA
+    type: trojan
+    server: 104.17.145.43
+    port: 443
+    password: humanity
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: www.cordweave.com
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇮🇹_IT_意大利_1
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+    skip-cert-verify: true
+  - name: 🇮🇹 意大利 | ITA_1
+    type: ss
+    server: 202.50.253.27
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+    skip-cert-verify: true
+  - name: 🇫🇷 机场推荐:dafei.de 法国 06
+    type: vless
+    server: 163.245.42.132
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: mother-earth.fyi
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    client-fingerprint: chrome
+    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+    tfo: true
+  - name: 🇫🇷 机场推荐:dafei.de 法国 03
+    type: vless
+    server: 9.247.23.209
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: mother-earth.fyi
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    client-fingerprint: chrome
+    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+    tfo: true
+  - name: 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
+    type: trojan
+    server: 144.31.138.127
+    port: 443
+    tfo: true
+    skip-cert-verify: true
+    password: '1234567890'
+    network: tcp
+    tls: true
+    servername: kfm-bn0.pages.dev
+    forumSource: sg_server
+  - name: 🇩🇪 德国 | DEU
+    type: vless
+    server: 199.232.239.239
+    port: 443
+    uuid: 40694ced-9a8c-42fd-f5f8-3ac3c8b27fc2
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    servername: firefox.com
+    ws-opts:
+      path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
+      headers:
+        Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇫🇷 机场推荐:dafei.de 法国 04
+    type: vless
+    server: 163.245.42.157
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: mother-earth.fyi
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    client-fingerprint: chrome
+    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
     tfo: true
   - name: 🇸🇬[www.v2nodes.com] vless-SG_1
     type: vless
@@ -319,57 +383,190 @@ proxies:
       headers:
         Host: ccc.010304.xyz
     forumSource: sg_server
-  - name: 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-    type: trojan
-    server: 144.31.138.127
+  - name: 🇩🇪 德国 | DEU_1
+    type: hysteria2
+    server: 9.247.54.68
     port: 443
-    tfo: true
+    password: c9aca131-c6a4-4518-9d7d-be52a60b4a3f
+    sni: nl1.obxodvpn.us
     skip-cert-verify: true
-    password: '1234567890'
-    network: tcp
-    tls: true
-    servername: kfm-bn0.pages.dev
-    forumSource: sg_server
-  - name: '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇳🇱 荷兰 | NLD
     type: vless
-    server: ccc.010304.xyz
+    server: 200.169.184.168
     port: 443
+    uuid: 6036c28a-8db2-432e-8118-ff0c16641ad0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: net.formatgo.ru
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: QnaizqXrXA0e4XihP_5Nf1z1aOOf0obBoyJ8QY_03kw
+      short-id: 9d0e1b6bf9c5eddb
+    client-fingerprint: firefox
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 哈萨克斯坦+V2CROSS.COM
+    type: vless
+    server: 95.56.251.12
+    port: 47443
+    uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: kz1.waspnest.space
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU
+      short-id: ae97223a8f799877
+    client-fingerprint: firefox
+    _sourceUrl: https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+    tfo: true
+  - name: 🇫🇷 法国 | FRA
+    type: vless
+    server: 199.232.78.160
+    port: 443
+    uuid: XpnTeam-72
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    servername: ssl.fastly.com
+    ws-opts:
+      path: /
+      headers:
+        Host: Appxdn.global.ssl.fastly.net
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇫🇷 机场推荐:dafei.de 法国 02
+    type: vless
+    server: edge.bookmai.com
+    port: 443
+    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: mother-earth.fyi
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    client-fingerprint: chrome
+    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+    tfo: true
+  - name: 🇺🇸 美国 | USA_1
+    type: vless
+    server: 146.75.59.186
+    port: 443
+    uuid: 780aa2f6-1a02-4fa2-bcd0-fa7d469bdff7
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    servername: firefox.com
+    ws-opts:
+      path: /
+      headers:
+        Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 🇩🇪 德国 | DEU_2
+    type: vless
+    server: 179.253.179.109
+    port: 63053
+    uuid: e3aa3d22-a95e-407b-aacc-d855b90a5d70
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: de2.derevohom.xyz
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+  - name: 俄罗斯+V2CROSS.COM
+    type: vless
+    server: 87.242.119.253
+    port: 443
+    uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: hvtlr-ru-47sb.fade.mom
+    _sourceUrl: https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+    tfo: true
+  - name: 🇺🇸 机场推荐:dafei.de 美国 44
+    type: vless
+    server: 79.182.39.57
+    port: 443
+    uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+    servername: a0688bt.us4.h1clayd.click
+    reality-opts:
+      public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
+      short-id: 257420d9d430152a
+    client-fingerprint: firefox
+    _sourceUrl: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+    tfo: true
+  - name: 🇺🇸 美国 | USA_2
+    type: ss
+    server: 202.50.253.36
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
     tfo: true
     skip-cert-verify: true
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    tls: true
-    servername: ccc.010304.xyz
-    ws-opts:
-      path: /fp=chrome
-    forumSource: sg_server
+  - name: 🇮🇹_IT_意大利_2
+    type: ss
+    server: 202.50.253.81
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    _sourceUrl: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    tfo: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🔰国外流量
     type: select
     proxies:
-      - 美国+CloudFlare节点_208
-      - '🇺🇸 美国 | USA #6_1'
-      - 🇺🇸 美国 | USA_86
-      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - '🇺🇸 美国 | USA #4_1'
-      - 🇹🇼 🇨🇳 台湾 | TWN
-      - 🇭🇰 香港 | HKG
-      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - '🇺🇸 美国 | USA #6_1'
+      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - 🇺🇸 美国 | USA_59
-      - 🇫🇷 机场推荐:dafei.de 法国 12
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
       - '🇺🇸 美国 | USA #2'
-      - 🇲🇾[www.v2nodes.com] trojan-MY-...
+      - 巴西 042
+      - 🇺🇸 美国 | USA_86
       - '🇩🇪 德国 | DEU #1'
-      - 🇫🇷 机场推荐:dafei.de 法国 02
-      - 🇭🇰 香港 | HKG_1
-      - '🏳[www.v2nodes.com] trojan- #6'
-      - 巴西 002
+      - 美国+CloudFlare节点_208
       - 美国 156
-      - 美国 353
-      - 北京市+惟译天创信息技术有限公司
-      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 新西兰+V2CROSS.COM
+      - 🇮🇹 意大利 | ITA
+      - 🇺🇸 美国 | USA
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹 意大利 | ITA_1
+      - 🇫🇷 机场推荐:dafei.de 法国 06
+      - 🇫🇷 机场推荐:dafei.de 法国 03
       - 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-      - '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 机场推荐:dafei.de 法国 04
+      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇩🇪 德国 | DEU_1
+      - 🇳🇱 荷兰 | NLD
+      - 哈萨克斯坦+V2CROSS.COM
+      - 🇫🇷 法国 | FRA
+      - 🇫🇷 机场推荐:dafei.de 法国 02
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU_2
+      - 俄罗斯+V2CROSS.COM
+      - 🇺🇸 机场推荐:dafei.de 美国 44
+      - 🇺🇸 美国 | USA_2
+      - 🇮🇹_IT_意大利_2
       - 🚀直接连接
   - name: ⚓️其他流量
     type: select
@@ -380,137 +577,217 @@ proxy-groups:
     type: select
     proxies:
       - 🔰国外流量
-      - 美国+CloudFlare节点_208
-      - '🇺🇸 美国 | USA #6_1'
-      - 🇺🇸 美国 | USA_86
-      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - '🇺🇸 美国 | USA #4_1'
-      - 🇹🇼 🇨🇳 台湾 | TWN
-      - 🇭🇰 香港 | HKG
-      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - '🇺🇸 美国 | USA #6_1'
+      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - 🇺🇸 美国 | USA_59
-      - 🇫🇷 机场推荐:dafei.de 法国 12
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
       - '🇺🇸 美国 | USA #2'
-      - 🇲🇾[www.v2nodes.com] trojan-MY-...
+      - 巴西 042
+      - 🇺🇸 美国 | USA_86
       - '🇩🇪 德国 | DEU #1'
-      - 🇫🇷 机场推荐:dafei.de 法国 02
-      - 🇭🇰 香港 | HKG_1
-      - '🏳[www.v2nodes.com] trojan- #6'
-      - 巴西 002
+      - 美国+CloudFlare节点_208
       - 美国 156
-      - 美国 353
-      - 北京市+惟译天创信息技术有限公司
-      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 新西兰+V2CROSS.COM
+      - 🇮🇹 意大利 | ITA
+      - 🇺🇸 美国 | USA
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹 意大利 | ITA_1
+      - 🇫🇷 机场推荐:dafei.de 法国 06
+      - 🇫🇷 机场推荐:dafei.de 法国 03
       - 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-      - '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 机场推荐:dafei.de 法国 04
+      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇩🇪 德国 | DEU_1
+      - 🇳🇱 荷兰 | NLD
+      - 哈萨克斯坦+V2CROSS.COM
+      - 🇫🇷 法国 | FRA
+      - 🇫🇷 机场推荐:dafei.de 法国 02
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU_2
+      - 俄罗斯+V2CROSS.COM
+      - 🇺🇸 机场推荐:dafei.de 美国 44
+      - 🇺🇸 美国 | USA_2
+      - 🇮🇹_IT_意大利_2
   - name: 🎬Youtube
     type: select
     proxies:
       - 🔰国外流量
-      - 美国+CloudFlare节点_208
-      - '🇺🇸 美国 | USA #6_1'
-      - 🇺🇸 美国 | USA_86
-      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - '🇺🇸 美国 | USA #4_1'
-      - 🇹🇼 🇨🇳 台湾 | TWN
-      - 🇭🇰 香港 | HKG
-      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - '🇺🇸 美国 | USA #6_1'
+      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - 🇺🇸 美国 | USA_59
-      - 🇫🇷 机场推荐:dafei.de 法国 12
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
       - '🇺🇸 美国 | USA #2'
-      - 🇲🇾[www.v2nodes.com] trojan-MY-...
+      - 巴西 042
+      - 🇺🇸 美国 | USA_86
       - '🇩🇪 德国 | DEU #1'
-      - 🇫🇷 机场推荐:dafei.de 法国 02
-      - 🇭🇰 香港 | HKG_1
-      - '🏳[www.v2nodes.com] trojan- #6'
-      - 巴西 002
+      - 美国+CloudFlare节点_208
       - 美国 156
-      - 美国 353
-      - 北京市+惟译天创信息技术有限公司
-      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 新西兰+V2CROSS.COM
+      - 🇮🇹 意大利 | ITA
+      - 🇺🇸 美国 | USA
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹 意大利 | ITA_1
+      - 🇫🇷 机场推荐:dafei.de 法国 06
+      - 🇫🇷 机场推荐:dafei.de 法国 03
       - 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-      - '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 机场推荐:dafei.de 法国 04
+      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇩🇪 德国 | DEU_1
+      - 🇳🇱 荷兰 | NLD
+      - 哈萨克斯坦+V2CROSS.COM
+      - 🇫🇷 法国 | FRA
+      - 🇫🇷 机场推荐:dafei.de 法国 02
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU_2
+      - 俄罗斯+V2CROSS.COM
+      - 🇺🇸 机场推荐:dafei.de 美国 44
+      - 🇺🇸 美国 | USA_2
+      - 🇮🇹_IT_意大利_2
   - name: 🎬Netflix
     type: select
     proxies:
       - 🔰国外流量
-      - 美国+CloudFlare节点_208
-      - '🇺🇸 美国 | USA #6_1'
-      - 🇺🇸 美国 | USA_86
-      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - '🇺🇸 美国 | USA #4_1'
-      - 🇹🇼 🇨🇳 台湾 | TWN
-      - 🇭🇰 香港 | HKG
-      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - '🇺🇸 美国 | USA #6_1'
+      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - 🇺🇸 美国 | USA_59
-      - 🇫🇷 机场推荐:dafei.de 法国 12
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
       - '🇺🇸 美国 | USA #2'
-      - 🇲🇾[www.v2nodes.com] trojan-MY-...
+      - 巴西 042
+      - 🇺🇸 美国 | USA_86
       - '🇩🇪 德国 | DEU #1'
-      - 🇫🇷 机场推荐:dafei.de 法国 02
-      - 🇭🇰 香港 | HKG_1
-      - '🏳[www.v2nodes.com] trojan- #6'
-      - 巴西 002
+      - 美国+CloudFlare节点_208
       - 美国 156
-      - 美国 353
-      - 北京市+惟译天创信息技术有限公司
-      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 新西兰+V2CROSS.COM
+      - 🇮🇹 意大利 | ITA
+      - 🇺🇸 美国 | USA
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹 意大利 | ITA_1
+      - 🇫🇷 机场推荐:dafei.de 法国 06
+      - 🇫🇷 机场推荐:dafei.de 法国 03
       - 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-      - '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 机场推荐:dafei.de 法国 04
+      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇩🇪 德国 | DEU_1
+      - 🇳🇱 荷兰 | NLD
+      - 哈萨克斯坦+V2CROSS.COM
+      - 🇫🇷 法国 | FRA
+      - 🇫🇷 机场推荐:dafei.de 法国 02
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU_2
+      - 俄罗斯+V2CROSS.COM
+      - 🇺🇸 机场推荐:dafei.de 美国 44
+      - 🇺🇸 美国 | USA_2
+      - 🇮🇹_IT_意大利_2
   - name: 🎬哔哩哔哩
     type: select
     proxies:
       - 🚀直接连接
-      - 美国+CloudFlare节点_208
-      - '🇺🇸 美国 | USA #6_1'
-      - 🇺🇸 美国 | USA_86
-      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - '🇺🇸 美国 | USA #4_1'
-      - 🇹🇼 🇨🇳 台湾 | TWN
-      - 🇭🇰 香港 | HKG
-      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - '🇺🇸 美国 | USA #6_1'
+      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - 🇺🇸 美国 | USA_59
-      - 🇫🇷 机场推荐:dafei.de 法国 12
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
       - '🇺🇸 美国 | USA #2'
-      - 🇲🇾[www.v2nodes.com] trojan-MY-...
+      - 巴西 042
+      - 🇺🇸 美国 | USA_86
       - '🇩🇪 德国 | DEU #1'
-      - 🇫🇷 机场推荐:dafei.de 法国 02
-      - 🇭🇰 香港 | HKG_1
-      - '🏳[www.v2nodes.com] trojan- #6'
-      - 巴西 002
+      - 美国+CloudFlare节点_208
       - 美国 156
-      - 美国 353
-      - 北京市+惟译天创信息技术有限公司
-      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 新西兰+V2CROSS.COM
+      - 🇮🇹 意大利 | ITA
+      - 🇺🇸 美国 | USA
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹 意大利 | ITA_1
+      - 🇫🇷 机场推荐:dafei.de 法国 06
+      - 🇫🇷 机场推荐:dafei.de 法国 03
       - 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-      - '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 机场推荐:dafei.de 法国 04
+      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇩🇪 德国 | DEU_1
+      - 🇳🇱 荷兰 | NLD
+      - 哈萨克斯坦+V2CROSS.COM
+      - 🇫🇷 法国 | FRA
+      - 🇫🇷 机场推荐:dafei.de 法国 02
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU_2
+      - 俄罗斯+V2CROSS.COM
+      - 🇺🇸 机场推荐:dafei.de 美国 44
+      - 🇺🇸 美国 | USA_2
+      - 🇮🇹_IT_意大利_2
   - name: 🎬国外媒体
     type: select
     proxies:
       - 🔰国外流量
-      - 美国+CloudFlare节点_208
-      - '🇺🇸 美国 | USA #6_1'
-      - 🇺🇸 美国 | USA_86
-      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - '🇺🇸 美国 | USA #4_1'
-      - 🇹🇼 🇨🇳 台湾 | TWN
-      - 🇭🇰 香港 | HKG
-      - 🇹🇼 🇨🇳 台湾 | TWN_1
+      - '🇺🇸 美国 | USA #6_1'
+      - 🇸🇬[www.v2nodes.com] vless-SG_2
       - 🇺🇸 美国 | USA_59
-      - 🇫🇷 机场推荐:dafei.de 法国 12
+      - 🇹🇼 🇨🇳 台湾 | TWN
+      - 🇹🇼 🇨🇳 台湾 | TWN_1
       - '🇺🇸 美国 | USA #2'
-      - 🇲🇾[www.v2nodes.com] trojan-MY-...
+      - 巴西 042
+      - 🇺🇸 美国 | USA_86
       - '🇩🇪 德国 | DEU #1'
-      - 🇫🇷 机场推荐:dafei.de 法国 02
-      - 🇭🇰 香港 | HKG_1
-      - '🏳[www.v2nodes.com] trojan- #6'
-      - 巴西 002
+      - 美国+CloudFlare节点_208
       - 美国 156
-      - 美国 353
-      - 北京市+惟译天创信息技术有限公司
-      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇯🇵_JP_日本
+      - 🇮🇹_IT_意大利
+      - 新西兰+V2CROSS.COM
+      - 🇮🇹 意大利 | ITA
+      - 🇺🇸 美国 | USA
+      - 🇮🇹_IT_意大利_1
+      - 🇮🇹 意大利 | ITA_1
+      - 🇫🇷 机场推荐:dafei.de 法国 06
+      - 🇫🇷 机场推荐:dafei.de 法国 03
       - 🇩🇪 DE德国(mibei77.com 米贝节点分享)_11
-      - '🇸🇬[www.v2nodes.com] vless-SG #2_1'
+      - 🇩🇪 德国 | DEU
+      - 🇫🇷 机场推荐:dafei.de 法国 04
+      - 🇸🇬[www.v2nodes.com] vless-SG_1
+      - 🇩🇪 德国 | DEU_1
+      - 🇳🇱 荷兰 | NLD
+      - 哈萨克斯坦+V2CROSS.COM
+      - 🇫🇷 法国 | FRA
+      - 🇫🇷 机场推荐:dafei.de 法国 02
+      - 🇺🇸 美国 | USA_1
+      - 🇩🇪 德国 | DEU_2
+      - 俄罗斯+V2CROSS.COM
+      - 🇺🇸 机场推荐:dafei.de 美国 44
+      - 🇺🇸 美国 | USA_2
+      - 🇮🇹_IT_意大利_2
   - name: 🍎苹果服务
     type: select
     proxies:

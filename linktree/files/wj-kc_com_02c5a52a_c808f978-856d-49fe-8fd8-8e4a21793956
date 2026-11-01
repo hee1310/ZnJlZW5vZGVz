@@ -179,6 +179,11 @@ proxy-groups:
     include-all-proxies: true
     url: http://www.gstatic.com/generate_204
     interval: '28800'
+  - name: 订阅全部节点
+    type: select
+    proxies:
+      - 官网：任意.快车.com
+      - 请充值
 rules:
   - DOMAIN-SUFFIX,openai.com,节点列表
   - DOMAIN-SUFFIX,chatgpt.com,节点列表
