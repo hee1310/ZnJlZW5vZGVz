@@ -16,28 +16,28 @@ proxies:
 - name: 美国西雅图2
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: cbce4f48-tnyao0-tpkh0c-1r7od.sv.plebai.net
+  server: fc8d9be3-tob9c0-tpkh0c-1r7od.sv.plebai.net
   tls: true
   type: socks5
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国西雅图
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: bcf52447-tnyao0-tpkh0c-1r7od.se.oshuawei.com
+  server: 0ac44253-tob9c0-tpkh0c-1r7od.se.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国洛杉矶[CM]
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 5228
-  server: 996ce7de-tnyao0-tpkh0c-1r7od.us.oshuawei.com
+  server: c5221de0-tob9c0-tpkh0c-1r7od.us.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国硅谷7
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 7bf638ad-tnyao0-tpkh0c-1r7od.us17.oshuawei.com
+  server: 5c0abc88-tob9c0-tpkh0c-1r7od.us17.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
@@ -47,65 +47,65 @@ proxies:
   name: 美国硅谷6
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 937a7931-tnyao0-tpkh0c-1r7od.sj.gotochinatown.net
+  server: 6d503214-tob9c0-tpkh0c-1r7od.sj.gotochinatown.net
   skip-cert-verify: true
-  sni: 937a7931-tnyao0-tpkh0c-1r7od.sj.gotochinatown.net
+  sni: 6d503214-tob9c0-tpkh0c-1r7od.sj.gotochinatown.net
   type: tuic
   udp-relay-mode: native
   uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国硅谷4
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 5ddd137e-tnyao0-tpkh0c-1r7od.us13.oshuawei.com
+  server: c13d82dd-tob9c0-tpkh0c-1r7od.us13.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国硅谷3
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 4e2f7ec9-tnyao0-tpkh0c-1r7od.u12.oshuawei.com
+  server: acad2aad-tob9c0-tpkh0c-1r7od.u12.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国硅谷2
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 28d010c6-tnyao0-tpkh0c-1r7od.sj.hyhuawei.com
+  server: 8cb5e484-tob9c0-tpkh0c-1r7od.sj.hyhuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国硅谷
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 0f1794ee-tnyao0-tpkh0c-1r7od.sj.oshuawei.com
+  server: 2790fcf0-tob9c0-tpkh0c-1r7od.sj.oshuawei.com
   tls: true
   type: socks5
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国硅谷5
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: f1d3bd9c-tnyao0-tpkh0c-1r7od.us16.hyhuawei.com
+  server: 6be1bae4-tob9c0-tpkh0c-1r7od.us16.hyhuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国圣何塞
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: dc01c687-tnyao0-tpkh0c-1r7od.sjc.oshuawei.com
+  server: db036d3b-tob9c0-tpkh0c-1r7od.sjc.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国洛杉矶2
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 9c66643a-tnyao0-tpkh0c-1r7od.los.gotochinatown.net
+  server: 8c3ee63a-tob9c0-tpkh0c-1r7od.los.gotochinatown.net
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 美国洛杉矶
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 9c66643a-tnyao0-tpkh0c-1r7od.los.gotochinatown.net
+  server: 8c3ee63a-tob9c0-tpkh0c-1r7od.los.gotochinatown.net
   tls: true
   type: socks5
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
@@ -114,35 +114,35 @@ proxies:
   name: 美国洛杉矶3
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 21f8779c-tnyao0-tpkh0c-1r7od.los.hyhuawei.com
+  server: f541ccb3-tob9c0-tpkh0c-1r7od.los.hyhuawei.com
   skip-cert-verify: true
   type: hysteria2
   udp: true
 - name: 美国ISP
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 895d27a4-tnyao0-tpkh0c-1r7od.misp.cdnkuaishou.com
+  server: 050632d8-tob9c0-tpkh0c-1r7od.misp.cdnkuaishou.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇭🇰香港精品3
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 8443
-  server: db989097-tnyao0-tpkh0c-1r7od.hkt.cdnhuawei.com
+  server: e6fd6808-tob9c0-tpkh0c-1r7od.hkt.cdnhuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇭🇰香港精品2
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: a3e8a67f-tnyao0-tpkh0c-1r7od.hkt2.cdnhuawei.com
+  server: 4fc8330d-tob9c0-tpkh0c-1r7od.hkt2.cdnhuawei.com
   tls: true
   type: socks5
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇭🇰香港精品4
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: a3e8a67f-tnyao0-tpkh0c-1r7od.hkt2.cdnhuawei.com
+  server: 4fc8330d-tob9c0-tpkh0c-1r7od.hkt2.cdnhuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
@@ -152,7 +152,7 @@ proxies:
   port: 443
   reality-opts:
     public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
-  server: 87050bcc-tnyao0-tpkh0c-1r7od.hk2.hyhuawei.com
+  server: 07d77ebe-tob9c0-tpkh0c-1r7od.hk2.hyhuawei.com
   servername: download.windowsupdate.com
   tls: true
   type: vless
@@ -164,7 +164,7 @@ proxies:
   name: 🇭🇰 香港03
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 34b910a7-tnyao0-tpkh0c-1r7od.hk3.hyhuawei.com
+  server: 9e747ff0-tob9c0-tpkh0c-1r7od.hk3.hyhuawei.com
   skip-cert-verify: true
   type: hysteria2
   udp: true
@@ -175,9 +175,9 @@ proxies:
   name: 🇭🇰 香港05
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 7d9f012e-tnyao0-tpkh0c-1r7od.pccw6.hyhuawei.com
+  server: bc4e3ae7-tob9c0-tpkh0c-1r7od.pccw6.hyhuawei.com
   skip-cert-verify: true
-  sni: 7d9f012e-tnyao0-tpkh0c-1r7od.pccw6.hyhuawei.com
+  sni: bc4e3ae7-tob9c0-tpkh0c-1r7od.pccw6.hyhuawei.com
   type: tuic
   uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - alpn:
@@ -185,7 +185,7 @@ proxies:
   name: 🇭🇰 香港06
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: ea9c601d-tnyao0-tpkh0c-1r7od.nw4.hyhuawei.com
+  server: 4ab3beeb-tob9c0-tpkh0c-1r7od.nw4.hyhuawei.com
   skip-cert-verify: true
   type: hysteria2
   udp: true
@@ -195,50 +195,50 @@ proxies:
   name: 🇭🇰香港04
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 20972070-tnyao0-tpkh0c-1r7od.pccw3.hyhuawei.com
+  server: 186b661d-tob9c0-tpkh0c-1r7od.pccw3.hyhuawei.com
   skip-cert-verify: true
-  sni: 20972070-tnyao0-tpkh0c-1r7od.pccw3.hyhuawei.com
+  sni: 186b661d-tob9c0-tpkh0c-1r7od.pccw3.hyhuawei.com
   type: tuic
   uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇬🇧 英国
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 12f4f814-tnyao0-tpkh0c-1r7od.uk.oshuawei.com
+  server: c94fd216-tob9c0-tpkh0c-1r7od.uk.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇩🇪 德国
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 34d77aad-tnyao0-tpkh0c-1r7od.de3.oshuawei.com
+  server: 5b05ea7b-tob9c0-tpkh0c-1r7od.de3.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇫🇷 法国
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 98d4318e-tnyao0-tpkh0c-1r7od.fr.oshuawei.com
+  server: 510fe2dd-tob9c0-tpkh0c-1r7od.fr.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇲🇾 马来西亚
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 5228
-  server: 50b6bd16-tnyao0-tpkh0c-1r7od.my.oshuawei.com
+  server: 0144b5b4-tob9c0-tpkh0c-1r7od.my.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇹🇭 泰国[CM]
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 32232
-  server: f9891eda-tnyao0-tpkh0c-1r7od.id.oshuawei.com
+  server: b567a8c6-tob9c0-tpkh0c-1r7od.id.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇮🇩 印尼
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 5228
-  server: f9891eda-tnyao0-tpkh0c-1r7od.id.oshuawei.com
+  server: b567a8c6-tob9c0-tpkh0c-1r7od.id.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
@@ -248,57 +248,57 @@ proxies:
   name: 🇯🇵 日本5
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 2e1e6092-tnyao0-tpkh0c-1r7od.jp5.hyhuawei.com
+  server: 5c1fd073-tob9c0-tpkh0c-1r7od.jp5.hyhuawei.com
   skip-cert-verify: true
-  sni: 2e1e6092-tnyao0-tpkh0c-1r7od.jp5.hyhuawei.com
+  sni: 5c1fd073-tob9c0-tpkh0c-1r7od.jp5.hyhuawei.com
   type: tuic
   uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇯🇵 日本
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: ce4753a4-tnyao0-tpkh0c-1r7od.jp.oshuawei.com
+  server: 379b3e0c-tob9c0-tpkh0c-1r7od.jp.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇯🇵 日本[CM]
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 5228
-  server: 6b2968af-tnyao0-tpkh0c-1r7od.jp2.oshuawei.com
+  server: 4306f2cc-tob9c0-tpkh0c-1r7od.jp2.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇨🇳 台湾
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 68cfc3fe-tnyao0-tpkh0c-1r7od.tw3.p5pv.com
+  server: ec91553b-tob9c0-tpkh0c-1r7od.tw3.p5pv.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇰🇷韩國
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 31433
-  server: ce0eb509-tnyao0-tpkh0c-1r7od.kr.oshuawei.com
+  server: a688cf71-tob9c0-tpkh0c-1r7od.kr.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇸🇬 新加坡3
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 71a516b6-tnyao0-tpkh0c-1r7od.sg3.oshuawei.com
+  server: b6a7bfba-tob9c0-tpkh0c-1r7od.sg3.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇸🇬 新加坡[CM]
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 5228
-  server: 8d12cb24-tnyao0-tpkh0c-1r7od.sg2.oshuawei.com
+  server: e77e5a2d-tob9c0-tpkh0c-1r7od.sg2.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - name: 🇸🇬 新加坡
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 6bc9080e-tnyao0-tpkh0c-1r7od.sg.oshuawei.com
+  server: c2b2f3b6-tob9c0-tpkh0c-1r7od.sg.oshuawei.com
   tls: true
   type: http
   username: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
@@ -308,7 +308,7 @@ proxies:
   name: 🇸🇬 新加坡07
   password: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   port: 443
-  server: 42617301-tnyao0-tpkh0c-1r7od.sg7.hyhuawei.com
+  server: 261de143-tob9c0-tpkh0c-1r7od.sg7.hyhuawei.com
   skip-cert-verify: true
   type: hysteria2
   udp: true

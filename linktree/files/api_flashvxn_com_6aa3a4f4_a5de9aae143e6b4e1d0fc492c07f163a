@@ -60,18 +60,18 @@ proxy-groups:
     interval: 300
     proxies:
       - TG-HK-6(https)[expired]
+      - DG-HK-6(https)[expired]
       - UG-HK-6(https)[expired]
       - IG-HK-6(https)[expired]
-      - DG-HK-6(https)[expired]
   - name: 🇨🇳 台湾自动
     type: fallback
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     proxies:
-      - TG-TW-6(https)[expired]
-      - UG-TW-6(https)[expired]
-      - DG-TW-6(https)[expired]
       - IG-TW-6(https)[expired]
+      - DG-TW-6(https)[expired]
+      - UG-TW-6(https)[expired]
+      - TG-TW-6(https)[expired]
   - name: 🇸🇬 新加坡自动
     type: fallback
     url: https://cp.cloudflare.com/generate_204
@@ -86,19 +86,19 @@ proxy-groups:
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     proxies:
-      - DG-JP-6(https)[expired]
-      - IG-JP-6(https)[expired]
       - TG-JP-6(https)[expired]
       - UG-JP-6(https)[expired]
+      - DG-JP-6(https)[expired]
+      - IG-JP-6(https)[expired]
   - name: 🇺🇸 美国自动
     type: fallback
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     proxies:
       - UG-US-6(https)[expired]
+      - DG-US-6(https)[expired]
       - TG-US-6(https)[expired]
       - IG-US-6(https)[expired]
-      - DG-US-6(https)[expired]
 proxies:
   - name: DG-HK-6(https)[expired]
     username: b1ad184b80

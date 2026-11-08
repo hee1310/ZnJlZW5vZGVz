@@ -15,7 +15,7 @@
     <title>qu.ax - Simple & Private File Hosting</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <script data-cfasync="false" async type="text/javascript" src="//du.mussedcraal.com/s3L2F1sWLpKYjRT/139448"></script>
+    <script data-cfasync="false" async type="text/javascript" src="//ex.bitsfagald.com/swIl5tR9pTiTTbU/139448"></script>
     <script async defer src="https://tianji.1337.la/tracker.js" data-website-id="cm4krj4fm000187p2belzg55x"></script>
     <style>
         body {

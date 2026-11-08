@@ -1,7 +1,7 @@
 # GLaDOS
 # GLobal Local and Destination Operating System
 # Clash Config File for Mozilla/5.0 (compatible; GitHubActions/1.0)-384170-0-0
-# Generated at Sun Nov 01 2026 05:46:47 GMT+0000 (Coordinated Universal Time) by Aperture Science
+# Generated at Sun Nov 08 2026 05:46:27 GMT+0000 (Coordinated Universal Time) by Aperture Science
 # ░██████╗░██╗░░░░░░█████╗░██████╗░░█████╗░░██████╗
 # ██╔════╝░██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔════╝
 # ██║░░██╗░██║░░░░░███████║██║░░██║██║░░██║╚█████╗░
@@ -18,6 +18,10 @@ allow-lan: false
 
 # Rule / Global/ DIRECT (default is Rule)
 mode: rule
+
+# remember manual proxy-group selections across restarts
+profile:
+  store-selected: true
 
 # set log level to stdout (default is info)
 # info / warning / error / debug
@@ -57,458 +61,7 @@ dns:
 proxies:
   - name: Fast-B1-1
     type: ss
-    server: 26af988.r9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.it:57468
-  - name: Fast-B1-2
-    type: ss
-    server: 26af988.r9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.lv:57468
-  - name: Fast-B1-3
-    type: ss
-    server: 26af988.r7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.io:57468
-  - name: Fast-B1-4
-    type: ss
-    server: 26af988.r7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.hu:57468
-  - name: Fast-B1-5
-    type: ss
-    server: 26af988.r8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.ee:57468
-  - name: Fast-B1-6
-    type: ss
-    server: 26af988.r8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.hu:57468
-  - name: Fast-B1-7
-    type: ss
-    server: 26af988.r6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.jp:57468
-  - name: Fast-B1-8
-    type: ss
-    server: 26af988.r6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.epicgames.com:57468
-  - name: Balancer-B1-1
-    type: ss
-    server: 26af988.b9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cl:57468
-  - name: Balancer-B1-2
-    type: ss
-    server: 26af988.b9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cl:57468
-  - name: Balancer-B1-3
-    type: ss
-    server: 26af988.b7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.fi:57468
-  - name: Balancer-B1-4
-    type: ss
-    server: 26af988.b7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.it:57468
-  - name: Balancer-B1-5
-    type: ss
-    server: 26af988.b8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.eu:57468
-  - name: Balancer-B1-6
-    type: ss
-    server: 26af988.b8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.eu:57468
-  - name: Balancer-B1-7
-    type: ss
-    server: 26af988.b6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.net:57468
-  - name: Balancer-B1-8
-    type: ss
-    server: 26af988.b6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.be:57468
-  - name: US-X1-1
-    type: ss
-    server: 26af988.u9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.eu:57468
-  - name: US-X1-2
-    type: ss
-    server: 26af988.u9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cat:57468
-  - name: US-X1-3
-    type: ss
-    server: 26af988.u7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.be:57468
-  - name: US-X1-4
-    type: ss
-    server: 26af988.u7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nvidia.com:57468
-  - name: US-X1-5
-    type: ss
-    server: 26af988.u8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.de:57468
-  - name: US-X1-6
-    type: ss
-    server: 26af988.u8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.ge:57468
-  - name: US-X1-7
-    type: ss
-    server: 26af988.u6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.md:57468
-  - name: US-X1-8
-    type: ss
-    server: 26af988.u6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.de:57468
-  - name: TW-X1-1
-    type: ss
-    server: 26af988.t9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.io:57468
-  - name: TW-X1-2
-    type: ss
-    server: 26af988.t9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.fi:57468
-  - name: TW-X1-3
-    type: ss
-    server: 26af988.t7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.be:57468
-  - name: TW-X1-4
-    type: ss
-    server: 26af988.t7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.io:57468
-  - name: TW-X1-5
-    type: ss
-    server: 26af988.t8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.is:57468
-  - name: TW-X1-6
-    type: ss
-    server: 26af988.t8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.dk:57468
-  - name: TW-X1-7
-    type: ss
-    server: 26af988.t6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.com:57468
-  - name: TW-X1-8
-    type: ss
-    server: 26af988.t6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.jp:57468
-  - name: JP-X1-1
-    type: ss
-    server: 26af988.j9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.de:57468
-  - name: JP-X1-2
-    type: ss
-    server: 26af988.j9.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.dk:57468
-  - name: JP-X1-3
-    type: ss
-    server: 26af988.j7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.com:57468
-  - name: JP-X1-4
-    type: ss
-    server: 26af988.j7.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cl:57468
-  - name: JP-X1-5
-    type: ss
-    server: 26af988.j8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.net:57468
-  - name: JP-X1-6
-    type: ss
-    server: 26af988.j8.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cat:57468
-  - name: JP-X1-7
-    type: ss
-    server: 26af988.j6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.lt:57468
-  - name: JP-X1-8
-    type: ss
-    server: 26af988.j6.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.com:57468
-  - name: US-Fixed-01
-    type: ss
-    server: 26af988.q1.glados-config.com
-    port: 2377
-    udp: false
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.es:57468
-  - name: US-Fixed-02
-    type: ss
-    server: 26af988.q2.glados-config.com
+    server: 26af988.r9.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -517,9 +70,10 @@ proxies:
     plugin-opts:
       mode: tls
       host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.fastly.net:57468
-  - name: US-Fixed-03
+    client-fingerprint: chrome
+  - name: Fast-B1-2
     type: ss
-    server: 26af988.q3.glados-config.com
+    server: 26af988.r9.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -527,10 +81,11 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.md:57468
-  - name: TW-Fixed-01
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.ge:57468
+    client-fingerprint: chrome
+  - name: Fast-B1-3
     type: ss
-    server: 26af988.m1.glados-config.com
+    server: 26af988.r7.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -538,10 +93,11 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.de:57468
-  - name: TW-Fixed-02
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.blizzard.com:57468
+    client-fingerprint: chrome
+  - name: Fast-B1-4
     type: ss
-    server: 26af988.m2.glados-config.com
+    server: 26af988.r7.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -549,10 +105,11 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.eu:57468
-  - name: TW-Fixed-03
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.com:57468
+    client-fingerprint: chrome
+  - name: Fast-B1-5
     type: ss
-    server: 26af988.m3.glados-config.com
+    server: 26af988.r8.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -560,10 +117,11 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.jp:57468
-  - name: JP-Fixed-01
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nvidia.com:57468
+    client-fingerprint: chrome
+  - name: Fast-B1-6
     type: ss
-    server: 26af988.e1.glados-config.com
+    server: 26af988.r8.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -571,10 +129,71 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cl:57468
-  - name: JP-Fixed-02
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.lu:57468
+    client-fingerprint: chrome
+  - name: Fast-B1-7
     type: ss
-    server: 26af988.e2.glados-config.com
+    server: 26af988.r6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cat:57468
+    client-fingerprint: chrome
+  - name: Fast-B1-8
+    type: ss
+    server: 26af988.r6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.mozilla.net:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-1
+    type: ss
+    server: 26af988.b9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cat:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-2
+    type: ss
+    server: 26af988.b9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.net:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-3
+    type: ss
+    server: 26af988.b7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.es:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-4
+    type: ss
+    server: 26af988.b7.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -583,9 +202,10 @@ proxies:
     plugin-opts:
       mode: tls
       host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.eu:57468
-  - name: JP-Fixed-03
+    client-fingerprint: chrome
+  - name: Balancer-B1-5
     type: ss
-    server: 26af988.e3.glados-config.com
+    server: 26af988.b8.glados.dnsbot.net
     port: 2377
     udp: false
     cipher: chacha20-ietf-poly1305
@@ -593,13 +213,447 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.net:57468
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.eu:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-6
+    type: ss
+    server: 26af988.b8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.be:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-7
+    type: ss
+    server: 26af988.b6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.cl:57468
+    client-fingerprint: chrome
+  - name: Balancer-B1-8
+    type: ss
+    server: 26af988.b6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.jp:57468
+    client-fingerprint: chrome
+  - name: US-X1-1
+    type: ss
+    server: 26af988.u9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.fastly.net:57468
+    client-fingerprint: chrome
+  - name: US-X1-2
+    type: ss
+    server: 26af988.u9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.mozilla.net:57468
+    client-fingerprint: chrome
+  - name: US-X1-3
+    type: ss
+    server: 26af988.u7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.md:57468
+    client-fingerprint: chrome
+  - name: US-X1-4
+    type: ss
+    server: 26af988.u7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.epicgames.com:57468
+    client-fingerprint: chrome
+  - name: US-X1-5
+    type: ss
+    server: 26af988.u8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.lt:57468
+    client-fingerprint: chrome
+  - name: US-X1-6
+    type: ss
+    server: 26af988.u8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.com:57468
+    client-fingerprint: chrome
+  - name: US-X1-7
+    type: ss
+    server: 26af988.u6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.is:57468
+    client-fingerprint: chrome
+  - name: US-X1-8
+    type: ss
+    server: 26af988.u6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.fastly.net:57468
+    client-fingerprint: chrome
+  - name: TW-X1-1
+    type: ss
+    server: 26af988.t9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.fi:57468
+    client-fingerprint: chrome
+  - name: TW-X1-2
+    type: ss
+    server: 26af988.t9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.xboxlive.com:57468
+    client-fingerprint: chrome
+  - name: TW-X1-3
+    type: ss
+    server: 26af988.t7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.ee:57468
+    client-fingerprint: chrome
+  - name: TW-X1-4
+    type: ss
+    server: 26af988.t7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.com:57468
+    client-fingerprint: chrome
+  - name: TW-X1-5
+    type: ss
+    server: 26af988.t8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.es:57468
+    client-fingerprint: chrome
+  - name: TW-X1-6
+    type: ss
+    server: 26af988.t8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.es:57468
+    client-fingerprint: chrome
+  - name: TW-X1-7
+    type: ss
+    server: 26af988.t6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.lt:57468
+    client-fingerprint: chrome
+  - name: TW-X1-8
+    type: ss
+    server: 26af988.t6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.epicgames.com:57468
+    client-fingerprint: chrome
+  - name: JP-X1-1
+    type: ss
+    server: 26af988.j9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.jp:57468
+    client-fingerprint: chrome
+  - name: JP-X1-2
+    type: ss
+    server: 26af988.j9.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.hu:57468
+    client-fingerprint: chrome
+  - name: JP-X1-3
+    type: ss
+    server: 26af988.j7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.de:57468
+    client-fingerprint: chrome
+  - name: JP-X1-4
+    type: ss
+    server: 26af988.j7.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.net:57468
+    client-fingerprint: chrome
+  - name: JP-X1-5
+    type: ss
+    server: 26af988.j8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.io:57468
+    client-fingerprint: chrome
+  - name: JP-X1-6
+    type: ss
+    server: 26af988.j8.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.com:57468
+    client-fingerprint: chrome
+  - name: JP-X1-7
+    type: ss
+    server: 26af988.j6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.epicgames.com:57468
+    client-fingerprint: chrome
+  - name: JP-X1-8
+    type: ss
+    server: 26af988.j6.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.hu:57468
+    client-fingerprint: chrome
+  - name: US-Fixed-01
+    type: ss
+    server: 26af988.q1.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.de:57468
+    client-fingerprint: chrome
+  - name: US-Fixed-02
+    type: ss
+    server: 26af988.q2.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.lt:57468
+    client-fingerprint: chrome
+  - name: US-Fixed-03
+    type: ss
+    server: 26af988.q3.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.md:57468
+    client-fingerprint: chrome
+  - name: TW-Fixed-01
+    type: ss
+    server: 26af988.m1.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.jp:57468
+    client-fingerprint: chrome
+  - name: TW-Fixed-02
+    type: ss
+    server: 26af988.m2.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.ch:57468
+    client-fingerprint: chrome
+  - name: TW-Fixed-03
+    type: ss
+    server: 26af988.m3.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.de:57468
+    client-fingerprint: chrome
+  - name: JP-Fixed-01
+    type: ss
+    server: 26af988.e1.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nvidia.com:57468
+    client-fingerprint: chrome
+  - name: JP-Fixed-02
+    type: ss
+    server: 26af988.e2.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.microsoft.com:57468
+    client-fingerprint: chrome
+  - name: JP-Fixed-03
+    type: ss
+    server: 26af988.e3.glados.dnsbot.net
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 26af988.xetfj3at5lsz7adg45ay4wtyd2.nintendo.com:57468
+    client-fingerprint: chrome
 
 proxy-groups:
   - name: Default Proxy
     type: "select"
     proxies:
       - Auto
+      - DIRECT
       - Streaming
       - US-Balancer
       - TW-Balancer
@@ -712,6 +766,7 @@ proxy-groups:
       - TW-Balancer
       - JP-Balancer
       - Auto
+      - REJECT
   - name: OpenAI
     type: "select"
     proxies:
@@ -727,6 +782,7 @@ proxy-groups:
       - JP-Fixed-01
       - JP-Fixed-02
       - JP-Fixed-03
+      - REJECT
   - name: Claude
     type: "select"
     proxies:
@@ -742,6 +798,7 @@ proxy-groups:
       - JP-Fixed-01
       - JP-Fixed-02
       - JP-Fixed-03
+      - REJECT
   - name: SpaceX
     type: "select"
     proxies:
@@ -867,6 +924,60 @@ proxy-groups:
       - JP-Fixed-01
       - JP-Fixed-02
       - JP-Fixed-03
+  - name: GLOBAL
+    type: "select"
+    default-selected: Auto
+    proxies:
+      - Auto
+      - DIRECT
+      - Default Proxy
+      - Streaming
+      - Google
+      - OpenAI
+      - Claude
+      - SpaceX
+      - Microsoft
+      - Steam
+      - Download
+      - US-Balancer
+      - TW-Balancer
+      - JP-Balancer
+      - US Fixed IP
+      - TW Fixed IP
+      - JP Fixed IP
+      - US-Fixed-01
+      - US-Fixed-02
+      - US-Fixed-03
+      - TW-Fixed-01
+      - TW-Fixed-02
+      - TW-Fixed-03
+      - JP-Fixed-01
+      - JP-Fixed-02
+      - JP-Fixed-03
+      - US-X1-1
+      - US-X1-2
+      - US-X1-3
+      - US-X1-4
+      - US-X1-5
+      - US-X1-6
+      - US-X1-7
+      - US-X1-8
+      - TW-X1-1
+      - TW-X1-2
+      - TW-X1-3
+      - TW-X1-4
+      - TW-X1-5
+      - TW-X1-6
+      - TW-X1-7
+      - TW-X1-8
+      - JP-X1-1
+      - JP-X1-2
+      - JP-X1-3
+      - JP-X1-4
+      - JP-X1-5
+      - JP-X1-6
+      - JP-X1-7
+      - JP-X1-8
 
 rules:
 # User custom rules + domain rules from unified service

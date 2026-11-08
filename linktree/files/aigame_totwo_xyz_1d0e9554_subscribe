@@ -1,41 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>totwo.xyz</title>
-    <meta content="NOW" name="expires">
-    <meta content="index, follow, all" name="GOOGLEBOT">
-    <meta content="index, follow, all" name="robots">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <style>
-        html, body, #partner, iframe
-        {
-            height:         100%;
-            width:          100%;
-            margin:         0;
-            padding:        0;
-            border:         0;
-            outline:        0;
-            font-size:      100%;
-            vertical-align: baseline;
-            background:     transparent;
-        }
+<!DOCTYPE html><html lang="en"  data-adblockkey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANnylWw2vLY4hUn9w06zQKbhKBfvjFUCsdFlb6TdQhxb9RXWXuI4t31c+o8fYOv/s8q1LGPga3DE1L/tHU4LENMCAwEAAQ==_fc9J1/UdJkV2UTWxb+QFIf8xT4QAumd/70yRKL4CAXkgxzE/UArRlhWI/v7ip0rKowUgnOKR0Nnak7s8/uES0Q==><head><meta charset="utf-8"><title>totwo.xyz&nbsp;-&nbsp;This website is for sale!&nbsp;-&nbsp;totwo Resources and Information.</title><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"><meta name="description" content="This website is for sale! totwo.xyz is your first and best source for information about totwo. Here you will also find topics relating to issues of general interest. We hope you find what you are looking for!"><link
+        rel="icon"
+        type="image/png"
+        href="//img.sedoparking.com/templates/logos/sedo_logo.png"
+/></head><body><img width="16" height="16" src="https://img.sedoparking.com/images/js_preloader.gif" alt="" /><script type="text/javascript">
+    function doRedirect() {
+        const request = new XMLHttpRequest();
+        request.open('GET', "\/\/aigame.totwo.xyz/search/tsc.php?ses\u003DogcgSFbQFTW9_cthFjXJSVg6LT\u002DFTzwFpt\u002DVWEDP\u002DrpdQeFJYhBS0dGzoeK1DG5QsmoWClbhOY1DZgE7vdI446W2bZSXnCPcAuUzDaB0fpRI5eBNnidLkHfkta6R8bBY6idCmN25ZfADjozV3hEgbw9jxLC9xx3JVUUD5ys_UTQqH12N0i9rsNIibdzsYBpwDMz_nrivKzUBREeK0fsOFfDShe6Dmh3CAZG1MvT6QpkwQ5go6e3aWVaQAmEq00tq9ojUQvRoTzY516_IevXYpy1rLKdoROTui8IsKssk_AphMFgvCBbmXchEosF85uZhWG_WI1ZNcGFnM0NwQYZbDhEuxAGYg08ZFIvIXHnnC4DYk3\u002D4xI7UPffTKKASLo\u0026cv\u003D2");
+        request.send();
+                request.onreadystatechange = function () {
+            if (request.readyState === 4 && request.status === 200) {
+                window.location = "\/\/aigame.totwo.xyz\/search\/redirect.php\u003Ff\u003Dhttp\u00253A\u00252F\u00252Fresultlookup.com\u00253Fdn\u00253Dtotwo.xyz\u002526sksubid\u00253D253786\u002526_slsen\u00253D1\u0026v\u003DogcJC4F0P5_e9ocf8\u002DWP2FBXrT69U0YgO3s3d3kNn9zvqMaH\u002DTu14o7aUx8g3SRwCQeoEKsEQ7KQiAcGUbB1\u002DkWhU3k7Ubdm\u002D_4t0Io9HNwuwspKnV_mAOYLIJcqRuQfDF5VMODG3HT8pqZ3gXq9a98D7D1Ey3Zu07yr9n4yeltA6H\u002DHFE4SW0BzRG5gnQk0Ll3Mfl457qT\u0026l\u003DogcskKsToAEuWLEzZzCHiLLh9_h289xURV0TXdS0UNFTvmOQXK4LXyAd4MhYBKh4FP3RClB8K3kdsaAuZ9kTufSNdvyHYFfplubfLp4lUccocKOmq320qSzotT\u002DCsusqaE4n3\u002DPDt3wf2UKQypjBKYyoWgG6jcA0yRCbJFLWPnFqcrxmlchMYNtrY2b6W2a6qXRcH41\u002D3tJcrdvrU72Uw6dySKVFN06yVPH_U6uojLj\u002Dx6lMEcPI1srDCQkeVU6IzdZy2SLiUG0x7hW1938v4xhY5hdHu7m\u002DyX7_hby6fQBYE8wrxLhbD4xhhH98DYAbGlqxaN64MigaorVtKUXp3\u002D6Bbppf2xFu3Kmxg5McC67XwOMJCUeW4G_z4J5QNp_nTcojGM27\u002DIToBZNKn9mFbQPoLuyTSSVZ4wvFqqICdURsywt6J5g2PAIgvpIdj_7eZGaWvW1DqyM\u002Dqgh8KsGbQE0R4oZDviHUs5Jf618CCz6TpF_55zFFoTbfYBFnh3\u002DA9oW4W5AIRr4xHvazOUUYmhfiupfwFM4eQKBdl9Z0ig2wmNM30ql61pdBrphald_FrKo5kWJHsENAsdXolf86skUACmtpg_qquq8caC5YmX6wgbg1Y5WZGk1CU5sIAqaboln5l\u002DeImjligEQ2BcOev\u002DKO5hi7OUW7\u002DMwWhDr3vrhzjFV82l8ZG1vxnWOBkepgQ7uLNJxSaI";
+            }
+        };
+            }
 
-        body
-        {
-            overflow: hidden;
-        }
-    </style>
-</head>
-<body>
-
-<div id="partner"></div>
-
-<script>
-    document.write(
-        '<script src="\/\/sedoparking.com/frmpark/totwo.xyz/sedopark/park.js">' +
-        '<\/script>'
-    );
-</script>
-</body>
-</html>
+    doRedirect();
+</script></body></html>

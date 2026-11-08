@@ -2525,7 +2525,18 @@ rules:
   - DOMAIN-SUFFIX,x.ai,🧲 AI
   - DOMAIN-SUFFIX,grok.com,🧲 AI
   - DOMAIN-SUFFIX,claude.com,🧲 AI
-  
+# Apple Intelligence
+  - DOMAIN-SUFFIX, gateway.icloud.com,🧲 AI
+  - DOMAIN-SUFFIX, apple-relay.apple.com,🧲 AI
+  - DOMAIN-SUFFIX, apple-relay.fastly-edge.com,🧲 AI
+  - DOMAIN-SUFFIX, apple-relay.cloudflare.com,🧲 AI
+  - DOMAIN-SUFFIX, guzzoni.apple.com,🧲 AI
+  - DOMAIN-SUFFIX, cp4.cloudflare.com,🧲 AI
+  - DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com,🧲 AI
+  - DOMAIN-SUFFIX, smoot.apple.com,🧲 AI
+  - DOMAIN-SUFFIX, apple-relay.akamaized.net,🧲 AI
+  - DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net,🧲 AI
+  - DOMAIN-SUFFIX, api-siri-prod.apple.com,🧲 AI  
   
   - DOMAIN,audio4-ak-spotify-com.akamaized.net,🎵 Spotify
   - DOMAIN,cdn-spotify-experiments.conductrics.com,🎵 Spotify

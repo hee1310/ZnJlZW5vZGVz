@@ -30,13 +30,13 @@ dns:
     - tls://1.12.12.12
     - tls://120.53.53.53
 proxies:
-  - {name: 🇯🇵 免费-日本1-Ver.7, server: 9d8bm9k-g06.jp01-nn-vm0.entry.fr0528.art, port: 21586, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 免费-日本2-Ver.8, server: 2debm1j-g06.jp02-e3-vm0.entry.fr0528.art, port: 11778, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 免费-日本3-Ver.7, server: 2g5du1s-g06.jp03-j7-vm0.entry.fr0528.art, port: 21586, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 免费-日本4-Ver.8, server: 9484u1k-g06.jp04-1d-vm0.entry.fr0528.art, port: 449, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 免费-日本5-Ver.9, server: 2dedmdk-g06.jp05-h6-vm0.entry.fr0528.art, port: 46487, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 免费-日本6-Ver.8, server: 9gndyds-g06.jp06-jz-vm0.entry.fr0528.art, port: 28788, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 免费-日本7-Ver.2, server: 24549ds-g06.jp07-sh-vm0.entry.fr0528.art, port: 28788, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本1-Ver.7, server: 9gn9m9s-g06.jp01-nn-vm0.entry.fr0528.art, port: 21586, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本2-Ver.8, server: 2g84y9j-g06.jp02-e3-vm0.entry.fr0528.art, port: 11778, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本3-Ver.7, server: 2g8b9dj-g06.jp03-j7-vm0.entry.fr0528.art, port: 21586, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本4-Ver.8, server: 2484mdk-g06.jp04-1d-vm0.entry.fr0528.art, port: 449, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本5-Ver.9, server: 2d8dm1j-g06.jp05-h6-vm0.entry.fr0528.art, port: 46487, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本6-Ver.8, server: lg8dm1s-g06.jp06-jz-vm0.entry.fr0528.art, port: 28788, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 免费-日本7-Ver.2, server: 2d8bu9j-g06.jp07-sh-vm0.entry.fr0528.art, port: 28788, type: vmess, uuid: 0628f524-c34d-3ab2-b361-016ed6eb5b66, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true}
 proxy-groups:
   - name: 🔰 选择节点
     type: select
