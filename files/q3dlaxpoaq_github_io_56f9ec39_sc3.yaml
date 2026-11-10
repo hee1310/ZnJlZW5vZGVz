@@ -1,0 +1,318 @@
+allow-lan: false
+dns:
+  direct-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+  - localhost
+  - +.localhost
+  - +.lan
+  - +.local
+  - +.home.arpa
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  ipv6: true
+  listen: 127.0.0.1:1053
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
+  prefer-h3: false
+  proxy-server-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  respect-rules: true
+  use-hosts: true
+  use-system-hosts: true
+ipv6: true
+log-level: warning
+mixed-port: 7890
+mode: rule
+proxies:
+- cipher: aes-256-gcm
+  name: 🇮🇹_IT_意大利_IPV4
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.54
+  skip-cert-verify: false
+  tls: false
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇮🇹_IT_意大利_IPV4 (2)
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.63
+  skip-cert-verify: false
+  tls: false
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇮🇹_IT_意大利_IPV4 (3)
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.90
+  skip-cert-verify: false
+  tls: false
+  type: ss
+- cipher: chacha20-ietf
+  name: 🇳🇱_NL_荷兰_IPV4
+  obfs: tls1.2_ticket_auth
+  password: dongtaiwang.com
+  port: 33336
+  protocol: auth_chain_a
+  server: 109.104.153.43
+  type: ssr
+- name: v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.8.83
+  servername: www.calmlunch.com
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: 🇫🇷_FR_法国_IPV4
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.67.231.254
+  servername: www.calmlunch.com
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- client-fingerprint: chrome
+  name: 🇺🇸_US_美国_IPV4
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.66.0.172
+  servername: www.cordweave.com
+  skip-cert-verify: true
+  sni: www.cordweave.com
+  tls: true
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇰🇷_KR_韩国_IPV4
+  password: 3637190e-4ce3-41cd-9425-f5676345b38c
+  port: 12308
+  server: 3.34.91.121
+  servername: kr02.ulifeai.com
+  skip-cert-verify: true
+  sni: kr02.ulifeai.com
+  tls: true
+  type: trojan
+- name: 🇺🇸_US_美国_IPV4 (2)
+  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
+  port: 443
+  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  servername: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  skip-cert-verify: true
+  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  tls: true
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: edge.bookmai.com
+  servername: mother-earth.fyi
+  skip-cert-verify: false
+  sni: mother-earth.fyi
+  tls: true
+  type: vless
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 9.247.23.209
+  servername: mother-earth.fyi
+  skip-cert-verify: false
+  sni: mother-earth.fyi
+  tls: true
+  type: vless
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+- cipher: rc4-md5
+  name: 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  obfs: plain
+  obfs-param: 6f5218522.douyin.com
+  password: di15PV
+  port: 27561
+  protocol: auth_aes128_md5
+  protocol-param: 218522:0hfCJk
+  server: api.meituan88.com
+  type: ssr
+- client-fingerprint: chrome
+  name: 🇩🇪_DE_德国_IPV4
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.80.111.7
+  servername: www.calmlunch.com
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  ws-opts:
+    path: /assignment
+proxy-groups:
+- name: 🚀 节点选择
+  proxies:
+  - ♻️ 自动选择
+  - DIRECT
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  type: select
+- interval: 300
+  name: ♻️ 自动选择
+  proxies:
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  tolerance: 50
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+- name: 🌍 国外媒体
+  proxies:
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🎯 全球直连
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  type: select
+- name: 📲 电报信息
+  proxies:
+  - 🚀 节点选择
+  - 🎯 全球直连
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  type: select
+- name: Ⓜ️ 微软服务
+  proxies:
+  - 🎯 全球直连
+  - 🚀 节点选择
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  type: select
+- name: 🍎 苹果服务
+  proxies:
+  - 🚀 节点选择
+  - 🎯 全球直连
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  type: select
+- name: 🎯 全球直连
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  type: select
+- name: 🛑 全球拦截
+  proxies:
+  - REJECT
+  - DIRECT
+  type: select
+- name: 🍃 应用净化
+  proxies:
+  - REJECT
+  - DIRECT
+  type: select
+- name: 🐟 漏网之鱼
+  proxies:
+  - 🚀 节点选择
+  - 🎯 全球直连
+  - ♻️ 自动选择
+  - 🇮🇹_IT_意大利_IPV4
+  - 🇮🇹_IT_意大利_IPV4 (2)
+  - 🇮🇹_IT_意大利_IPV4 (3)
+  - 🇳🇱_NL_荷兰_IPV4
+  - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+  - 🇫🇷_FR_法国_IPV4
+  - 🇺🇸_US_美国_IPV4
+  - 🇰🇷_KR_韩国_IPV4
+  - 🇺🇸_US_美国_IPV4 (2)
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
+  - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  type: select

@@ -1,0 +1,1228 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: silent
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://doh.dns.sb/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.twnic.tw/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - name: 🇭🇰 香港 01
+    type: vmess
+    server: 47.83.170.100
+    port: 8080
+    udp: true
+    uuid: 83f357da-c5b3-496a-bf7a-dac72d0a3a76
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 02
+    type: vmess
+    server: 47.239.31.30
+    port: 8080
+    udp: true
+    uuid: 16929a39-100f-490a-a62c-1bbf5dc1715d
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 03
+    type: vmess
+    server: 47.83.208.87
+    port: 8080
+    udp: true
+    uuid: fe7d680d-8ea7-4686-8cb3-b8580f7f51da
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 04
+    type: vmess
+    server: 47.83.222.145
+    port: 8080
+    udp: true
+    uuid: ecc32aae-a082-4737-b399-f032f1ccf699
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 05
+    type: vmess
+    server: 47.76.140.110
+    port: 8080
+    udp: true
+    uuid: 0f4ef2a7-75b0-44ea-9010-9a3d8e955608
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 06
+    type: vmess
+    server: 47.83.225.131
+    port: 8080
+    udp: true
+    uuid: 353a1b7f-8680-44ee-b6e6-4e33b6569016
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 07
+    type: vmess
+    server: 47.239.48.194
+    port: 8080
+    udp: true
+    uuid: f398f1d5-854a-41df-a38a-82c983f01d13
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 08
+    type: vmess
+    server: 47.239.233.39
+    port: 8080
+    udp: true
+    uuid: e7a15252-a98b-43cb-b051-212e5ba055d4
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 09
+    type: vmess
+    server: 47.239.48.208
+    port: 8080
+    udp: true
+    uuid: 357b553c-afa2-4a09-afd8-f26d275673f2
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 10
+    type: vmess
+    server: 8.218.34.179
+    port: 8080
+    udp: true
+    uuid: b8a604ad-8b1a-46eb-a28c-59cf57b6a4b2
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 11
+    type: vmess
+    server: 47.239.31.143
+    port: 8080
+    udp: true
+    uuid: 2658158b-c7b2-45d1-86ec-bcb21df051f7
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 12
+    type: vmess
+    server: 47.239.15.132
+    port: 8080
+    udp: true
+    uuid: f12e9063-2063-4500-886d-5d12cbad150c
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 13
+    type: vmess
+    server: 47.243.109.243
+    port: 8080
+    udp: true
+    uuid: 88c3a642-dc05-426a-8633-e3e0a6a1d32a
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 14
+    type: vmess
+    server: 8.217.223.241
+    port: 8080
+    udp: true
+    uuid: 1dd8eb7d-a955-4dd8-a076-e1d5d1e0fe89
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 15
+    type: vmess
+    server: 47.239.161.18
+    port: 8080
+    udp: true
+    uuid: 4638209d-0e7c-4ad1-8c86-73a3953fba6e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 16
+    type: vmess
+    server: 8.217.201.102
+    port: 8080
+    udp: true
+    uuid: 602a4353-b1ab-4633-b1ad-e26fc9bf5524
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 17
+    type: vmess
+    server: 47.83.1.97
+    port: 8080
+    udp: true
+    uuid: 80d223cd-9e27-43cd-8540-59da12b7fe6e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 18
+    type: vmess
+    server: 47.239.248.15
+    port: 8080
+    udp: true
+    uuid: 1159c36a-38c4-4398-94cf-ac2bf4b0baba
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 19
+    type: vmess
+    server: 47.239.207.245
+    port: 8080
+    udp: true
+    uuid: 08be5b0e-1e42-41d0-8d45-af36f0628da4
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 20
+    type: vmess
+    server: 8.210.102.8
+    port: 8080
+    udp: true
+    uuid: c1605beb-04e3-4b96-9126-331702630d0a
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 21
+    type: vmess
+    server: 47.242.243.249
+    port: 8080
+    udp: true
+    uuid: 66e3de38-ba88-4018-95e0-6e8d512f11d0
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 22
+    type: vmess
+    server: 47.76.87.44
+    port: 8080
+    udp: true
+    uuid: 56810c27-1e87-43e8-8a90-ad3c24627446
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 23
+    type: vmess
+    server: 47.238.79.130
+    port: 8080
+    udp: true
+    uuid: dab6aad5-80f6-452c-9a8e-e030d26ce156
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇭🇰 香港 24
+    type: vmess
+    server: 47.83.206.84
+    port: 8080
+    udp: true
+    uuid: 84c2d30b-e4ba-484f-ba15-aeeb8d3c5401
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 01
+    type: vmess
+    server: 47.236.205.19
+    port: 8080
+    udp: true
+    uuid: 9ee40684-1cad-4584-a89d-bc4dd15b77dc
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 02
+    type: vmess
+    server: 47.237.87.47
+    port: 8080
+    udp: true
+    uuid: 4cbc7d32-2f30-4034-b4cb-4675b79e93e0
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 03
+    type: vmess
+    server: 47.236.120.122
+    port: 8080
+    udp: true
+    uuid: c8c44965-d92a-4819-8f3f-b03c6ce9201e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 04
+    type: vmess
+    server: 47.236.197.234
+    port: 8080
+    udp: true
+    uuid: 208dadf2-c55a-4539-939d-a0ce2399dcf4
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 05
+    type: vmess
+    server: 47.237.149.35
+    port: 8080
+    udp: true
+    uuid: 7b320dd4-04af-4f0e-a10d-324140182e58
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 06
+    type: vmess
+    server: 47.236.104.141
+    port: 8080
+    udp: true
+    uuid: 0a71adb5-5236-4336-bced-5ee58efbfbdf
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 07
+    type: vmess
+    server: 47.237.104.240
+    port: 8080
+    udp: true
+    uuid: 2ba91828-fd0a-4078-901d-3925b5fe2189
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 08
+    type: vmess
+    server: 47.237.133.201
+    port: 8080
+    udp: true
+    uuid: 981a7ad2-960e-42e7-ac29-d7391db0a1b6
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 09
+    type: vmess
+    server: 47.236.244.168
+    port: 8080
+    udp: true
+    uuid: a0866494-7354-430a-b6b3-4ac526ce7a50
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 10
+    type: vmess
+    server: 47.237.24.195
+    port: 8080
+    udp: true
+    uuid: 692c420c-23f9-4745-812c-eaeb617c0247
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 11
+    type: vmess
+    server: 8.222.206.47
+    port: 8080
+    udp: true
+    uuid: 1d6911c9-4ba5-4de4-a9d2-495c18ac1b45
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 12
+    type: vmess
+    server: 47.237.0.177
+    port: 8080
+    udp: true
+    uuid: 671848a3-e0da-4d47-a17e-6326cf3131e0
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 13
+    type: vmess
+    server: 8.219.68.19
+    port: 8080
+    udp: true
+    uuid: 6d71af49-dae9-4f8c-b016-7939943e633e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 14
+    type: vmess
+    server: 47.236.128.16
+    port: 8080
+    udp: true
+    uuid: 26496269-52c8-4911-9d58-3e8afd88ec6c
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 15
+    type: vmess
+    server: 47.237.147.12
+    port: 8080
+    udp: true
+    uuid: 6c0400dc-487b-42d7-baa3-3985b80c9f4e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 16
+    type: vmess
+    server: 47.245.86.214
+    port: 8080
+    udp: true
+    uuid: caa0dae0-923f-4145-9db4-7d0bd4c4ee33
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 17
+    type: vmess
+    server: 47.236.152.122
+    port: 8080
+    udp: true
+    uuid: 76f2b0f4-925d-45dd-bc34-03fcff296441
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 18
+    type: vmess
+    server: 47.236.64.216
+    port: 8080
+    udp: true
+    uuid: e8f70314-81b4-4ec2-9c88-e8582980585c
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 19
+    type: vmess
+    server: 8.222.166.72
+    port: 8080
+    udp: true
+    uuid: 089240e2-7a2f-45ff-a107-516fb721009e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 20
+    type: vmess
+    server: 47.237.16.63
+    port: 8080
+    udp: true
+    uuid: 8fe66650-fc21-4bc8-a8e4-1b9b3451f430
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 21
+    type: vmess
+    server: 47.236.19.110
+    port: 8080
+    udp: true
+    uuid: eb485caa-c03a-42d6-8ee8-34635913ff38
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 22
+    type: vmess
+    server: 47.236.164.0
+    port: 8080
+    udp: true
+    uuid: 8ecedf7e-a9bd-4de4-8f20-031aeb93631c
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 23
+    type: vmess
+    server: 47.237.143.183
+    port: 8080
+    udp: true
+    uuid: 98373372-a2e0-42d6-9221-bfa6f6687bc3
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇸🇬 新加坡 24
+    type: vmess
+    server: 47.237.68.57
+    port: 8080
+    udp: true
+    uuid: 6ce0df73-2108-4332-b890-dc3f6d236e56
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 01
+    type: vmess
+    server: 8.209.233.198
+    port: 8080
+    udp: true
+    uuid: 08ff8bb4-fd47-40bc-9326-aed9102da4f6
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 02
+    type: vmess
+    server: 8.211.140.139
+    port: 8080
+    udp: true
+    uuid: 57a0453e-2459-4510-b08f-1e0bee4be2b9
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 03
+    type: vmess
+    server: 8.216.1.103
+    port: 8080
+    udp: true
+    uuid: f842ecbf-310c-4fe1-b1d3-c0881566bb54
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 04
+    type: vmess
+    server: 47.245.42.64
+    port: 8080
+    udp: true
+    uuid: 53897e17-30b8-44f7-bd9d-e4bdc38d3648
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 05
+    type: vmess
+    server: 47.74.12.75
+    port: 8080
+    udp: true
+    uuid: 827f751b-f05c-4dee-8f73-7dce7d320e88
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 06
+    type: vmess
+    server: 8.216.13.21
+    port: 8080
+    udp: true
+    uuid: f67855c5-f679-49ad-921e-a68ec5a4cead
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 07
+    type: vmess
+    server: 8.216.20.166
+    port: 8080
+    udp: true
+    uuid: d4606563-c987-4fbe-b546-bb118da87521
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 08
+    type: vmess
+    server: 47.245.35.34
+    port: 8080
+    udp: true
+    uuid: 800c4b55-6f78-4fd7-9478-cc30547a91fd
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 09
+    type: vmess
+    server: 47.245.3.185
+    port: 8080
+    udp: true
+    uuid: 5f70cfea-e4f0-40a8-b57f-6bdd762c7a4b
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 10
+    type: vmess
+    server: 47.245.10.166
+    port: 8080
+    udp: true
+    uuid: 66857714-5456-462f-bc9e-2ff21877ddcb
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 11
+    type: vmess
+    server: 8.216.20.190
+    port: 8080
+    udp: true
+    uuid: c00b7a12-eb4e-44df-ba99-52e5c9968b8c
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 12
+    type: vmess
+    server: 47.74.45.36
+    port: 8080
+    udp: true
+    uuid: 9ab5b4ef-e0cb-4a58-b7db-1a01d5acb821
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 13
+    type: vmess
+    server: 8.209.242.91
+    port: 8080
+    udp: true
+    uuid: e33333c6-1d76-4158-8489-560bda757d1b
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 14
+    type: vmess
+    server: 8.211.148.15
+    port: 8080
+    udp: true
+    uuid: 757e6443-e4ec-48e1-a721-47c49a1e302b
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 15
+    type: vmess
+    server: 8.209.233.248
+    port: 8080
+    udp: true
+    uuid: 38cd58a1-3c80-4a94-988e-424c27de75fe
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 16
+    type: vmess
+    server: 47.74.13.91
+    port: 8080
+    udp: true
+    uuid: 4f891e72-e0d5-4532-9de2-063ead2fa713
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 17
+    type: vmess
+    server: 47.74.59.11
+    port: 8080
+    udp: true
+    uuid: 65779acb-3868-48e0-bc00-3c0f72fe923f
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 18
+    type: vmess
+    server: 8.209.204.203
+    port: 8080
+    udp: true
+    uuid: 9e29ab71-d244-4284-b18e-9bab1977e7df
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 19
+    type: vmess
+    server: 8.211.146.246
+    port: 8080
+    udp: true
+    uuid: fc79ce82-6b89-468c-96d0-2fbf665f3e58
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 20
+    type: vmess
+    server: 8.216.11.50
+    port: 8080
+    udp: true
+    uuid: a8c0f639-d834-4daf-b033-470ece03da5a
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 21
+    type: vmess
+    server: 47.91.19.154
+    port: 8080
+    udp: true
+    uuid: 60d4f767-fd8e-4513-bfce-1ea985515fbf
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 22
+    type: vmess
+    server: 8.216.12.247
+    port: 8080
+    udp: true
+    uuid: 1cfffe25-7cef-4f94-a37b-476a493304a6
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 23
+    type: vmess
+    server: 8.209.218.56
+    port: 8080
+    udp: true
+    uuid: 737c6a40-9054-4a33-a735-77eb6d743491
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+  - name: 🇯🇵 日本 24
+    type: vmess
+    server: 47.74.17.39
+    port: 8080
+    udp: true
+    uuid: 1e105b72-f7ff-40e4-9bbf-6d9e4dc09311
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: ''
+    network: tcp
+    client-fingerprint: ''
+    skip-cert-verify: false
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🇭🇰 香港 01
+      - 🇭🇰 香港 02
+      - 🇭🇰 香港 03
+      - 🇭🇰 香港 04
+      - 🇭🇰 香港 05
+      - 🇭🇰 香港 06
+      - 🇭🇰 香港 07
+      - 🇭🇰 香港 08
+      - 🇭🇰 香港 09
+      - 🇭🇰 香港 10
+      - 🇭🇰 香港 11
+      - 🇭🇰 香港 12
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港 14
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 16
+      - 🇭🇰 香港 17
+      - 🇭🇰 香港 18
+      - 🇭🇰 香港 19
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 21
+      - 🇭🇰 香港 22
+      - 🇭🇰 香港 23
+      - 🇭🇰 香港 24
+      - 🇸🇬 新加坡 01
+      - 🇸🇬 新加坡 02
+      - 🇸🇬 新加坡 03
+      - 🇸🇬 新加坡 04
+      - 🇸🇬 新加坡 05
+      - 🇸🇬 新加坡 06
+      - 🇸🇬 新加坡 07
+      - 🇸🇬 新加坡 08
+      - 🇸🇬 新加坡 09
+      - 🇸🇬 新加坡 10
+      - 🇸🇬 新加坡 11
+      - 🇸🇬 新加坡 12
+      - 🇸🇬 新加坡 13
+      - 🇸🇬 新加坡 14
+      - 🇸🇬 新加坡 15
+      - 🇸🇬 新加坡 16
+      - 🇸🇬 新加坡 17
+      - 🇸🇬 新加坡 18
+      - 🇸🇬 新加坡 19
+      - 🇸🇬 新加坡 20
+      - 🇸🇬 新加坡 21
+      - 🇸🇬 新加坡 22
+      - 🇸🇬 新加坡 23
+      - 🇸🇬 新加坡 24
+      - 🇯🇵 日本 01
+      - 🇯🇵 日本 02
+      - 🇯🇵 日本 03
+      - 🇯🇵 日本 04
+      - 🇯🇵 日本 05
+      - 🇯🇵 日本 06
+      - 🇯🇵 日本 07
+      - 🇯🇵 日本 08
+      - 🇯🇵 日本 09
+      - 🇯🇵 日本 10
+      - 🇯🇵 日本 11
+      - 🇯🇵 日本 12
+      - 🇯🇵 日本 13
+      - 🇯🇵 日本 14
+      - 🇯🇵 日本 15
+      - 🇯🇵 日本 16
+      - 🇯🇵 日本 17
+      - 🇯🇵 日本 18
+      - 🇯🇵 日本 19
+      - 🇯🇵 日本 20
+      - 🇯🇵 日本 21
+      - 🇯🇵 日本 22
+      - 🇯🇵 日本 23
+      - 🇯🇵 日本 24
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+  - name: 📦 PikPak
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+  - name: 🤖 OpenAI
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - IP-CIDR,129.146.160.80/32,DIRECT,no-resolve
+  - IP-CIDR,148.135.52.61/32,DIRECT,no-resolve
+  - IP-CIDR,148.135.56.101/32,DIRECT,no-resolve
+  - IP-CIDR,37.123.193.133/32,DIRECT,no-resolve
+  - IP-CIDR,111.119.203.69/32,DIRECT,no-resolve
+  - IP-CIDR,110.238.105.126/32,DIRECT,no-resolve
+  - IP-CIDR,166.108.206.148/32,DIRECT,no-resolve
+  - IP-CIDR,155.248.181.42/32,DIRECT,no-resolve
+  - IP-CIDR,176.126.114.184/32,DIRECT,no-resolve
+  - IP-CIDR,103.238.129.152/32,DIRECT,no-resolve
+  - IP-CIDR,45.66.217.124/32,DIRECT,no-resolve
+  - IP-CIDR,183.2.133.144/32,DIRECT,no-resolve
+  - IP-CIDR,103.103.245.13/32,DIRECT,no-resolve
+  - DOMAIN,oiyun.de,DIRECT
+  - DOMAIN,github.moeyy.xyz,DIRECT
+  - DOMAIN,hk.xybhdy.top,DIRECT
+  - DOMAIN,hd1dc.com,DIRECT
+  - RULE-SET,LocalAreaNetwork,DIRECT
+  - RULE-SET,BanAD,REJECT
+  - RULE-SET,BanAdobe,REJECT
+  - RULE-SET,GoogleFCM,🚀 节点选择
+  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,PikPak,📦 PikPak
+  - RULE-SET,OpenAI,🤖 OpenAI
+  - RULE-SET,Claude,🤖 OpenAI
+  - RULE-SET,Gemini,🤖 OpenAI
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,ProxyClassical,🚀 节点选择
+  - RULE-SET,ChinaCIDR,DIRECT
+  - RULE-SET,ChinaClassical,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  Apple:
+    behavior: classical
+    interval: 604800
+    path: ./rules/Apple.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.yaml
+  BanAD:
+    behavior: domain
+    interval: 604800
+    path: ./rules/BanAD.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+  BanAdobe:
+    behavior: classical
+    interval: 604800
+    path: ./rules/BanAdobe.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/ignaciocastro/a-dove-is-dumb/main/clash.yaml
+  ChinaCIDR:
+    behavior: ipcidr
+    interval: 604800
+    path: ./rules/CNCIDR.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+  ChinaClassical:
+    behavior: domain
+    interval: 604800
+    path: ./rules/ChinaClassical.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+  Claude:
+    behavior: classical
+    interval: 604800
+    path: ./rules/Claude.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
+  Gemini:
+    behavior: classical
+    interval: 604800
+    path: ./rules/Gemini.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+  GoogleFCM:
+    behavior: classical
+    interval: 604800
+    path: ./rules/GoogleFCM.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.yaml
+  LocalAreaNetwork:
+    behavior: classical
+    interval: 604800
+    path: ./rules/LocalAreaNetwork.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
+  Microsoft:
+    behavior: classical
+    interval: 604800
+    path: ./rules/Microsoft.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
+  OpenAI:
+    behavior: classical
+    interval: 604800
+    path: ./rules/OpenAI.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+  PikPak:
+    behavior: classical
+    interval: 604800
+    path: ./rules/PikPak.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml
+  ProxyClassical:
+    behavior: domain
+    interval: 604800
+    path: ./rules/ProxyClassical.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+  ProxyMedia:
+    behavior: classical
+    interval: 604800
+    path: ./rules/ProxyMedia.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
+  SteamCN:
+    behavior: classical
+    interval: 604800
+    path: ./rules/SteamCN.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.yaml
+  Telegram:
+    behavior: classical
+    interval: 604800
+    path: ./rules/Telegram.yaml
+    type: http
+    url: 
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml

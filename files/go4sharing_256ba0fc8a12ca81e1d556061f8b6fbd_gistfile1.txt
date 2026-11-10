@@ -1,0 +1,3785 @@
+mode: Global
+proxies:
+  - name: 中国 - 香港 - 1
+    server: 119.8.35.24
+    port: '10030'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1374
+  - name: 中国 - 香港 - 10
+    server: 202.85.53.160
+    port: '7000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1141
+  - name: 中国 - 香港 - 2
+    server: 47.83.134.213
+    port: '30443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 925
+  - name: 中国 - 香港 - 3
+    server: 154.16.10.205
+    port: '55443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2259
+  - name: 中国 - 香港 - 4
+    server: 152.32.215.105
+    port: '9443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 545
+  - name: 中国 - 香港 - 5
+    server: 175.29.23.5
+    port: '7000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1109
+  - name: 中国 - 香港 - 6
+    server: 89.251.26.174
+    port: '40000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1310
+  - name: 中国 - 香港 - 7
+    server: 47.242.145.136
+    port: '8001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 900
+  - name: 中国 - 香港 - 8
+    server: 157.254.22.77
+    port: '55443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2355
+  - name: 中国 - 香港 - 9
+    server: 123.30.210.42
+    port: '6666'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2320
+  - name: 丹麦 - 哥本哈根 - 1
+    server: 141.227.172.105
+    port: '8069'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1676
+  - name: 丹麦 - 哥本哈根 - 2
+    server: 195.54.170.66
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1642
+  - name: 丹麦 - 哥本哈根 - 3
+    server: 178.20.44.159
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2347
+  - name: 亚美尼亚 - Yerevan - 1
+    server: 93.115.240.86
+    port: '2525'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2860
+  - name: 亚美尼亚 - Yerevan - 2
+    server: 45.83.143.70
+    port: '50050'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2495
+  - name: 亚美尼亚 - Yerevan - 3
+    server: 93.115.240.30
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2283
+  - name: 亚美尼亚 - Yerevan - 4
+    server: 92.223.2.7
+    port: '2020'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1907
+  - name: 保加利亚 - 索菲亞 - 1
+    server: 185.247.58.110
+    port: '12345'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1970
+  - name: 保加利亚 - 索菲亞 - 2
+    server: 5.133.92.9
+    port: '16509'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2231
+  - name: 保加利亚 - 索菲亞 - 3
+    server: 185.82.218.224
+    port: '9443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2027
+  - name: 保加利亚 - 索菲亞 - 4
+    server: 5.180.45.246
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2821
+  - name: 加拿大 - 多伦多 - 1
+    server: 5.180.34.89
+    port: '11000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1447
+  - name: 加拿大 - 多伦多 - 2
+    server: 147.45.50.155
+    port: '50050'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2687
+  - name: 加拿大 - 多伦多 - 5
+    server: 152.70.101.24
+    port: '16992'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2776
+  - name: 加拿大 - 多伦多 - 6
+    server: 192.40.139.236
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1860
+  - name: 加拿大 - 多伦多 - 7
+    server: 47.254.89.92
+    port: '8093'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1802
+  - name: 加拿大 - 密西沙加 - 3
+    server: 155.138.147.168
+    port: '2080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2711
+  - name: 加拿大 - 密西沙加 - 4
+    server: 167.114.113.49
+    port: '2525'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1966
+  - name: 哈萨克斯坦 - Aqtöbe - 1
+    server: 38.244.134.119
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2591
+  - name: 土耳其 - Kocasinan - 1
+    server: 94.131.108.11
+    port: '55553'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2726
+  - name: 土耳其 - Kocasinan - 2
+    server: 107.161.174.239
+    port: '2051'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2398
+  - name: 德国 - 德赖艾希 - 1
+    server: ip.sb
+    port: 443
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1567
+  - name: 德国 - 德赖艾希 - 10
+    server: 159.195.20.112
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2398
+  - name: 德国 - 德赖艾希 - 11
+    server: 91.107.161.243
+    port: '2082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1690
+  - name: 德国 - 德赖艾希 - 12
+    server: 91.107.129.18
+    port: '2082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2294
+  - name: 德国 - 德赖艾希 - 13
+    server: 91.107.148.163
+    port: '2082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2805
+  - name: 德国 - 德赖艾希 - 14
+    server: 91.107.188.184
+    port: '2082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1641
+  - name: 德国 - 德赖艾希 - 15
+    server: 91.107.252.241
+    port: '2082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1587
+  - name: 德国 - 德赖艾希 - 16
+    server: 49.13.224.41
+    port: '2020'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1586
+  - name: 德国 - 德赖艾希 - 17
+    server: 65.109.220.75
+    port: '4440'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2111
+  - name: 德国 - 德赖艾希 - 18
+    server: 91.107.153.166
+    port: '2525'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1446
+  - name: 德国 - 德赖艾希 - 19
+    server: 155.254.35.22
+    port: '2051'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1902
+  - name: 德国 - 德赖艾希 - 2
+    server: 188.68.58.109
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1559
+  - name: 德国 - 德赖艾希 - 20
+    server: 162.248.227.139
+    port: '12345'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2472
+  - name: 德国 - 德赖艾希 - 21
+    server: 65.108.61.218
+    port: '900'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1476
+  - name: 德国 - 德赖艾希 - 22
+    server: 57.129.15.6
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1179
+  - name: 德国 - 德赖艾希 - 23
+    server: 57.129.65.239
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1466
+  - name: 德国 - 德赖艾希 - 25
+    server: 91.107.170.178
+    port: '2020'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1378
+  - name: 德国 - 德赖艾希 - 26
+    server: 185.161.251.96
+    port: '50050'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2071
+  - name: 德国 - 德赖艾希 - 27
+    server: 89.58.34.93
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1289
+  - name: 德国 - 德赖艾希 - 28
+    server: 162.55.180.26
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1642
+  - name: 德国 - 德赖艾希 - 29
+    server: 85.17.67.245
+    port: '8020'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2675
+  - name: 德国 - 德赖艾希 - 3
+    server: 138.226.236.46
+    port: '4444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1679
+  - name: 德国 - 德赖艾希 - 31
+    server: 65.109.193.73
+    port: '5009'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2506
+  - name: 德国 - 德赖艾希 - 32
+    server: 85.17.67.245
+    port: '9091'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1624
+  - name: 德国 - 德赖艾希 - 33
+    server: 91.107.250.194
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1576
+  - name: 德国 - 德赖艾希 - 34
+    server: 91.107.250.73
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1341
+  - name: 德国 - 德赖艾希 - 35
+    server: 91.107.156.210
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1393
+  - name: 德国 - 德赖艾希 - 36
+    server: 91.107.173.219
+    port: '7171'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1630
+  - name: 德国 - 德赖艾希 - 37
+    server: 62.60.247.197
+    port: '8091'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2937
+  - name: 德国 - 德赖艾希 - 38
+    server: 185.104.63.51
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1384
+  - name: 德国 - 德赖艾希 - 39
+    server: 159.100.6.21
+    port: '27017'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2236
+  - name: 德国 - 德赖艾希 - 4
+    server: 91.107.166.206
+    port: '2051'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2210
+  - name: 德国 - 德赖艾希 - 40
+    server: 37.27.201.146
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1408
+  - name: 德国 - 德赖艾希 - 41
+    server: 185.254.97.208
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1194
+  - name: 德国 - 德赖艾希 - 42
+    server: 91.107.166.26
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1656
+  - name: 德国 - 德赖艾希 - 43
+    server: 194.87.77.188
+    port: '11001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1790
+  - name: 德国 - 德赖艾希 - 44
+    server: 65.109.188.82
+    port: '8989'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2267
+  - name: 德国 - 德赖艾希 - 45
+    server: 5.75.200.95
+    port: '4439'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1426
+  - name: 德国 - 德赖艾希 - 46
+    server: 138.124.116.141
+    port: '999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1861
+  - name: 德国 - 德赖艾希 - 47
+    server: 14.21.7.146
+    port: '16993'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2362
+  - name: 德国 - 德赖艾希 - 48
+    server: 2.58.56.170
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1528
+  - name: 德国 - 德赖艾希 - 49
+    server: 91.107.178.200
+    port: '2501'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1495
+  - name: 德国 - 德赖艾希 - 5
+    server: 91.107.172.51
+    port: '2051'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2731
+  - name: 德国 - 德赖艾希 - 50
+    server: 91.186.217.158
+    port: '445'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2775
+  - name: 德国 - 德赖艾希 - 51
+    server: 62.60.148.115
+    port: '9999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2705
+  - name: 德国 - 德赖艾希 - 52
+    server: 5.75.165.246
+    port: '9092'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1314
+  - name: 德国 - 德赖艾希 - 53
+    server: 45.83.129.107
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2701
+  - name: 德国 - 德赖艾希 - 54
+    server: 135.181.25.7
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1708
+  - name: 德国 - 德赖艾希 - 55
+    server: 91.98.123.18
+    port: '104'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1577
+  - name: 德国 - 德赖艾希 - 57
+    server: 46.62.238.101
+    port: '900'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1612
+  - name: 德国 - 德赖艾希 - 58
+    server: 89.208.113.120
+    port: '8082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2696
+  - name: 德国 - 德赖艾希 - 59
+    server: 91.107.252.241
+    port: '2051'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1975
+  - name: 德国 - 德赖艾希 - 6
+    server: 218.23.94.10
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2633
+  - name: 德国 - 德赖艾希 - 60
+    server: 38.180.181.134
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2035
+  - name: 德国 - 德赖艾希 - 61
+    server: 38.180.219.136
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2307
+  - name: 德国 - 德赖艾希 - 62
+    server: 185.254.97.115
+    port: '7171'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1421
+  - name: 德国 - 德赖艾希 - 64
+    server: 65.109.210.183
+    port: '8890'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1472
+  - name: 德国 - 德赖艾希 - 65
+    server: 65.109.191.225
+    port: '10001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2362
+  - name: 德国 - 德赖艾希 - 66
+    server: 65.108.249.15
+    port: '512'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1968
+  - name: 德国 - 德赖艾希 - 67
+    server: 91.107.182.214
+    port: '11001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1588
+  - name: 德国 - 德赖艾希 - 68
+    server: 91.99.149.94
+    port: '11001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1347
+  - name: 德国 - 德赖艾希 - 69
+    server: 65.109.182.61
+    port: '2023'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2326
+  - name: 德国 - 德赖艾希 - 7
+    server: 91.98.123.18
+    port: '999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2034
+  - name: 德国 - 德赖艾希 - 70
+    server: 65.109.210.183
+    port: '9999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1635
+  - name: 德国 - 德赖艾希 - 71
+    server: 195.62.48.25
+    port: '6780'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1713
+  - name: 德国 - 德赖艾希 - 72
+    server: 77.110.103.246
+    port: '3529'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2136
+  - name: 德国 - 德赖艾希 - 73
+    server: 130.185.122.203
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2431
+  - name: 德国 - 德赖艾希 - 74
+    server: 95.164.16.144
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2337
+  - name: 德国 - 德赖艾希 - 75
+    server: 65.109.180.149
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2742
+  - name: 德国 - 德赖艾希 - 76
+    server: 5.75.205.57
+    port: '8989'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1201
+  - name: 德国 - 德赖艾希 - 77
+    server: 38.180.22.20
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1363
+  - name: 德国 - 德赖艾希 - 78
+    server: 77.233.223.128
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2319
+  - name: 德国 - 德赖艾希 - 79
+    server: 91.107.130.50
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1205
+  - name: 德国 - 德赖艾希 - 8
+    server: 159.195.22.152
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2244
+  - name: 德国 - 德赖艾希 - 80
+    server: 116.202.10.123
+    port: '4440'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2522
+  - name: 德国 - 德赖艾希 - 81
+    server: 86.106.84.89
+    port: '8081'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1805
+  - name: 德国 - 德赖艾希 - 82
+    server: 91.107.129.15
+    port: '4440'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1266
+  - name: 德国 - 德赖艾希 - 83
+    server: 45.95.174.14
+    port: '50443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1874
+  - name: 德国 - 德赖艾希 - 84
+    server: 188.127.247.194
+    port: '445'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2065
+  - name: 德国 - 德赖艾希 - 86
+    server: 138.199.212.148
+    port: '900'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2677
+  - name: 德国 - 德赖艾希 - 9
+    server: 159.195.21.31
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2248
+  - name: 德国 - 杜塞尔多夫 - 24
+    server: 194.76.137.229
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1382
+  - name: 德国 - 杜塞尔多夫 - 56
+    server: 194.76.137.162
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1923
+  - name: 德国 - 杜塞尔多夫 - 63
+    server: 45.95.2.173
+    port: '6666'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2905
+  - name: 德国 - 杜塞尔多夫 - 85
+    server: 95.164.47.199
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2557
+  - name: 德国 - 杜塞尔多夫 - 87
+    server: 185.235.241.207
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2178
+  - name: 德国 - 諾德施泰特 - 30
+    server: 194.55.235.11
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2495
+  - name: 意大利 - Gallarate - 1
+    server: 79.30.36.126
+    port: '19530'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2097
+  - name: 意大利 - Gallarate - 2
+    server: 195.231.37.23
+    port: '880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1912
+  - name: 捷克 - 克拉德诺 - 1
+    server: 91.184.249.207
+    port: '60001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2329
+  - name: 新加坡 - 新加坡 - 1
+    server: kinsta.com
+    port: 443
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1230
+  - name: 新加坡 - 新加坡 - 2
+    server: 140.245.53.210
+    port: '8800'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1710
+  - name: 新加坡 - 新加坡 - 3
+    server: 140.235.37.15
+    port: '40001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1859
+  - name: 新加坡 - 新加坡 - 4
+    server: 138.2.92.242
+    port: '3128'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2215
+  - name: 日本 - Ōkubo-naka - 1
+    server: 61.89.43.237
+    port: '33889'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1188
+  - name: 日本 - Ōkubo-naka - 2
+    server: 126.4.163.149
+    port: '16922'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1049
+  - name: 日本 - Ōkubo-naka - 3
+    server: 126.4.163.149
+    port: '16509'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2013
+  - name: 日本 - Ōkubo-naka - 6
+    server: 121.80.244.179
+    port: '11310'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 939
+  - name: 日本 - 成田市 - 4
+    server: 156.231.116.170
+    port: '19999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1384
+  - name: 日本 - 成田市 - 5
+    server: 13.159.12.37
+    port: '10030'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2838
+  - name: 日本 - 成田市 - 7
+    server: 45.32.49.72
+    port: '9443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1246
+  - name: 日本 - 成田市 - 8
+    server: 118.126.97.117
+    port: '5000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 801
+  - name: 法国 - 奧奈叢林 - 1
+    server: 212.47.245.217
+    port: '50000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1529
+  - name: 法国 - 奧奈叢林 - 2
+    server: 188.255.199.2
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2039
+  - name: 法国 - 奧奈叢林 - 3
+    server: 188.255.199.0
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2009
+  - name: 法国 - 奧奈叢林 - 4
+    server: 188.255.199.1
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2037
+  - name: 波兰 - 普魯斯科夫 - 1
+    server: 154.53.166.238
+    port: '2082'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1650
+  - name: 波兰 - 普魯斯科夫 - 2
+    server: 45.140.146.23
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2714
+  - name: 瑞典 - Steninge - 1
+    server: 188.215.31.109
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1572
+  - name: 瑞典 - Steninge - 2
+    server: 207.127.89.90
+    port: '12000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1690
+  - name: 瑞士 - 梅兰 - 2
+    server: 37.156.46.22
+    port: '2095'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1681
+  - name: 瑞士 - 温特图尔 - 1
+    server: 104.244.79.140
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2301
+  - name: 立陶宛 - 倫特瓦里斯 - 1
+    server: 185.242.107.130
+    port: '12580'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2632
+  - name: 罗马尼亚 - Voluntari - 1
+    server: 5.13.86.143
+    port: '20880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2359
+  - name: 罗马尼亚 - Voluntari - 2
+    server: 79.119.160.185
+    port: '12121'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1718
+  - name: 罗马尼亚 - Voluntari - 3
+    server: 38.79.154.215
+    port: '999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1870
+  - name: 美国 - Reston - 14
+    server: 216.144.235.37
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1973
+  - name: 美国 - 东洛杉矶 - 1
+    server: 216.167.33.104
+    port: '18001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1404
+  - name: 美国 - 东洛杉矶 - 10
+    server: 142.171.220.62
+    port: '16601'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1312
+  - name: 美国 - 东洛杉矶 - 11
+    server: 64.69.32.12
+    port: '2003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1334
+  - name: 美国 - 东洛杉矶 - 12
+    server: 220.88.246.34
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1540
+  - name: 美国 - 东洛杉矶 - 13
+    server: 154.21.91.135
+    port: '60010'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1143
+  - name: 美国 - 东洛杉矶 - 15
+    server: 38.175.206.160
+    port: '33890'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1880
+  - name: 美国 - 东洛杉矶 - 16
+    server: 23.185.200.148
+    port: '9527'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1148
+  - name: 美国 - 东洛杉矶 - 17
+    server: 155.94.145.235
+    port: '40001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2358
+  - name: 美国 - 东洛杉矶 - 18
+    server: 38.244.51.6
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1185
+  - name: 美国 - 东洛杉矶 - 21
+    server: 154.17.224.132
+    port: '2222'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1224
+  - name: 美国 - 东洛杉矶 - 23
+    server: 211.216.185.56
+    port: '30080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1654
+  - name: 美国 - 东洛杉矶 - 24
+    server: 39.106.51.75
+    port: '50443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1640
+  - name: 美国 - 东洛杉矶 - 27
+    server: 14.44.32.251
+    port: '13666'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1589
+  - name: 美国 - 东洛杉矶 - 28
+    server: 38.83.41.89
+    port: '28080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1214
+  - name: 美国 - 东洛杉矶 - 29
+    server: 220.72.161.178
+    port: '34599'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1555
+  - name: 美国 - 东洛杉矶 - 30
+    server: 216.144.224.79
+    port: '60001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1373
+  - name: 美国 - 东洛杉矶 - 31
+    server: 72.249.200.113
+    port: '7777'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1219
+  - name: 美国 - 东洛杉矶 - 32
+    server: 221.165.0.149
+    port: '23456'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1804
+  - name: 美国 - 东洛杉矶 - 33
+    server: 38.95.73.40
+    port: '587'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1174
+  - name: 美国 - 东洛杉矶 - 34
+    server: 148.135.52.133
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2331
+  - name: 美国 - 东洛杉矶 - 36
+    server: 142.171.225.216
+    port: '5223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2566
+  - name: 美国 - 东洛杉矶 - 5
+    server: 125.137.12.172
+    port: '30443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1337
+  - name: 美国 - 东洛杉矶 - 6
+    server: 112.164.215.101
+    port: '19200'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2130
+  - name: 美国 - 东洛杉矶 - 7
+    server: 108.247.217.159
+    port: '40001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1710
+  - name: 美国 - 惠顿 - 8
+    server: 47.83.152.45
+    port: '20880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1871
+  - name: 美国 - 惠顿 - 9
+    server: 66.154.105.50
+    port: '9898'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2183
+  - name: 美国 - 波特蘭 - 19
+    server: 5.78.54.230
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2236
+  - name: 美国 - 波特蘭 - 4
+    server: 5.78.143.220
+    port: '30443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1347
+  - name: 美国 - 紐約 - 20
+    server: 107.161.168.207
+    port: '8020'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2064
+  - name: 美国 - 紐約 - 22
+    server: 134.199.242.166
+    port: '1001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1745
+  - name: 美国 - 紐約 - 25
+    server: 50.117.3.120
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2660
+  - name: 美国 - 紐約 - 26
+    server: 192.3.219.79
+    port: '8101'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1825
+  - name: 美国 - 紐約 - 3
+    server: 166.88.8.61
+    port: '27015'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1499
+  - name: 美国 - 紐約 - 35
+    server: 198.98.54.187
+    port: '2095'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1810
+  - name: 美国 - 肯特 - 2
+    server: 23.94.43.128
+    port: '8080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2865
+  - name: 芬兰 - 万塔 - 1
+    server: 194.164.235.39
+    port: '9443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2400
+  - name: 芬兰 - 万塔 - 2
+    server: 92.63.224.207
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1928
+  - name: 英国 - 豪恩斯洛 - 1
+    server: 51.195.238.105
+    port: '5050'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1851
+  - name: 英国 - 豪恩斯洛 - 2
+    server: 91.199.32.81
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2348
+  - name: 英国 - 豪恩斯洛 - 3
+    server: 142.93.37.152
+    port: '8880'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2705
+  - name: 英国 - 豪恩斯洛 - 4
+    server: 150.230.125.213
+    port: '30443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1812
+  - name: 英国 - 豪恩斯洛 - 5
+    server: 57.129.135.27
+    port: '8899'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2546
+  - name: 英国 - 豪恩斯洛 - 6
+    server: 5.61.62.185
+    port: '25'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1304
+  - name: 荷兰 - 阿姆斯特丹 - 1
+    server: okgg.top
+    port: 443
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1527
+  - name: 荷兰 - 阿姆斯特丹 - 10
+    server: 185.246.155.188
+    port: '888'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1331
+  - name: 荷兰 - 阿姆斯特丹 - 11
+    server: 185.19.33.166
+    port: '5901'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1597
+  - name: 荷兰 - 阿姆斯特丹 - 12
+    server: 185.198.234.173
+    port: '7070'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1709
+  - name: 荷兰 - 阿姆斯特丹 - 13
+    server: 185.198.234.113
+    port: '7070'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2548
+  - name: 荷兰 - 阿姆斯特丹 - 14
+    server: 178.253.22.244
+    port: '13377'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2820
+  - name: 荷兰 - 阿姆斯特丹 - 15
+    server: 47.100.242.145
+    port: '4439'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1330
+  - name: 荷兰 - 阿姆斯特丹 - 16
+    server: 45.83.20.142
+    port: '2223'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2217
+  - name: 荷兰 - 阿姆斯特丹 - 17
+    server: 45.131.111.147
+    port: '2055'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1715
+  - name: 荷兰 - 阿姆斯特丹 - 18
+    server: 5.255.105.68
+    port: '999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1659
+  - name: 荷兰 - 阿姆斯特丹 - 19
+    server: 77.238.233.156
+    port: '9443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2027
+  - name: 荷兰 - 阿姆斯特丹 - 2
+    server: 43.250.54.141
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1509
+  - name: 荷兰 - 阿姆斯特丹 - 20
+    server: 45.67.136.50
+    port: '2052'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1807
+  - name: 荷兰 - 阿姆斯特丹 - 21
+    server: 104.234.46.153
+    port: '8002'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1510
+  - name: 荷兰 - 阿姆斯特丹 - 3
+    server: 43.250.54.105
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1355
+  - name: 荷兰 - 阿姆斯特丹 - 4
+    server: 43.250.53.16
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2774
+  - name: 荷兰 - 阿姆斯特丹 - 5
+    server: 178.208.90.124
+    port: '445'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1383
+  - name: 荷兰 - 阿姆斯特丹 - 6
+    server: 179.61.138.54
+    port: '2086'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2058
+  - name: 荷兰 - 阿姆斯特丹 - 7
+    server: 45.82.13.64
+    port: '9090'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1243
+  - name: 荷兰 - 阿姆斯特丹 - 8
+    server: 91.84.111.143
+    port: '8444'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1572
+  - name: 荷兰 - 阿姆斯特丹 - 9
+    server: 89.34.230.205
+    port: '7080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2839
+  - name: 西班牙 - 查馬丁區 - 1
+    server: 83.149.105.45
+    port: '7777'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1472
+  - name: 韩国 - Yeongdong-gun - 1
+    server: 124.80.62.144
+    port: '15672'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1076
+  - name: 韩国 - Yeongdong-gun - 10
+    server: 59.15.182.92
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1072
+  - name: 韩国 - Yeongdong-gun - 11
+    server: 121.170.200.232
+    port: '10255'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1020
+  - name: 韩国 - Yeongdong-gun - 12
+    server: 121.173.93.124
+    port: '10255'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 959
+  - name: 韩国 - Yeongdong-gun - 13
+    server: 203.90.33.157
+    port: '19530'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 881
+  - name: 韩国 - Yeongdong-gun - 14
+    server: 124.111.208.233
+    port: '16923'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 834
+  - name: 韩国 - Yeongdong-gun - 15
+    server: 14.46.207.19
+    port: '22335'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1063
+  - name: 韩国 - Yeongdong-gun - 16
+    server: 119.56.178.65
+    port: '11001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1219
+  - name: 韩国 - Yeongdong-gun - 17
+    server: 116.123.6.19
+    port: '20332'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 790
+  - name: 韩国 - Yeongdong-gun - 18
+    server: 211.63.246.86
+    port: '18001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 807
+  - name: 韩国 - Yeongdong-gun - 19
+    server: 49.246.106.43
+    port: '19530'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1004
+  - name: 韩国 - Yeongdong-gun - 2
+    server: 121.177.141.186
+    port: '10005'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1367
+  - name: 韩国 - Yeongdong-gun - 20
+    server: 114.29.135.42
+    port: '19530'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 835
+  - name: 韩国 - Yeongdong-gun - 21
+    server: 124.153.180.85
+    port: '32400'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1104
+  - name: 韩国 - Yeongdong-gun - 22
+    server: 59.12.232.18
+    port: '14534'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 847
+  - name: 韩国 - Yeongdong-gun - 23
+    server: 59.7.190.194
+    port: '14534'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 922
+  - name: 韩国 - Yeongdong-gun - 24
+    server: 118.36.79.89
+    port: '16514'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 935
+  - name: 韩国 - Yeongdong-gun - 25
+    server: 123.111.152.207
+    port: '19530'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 640
+  - name: 韩国 - Yeongdong-gun - 26
+    server: 211.228.207.178
+    port: '16509'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 856
+  - name: 韩国 - Yeongdong-gun - 27
+    server: 210.91.163.129
+    port: '32459'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 922
+  - name: 韩国 - Yeongdong-gun - 28
+    server: 110.12.52.95
+    port: '10250'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2449
+  - name: 韩国 - Yeongdong-gun - 29
+    server: 220.78.247.55
+    port: '32080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1087
+  - name: 韩国 - Yeongdong-gun - 3
+    server: 121.178.220.105
+    port: '10005'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1387
+  - name: 韩国 - Yeongdong-gun - 30
+    server: 14.36.170.70
+    port: '19530'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 743
+  - name: 韩国 - Yeongdong-gun - 31
+    server: 14.42.121.185
+    port: '11001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1109
+  - name: 韩国 - Yeongdong-gun - 32
+    server: 175.201.244.213
+    port: '11001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1135
+  - name: 韩国 - Yeongdong-gun - 33
+    server: 112.170.95.30
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1075
+  - name: 韩国 - Yeongdong-gun - 34
+    server: 121.157.52.181
+    port: '32459'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1499
+  - name: 韩国 - Yeongdong-gun - 35
+    server: 220.118.166.63
+    port: '11000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1737
+  - name: 韩国 - Yeongdong-gun - 36
+    server: 211.199.65.186
+    port: '10332'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1010
+  - name: 韩国 - Yeongdong-gun - 37
+    server: 121.144.160.98
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 900
+  - name: 韩国 - Yeongdong-gun - 38
+    server: 221.164.8.208
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 953
+  - name: 韩国 - Yeongdong-gun - 39
+    server: 112.184.121.20
+    port: '30443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 940
+  - name: 韩国 - Yeongdong-gun - 4
+    server: 119.206.233.100
+    port: '34599'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1075
+  - name: 韩国 - Yeongdong-gun - 40
+    server: 220.124.151.123
+    port: '30443'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1951
+  - name: 韩国 - Yeongdong-gun - 41
+    server: 118.40.210.193
+    port: '32080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1331
+  - name: 韩国 - Yeongdong-gun - 42
+    server: 219.249.105.205
+    port: '18001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 749
+  - name: 韩国 - Yeongdong-gun - 43
+    server: 59.10.55.136
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1027
+  - name: 韩国 - Yeongdong-gun - 44
+    server: 59.8.196.21
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 928
+  - name: 韩国 - Yeongdong-gun - 45
+    server: 59.8.83.149
+    port: '18001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2443
+  - name: 韩国 - Yeongdong-gun - 46
+    server: 220.81.99.172
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 948
+  - name: 韩国 - Yeongdong-gun - 47
+    server: 112.173.86.233
+    port: '16992'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1390
+  - name: 韩国 - Yeongdong-gun - 48
+    server: 14.44.53.56
+    port: '10255'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1813
+  - name: 韩国 - Yeongdong-gun - 49
+    server: 175.197.149.153
+    port: '25000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 965
+  - name: 韩国 - Yeongdong-gun - 5
+    server: 121.160.139.208
+    port: '25010'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2106
+  - name: 韩国 - Yeongdong-gun - 50
+    server: 221.154.190.43
+    port: '18001'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1986
+  - name: 韩国 - Yeongdong-gun - 51
+    server: 221.162.248.38
+    port: '30080'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1063
+  - name: 韩国 - Yeongdong-gun - 52
+    server: 221.151.217.163
+    port: '27018'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1049
+  - name: 韩国 - Yeongdong-gun - 53
+    server: 218.157.248.9
+    port: '12121'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1378
+  - name: 韩国 - Yeongdong-gun - 54
+    server: 175.203.30.93
+    port: '10332'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 892
+  - name: 韩国 - Yeongdong-gun - 55
+    server: 211.220.30.21
+    port: '10035'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1109
+  - name: 韩国 - Yeongdong-gun - 56
+    server: 222.117.230.38
+    port: '23456'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 923
+  - name: 韩国 - Yeongdong-gun - 57
+    server: 222.116.153.46
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2051
+  - name: 韩国 - Yeongdong-gun - 58
+    server: 222.112.173.127
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 871
+  - name: 韩国 - Yeongdong-gun - 59
+    server: 221.144.249.199
+    port: '29999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1779
+  - name: 韩国 - Yeongdong-gun - 6
+    server: 121.174.145.178
+    port: '25010'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1375
+  - name: 韩国 - Yeongdong-gun - 60
+    server: 121.159.68.210
+    port: '19000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1467
+  - name: 韩国 - Yeongdong-gun - 61
+    server: 121.159.229.135
+    port: '19000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1125
+  - name: 韩国 - Yeongdong-gun - 62
+    server: 121.145.70.61
+    port: '19000'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1424
+  - name: 韩国 - Yeongdong-gun - 63
+    server: 59.27.89.42
+    port: '10554'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 905
+  - name: 韩国 - Yeongdong-gun - 64
+    server: 58.231.142.151
+    port: '10030'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1273
+  - name: 韩国 - Yeongdong-gun - 65
+    server: 14.38.65.221
+    port: '19200'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1400
+  - name: 韩国 - Yeongdong-gun - 66
+    server: 125.141.32.222
+    port: '27016'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1225
+  - name: 韩国 - Yeongdong-gun - 67
+    server: 125.134.233.181
+    port: '27016'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1164
+  - name: 韩国 - Yeongdong-gun - 68
+    server: 221.165.212.251
+    port: '32400'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1558
+  - name: 韩国 - Yeongdong-gun - 69
+    server: 114.207.99.233
+    port: '11434'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1427
+  - name: 韩国 - Yeongdong-gun - 7
+    server: 119.206.37.103
+    port: '33890'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1356
+  - name: 韩国 - Yeongdong-gun - 70
+    server: 61.72.211.3
+    port: '28006'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2322
+  - name: 韩国 - Yeongdong-gun - 71
+    server: 61.79.126.130
+    port: '25010'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2112
+  - name: 韩国 - Yeongdong-gun - 72
+    server: 59.24.1.109
+    port: '13377'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2728
+  - name: 韩国 - Yeongdong-gun - 73
+    server: 14.51.201.141
+    port: '10035'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 2720
+  - name: 韩国 - Yeongdong-gun - 74
+    server: 121.183.225.213
+    port: '37215'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1713
+  - name: 韩国 - Yeongdong-gun - 75
+    server: 223.222.74.163
+    port: '10035'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 905
+  - name: 韩国 - Yeongdong-gun - 76
+    server: 125.135.70.113
+    port: '37215'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1902
+  - name: 韩国 - Yeongdong-gun - 77
+    server: 118.36.249.41
+    port: '10332'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1387
+  - name: 韩国 - Yeongdong-gun - 78
+    server: 222.116.251.108
+    port: '19999'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1695
+  - name: 韩国 - Yeongdong-gun - 8
+    server: 221.142.11.166
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1073
+  - name: 韩国 - Yeongdong-gun - 9
+    server: 218.236.248.230
+    port: '10003'
+    type: trojan
+    password: trojan
+    sni: doufeng.pages.dev
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: doufeng.pages.dev
+    delay: 1315
